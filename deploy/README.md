@@ -10,11 +10,27 @@ cloud** — no localhost, no long-running server to babysit.
 - The [**AWS Lambda Web Adapter**](https://github.com/awslabs/aws-lambda-web-adapter)
   runs inside the image as a Lambda extension. It bridges Lambda invocations to
   the normal uvicorn web server your app already starts — **zero code changes**.
-- A **Function URL** with `RESPONSE_STREAM` gives a public HTTPS endpoint that
-  supports the SSE frames MCP streamable-http uses.
+- A public **API Gateway HTTP API** fronts the function and gives the HTTPS
+  endpoint Claude Co-Work connects to. (A Lambda **Function URL** also works in
+  principle, but some accounts block public Function URLs — see
+  [Ingress](#ingress-api-gateway-vs-function-url) below. API Gateway is the default.)
 - `main.py` already sets `stateless_http=True` (required — Lambda has no session
   affinity) and already resolves the Kylas key **per request** from the
   `x-api-key` header, falling back to the `KYLAS_API_KEY` env var.
+
+## Ingress: API Gateway vs Function URL
+
+`deploy.sh` defaults to `INGRESS=apigw`. Override with `INGRESS=function-url`.
+
+> **Why API Gateway is the default:** on some AWS accounts, public Lambda
+> **Function URLs** return `403 AccessDeniedException` at AWS's front door —
+> even with `AuthType: NONE`, a correct public resource policy, and **no** SCP/RCP
+> denying it (verified as root: `list-roots` shows `PolicyTypes: []`). It's an
+> account/service-layer restriction, not something in this repo or in your
+> Organizations policies. **API Gateway public endpoints are not affected**, so
+> it's the reliable choice. The two ingresses need different Lambda Web Adapter
+> modes (`buffered` for API Gateway, `response_stream` for Function URL); the
+> deploy script sets this automatically.
 
 ## Auth model (public URL + per-user key)
 
@@ -51,14 +67,15 @@ The script is **idempotent** — re-run it to ship a new build. It will:
 2. build & push the image,
 3. create/reuse an IAM execution role,
 4. create/update the Lambda function,
-5. create/update a public Function URL with response streaming,
-6. print your MCP endpoint: `https://<id>.lambda-url.<region>.on.aws/mcp`
+5. create/reuse the public ingress (API Gateway HTTP API by default),
+6. print your MCP endpoint, e.g. `https://<id>.execute-api.<region>.amazonaws.com/mcp`
 
 ### Configuration knobs (env vars)
 
 | Var              | Default                     | Notes                                        |
 |------------------|-----------------------------|----------------------------------------------|
 | `AWS_REGION`     | `ap-south-1`                | Region to deploy into                        |
+| `INGRESS`        | `apigw`                     | `apigw` (API Gateway) or `function-url`       |
 | `FUNCTION_NAME`  | `kylas-crm-mcp`             | Lambda function name                         |
 | `ECR_REPO`       | `kylas-crm-mcp`             | ECR repository name                          |
 | `ARCH`           | `x86_64`                    | `x86_64` or `arm64` (arm64 = cheaper Graviton) |
@@ -78,8 +95,19 @@ x-api-key: <your Kylas API key>
 
 ## Verify
 
+Use the smoke test — it runs `initialize` → `tools/list` → a live `get_current_user`
+call, no MCP client needed:
+
 ```bash
-curl -i -X POST "https://<id>.lambda-url.<region>.on.aws/mcp" \
+MCP_URL="https://<id>.execute-api.<region>.amazonaws.com/mcp" \
+KYLAS_KEY="<your Kylas API key>" \
+./deploy/smoke-test.sh
+```
+
+Or a raw one-liner:
+
+```bash
+curl -i -X POST "https://<id>.execute-api.<region>.amazonaws.com/mcp" \
   -H "Content-Type: application/json" \
   -H "Accept: application/json, text/event-stream" \
   -H "x-api-key: <your Kylas API key>" \
@@ -98,5 +126,9 @@ you're live.
   ticks while warm — harmless, because labels also load lazily on the first
   request via middleware.
 - **Timeout**: long multi-page CRM operations must finish within `TIMEOUT`
-  (≤ 900 s). 120 s is plenty for normal tool calls.
+  (≤ 900 s). 120 s is plenty for normal tool calls. Note API Gateway HTTP APIs
+  add their own **29 s** integration cap, independent of the Lambda timeout.
+- **Buffered responses on API Gateway**: SSE frames are returned as one complete
+  body rather than truly streamed. Fine for MCP tool calls (each is a single
+  JSON-RPC response); it just isn't incremental streaming.
 - **Logs**: `aws logs tail /aws/lambda/kylas-crm-mcp --follow --region <region>`

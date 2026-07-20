@@ -25,6 +25,11 @@ ARCH="${ARCH:-x86_64}"                           # x86_64 or arm64
 MEMORY="${MEMORY:-1024}"                          # MB
 TIMEOUT="${TIMEOUT:-120}"                         # seconds (max 900)
 IMAGE_TAG="${IMAGE_TAG:-latest}"
+# Public ingress: 'apigw' (API Gateway HTTP API) or 'function-url'.
+# NOTE: some accounts block public Lambda Function URLs at the account/service
+# layer (403 AccessDeniedException even with a correct public policy and no
+# SCP/RCP). API Gateway is not affected, so it's the default here.
+INGRESS="${INGRESS:-apigw}"
 # Optional: bake in a single Kylas key for single-tenant use. Leave empty to
 # require callers to pass their own `x-api-key` header (recommended).
 KYLAS_API_KEY="${KYLAS_API_KEY:-}"
@@ -84,7 +89,14 @@ fi
 ROLE_ARN="$(aws iam get-role --role-name "$ROLE_NAME" --query Role.Arn --output text)"
 
 # 4. Environment variables for the function ----------------------------------
-ENV_VARS="KYLAS_BASE_URL=${KYLAS_BASE_URL}"
+# API Gateway does a standard (buffered) invoke; Function URL streams. The LWA
+# invoke mode must match the ingress, or the adapter mishandles the response.
+if [[ "$INGRESS" == "apigw" ]]; then
+  LWA_MODE="buffered"
+else
+  LWA_MODE="response_stream"
+fi
+ENV_VARS="KYLAS_BASE_URL=${KYLAS_BASE_URL},AWS_LWA_INVOKE_MODE=${LWA_MODE}"
 if [[ -n "$KYLAS_API_KEY" ]]; then
   ENV_VARS="${ENV_VARS},KYLAS_API_KEY=${KYLAS_API_KEY}"
 fi
@@ -117,32 +129,53 @@ else
   aws lambda wait function-active --function-name "$FUNCTION_NAME" --region "$AWS_REGION"
 fi
 
-# 6. Public Function URL with response streaming -----------------------------
-echo "==> Ensuring Function URL (auth NONE, RESPONSE_STREAM)"
-if ! aws lambda get-function-url-config --function-name "$FUNCTION_NAME" --region "$AWS_REGION" >/dev/null 2>&1; then
-  aws lambda create-function-url-config \
-    --function-name "$FUNCTION_NAME" \
-    --auth-type NONE \
-    --invoke-mode RESPONSE_STREAM \
-    --region "$AWS_REGION" >/dev/null
-  # allow public invocation of the Function URL
-  aws lambda add-permission \
-    --function-name "$FUNCTION_NAME" \
-    --statement-id FunctionURLAllowPublicAccess \
-    --action lambda:InvokeFunctionUrl \
-    --principal '*' \
-    --function-url-auth-type NONE \
-    --region "$AWS_REGION" >/dev/null 2>&1 || true
+# 6. Public ingress ----------------------------------------------------------
+if [[ "$INGRESS" == "apigw" ]]; then
+  echo "==> Ensuring API Gateway HTTP API '${FUNCTION_NAME}-api'"
+  FN_ARN="arn:aws:lambda:${AWS_REGION}:${ACCOUNT_ID}:function:${FUNCTION_NAME}"
+  API_ID="$(aws apigatewayv2 get-apis --region "$AWS_REGION" \
+    --query "Items[?Name=='${FUNCTION_NAME}-api'].ApiId | [0]" --output text 2>/dev/null)"
+  if [[ -z "$API_ID" || "$API_ID" == "None" ]]; then
+    # quick-create wires integration + $default route + auto-deployed $default stage
+    API_ID="$(aws apigatewayv2 create-api --name "${FUNCTION_NAME}-api" \
+      --protocol-type HTTP --target "$FN_ARN" --region "$AWS_REGION" \
+      --query ApiId --output text)"
+  fi
+  # permission for API Gateway to invoke the function (idempotent)
+  aws lambda add-permission --function-name "$FUNCTION_NAME" --region "$AWS_REGION" \
+    --statement-id apigw-invoke --action lambda:InvokeFunction \
+    --principal apigateway.amazonaws.com \
+    --source-arn "arn:aws:execute-api:${AWS_REGION}:${ACCOUNT_ID}:${API_ID}/*/*" \
+    >/dev/null 2>&1 || true
+  API_ENDPOINT="$(aws apigatewayv2 get-api --api-id "$API_ID" --region "$AWS_REGION" \
+    --query ApiEndpoint --output text)"
+  MCP_URL="${API_ENDPOINT%/}/mcp"
 else
-  aws lambda update-function-url-config \
-    --function-name "$FUNCTION_NAME" \
-    --auth-type NONE \
-    --invoke-mode RESPONSE_STREAM \
-    --region "$AWS_REGION" >/dev/null
+  echo "==> Ensuring Function URL (auth NONE, RESPONSE_STREAM)"
+  echo "    (heads up: some accounts block public Function URLs — see deploy/README.md)"
+  if ! aws lambda get-function-url-config --function-name "$FUNCTION_NAME" --region "$AWS_REGION" >/dev/null 2>&1; then
+    aws lambda create-function-url-config \
+      --function-name "$FUNCTION_NAME" \
+      --auth-type NONE \
+      --invoke-mode RESPONSE_STREAM \
+      --region "$AWS_REGION" >/dev/null
+    aws lambda add-permission \
+      --function-name "$FUNCTION_NAME" \
+      --statement-id FunctionURLAllowPublicAccess \
+      --action lambda:InvokeFunctionUrl \
+      --principal '*' \
+      --function-url-auth-type NONE \
+      --region "$AWS_REGION" >/dev/null 2>&1 || true
+  else
+    aws lambda update-function-url-config \
+      --function-name "$FUNCTION_NAME" \
+      --auth-type NONE \
+      --invoke-mode RESPONSE_STREAM \
+      --region "$AWS_REGION" >/dev/null
+  fi
+  FUNCTION_URL="$(aws lambda get-function-url-config --function-name "$FUNCTION_NAME" --region "$AWS_REGION" --query FunctionUrl --output text)"
+  MCP_URL="${FUNCTION_URL%/}/mcp"
 fi
-
-FUNCTION_URL="$(aws lambda get-function-url-config --function-name "$FUNCTION_NAME" --region "$AWS_REGION" --query FunctionUrl --output text)"
-MCP_URL="${FUNCTION_URL%/}/mcp"
 
 echo ""
 echo "============================================================"
