@@ -83,6 +83,14 @@ The script is **idempotent** — re-run it to ship a new build. It will:
 | `TIMEOUT`        | `120`                       | Seconds (max 900)                            |
 | `KYLAS_API_KEY`  | *(empty)*                   | Set only for single-tenant (baked-in key)    |
 | `KYLAS_BASE_URL` | `https://api.kylas.io/v1`   | Override for non-default Kylas envs          |
+| `ZIPLABS_AUTHKEY`| *(empty)*                   | Enables `enrich_person` / `enrich_deal_primary_contact` |
+
+> **ZipLabs on Lambda:** the deploy script always sets
+> `ZIPLABS_STORE_DIR=/tmp/enrichment_responses`, because the rest of the Lambda
+> filesystem is read-only. Enrichment still works without it (storage failures
+> are swallowed), but full responses only persist when the dir is under `/tmp`.
+> Note `/tmp` is per-execution-environment and ephemeral — fine as a scratch
+> cache, not durable storage.
 
 ## Connect from Claude Co-Work
 

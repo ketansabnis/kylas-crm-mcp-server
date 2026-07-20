@@ -34,6 +34,9 @@ INGRESS="${INGRESS:-apigw}"
 # require callers to pass their own `x-api-key` header (recommended).
 KYLAS_API_KEY="${KYLAS_API_KEY:-}"
 KYLAS_BASE_URL="${KYLAS_BASE_URL:-https://api.kylas.io/v1}"
+# Optional: ZipLabs person-enrichment key (enables enrich_person /
+# enrich_deal_primary_contact). Leave empty to disable enrichment.
+ZIPLABS_AUTHKEY="${ZIPLABS_AUTHKEY:-}"
 # ----------------------------------------------------------------------------
 
 if [[ "$ARCH" == "arm64" ]]; then
@@ -96,9 +99,14 @@ if [[ "$INGRESS" == "apigw" ]]; then
 else
   LWA_MODE="response_stream"
 fi
-ENV_VARS="KYLAS_BASE_URL=${KYLAS_BASE_URL},AWS_LWA_INVOKE_MODE=${LWA_MODE}"
+# ZIPLABS_STORE_DIR must point at /tmp — the rest of the Lambda filesystem is
+# read-only, so enrichment-response storage would otherwise silently fail.
+ENV_VARS="KYLAS_BASE_URL=${KYLAS_BASE_URL},AWS_LWA_INVOKE_MODE=${LWA_MODE},ZIPLABS_STORE_DIR=/tmp/enrichment_responses"
 if [[ -n "$KYLAS_API_KEY" ]]; then
   ENV_VARS="${ENV_VARS},KYLAS_API_KEY=${KYLAS_API_KEY}"
+fi
+if [[ -n "$ZIPLABS_AUTHKEY" ]]; then
+  ENV_VARS="${ENV_VARS},ZIPLABS_AUTHKEY=${ZIPLABS_AUTHKEY}"
 fi
 
 # 5. Create or update the Lambda function ------------------------------------
