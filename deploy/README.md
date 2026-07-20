@@ -139,4 +139,12 @@ you're live.
 - **Buffered responses on API Gateway**: SSE frames are returned as one complete
   body rather than truly streamed. Fine for MCP tool calls (each is a single
   JSON-RPC response); it just isn't incremental streaming.
+- **ZipLabs enrichment vs the 30s gateway cap**: `enrich_person` /
+  `enrich_deal_primary_contact` poll a ZipLabs job (up to 120s locally). API
+  Gateway HTTP APIs hard-cap at 30s, so the deploy script sets
+  `ZIPLABS_POLL_MAX_SECONDS=25` for the `apigw` ingress — a job that finishes in
+  ~25s returns; a slower one gets a clean "try again shortly" message instead of
+  a 504. Jobs that genuinely need >30s cannot complete in one call through API
+  Gateway (an inherent limit; the only true fixes are the async job pattern or a
+  Function URL, which this account blocks).
 - **Logs**: `aws logs tail /aws/lambda/kylas-crm-mcp --follow --region <region>`

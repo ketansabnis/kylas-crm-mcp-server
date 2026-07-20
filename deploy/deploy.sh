@@ -96,12 +96,18 @@ ROLE_ARN="$(aws iam get-role --role-name "$ROLE_NAME" --query Role.Arn --output 
 # invoke mode must match the ingress, or the adapter mishandles the response.
 if [[ "$INGRESS" == "apigw" ]]; then
   LWA_MODE="buffered"
+  # API Gateway HTTP APIs hard-cap integration at 30s. Cap the ZipLabs poll
+  # below that so a slow enrichment returns a clean "try again" message instead
+  # of a 504 (and the Lambda stops polling instead of billing on to 120s).
+  ZIPLABS_POLL_MAX="${ZIPLABS_POLL_MAX:-25}"
 else
   LWA_MODE="response_stream"
+  # Function URLs allow long responses; keep the app default (120s).
+  ZIPLABS_POLL_MAX="${ZIPLABS_POLL_MAX:-120}"
 fi
 # ZIPLABS_STORE_DIR must point at /tmp — the rest of the Lambda filesystem is
 # read-only, so enrichment-response storage would otherwise silently fail.
-ENV_VARS="KYLAS_BASE_URL=${KYLAS_BASE_URL},AWS_LWA_INVOKE_MODE=${LWA_MODE},ZIPLABS_STORE_DIR=/tmp/enrichment_responses"
+ENV_VARS="KYLAS_BASE_URL=${KYLAS_BASE_URL},AWS_LWA_INVOKE_MODE=${LWA_MODE},ZIPLABS_STORE_DIR=/tmp/enrichment_responses,ZIPLABS_POLL_MAX_SECONDS=${ZIPLABS_POLL_MAX}"
 if [[ -n "$KYLAS_API_KEY" ]]; then
   ENV_VARS="${ENV_VARS},KYLAS_API_KEY=${KYLAS_API_KEY}"
 fi
