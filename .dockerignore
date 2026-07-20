@@ -1,0 +1,23 @@
+# Keep the Lambda build context tiny — the image only needs main.py +
+# requirements.txt. Everything below is data/tooling that must never ship.
+.venv/
+__pycache__/
+.pytest_cache/
+*.egg-info/
+.git/
+.env
+
+# Large local data / reports that are not part of the server
+enrichment_responses/
+onboarding_reports/
+marketing_weekly/
+presales_june_analysis/
+presales-marketing-weekly/
+deal-audit/
+*.xlsx
+~$*.xlsx
+*.postman_collection.json
+ziA5Yf3Y
+ziwsuTLR
+presals_tmp.json
+.DS_Store

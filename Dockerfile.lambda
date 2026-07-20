@@ -1,0 +1,38 @@
+# Kylas CRM MCP Server - AWS Lambda (via Lambda Web Adapter)
+#
+# Runs the existing FastMCP streamable-http app UNCHANGED as a normal uvicorn
+# web server inside Lambda. The AWS Lambda Web Adapter (LWA) extension bridges
+# the Lambda Runtime API to the local HTTP server, so no code changes are
+# needed. A Lambda Function URL with RESPONSE_STREAM gives a public HTTPS
+# endpoint that Claude Co-Work can connect to at  <function-url>/mcp
+FROM python:3.11-slim
+
+# Lambda Web Adapter: a Lambda external extension that proxies invocations to
+# the local web server. Pin the version; bump deliberately.
+COPY --from=public.ecr.aws/awsguru/aws-lambda-adapter:0.9.1 /lambda-adapter /opt/extensions/lambda-adapter
+
+WORKDIR /app
+
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY main.py .
+
+ENV PYTHONUNBUFFERED=1
+
+# Serve the streamable-http transport (stateless_http=True is already set in
+# main.py, which is required on Lambda since there is no session affinity).
+ENV MCP_TRANSPORT=streamable-http
+ENV MCP_HOST=0.0.0.0
+ENV MCP_PORT=8080
+
+# --- Lambda Web Adapter configuration ---
+# LWA forwards invocations to this port (must match MCP_PORT).
+ENV AWS_LWA_PORT=8080
+# Stream responses back through the Function URL (needed for MCP SSE frames).
+ENV AWS_LWA_INVOKE_MODE=response_stream
+# FastMCP has no plain health route, so use a TCP open-port readiness check
+# instead of the default HTTP GET (which would 404/406 and never go ready).
+ENV AWS_LWA_READINESS_CHECK_PROTOCOL=tcp
+
+CMD ["python", "-u", "main.py"]
