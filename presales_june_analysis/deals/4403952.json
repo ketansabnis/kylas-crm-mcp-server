@@ -1,0 +1,51 @@
+{
+ "deal_id": 4403952,
+ "deal_name": "Vrajesh Soni",
+ "creator": "Revati Ambike",
+ "creator_id": 9062,
+ "owner": "Sakshi Kadu",
+ "pipeline": "Sell.Do Deal Pipeline",
+ "stage": "Demo Conducted",
+ "pipeline_stage_reason": null,
+ "created_at": "2026-06-19T09:41:24.188Z",
+ "updated_at": "2026-06-22T12:33:05.106Z",
+ "meeting_conducted": true,
+ "cfMeetingConductedOn": "2026-06-22T12:33:02.360Z",
+ "noOfLicenses": 50,
+ "cfCity": "Vadodara",
+ "cfReDeveloperOrChannelPartner": "Developer",
+ "estimatedValue": null,
+ "actualValue": null,
+ "products": [
+  "Sell.Do Enterprise"
+ ],
+ "source": null,
+ "campaign": null,
+ "cfPreviousCrm": "Never used a CRM",
+ "cfRequiredTools": [
+  "CRM"
+ ],
+ "cfSales": null,
+ "cfFirstSalesOwner": "Sakshi Kadu",
+ "cfOwnerPhoneNumber": "+917499017438",
+ "notes_count": 12,
+ "notes_text": "By 9062: Type-CRM;City-Vadodara;Company-Nyalkaran Group;Developer (residential+commercial);Team Size-50;Current CRM-No;Meeting 20 Jun 12pm online. AUDIT(4248): FORWARD (green) - verified established Vadodara developer (Nyalkaran Group), real multi-project footprint, 50-licence claim credible, genuine need (never used CRM), demo booked; only flag confirm Vrajesh Soni authority. Mgmt: big client, Sakshi on medical leave, someone take it ahead. By 58133: client in meeting, details shared, call 6th July. 47602: how did a 50-user account only get a 20-min demo? By 73467: demo was ~20 min on Saturday; asked call back Monday.",
+ "license_tier": "40+",
+ "city_bucket": "Other",
+ "city_clean": "Vadodara",
+ "onsite_or_online": "Online",
+ "name_valid": true,
+ "bant": {
+  "budget": "no explicit signal; enterprise-scale 50 seats",
+  "authority": "Contact authority flagged to confirm; treated as key by mgmt",
+  "need": "Strong; established developer, 50 users, never used CRM",
+  "timeline": "Slow-moving; repeated call-backs, no close date",
+  "bant_score": 3,
+  "bant_flag": "Strong"
+ },
+ "enterprise_flag": true,
+ "pre_sales_verdict": "GREEN",
+ "stall_blocker": "Sales-gap",
+ "blocker_owner": "Sales",
+ "one_line": "Verified 50-seat Vadodara developer (Nyalkaran Group), audit-green enterprise lead - excellent pre-sales; a 20-min demo and a rep on leave are the real drag."
+}

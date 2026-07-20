@@ -1,0 +1,19 @@
+{
+  "deal_id": 4045264,
+  "name": "Sanjeev arora",
+  "owner": "Ankur Singhal",
+  "creator_id": 54132,
+  "stage": "Unqualified",
+  "noOfLicenses": 5,
+  "city": "Ahmedabad",
+  "created_at": "2026-04-06",
+  "demo_date": null,
+  "lost_date": "2026-04-16",
+  "days_created_to_demo": null,
+  "days_demo_to_lost": null,
+  "days_total": 10,
+  "sales_attempts": 0,
+  "loss_reason": "Not-interested",
+  "one_line": "Developer never took the scheduled demo; client dropped the plan, unqualified.",
+  "notes_count": 8
+}

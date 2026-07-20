@@ -1,0 +1,19 @@
+{
+  "deal_id": 4053985,
+  "name": "Avi",
+  "owner": "Disha Kadam",
+  "creator_id": 54132,
+  "stage": "Lost",
+  "noOfLicenses": 10,
+  "city": "Vadodara",
+  "created_at": "2026-04-07",
+  "demo_date": "2026-04-10",
+  "lost_date": "2026-05-14",
+  "days_created_to_demo": 3,
+  "days_demo_to_lost": 34,
+  "days_total": 37,
+  "sales_attempts": 16,
+  "loss_reason": "Non-responsive",
+  "one_line": "Industrial developer went dark post-demo; owner logged ~16 CNR/switched-off attempts over a month before losing.",
+  "notes_count": 24
+}

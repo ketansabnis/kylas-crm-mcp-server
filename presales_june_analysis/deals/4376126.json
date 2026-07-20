@@ -1,0 +1,51 @@
+{
+ "deal_id": 4376126,
+ "deal_name": "Rubyland Victorra",
+ "creator": "Revati Ambike",
+ "creator_id": 9062,
+ "owner": "Santhana K",
+ "pipeline": "Sell.Do Deal Pipeline",
+ "stage": "Demo Conducted",
+ "pipeline_stage_reason": null,
+ "created_at": "2026-06-12T08:30:19.917Z",
+ "updated_at": "2026-06-16T10:38:42.640Z",
+ "meeting_conducted": true,
+ "cfMeetingConductedOn": "2026-06-16T10:38:40.312Z",
+ "noOfLicenses": 35,
+ "cfCity": "Chennai",
+ "cfReDeveloperOrChannelPartner": "Developer",
+ "estimatedValue": null,
+ "actualValue": null,
+ "products": [
+  "Sell.Do Enterprise"
+ ],
+ "source": null,
+ "campaign": null,
+ "cfPreviousCrm": "Never used a CRM",
+ "cfRequiredTools": [
+  "CRM"
+ ],
+ "cfSales": null,
+ "cfFirstSalesOwner": "Santhana K",
+ "cfOwnerPhoneNumber": true,
+ "notes_count": 7,
+ "notes_text": "9062: Kasadara Properties, Chennai, a marketing agency looking for CRM for their developer client, team 35, current CRM yes (Highrise), current challenges yes, demo scheduled; emails captured. | 17923: demo done, wants to discuss with the client, will connect Friday.",
+ "license_tier": "10-39",
+ "city_bucket": "Main6",
+ "city_clean": "Chennai",
+ "onsite_or_online": "Online",
+ "name_valid": true,
+ "bant": {
+  "budget": "no explicit budget signal",
+  "authority": "Marketing agency (proxy buyer) - end decision with their developer client",
+  "need": "35-seat, currently on Highrise, real switch/challenges",
+  "timeline": "Will discuss with client, connect Friday",
+  "bant_score": 3,
+  "bant_flag": "Strong"
+ },
+ "enterprise_flag": false,
+ "pre_sales_verdict": "GREEN",
+ "stall_blocker": "Progressing",
+ "blocker_owner": "Sales",
+ "one_line": "35-seat Chennai account on Highrise via a marketing-agency proxy - well-qualified enterprise demo, decision pending with end client."
+}

@@ -1,0 +1,51 @@
+{
+ "deal_id": 4371017,
+ "deal_name": "Abhijit Karnani",
+ "creator": "Revati Ambike",
+ "creator_id": 9062,
+ "owner": "Ganesh Vamsee",
+ "pipeline": "Sell.Do Deal Pipeline",
+ "stage": "Quote Sent",
+ "pipeline_stage_reason": null,
+ "created_at": "2026-06-11T06:15:50.428Z",
+ "updated_at": "2026-07-06T08:20:38.844Z",
+ "meeting_conducted": true,
+ "cfMeetingConductedOn": "2026-07-06T06:34:27.344Z",
+ "noOfLicenses": 20,
+ "cfCity": "Visakhapatnam",
+ "cfReDeveloperOrChannelPartner": "Developer",
+ "estimatedValue": null,
+ "actualValue": null,
+ "products": [
+  "Sell.Do Enterprise"
+ ],
+ "source": null,
+ "campaign": null,
+ "cfPreviousCrm": "Never used a CRM",
+ "cfRequiredTools": [
+  "CRM"
+ ],
+ "cfSales": null,
+ "cfFirstSalesOwner": "Ganesh Vamsee",
+ "cfOwnerPhoneNumber": true,
+ "notes_count": 17,
+ "notes_text": "9062: Mangal Realty, Visakhapatnam, Developer, team 20, no CRM, demo 12 Jun online; heavy reschedule/no-response history over weeks; client busy in pre-launch, free next week. | 72847: repeated no-response; eventually demo done - wants 5 pre-sales users, 1 lakh/project, Mcube for 5 users + WhatsApp API; need best quotation.",
+ "license_tier": "10-39",
+ "city_bucket": "Other",
+ "city_clean": "Visakhapatnam",
+ "onsite_or_online": "Online",
+ "name_valid": true,
+ "bant": {
+  "budget": "1 lakh/project discussed; quote pending",
+  "authority": "Owner-level developer",
+  "need": "20-team developer, no CRM, wants CRM+Mcube+WhatsApp API",
+  "timeline": "Busy with pre-launch, slow but engaged",
+  "bant_score": 3,
+  "bant_flag": "Strong"
+ },
+ "enterprise_flag": false,
+ "pre_sales_verdict": "GREEN",
+ "stall_blocker": "Progressing",
+ "blocker_owner": "Sales",
+ "one_line": "Vizag developer (Mangal Realty), ~20 seats, demo finally conducted, real budget/need - qualified; slow but live in Quote Sent."
+}

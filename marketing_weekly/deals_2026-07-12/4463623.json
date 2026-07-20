@@ -1,0 +1,21 @@
+{
+  "deal_id": 4463623,
+  "name": "Aniruddh Masnekar",
+  "owner": "Ananya Kumari",
+  "stage": "Quote Sent",
+  "licences": 1,
+  "tier": "<5",
+  "city": "Goa",
+  "dev_broker": "Channel partner",
+  "onsite": "Online",
+  "bant_flag": "Weak",
+  "verdict": "RED",
+  "prob": 0.004,
+  "band": "COLD",
+  "name_valid": true,
+  "dummy_phone": false,
+  "unverified_contact": false,
+  "sales_followup_since_demo": 4,
+  "next_action": "Ananya: he wants a portal-posting tool, not a CRM - give him the 6-month option once, then disqualify.",
+  "one_line": "Goa 1-seat broker Viva Realty; verified but requirement mismatch (wants portal listing tool), low intent."
+}

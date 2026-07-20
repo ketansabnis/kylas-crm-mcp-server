@@ -1,0 +1,21 @@
+{
+  "deal_id": 4475026,
+  "name": "hitesh chaudhary",
+  "owner": "Arzoo Choudhary",
+  "stage": "Closed Lost",
+  "licences": 3,
+  "tier": "<5",
+  "city": "Mathura",
+  "dev_broker": "Developer",
+  "onsite": "Online",
+  "bant_flag": "Weak",
+  "verdict": "RED",
+  "prob": 0.0074,
+  "band": "COLD",
+  "name_valid": true,
+  "dummy_phone": false,
+  "unverified_contact": true,
+  "sales_followup_since_demo": 5,
+  "next_action": "Log the competitor loss (TeleCRM, won on price); no win-back - use as pricing feedback at the 2-3 seat end.",
+  "one_line": "LOST to TeleCRM on cost. 3-seat Mathura developer, unverified phone, was also shopping HubSpot/Salesforce."
+}

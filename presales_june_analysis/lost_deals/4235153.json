@@ -1,0 +1,19 @@
+{
+  "deal_id": 4235153,
+  "name": "Lumina Pais",
+  "owner": "Panchasheel Tare",
+  "creator_id": 9062,
+  "stage": "Lost",
+  "noOfLicenses": 10,
+  "city": "Bangalore",
+  "created_at": "2026-05-07",
+  "demo_date": null,
+  "lost_date": "2026-06-01",
+  "days_created_to_demo": null,
+  "days_demo_to_lost": null,
+  "days_total": 25,
+  "sales_attempts": 5,
+  "loss_reason": "Not-interested",
+  "one_line": "No demo; personal-use interest only. Sales tried 5 times (client kept disconnecting) before she dropped the plan.",
+  "notes_count": 9
+}

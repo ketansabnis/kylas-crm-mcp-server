@@ -1,0 +1,19 @@
+{
+  "deal_id": 4245817,
+  "name": "Dev Barot",
+  "owner": "Alok Tiwari",
+  "creator_id": 9062,
+  "stage": "Unqualified",
+  "noOfLicenses": 10,
+  "city": "Ahmedabad",
+  "created_at": "2026-05-11",
+  "demo_date": "2026-05-19",
+  "lost_date": "2026-07-02",
+  "days_created_to_demo": 8,
+  "days_demo_to_lost": 44,
+  "days_total": 52,
+  "sales_attempts": 10,
+  "loss_reason": "Non-responsive",
+  "one_line": "Demo done for small 6-7 member developer; said would discuss with partner then went dark. Sales chased ~10x (calls/WA drops) with no reply.",
+  "notes_count": 29
+}

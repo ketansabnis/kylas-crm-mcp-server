@@ -1,0 +1,179 @@
+{
+  "week_start": "2026-07-06",
+  "week_end": "2026-07-12",
+  "N": 43,
+  "five": 26,
+  "green": 7,
+  "verdict": {
+    "GREEN": 7,
+    "AMBER": 20,
+    "RED": 16
+  },
+  "band": {
+    "HOT": 5,
+    "COLD": 36,
+    "WARM": 2
+  },
+  "tier": {
+    "10+": 10,
+    "5-10": 16,
+    "<5": 17
+  },
+  "dev": 18,
+  "cp": 25,
+  "onsite_all": 5,
+  "main6": 26,
+  "onsite_m6": 4,
+  "source": {
+    "Organic": {
+      "demos": 13,
+      "five": 10,
+      "green": 3,
+      "red": 5,
+      "dev": 8,
+      "hotwarm": 4
+    },
+    "Google": {
+      "demos": 10,
+      "five": 7,
+      "green": 2,
+      "red": 2,
+      "dev": 4,
+      "hotwarm": 2
+    },
+    "Facebook": {
+      "demos": 11,
+      "five": 6,
+      "green": 1,
+      "red": 5,
+      "dev": 1,
+      "hotwarm": 0
+    },
+    "WhatsApp": {
+      "demos": 7,
+      "five": 1,
+      "green": 1,
+      "red": 4,
+      "dev": 4,
+      "hotwarm": 1
+    },
+    "Unknown": {
+      "demos": 2,
+      "five": 2,
+      "green": 0,
+      "red": 0,
+      "dev": 1,
+      "hotwarm": 0
+    }
+  },
+  "creator": {
+    "Revati Ambike": 27,
+    "Ashwini Nirmal": 16
+  },
+  "alloc": {
+    "Ganesh Vamsee": 2,
+    "Ankur Singhal": 5,
+    "Disha Kadam": 5,
+    "Ananya Kumari": 4,
+    "Santhana K": 2,
+    "Suraj Chauhan": 5,
+    "Jaganmohan Vankina": 2,
+    "Anuj Pathak": 5,
+    "Panchasheel Tare": 2,
+    "Arzoo Choudhary": 4,
+    "Tejas Mehta": 1,
+    "Niket Rathod": 2,
+    "Sakshi Kadu": 2,
+    "Jawed Alam": 2
+  },
+  "routing": {
+    "dev_to_revati": 10,
+    "dev_to_ashwini": 8,
+    "cp_to_ashwini": 8,
+    "cp_to_revati": 17
+  },
+  "alerts": {
+    "zero_followup": 5,
+    "dummy_phone": 2,
+    "unverified": 12,
+    "bad_name": 9
+  },
+  "targets": {
+    "five": 50,
+    "green": 25,
+    "devshare": 0.5,
+    "onsite_m6": 0.4
+  },
+  "funnel": {
+    "created": 51,
+    "demoed": 34,
+    "leak": 17,
+    "demos_conducted": 43,
+    "older_demoed": 9
+  },
+  "campaign": {
+    "Meta Lead-Gen (Apr-24)": 4,
+    "Meta Lead-Gen (Jun-25)": 6,
+    "Google Brand Search": 3,
+    "Google Search (jan24)": 3,
+    "Other/untagged paid": 2
+  },
+  "cohort": {
+    "demos": 107,
+    "lost": 43,
+    "won": 2,
+    "open": 62
+  },
+  "reps": {
+    "Revati Ambike": {
+      "demos": 27,
+      "GREEN": 6,
+      "RED": 11,
+      "five": 16,
+      "dev": 10,
+      "onsite": 5,
+      "hotwarm": 4,
+      "badname": 5,
+      "unver": 4
+    },
+    "Ashwini Nirmal": {
+      "demos": 16,
+      "GREEN": 1,
+      "RED": 5,
+      "five": 10,
+      "dev": 8,
+      "onsite": 0,
+      "hotwarm": 3,
+      "badname": 4,
+      "unver": 8
+    }
+  },
+  "enterprise40": 1,
+  "losses": {
+    "n": 56,
+    "avg_attempts": 6.0,
+    "zero_followup": 8,
+    "reasons": {
+      "Non-responsive": 15,
+      "Competitor/Existing-CRM": 10,
+      "Budget": 5,
+      "Product-gap": 3,
+      "Timeline/Not-now": 10,
+      "Not-interested": 7,
+      "Sub-ICP/Too-small": 2,
+      "Other": 1,
+      "Wrong/Unverified-contact": 3
+    },
+    "competitors": {
+      "Salesforce": 1,
+      "Tabbly / Exotel": 1,
+      "LeadRat": 2,
+      "Workveu": 1,
+      "4QT": 1,
+      "Kit19": 1,
+      "Buildesk": 3,
+      "Paramantra": 1,
+      "Tranquil": 1
+    }
+  }
+}

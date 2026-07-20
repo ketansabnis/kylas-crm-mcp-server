@@ -1,0 +1,19 @@
+{
+  "deal_id": 4030574,
+  "name": "Mohit",
+  "owner": "Panchasheel Tare",
+  "creator_id": 9062,
+  "stage": "Lost",
+  "noOfLicenses": 10,
+  "city": "Delhi",
+  "created_at": "2026-04-02",
+  "demo_date": "2026-04-06",
+  "lost_date": "2026-05-29",
+  "days_created_to_demo": 4,
+  "days_demo_to_lost": 53,
+  "days_total": 57,
+  "sales_attempts": 3,
+  "loss_reason": "Non-responsive",
+  "one_line": "Broker wanting AI calling + CRM; owner shared quote then chased with RNR and client disconnecting calls before marking lost.",
+  "notes_count": 7
+}

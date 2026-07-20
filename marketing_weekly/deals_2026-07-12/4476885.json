@@ -1,0 +1,21 @@
+{
+  "deal_id": 4476885,
+  "name": "Krunal Khatri",
+  "owner": "Niket Rathod",
+  "stage": "Closed Unqualified",
+  "licences": 6,
+  "tier": "5-10",
+  "city": "Ahmedabad",
+  "dev_broker": "Channel partner",
+  "onsite": "Online",
+  "bant_flag": "Weak",
+  "verdict": "RED",
+  "prob": 0.0074,
+  "band": "COLD",
+  "name_valid": true,
+  "dummy_phone": true,
+  "unverified_contact": false,
+  "sales_followup_since_demo": 6,
+  "next_action": "Log competitor loss (Homeleads) and fix the placeholder +919999999999 owner phone at source in pre-sales.",
+  "one_line": "LOST to Homeleads. 6-seat Ahmedabad broker, dummy owner phone, unverifiable firm - six chases, no traction."
+}

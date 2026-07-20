@@ -1,0 +1,21 @@
+{
+  "deal_id": 4481390,
+  "name": "Gaurav",
+  "owner": "Disha Kadam",
+  "stage": "Quote Sent",
+  "licences": 5,
+  "tier": "5-10",
+  "city": "Pune",
+  "dev_broker": "Channel partner",
+  "onsite": "Online",
+  "bant_flag": "Partial",
+  "verdict": "AMBER",
+  "prob": 0.0134,
+  "band": "COLD",
+  "name_valid": false,
+  "dummy_phone": false,
+  "unverified_contact": false,
+  "sales_followup_since_demo": 3,
+  "next_action": "Call Wednesday as agreed with the 5-user quote; capture surname + company email - the record is a first name only.",
+  "one_line": "Sales Gear Realty (Pune mandate CP), 5 seats, quote sent. New firm, 2 projects, on Google Sheets. First-name record."
+}

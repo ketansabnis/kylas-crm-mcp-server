@@ -1,0 +1,19 @@
+{
+  "deal_id": 4031769,
+  "name": "Pooja Chauhan",
+  "owner": "Ankur Singhal",
+  "creator_id": 54132,
+  "stage": "Unqualified",
+  "noOfLicenses": 5,
+  "city": "jaipur",
+  "created_at": "2026-04-02",
+  "demo_date": null,
+  "lost_date": "2026-04-29",
+  "days_created_to_demo": null,
+  "days_demo_to_lost": null,
+  "days_total": 27,
+  "sales_attempts": 0,
+  "loss_reason": "Not-interested",
+  "one_line": "Developer never joined scheduled demo; owner chased with 2 calls, client not-interested anymore, unqualified.",
+  "notes_count": 8
+}

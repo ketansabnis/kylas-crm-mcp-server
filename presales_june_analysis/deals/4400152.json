@@ -1,0 +1,51 @@
+{
+ "deal_id": 4400152,
+ "deal_name": "Rahul Gupta",
+ "creator": "Revati Ambike",
+ "creator_id": 9062,
+ "owner": "Anuj Pathak",
+ "pipeline": "Sell.Do Deal Pipeline",
+ "stage": "Closed Unqualified",
+ "pipeline_stage_reason": null,
+ "created_at": "2026-06-18T11:12:38.747Z",
+ "updated_at": "2026-06-22T11:54:01.896Z",
+ "meeting_conducted": true,
+ "cfMeetingConductedOn": "2026-06-19T07:15:47.786Z",
+ "noOfLicenses": 5,
+ "cfCity": "Lucknow",
+ "cfReDeveloperOrChannelPartner": "Channel partner",
+ "estimatedValue": null,
+ "actualValue": null,
+ "products": [
+  "Sell.Do Enterprise"
+ ],
+ "source": null,
+ "campaign": null,
+ "cfPreviousCrm": "Never used a CRM",
+ "cfRequiredTools": [
+  "CRM"
+ ],
+ "cfSales": null,
+ "cfFirstSalesOwner": "Anuj Pathak",
+ "cfOwnerPhoneNumber": "+917391046052",
+ "notes_count": 13,
+ "notes_text": "By 9062: repeated not responding. Type-CRM;City-Lucknow;Company-9Buy9 Consultants;Broker (luxury+affordable);Team Size-5;Current CRM-No(excel);Meeting 18 Jun 6pm. AUDIT(4248): FORWARD WITH FLAGS - on-ICP Lucknow broker with strong brand validity & genuine need (no CRM today), but named contact Rahul Gupta not a verifiable DM; confirm role/escalate to partner. By 50500: Demo Conducted; Quote sent; client said did not check quotation, give time; later said your CRM interface is not good, looks very old.",
+ "license_tier": "5-9",
+ "city_bucket": "Other",
+ "city_clean": "Lucknow",
+ "onsite_or_online": "Online",
+ "name_valid": true,
+ "bant": {
+  "budget": "Quote sent; not evaluated by client",
+  "authority": "Contact not verified DM - true owners are partners",
+  "need": "Real; no CRM today, established broker",
+  "timeline": "Stalled; client asked for time then objected on product",
+  "bant_score": 2,
+  "bant_flag": "Partial"
+ },
+ "enterprise_flag": false,
+ "pre_sales_verdict": "GREEN",
+ "stall_blocker": "Competitor/Existing-CRM",
+ "blocker_owner": "Product/Pricing",
+ "one_line": "On-ICP Lucknow broker (9Buy9), strong brand and real need - solid pre-sales; lost on a product/UI objection (interface looks old), not a qualification gap."
+}

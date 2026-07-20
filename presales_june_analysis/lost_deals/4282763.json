@@ -1,0 +1,19 @@
+{
+  "deal_id": 4282763,
+  "name": "Tushar K",
+  "owner": "Arzoo Choudhary",
+  "creator_id": 54132,
+  "stage": "Lost",
+  "noOfLicenses": 12,
+  "city": "Gurugram",
+  "created_at": "2026-05-19T10:28:25.475Z",
+  "demo_date": "2026-05-21T13:47:36.093Z",
+  "lost_date": "2026-06-18T12:34:31.379Z",
+  "days_created_to_demo": 2,
+  "days_demo_to_lost": 28,
+  "days_total": 30,
+  "sales_attempts": 10,
+  "loss_reason": "Non-responsive",
+  "one_line": "Quote sent then client went dark; sales made ~10 calls/texts from multiple numbers over a month with no response before marking lost.",
+  "notes_count": 19
+}

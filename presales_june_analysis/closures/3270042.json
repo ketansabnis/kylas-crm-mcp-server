@@ -1,0 +1,17 @@
+{
+  "deal_id": 3270042,
+  "deal_name": "Kavita dam",
+  "owner": "Arzoo Choudhary",
+  "stage": "Won/ Booked",
+  "created_at": "2025-09-17T13:04:36.371Z",
+  "updated_at": "2026-06-30T05:37:07.267Z",
+  "products_total": 277000.0,
+  "cfBilledAmount": 277000,
+  "cfActualPaymentReceived": 277000,
+  "noOfLicenses": 25,
+  "cfCity": "Ranchi",
+  "cfReDeveloperOrChannelPartner": "Developer",
+  "cfMeetingConductedOn": "2026-05-15T11:22:43.156Z",
+  "cfPreviousCrm": "Never used a CRM",
+  "cfOwnerPhoneNumber": "+919870893570"
+}

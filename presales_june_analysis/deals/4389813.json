@@ -1,0 +1,51 @@
+{
+ "deal_id": 4389813,
+ "deal_name": "Md Danish",
+ "creator": "Revati Ambike",
+ "creator_id": 9062,
+ "owner": "Arzoo Choudhary",
+ "pipeline": "Sell.Do Deal Pipeline",
+ "stage": "Closed Lost",
+ "pipeline_stage_reason": null,
+ "created_at": "2026-06-16T10:14:09.496Z",
+ "updated_at": "2026-06-17T10:21:36.381Z",
+ "meeting_conducted": true,
+ "cfMeetingConductedOn": "2026-06-16T12:53:37.414Z",
+ "noOfLicenses": 5,
+ "cfCity": "Noida",
+ "cfReDeveloperOrChannelPartner": "Developer",
+ "estimatedValue": null,
+ "actualValue": null,
+ "products": [
+  "Sell.Do Enterprise"
+ ],
+ "source": null,
+ "campaign": null,
+ "cfPreviousCrm": "Never used a CRM",
+ "cfRequiredTools": [
+  "CRM"
+ ],
+ "cfSales": null,
+ "cfFirstSalesOwner": "Arzoo Choudhary",
+ "cfOwnerPhoneNumber": "+919870893570",
+ "notes_count": 8,
+ "notes_text": "By 73470: showed how it works, price sensitive, will tell if needed. By 9062: Type-CRM;City-Noida;Company-RS Buildtech;Developer(residential);Team Size-5;Current CRM-No(excel);Challenges-lead management/inventory/post-sales;Meeting 16 Jun. By 73470: number switched off; had a word via WA - not interested at the moment, started RE only 3 months ago, will take a CRM after he grows, price sensitive no cash inflow; also NOT a team of 5, max 3-4; demo happened but with very little interest.",
+ "license_tier": "1-4",
+ "city_bucket": "Main6",
+ "city_clean": "Noida",
+ "onsite_or_online": "Online",
+ "name_valid": true,
+ "bant": {
+  "budget": "None; no cash inflow, explicitly price-sensitive",
+  "authority": "Owner/founder - DM, but brand-new business",
+  "need": "Real on paper (lead/inventory/post-sales) but not urgent; too early",
+  "timeline": "None; will consider after the business grows",
+  "bant_score": 1,
+  "bant_flag": "Weak"
+ },
+ "enterprise_flag": false,
+ "pre_sales_verdict": "RED",
+ "stall_blocker": "Quality/ICP",
+ "blocker_owner": "Pre-sales",
+ "one_line": "Brand-new 3-month-old Noida micro-developer (3-4, not 5), no cash and low interest - overstated size, demo-for-the-number on an unqualified early-stage prospect."
+}

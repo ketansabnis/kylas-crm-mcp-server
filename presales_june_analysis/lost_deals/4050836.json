@@ -1,0 +1,19 @@
+{
+  "deal_id": 4050836,
+  "name": "Amit Chauhan",
+  "owner": "Arzoo Choudhary",
+  "creator_id": 9062,
+  "stage": "Lost",
+  "noOfLicenses": 5,
+  "city": "Noida",
+  "created_at": "2026-04-07",
+  "demo_date": "2026-04-08",
+  "lost_date": "2026-05-15",
+  "days_created_to_demo": 1,
+  "days_demo_to_lost": 37,
+  "days_total": 38,
+  "sales_attempts": 8,
+  "loss_reason": "Competitor/Existing-CRM",
+  "one_line": "Developer chased ~8 times post-demo but closed with LeadSquared (cheaper than Leadrat and us).",
+  "notes_count": 14
+}

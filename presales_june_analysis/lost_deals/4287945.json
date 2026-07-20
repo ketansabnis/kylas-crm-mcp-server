@@ -1,0 +1,19 @@
+{
+  "deal_id": 4287945,
+  "name": "Praveen Tripathi",
+  "owner": "Anuj Pathak",
+  "creator_id": 9062,
+  "stage": "Unqualified",
+  "noOfLicenses": 10,
+  "city": "Lucknow",
+  "created_at": "2026-05-20T11:25:23.531Z",
+  "demo_date": null,
+  "lost_date": "2026-06-19T10:50:46.239Z",
+  "days_created_to_demo": null,
+  "days_demo_to_lost": null,
+  "days_total": 30,
+  "sales_attempts": 4,
+  "loss_reason": "Non-responsive",
+  "one_line": "No demo; client never connected (did-not-pick, WA sent, phone switched off) despite ~4 sales attempts over a month before being marked unqualified.",
+  "notes_count": 20
+}

@@ -1,0 +1,21 @@
+{
+  "deal_id": 4477974,
+  "name": "Bhargav",
+  "owner": "Ganesh Vamsee",
+  "stage": "Quote Sent",
+  "licences": 3,
+  "tier": "<5",
+  "city": "Hyderabad",
+  "dev_broker": "Channel partner",
+  "onsite": "Online",
+  "bant_flag": "Strong",
+  "verdict": "AMBER",
+  "prob": 0.3318,
+  "band": "HOT",
+  "name_valid": false,
+  "dummy_phone": false,
+  "unverified_contact": true,
+  "sales_followup_since_demo": 6,
+  "next_action": "Chase the Rs 22,656 payment link he promised for Monday, and capture his full name / verify identity before invoicing.",
+  "one_line": "HOT: Hyderabad CP, payment link out (Rs 22,656), payment promised Monday. Only 3 seats; phone role-mismatched."
+}

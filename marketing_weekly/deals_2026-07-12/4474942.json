@@ -1,0 +1,21 @@
+{
+  "deal_id": 4474942,
+  "name": "ashrab mansoori",
+  "owner": "Anuj Pathak",
+  "stage": "Demo Conducted",
+  "licences": 3,
+  "tier": "<5",
+  "city": "Baroda",
+  "dev_broker": "Developer",
+  "onsite": "Online",
+  "bant_flag": "Partial",
+  "verdict": "AMBER",
+  "prob": 0.0148,
+  "band": "COLD",
+  "name_valid": true,
+  "dummy_phone": false,
+  "unverified_contact": false,
+  "sales_followup_since_demo": 3,
+  "next_action": "Call Monday as he asked; quote is out - push for a 3-seat close this week or park it.",
+  "one_line": "Baroda owner-led 3-seat developer (Sai Estate); quote sent, owner verified, but small and slow to respond."
+}

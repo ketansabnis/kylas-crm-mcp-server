@@ -1,0 +1,19 @@
+{
+  "deal_id": 4234698,
+  "name": "neha",
+  "owner": "Arzoo Choudhary",
+  "creator_id": 54132,
+  "stage": "Lost",
+  "noOfLicenses": 10,
+  "city": "new delhi",
+  "created_at": "2026-05-07",
+  "demo_date": "2026-06-01",
+  "lost_date": "2026-06-08",
+  "days_created_to_demo": 25,
+  "days_demo_to_lost": 7,
+  "days_total": 32,
+  "sales_attempts": 5,
+  "loss_reason": "Competitor/Existing-CRM",
+  "one_line": "Demo done, discounted quote given; sales chased daily for a week but partner picked cheaper Homelead CRM.",
+  "notes_count": 24
+}

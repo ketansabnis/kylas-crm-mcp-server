@@ -1,0 +1,19 @@
+{
+  "deal_id": 4340165,
+  "name": "Somya Parashar",
+  "owner": "Jaganmohan Vankina",
+  "creator_id": 54132,
+  "stage": "Unqualified",
+  "noOfLicenses": 17,
+  "city": "Hyderabad",
+  "created_at": "2026-06-02",
+  "demo_date": null,
+  "lost_date": "2026-07-02",
+  "days_created_to_demo": null,
+  "days_demo_to_lost": null,
+  "days_total": 30,
+  "sales_attempts": 6,
+  "loss_reason": "Non-responsive",
+  "one_line": "Aliens Group (on Salesforce); demo never held (manager on leave, no-show); owner chased ~6x, client not reachable/responding.",
+  "notes_count": 11
+}

@@ -1,0 +1,19 @@
+{
+  "deal_id": 4090631,
+  "name": "Arif Sheikh",
+  "owner": "Disha Kadam",
+  "creator_id": 54132,
+  "stage": "Lost",
+  "noOfLicenses": 6,
+  "city": "Lucknow",
+  "created_at": "2026-04-13",
+  "demo_date": "2026-04-14",
+  "lost_date": "2026-04-29",
+  "days_created_to_demo": 1,
+  "days_demo_to_lost": 15,
+  "days_total": 16,
+  "sales_attempts": 11,
+  "loss_reason": "Non-responsive",
+  "one_line": "Individual CP got a 40k payment link, confirmed payment then went dark; owner chased ~11 times (CNR) before losing.",
+  "notes_count": 16
+}

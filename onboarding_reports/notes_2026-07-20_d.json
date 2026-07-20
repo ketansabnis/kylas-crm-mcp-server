@@ -1,0 +1,80 @@
+{
+  "4402389": [
+    1784475706933,
+    "Customer not well last week and was on sick leave. &nbsp; Action for next week: &nbsp; Check their availability if they are available, schedule call on AI bot feedback, follow up on CP form",
+    "Customer (Sahil) on sick leave last week; next week check availability, schedule AI-bot feedback call, follow up on CP form.",
+    []
+  ],
+  "4402374": [
+    1784475466234,
+    "Schedule Admin Training based on customer's availability and handover.",
+    "Admin Training to be scheduled per customer availability, then handover.",
+    []
+  ],
+  "4389699": [
+    1784462384622,
+    "Last Week's Tasks Raise the Jira for the Calling Logs concern – Completed Check the issue with Interakt and raise a Jira – Completed Escalate to Ketan Sir if there is no further movement. This Week's Tasks Sales Training Admin Training (Tentative) Completed Onboarding Tasks User Login Creation Account Setup Proj",
+    "Weekly update: Jiras raised for calling-logs and Interakt WhatsApp issues (done); this week sales and tentative admin training; WhatsApp Interakt integration still pending on dev team.",
+    []
+  ],
+  "4389674": [
+    1784463119899,
+    "This Week's Tasks Facebook CAPI Integration – Completed Workflow Setup – Will be completed once the WhatsApp integration is completed. Follow-up for the IVR – Initiated Prepare the Handover Document&nbsp; Check Account Usage – Completed Completed Onboarding Tasks Account Creation User Login Creation Project",
+    "Weekly: Facebook CAPI done, account-usage check done, IVR follow-up initiated, handover doc being prepared; Gupshup WhatsApp and workflow still pending API changes.",
+    []
+  ],
+  "4375201": [
+    1784383384245,
+    "Update on This week target: Mcube Testing - Issue raised to mcube team, Calls are getting initiated but recordings not getting captured. Once resolved client will proceed with integrations as api details are already shared from our end",
+    "MCube testing blocked - calls initiate but recordings not captured; issue raised to MCube team; client will proceed with integrations once resolved.",
+    []
+  ],
+  "4370391": [
+    1784260969814,
+    "Tasks for this week: Custom Fields Setup Today - Done Demo for the Inventory layout by tomorrow - Not Done. As client and their team is not available this week. Account will show movement post Inventory Demo - As per client they will be available from Monday.",
+    "Custom fields set up; inventory-layout demo not done (client team unavailable); movement expected after inventory demo, client available Monday.",
+    []
+  ],
+  "4370308": [
+    1784263361132,
+    "Awaiting availability for customer to schedule Admin Training. To be scheduled next week and then handover.",
+    "Awaiting customer availability for Admin Training; to schedule next week then handover.",
+    []
+  ],
+  "4368709": [
+    1784519866673,
+    "The account was on hold from today the onboarding will start.",
+    "Account was on hold; onboarding to start from today.",
+    []
+  ],
+  "4345401": [
+    1784527421524,
+    "Last week tasks: Follow-up for the pending pointers - Done. But still they haven't updated on fresh mobile number for WhatsApp. Put On Hold If no update - Have dropped an email for Account on Hold. This week tasks: Client has assured to connect for Sales Training on Monday. Native WhatsApp Integratio",
+    "Pending pointers followed up; customer still hasn't shared fresh WhatsApp number - account-on-hold email sent; client assured Sales Training Monday.",
+    []
+  ],
+  "4337048": [
+    1783713865506,
+    "Inventory file upload is in progress, &nbsp; Customer to provide update on below items by 11th EOD. &nbsp; Pending Activities Bulk Lead Import – Awaiting the lead import file from customer's end expected to be received &nbsp;by tomorrow EOD. Inventory Upload – Upload in progress. Knowlarity Integration –Not",
+    "Inventory upload in progress; customer to update pending items (bulk lead import, website, WhatsApp number, property portals) by 11th EOD.",
+    []
+  ],
+  "4336926": [
+    1784261265338,
+    "Tasks for this week: Sales Training Done, Account Live. Put in On Hold if there is no update on 03 follow-up Emails and calls - Prabhu has visited here and working closely with the client to move things ahead. Facebook Integration - Done",
+    "Sales Training done, account live; Facebook integration done; Prabhu on-site working with client; hold threatened if no update after 3 follow-ups.",
+    []
+  ],
+  "4299438": [
+    1784527262585,
+    "Last week tasks: Mail Gun Setup Scheduled to be completed by this week - Promotional is done. But, transactional is not working. Sales Training - Not Done. As informed client take this up once Email thing is sorted. Tasks for this week: Mail Gun Setup - For transactional emails. Sales Training - As informe",
+    "Mailgun promotional emails working, transactional broken; Sales Training deferred until email issue fixed.",
+    []
+  ],
+  "4255693": [
+    1784264456942,
+    "CALICUT - &nbsp; Last week planned tasks are completed Native WhatsApp Templates Addition - Done Hierarchy Setup - &nbsp;Done Inventory Setup, Booking Form (Raahul will verify the doc today), Cost Seets, Payment Scheduled To be completed by this week - Done Time-sheet to be updated with the timelines - Done",
+    "Last week's tasks done (WhatsApp templates, hierarchy, inventory, booking form, cost sheets, payment schedule, timesheet); Manager and Admin Training followed up.",
+    []
+  ]
+}

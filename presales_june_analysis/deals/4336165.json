@@ -1,0 +1,52 @@
+{
+ "deal_id": 4336165,
+ "deal_name": "Guruprasad Malbari",
+ "creator": "Revati Ambike",
+ "creator_id": 9062,
+ "owner": "Niket Rathod",
+ "owner_id": 79391,
+ "pipeline": "Sell.Do Deal Pipeline",
+ "stage": "Closed Unqualified",
+ "pipeline_stage_reason": null,
+ "created_at": "2026-06-01T09:40:14.757Z",
+ "updated_at": "2026-06-08T05:54:38.212Z",
+ "meeting_conducted": true,
+ "cfMeetingConductedOn": "2026-06-02T15:19:13.684Z",
+ "noOfLicenses": 2,
+ "cfCity": "Thane",
+ "cfReDeveloperOrChannelPartner": "Channel partner",
+ "estimatedValue": null,
+ "actualValue": null,
+ "products": [
+  "Sell.Do Enterprise"
+ ],
+ "source": null,
+ "campaign": null,
+ "cfPreviousCrm": "Never used a CRM",
+ "cfRequiredTools": [
+  "CRM"
+ ],
+ "cfSales": null,
+ "cfFirstSalesOwner": "Niket Rathod",
+ "cfOwnerPhoneNumber": "+919999999999",
+ "notes_count": 6,
+ "notes_text": "[9062 2026-06-01] Type of Deal - CRM / City-Thane Company Name -Dream House Developer/Channel Partner firm -Broker Total Team Size-2 Current CRM -No (Using google sheet) Tentative meeting 2nd June 11:30 am (In person meeting) | [9062 2026-06-01] Client wants in person meeting, office address Waghbil Rd Thane | [9062 2026-06-01] spoke with client, busy, call back afternoon | [79391 2026-06-02] Demo conducted | [79391 2026-06-02] onsite demo conducted with both partners, they have time to think and inform | [79391 2026-06-08] not interested, they are only 2 team and both are partner",
+ "license_tier": "1-4",
+ "city_bucket": "Main6",
+ "city_clean": "Thane",
+ "onsite_or_online": "Onsite",
+ "name_valid": true,
+ "bant": {
+  "budget": "no signal - price not discussed",
+  "authority": "both partners attended - DM present",
+  "need": "very small 2-person broker (both partners), no current CRM - minimal need",
+  "timeline": "none - not interested right after demo",
+  "bant_score": 1,
+  "bant_flag": "Weak"
+ },
+ "enterprise_flag": false,
+ "pre_sales_verdict": "RED",
+ "stall_blocker": "Quality/ICP",
+ "blocker_owner": "Pre-sales",
+ "one_line": "2-person Thane broker where both people are partners - too small for a CRM, rep flagged 'not interested', a demo run for the number on a sub-ICP account."
+}

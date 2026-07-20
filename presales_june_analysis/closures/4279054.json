@@ -1,0 +1,17 @@
+{
+  "deal_id": 4279054,
+  "deal_name": "Sehul Panchal",
+  "owner": "Alok Tiwari",
+  "stage": "Won/ Booked",
+  "created_at": "2026-05-18T13:33:07.063Z",
+  "updated_at": "2026-07-06T09:29:09.869Z",
+  "products_total": 40000.0,
+  "cfBilledAmount": 40000,
+  "cfActualPaymentReceived": 40000,
+  "noOfLicenses": 10,
+  "cfCity": "Kalyan",
+  "cfReDeveloperOrChannelPartner": "Channel partner",
+  "cfMeetingConductedOn": "2026-05-20T10:49:18.546Z",
+  "cfPreviousCrm": "Never used a CRM",
+  "cfOwnerPhoneNumber": "+917391046055"
+}

@@ -1,0 +1,51 @@
+{
+ "deal_id": 4370466,
+ "deal_name": "Nicklesh",
+ "creator": "Revati Ambike",
+ "creator_id": 9062,
+ "owner": "Ganesh Vamsee",
+ "pipeline": "Sell.Do Deal Pipeline",
+ "stage": "Demo Conducted",
+ "pipeline_stage_reason": null,
+ "created_at": "2026-06-11T04:37:05.356Z",
+ "updated_at": "2026-06-11T07:54:05.820Z",
+ "meeting_conducted": true,
+ "cfMeetingConductedOn": "2026-06-11T07:54:05.523Z",
+ "noOfLicenses": 3,
+ "cfCity": "Bangalore",
+ "cfReDeveloperOrChannelPartner": "Channel partner",
+ "estimatedValue": null,
+ "actualValue": null,
+ "products": [
+  "Sell.Do Enterprise"
+ ],
+ "source": null,
+ "campaign": null,
+ "cfPreviousCrm": "Never used a CRM",
+ "cfRequiredTools": [
+  "AI Calling"
+ ],
+ "cfSales": null,
+ "cfFirstSalesOwner": "Ganesh Vamsee",
+ "cfOwnerPhoneNumber": true,
+ "notes_count": 6,
+ "notes_text": "9062: Proproz, Bangalore, Broker, team 3, AI Calling only (not CRM), demo 11 Jun online, price ~Rs 8 per... | 72847: doesn't want CRM, only AI-calling; made to talk to live bot, liked quality but wants pricing discussion; partner out of town; later team out of budget, investing in digital marketing, connect after a month.",
+ "license_tier": "1-4",
+ "city_bucket": "Main6",
+ "city_clean": "Bangalore",
+ "onsite_or_online": "Online",
+ "name_valid": false,
+ "bant": {
+  "budget": "Team out of budget for now",
+  "authority": "Deciding with partner",
+  "need": "Only wants AI calling, not the CRM - narrow fit",
+  "timeline": "Deferred by a month, prioritising digital marketing",
+  "bant_score": 1,
+  "bant_flag": "Weak"
+ },
+ "enterprise_flag": false,
+ "pre_sales_verdict": "AMBER",
+ "stall_blocker": "Budget",
+ "blocker_owner": "Customer",
+ "one_line": "3-seat Bangalore broker wanting AI-calling only (not the CRM) and out of budget - narrow-fit demo, deferred a month."
+}

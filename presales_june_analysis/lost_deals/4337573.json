@@ -1,0 +1,19 @@
+{
+  "deal_id": 4337573,
+  "name": "Neeraj Yadav",
+  "owner": "Alok Tiwari",
+  "creator_id": 54132,
+  "stage": "Unqualified",
+  "noOfLicenses": 5,
+  "city": "Bhiwadi",
+  "created_at": "2026-06-01",
+  "demo_date": null,
+  "lost_date": "2026-06-22",
+  "days_created_to_demo": null,
+  "days_demo_to_lost": null,
+  "days_total": 21,
+  "sales_attempts": 5,
+  "loss_reason": "Non-responsive",
+  "one_line": "Demo never happened; client persistently not answering/disconnecting; owner logged ~5 no-responses; finally not interested.",
+  "notes_count": 17
+}

@@ -1,0 +1,19 @@
+{
+  "deal_id": 4208659,
+  "name": "Ankit Seth",
+  "owner": "Alok Tiwari",
+  "creator_id": 9062,
+  "stage": "Unqualified",
+  "noOfLicenses": 10,
+  "city": "Indore",
+  "created_at": "2026-04-30",
+  "demo_date": "2026-05-01",
+  "lost_date": "2026-05-27",
+  "days_created_to_demo": 1,
+  "days_demo_to_lost": 26,
+  "days_total": 27,
+  "sales_attempts": 8,
+  "loss_reason": "Competitor/Existing-CRM",
+  "one_line": "Boss opted for a friend-referred CRM (Rono); sales chased with revised pricing and comparisons ~8 times post-demo but lost to competitor.",
+  "notes_count": 12
+}

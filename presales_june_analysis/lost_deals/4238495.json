@@ -1,0 +1,19 @@
+{
+  "deal_id": 4238495,
+  "name": "Dinesh",
+  "owner": "Suraj Chauhan",
+  "creator_id": 9062,
+  "stage": "Unqualified",
+  "noOfLicenses": 5,
+  "city": "Delhi",
+  "created_at": "2026-05-08",
+  "demo_date": null,
+  "lost_date": "2026-05-27",
+  "days_created_to_demo": null,
+  "days_demo_to_lost": null,
+  "days_total": 19,
+  "sales_attempts": 4,
+  "loss_reason": "Non-responsive",
+  "one_line": "Small 5-user broker; spoke once, asked for time to think, then stopped responding. Sales chased ~4 times before marking unqualified.",
+  "notes_count": 12
+}

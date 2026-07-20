@@ -1,0 +1,19 @@
+{
+  "deal_id": 4323936,
+  "name": "Abhi roy",
+  "owner": "Panchasheel Tare",
+  "creator_id": 54132,
+  "stage": "Unqualified",
+  "noOfLicenses": 7,
+  "city": "Kolkata",
+  "created_at": "2026-05-28",
+  "demo_date": null,
+  "lost_date": "2026-06-12",
+  "days_created_to_demo": null,
+  "days_demo_to_lost": null,
+  "days_total": 15,
+  "sales_attempts": 3,
+  "loss_reason": "Competitor/Existing-CRM",
+  "one_line": "Price-shopper comparing Zoho/B2Bricks; demo never taken. Owner chased ~3x; client finalized another CRM.",
+  "notes_count": 11
+}

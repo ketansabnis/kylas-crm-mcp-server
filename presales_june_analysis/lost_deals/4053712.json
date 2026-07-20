@@ -1,0 +1,19 @@
+{
+  "deal_id": 4053712,
+  "name": "Jitendra Sharma",
+  "owner": "Arzoo Choudhary",
+  "creator_id": 9062,
+  "stage": "Lost",
+  "noOfLicenses": 12,
+  "city": "Delhi",
+  "created_at": "2026-04-07",
+  "demo_date": "2026-04-07",
+  "lost_date": "2026-04-08",
+  "days_created_to_demo": 0,
+  "days_demo_to_lost": 1,
+  "days_total": 1,
+  "sales_attempts": 1,
+  "loss_reason": "Competitor/Existing-CRM",
+  "one_line": "Poor-fit lead on Zoho with no issues, unwilling to switch and asking irrelevant questions; lost the day after demo.",
+  "notes_count": 9
+}

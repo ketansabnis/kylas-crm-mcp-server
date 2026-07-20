@@ -1,0 +1,19 @@
+{
+  "deal_id": 4209567,
+  "name": "Amaan Vanu",
+  "owner": "Ankur Singhal",
+  "creator_id": 9062,
+  "stage": "Unqualified",
+  "noOfLicenses": 7,
+  "city": "Jaipur",
+  "created_at": "2026-04-30",
+  "demo_date": null,
+  "lost_date": "2026-05-04",
+  "days_created_to_demo": null,
+  "days_demo_to_lost": null,
+  "days_total": 4,
+  "sales_attempts": 1,
+  "loss_reason": "Competitor/Existing-CRM",
+  "one_line": "Client had already bought Tranquil CRM; only one sales follow-up before it was lost within days of creation.",
+  "notes_count": 4
+}

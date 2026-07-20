@@ -1,0 +1,17 @@
+{
+  "deal_id": 4360767,
+  "deal_name": "Hari Haran",
+  "owner": "Santhana K",
+  "stage": "Won/ Booked",
+  "created_at": "2026-06-08T13:21:57.427Z",
+  "updated_at": "2026-07-01T06:07:52.029Z",
+  "products_total": null,
+  "cfBilledAmount": 106200,
+  "cfActualPaymentReceived": null,
+  "noOfLicenses": 10,
+  "cfCity": "Chennai",
+  "cfReDeveloperOrChannelPartner": "Developer",
+  "cfMeetingConductedOn": "2026-06-11T05:47:27.137Z",
+  "cfPreviousCrm": "Never used a CRM",
+  "cfOwnerPhoneNumber": "+919384979556"
+}

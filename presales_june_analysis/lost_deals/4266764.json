@@ -1,0 +1,19 @@
+{
+  "deal_id": 4266764,
+  "name": "Mehebub Alam",
+  "owner": "Panchasheel Tare",
+  "creator_id": 9062,
+  "stage": "Lost",
+  "noOfLicenses": 8,
+  "city": "Kolkata",
+  "created_at": "2026-05-15T07:05:47.828Z",
+  "demo_date": null,
+  "lost_date": "2026-06-01T05:03:38.178Z",
+  "days_created_to_demo": null,
+  "days_demo_to_lost": null,
+  "days_total": 16,
+  "sales_attempts": 6,
+  "loss_reason": "Non-responsive",
+  "one_line": "No demo ever held; client never responded. Sales owner made ~6 ring/no-response attempts before dropping.",
+  "notes_count": 12
+}

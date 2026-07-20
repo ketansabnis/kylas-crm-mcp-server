@@ -1,0 +1,17 @@
+{
+  "deal_id": 4297426,
+  "deal_name": "Girish",
+  "owner": "Panchasheel Tare",
+  "stage": "Won/ Booked",
+  "created_at": "2026-05-22T08:33:37.955Z",
+  "updated_at": "2026-07-06T05:07:56.255Z",
+  "products_total": null,
+  "cfBilledAmount": 87400,
+  "cfActualPaymentReceived": 87400,
+  "noOfLicenses": 5,
+  "cfCity": "Bangalore",
+  "cfReDeveloperOrChannelPartner": "Developer",
+  "cfMeetingConductedOn": "2026-05-25T15:29:25.290Z",
+  "cfPreviousCrm": "Never used a CRM",
+  "cfOwnerPhoneNumber": "+919513300040"
+}

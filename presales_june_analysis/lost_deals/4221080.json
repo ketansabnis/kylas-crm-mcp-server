@@ -1,0 +1,19 @@
+{
+  "deal_id": 4221080,
+  "name": "Ravish Khare",
+  "owner": "Arzoo Choudhary",
+  "creator_id": 54132,
+  "stage": "Lost",
+  "noOfLicenses": 10,
+  "city": "Noida",
+  "created_at": "2026-05-04",
+  "demo_date": "2026-05-04",
+  "lost_date": "2026-05-22",
+  "days_created_to_demo": 0,
+  "days_demo_to_lost": 18,
+  "days_total": 18,
+  "sales_attempts": 8,
+  "loss_reason": "Competitor/Existing-CRM",
+  "one_line": "After demo, quotes and discounts, client chose a cheaper local vendor (10k, one-time); sales chased ~8 times before losing on price/competitor.",
+  "notes_count": 12
+}

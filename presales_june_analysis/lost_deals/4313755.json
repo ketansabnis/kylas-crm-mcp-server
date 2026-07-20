@@ -1,0 +1,19 @@
+{
+  "deal_id": 4313755,
+  "name": "Vivekanand Jaiswal",
+  "owner": "Disha Kadam",
+  "creator_id": 54132,
+  "stage": "Lost",
+  "noOfLicenses": 10,
+  "city": "Ahmedabad",
+  "created_at": "2026-05-26",
+  "demo_date": "2026-05-27",
+  "lost_date": "2026-06-25",
+  "days_created_to_demo": 1,
+  "days_demo_to_lost": 29,
+  "days_total": 30,
+  "sales_attempts": 9,
+  "loss_reason": "Non-responsive",
+  "one_line": "Demoed; sales chased ~9x over a month (out-of-station, wedding, repeated CNR) with no reconnect. Non-responsive.",
+  "notes_count": 13
+}

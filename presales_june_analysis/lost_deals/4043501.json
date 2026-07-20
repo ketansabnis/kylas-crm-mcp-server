@@ -1,0 +1,19 @@
+{
+  "deal_id": 4043501,
+  "name": "Nikhil",
+  "owner": "Disha Kadam",
+  "creator_id": 54132,
+  "stage": "Lost",
+  "noOfLicenses": 5,
+  "city": "Raipur",
+  "created_at": "2026-04-06",
+  "demo_date": "2026-04-06",
+  "lost_date": "2026-06-03",
+  "days_created_to_demo": 0,
+  "days_demo_to_lost": 58,
+  "days_total": 58,
+  "sales_attempts": 16,
+  "loss_reason": "Budget",
+  "one_line": "CP wanted budget-friendly CRM, unwilling to spend then went dark; owner chased ~16 times (CNR/switched off) before losing.",
+  "notes_count": 19
+}

@@ -1,0 +1,19 @@
+{
+  "deal_id": 4090615,
+  "name": "Avinash Shamb",
+  "owner": "Pranith A B",
+  "creator_id": 9062,
+  "stage": "Lost",
+  "noOfLicenses": 15,
+  "city": "Bangalore",
+  "created_at": "2026-04-13",
+  "demo_date": "2026-06-09",
+  "lost_date": "2026-07-03",
+  "days_created_to_demo": 57,
+  "days_demo_to_lost": 24,
+  "days_total": 81,
+  "sales_attempts": 2,
+  "loss_reason": "Competitor/Existing-CRM",
+  "one_line": "Broker on TeleCRM; our quote 3.2L vs wanting under 1L, closed with TeleCRM for 1L. Lost on price/incumbent.",
+  "notes_count": 11
+}

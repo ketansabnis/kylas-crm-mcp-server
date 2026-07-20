@@ -1,0 +1,19 @@
+{
+  "deal_id": 4221786,
+  "name": "Zaid",
+  "owner": "Karan Shinde",
+  "creator_id": 54132,
+  "stage": "Unqualified",
+  "noOfLicenses": 7,
+  "city": "Mumbai",
+  "created_at": "2026-05-04",
+  "demo_date": "2026-05-04",
+  "lost_date": "2026-05-21",
+  "days_created_to_demo": 0,
+  "days_demo_to_lost": 17,
+  "days_total": 17,
+  "sales_attempts": 4,
+  "loss_reason": "Budget",
+  "one_line": "Post-demo client went dark across calls/WhatsApp then said he's using free tools/spreadsheets and won't spend on a CRM; ~4 sales attempts.",
+  "notes_count": 6
+}

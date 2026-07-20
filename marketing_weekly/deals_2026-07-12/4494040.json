@@ -1,0 +1,21 @@
+{
+  "deal_id": 4494040,
+  "name": "Sunil",
+  "owner": "Disha Kadam",
+  "stage": "Quote Sent",
+  "licences": 5,
+  "tier": "5-10",
+  "city": "Pune",
+  "dev_broker": "Channel partner",
+  "onsite": "Online",
+  "bant_flag": "Partial",
+  "verdict": "AMBER",
+  "prob": 0.0134,
+  "band": "COLD",
+  "name_valid": false,
+  "dummy_phone": false,
+  "unverified_contact": false,
+  "sales_followup_since_demo": 3,
+  "next_action": "He dodged the office address twice and is now CNR - one more attempt on the 5-user quote, then demote; capture his surname.",
+  "one_line": "SV Realty Pune, 12-yr CP, 5 seats, quote Rs 53,400 - but evasive (never gave an address) and now unreachable."
+}

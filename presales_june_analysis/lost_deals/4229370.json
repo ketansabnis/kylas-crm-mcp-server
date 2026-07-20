@@ -1,0 +1,19 @@
+{
+  "deal_id": 4229370,
+  "name": "Rajat Agarwal",
+  "owner": "Alok Tiwari",
+  "creator_id": 9062,
+  "stage": "Unqualified",
+  "noOfLicenses": 5,
+  "city": "Ghaziabad",
+  "created_at": "2026-05-06",
+  "demo_date": "2026-05-06",
+  "lost_date": "2026-05-07",
+  "days_created_to_demo": 0,
+  "days_demo_to_lost": 1,
+  "days_total": 1,
+  "sales_attempts": 0,
+  "loss_reason": "Budget",
+  "one_line": "Demo done for 4 users but price too high; unqualified next day with no post-demo follow-up.",
+  "notes_count": 3
+}

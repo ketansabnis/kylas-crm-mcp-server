@@ -1,0 +1,19 @@
+{
+  "deal_id": 4222364,
+  "name": "Praveen Saini",
+  "owner": "Alok Tiwari",
+  "creator_id": 9062,
+  "stage": "Lost",
+  "noOfLicenses": 6,
+  "city": "Jaipur",
+  "created_at": "2026-05-04",
+  "demo_date": null,
+  "lost_date": "2026-06-01",
+  "days_created_to_demo": null,
+  "days_demo_to_lost": null,
+  "days_total": 28,
+  "sales_attempts": 16,
+  "loss_reason": "Non-responsive",
+  "one_line": "Chronically non-responsive; sales made ~16 call/WA attempts over a month with only brief connects and no demo ever held before marking lost.",
+  "notes_count": 18
+}

@@ -1,0 +1,19 @@
+{
+  "deal_id": 4043342,
+  "name": "Alok",
+  "owner": "Alok Tiwari",
+  "creator_id": 54132,
+  "stage": "Lost",
+  "noOfLicenses": 10,
+  "city": "Indore",
+  "created_at": "2026-04-06",
+  "demo_date": "2026-04-06",
+  "lost_date": "2026-06-12",
+  "days_created_to_demo": 0,
+  "days_demo_to_lost": 67,
+  "days_total": 67,
+  "sales_attempts": 20,
+  "loss_reason": "Timeline/Not-now",
+  "one_line": "CP found proposal too high then repeatedly deferred; owner chased ~20 times over 2 months, client put on hold for next quarter.",
+  "notes_count": 27
+}

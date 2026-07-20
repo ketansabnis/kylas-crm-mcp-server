@@ -1,0 +1,19 @@
+{
+  "deal_id": 4255575,
+  "name": "Yash/ Vikram",
+  "owner": "Disha Kadam",
+  "creator_id": 9062,
+  "stage": "Lost",
+  "noOfLicenses": 15,
+  "city": "Pune",
+  "created_at": "2026-05-13T07:48:04.313Z",
+  "demo_date": "2026-05-13T14:17:34.616Z",
+  "lost_date": "2026-06-30T09:19:29.574Z",
+  "days_created_to_demo": 0,
+  "days_demo_to_lost": 48,
+  "days_total": 48,
+  "sales_attempts": 24,
+  "loss_reason": "Non-responsive",
+  "one_line": "On LeadRat (active 3M), kept deferring then went dark. Sales chased ~24 calls/CNR over 48 days (relentless) before giving up.",
+  "notes_count": 31
+}

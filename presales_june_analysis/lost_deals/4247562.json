@@ -1,0 +1,19 @@
+{
+  "deal_id": 4247562,
+  "name": "Vineet Singh",
+  "owner": "Arzoo Choudhary",
+  "creator_id": 54132,
+  "stage": "Lost",
+  "noOfLicenses": 5,
+  "city": "Varanasi",
+  "created_at": "2026-05-11",
+  "demo_date": null,
+  "lost_date": "2026-05-22",
+  "days_created_to_demo": null,
+  "days_demo_to_lost": null,
+  "days_total": 11,
+  "sales_attempts": 1,
+  "loss_reason": "Non-responsive",
+  "one_line": "Client kept disconnecting calls, never joined the demo and said not willing to proceed. Minimal sales follow-up (~1) before loss.",
+  "notes_count": 5
+}

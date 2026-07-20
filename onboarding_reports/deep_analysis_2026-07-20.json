@@ -1,0 +1,790 @@
+{
+ "date": "2026-07-20",
+ "headline": {
+  "deals": 62,
+  "progressed": 25,
+  "stuck": 29,
+  "new": 8,
+  "superred": 25,
+  "superred_prev": 29
+ },
+ "trend": [
+  {
+   "date": "2026-06-18",
+   "deals": 83,
+   "progressed": 0,
+   "stuck": 0,
+   "superred": 0
+  },
+  {
+   "date": "2026-06-22",
+   "deals": 78,
+   "progressed": 28,
+   "stuck": 44,
+   "superred": 0
+  },
+  {
+   "date": "2026-06-25",
+   "deals": 77,
+   "progressed": 20,
+   "stuck": 50,
+   "superred": 31
+  },
+  {
+   "date": "2026-06-29",
+   "deals": 60,
+   "progressed": 9,
+   "stuck": 47,
+   "superred": 29
+  },
+  {
+   "date": "2026-07-02",
+   "deals": 67,
+   "progressed": 34,
+   "stuck": 25,
+   "superred": 21
+  },
+  {
+   "date": "2026-07-07",
+   "deals": 58,
+   "progressed": 29,
+   "stuck": 27,
+   "superred": 15
+  },
+  {
+   "date": "2026-07-10",
+   "deals": 61,
+   "progressed": 20,
+   "stuck": 33,
+   "superred": 16
+  },
+  {
+   "date": "2026-07-13",
+   "deals": 58,
+   "progressed": 21,
+   "stuck": 35,
+   "superred": 21
+  },
+  {
+   "date": "2026-07-16",
+   "deals": 60,
+   "progressed": 4,
+   "stuck": 43,
+   "superred": 29
+  },
+  {
+   "date": "2026-07-20",
+   "deals": 62,
+   "progressed": 25,
+   "stuck": 29,
+   "superred": 25
+  }
+ ],
+ "reality": [
+  {
+   "deal": "Kohinoor AI Calling",
+   "owner": "Venkat Viswavardhan",
+   "key": "ESTATE-21040",
+   "severity": "GHOST DEPENDENCY",
+   "status": "Won't Fix",
+   "fix": "11.3",
+   "updated": "2026-07-13",
+   "stuck_streak": 9,
+   "note": "Schedule call to discuss customer pointers (dependent on Sharayu/customer availability).",
+   "why": "Ticket is Won't Fix - the deal is still being held against a dependency that is closed. Customer is waiting for nothing."
+  },
+  {
+   "deal": "Kohinoor AI Calling",
+   "owner": "Venkat Viswavardhan",
+   "key": "SS-12176",
+   "severity": "GHOST DEPENDENCY",
+   "status": "Done",
+   "fix": "11.0",
+   "updated": "2026-07-16",
+   "stuck_streak": 9,
+   "note": "Schedule call to discuss customer pointers (dependent on Sharayu/customer availability).",
+   "why": "Ticket is Done - the deal is still being held against a dependency that is closed. Customer is waiting for nothing."
+  },
+  {
+   "deal": "Times Group",
+   "owner": "Sanket Nampalliwar",
+   "key": "ESTATE-18697",
+   "severity": "GHOST DEPENDENCY",
+   "status": "Done",
+   "fix": "6.0",
+   "updated": "2026-02-13",
+   "stuck_streak": 9,
+   "note": "Data uploaded but client reports discrepancies; internal validation meeting 7 Jul; only formula fields and roles/access ",
+   "why": "Ticket is Done - the deal is still being held against a dependency that is closed. Customer is waiting for nothing."
+  },
+  {
+   "deal": "Mythri Builder AI Calling",
+   "owner": "Venkat Viswavardhan",
+   "key": "SS-12285",
+   "severity": "STUCK IN OUR QUEUE",
+   "status": "Tech Discussion",
+   "fix": "",
+   "updated": "2026-06-26",
+   "stuck_streak": 3,
+   "note": "Connect with new POC for BOT feedback and push adoption.",
+   "why": "Ticket sits in 'Tech Discussion' - this is our bottleneck, not the customer's."
+  }
+ ],
+ "blockmix": {
+  "UNCLEAR": 29,
+  "CUSTOMER": 16,
+  "VENDOR": 4,
+  "OWNER-INACTION": 8,
+  "US-COMMERCIAL": 2,
+  "US-TECH": 3
+ },
+ "mislabelled_pending": [
+  [
+   "Navkar Realty",
+   "OWNER-INACTION",
+   "Venkat Viswavardhan"
+  ],
+  [
+   "Ribitto Private Limited",
+   "US-TECH",
+   "Muntazar Mhate"
+  ],
+  [
+   "Times Group",
+   "US-COMMERCIAL",
+   "Sanket Nampalliwar"
+  ]
+ ],
+ "blocked_on_us": [
+  [
+   "SPR Construction Pvt Ltd (leasing team)",
+   "OWNER-INACTION",
+   "Raahul Ramanan R",
+   1
+  ],
+  [
+   "Propnsafe Realty LLP",
+   "VENDOR",
+   "Sahil Jane",
+   2
+  ],
+  [
+   "Navkar Realty",
+   "OWNER-INACTION",
+   "Venkat Viswavardhan",
+   3
+  ],
+  [
+   "Leonaara PVt LTD",
+   "US-COMMERCIAL",
+   "Sahil Jane",
+   4
+  ],
+  [
+   "Strata Capital Holdings",
+   "US-TECH",
+   "Shweta Gouda",
+   3
+  ],
+  [
+   "i5 Housing and Properties LLP",
+   "VENDOR",
+   "Sourabh Sahu",
+   2
+  ],
+  [
+   "Ribitto Private Limited",
+   "US-TECH",
+   "Muntazar Mhate",
+   9
+  ],
+  [
+   "SPR Construction Pvt Ltd",
+   "OWNER-INACTION",
+   "Raahul Ramanan R",
+   9
+  ],
+  [
+   "Kunwarji Realtors",
+   "OWNER-INACTION",
+   "Sanket Nampalliwar",
+   3
+  ],
+  [
+   "NPS DEVELOPERS",
+   "OWNER-INACTION",
+   "Raahul Ramanan R",
+   5
+  ],
+  [
+   "GRUHAM SPACES LLP",
+   "US-TECH",
+   "Venkat Viswavardhan",
+   2
+  ],
+  [
+   "Shree Honda",
+   "OWNER-INACTION",
+   "Sourabh Sahu",
+   3
+  ],
+  [
+   "Shree Automotive",
+   "OWNER-INACTION",
+   "Sourabh Sahu",
+   5
+  ],
+  [
+   "Times Group",
+   "US-COMMERCIAL",
+   "Sanket Nampalliwar",
+   9
+  ]
+ ],
+ "escalations": [
+  {
+   "id": 4368709,
+   "name": "Veedhan Buildtech",
+   "owner": "Sahil Jane",
+   "stage": "Onboarding In Progress",
+   "vband": "blank",
+   "lic": 5,
+   "age": "30-60 d",
+   "streak": 0,
+   "first_flagged": "2026-06-18",
+   "days_open": 32,
+   "moved_since": "yes",
+   "note": "Account was on hold; onboarding to start from today."
+  },
+  {
+   "id": 4437383,
+   "name": "Aryma Infra (OPC)Pvt Ltd",
+   "owner": "Sahil Jane",
+   "stage": "Onboarding In Progress",
+   "vband": "1-2L",
+   "lic": 5,
+   "age": "14-30 d",
+   "streak": 0,
+   "first_flagged": "2026-07-02",
+   "days_open": 18,
+   "moved_since": "yes",
+   "note": "Account was on hold; resuming - sales training scheduled Tuesday 11:00 AM."
+  },
+  {
+   "id": 4144089,
+   "name": "Dhanraj Realbuild Llp",
+   "owner": "Venkat Viswavardhan",
+   "stage": "Pending on Customer",
+   "vband": "5-7L",
+   "lic": 6,
+   "age": "60-90 d",
+   "streak": 9,
+   "first_flagged": "2026-07-07",
+   "days_open": 13,
+   "moved_since": "NO",
+   "note": "Customer refuses AI-calling discussion, wants unavailable sourcing changes; checking with Siddharth (refund risk)."
+  },
+  {
+   "id": 4458766,
+   "name": "VASTU INFINITY AND VENTURES LLP",
+   "owner": "Sahil Jane",
+   "stage": "Onboarding In Progress",
+   "vband": "blank",
+   "lic": 5,
+   "age": "14-30 d",
+   "streak": 0,
+   "first_flagged": "2026-07-10",
+   "days_open": 10,
+   "moved_since": "yes",
+   "note": "Admin training done, account made live in OB, handover planned this week; Meta integration on hold (POC away 2 weeks)."
+  },
+  {
+   "id": 3302998,
+   "name": "Times Group",
+   "owner": "Sanket Nampalliwar",
+   "stage": "Pending on Customer",
+   "vband": "7-10L",
+   "lic": 50,
+   "age": ">180 d",
+   "streak": 9,
+   "first_flagged": "2026-07-13",
+   "days_open": 7,
+   "moved_since": "NO",
+   "note": "Data uploaded but client reports discrepancies; internal validation meeting 7 Jul; only formula fields and roles/access pending."
+  },
+  {
+   "id": 4230613,
+   "name": "Kunwarji Realtors",
+   "owner": "Sanket Nampalliwar",
+   "stage": "Onboarding In Progress",
+   "vband": ">=10L",
+   "lic": 150,
+   "age": "60-90 d",
+   "streak": 3,
+   "first_flagged": "2026-07-13",
+   "days_open": 7,
+   "moved_since": "NO",
+   "note": "Client escalated rollout delays, wants 3-5 day onsite; JIRAs (incl mobile) to deploy by 15 Jul; targeting completion end-Jul/early-Aug."
+  },
+  {
+   "id": 4345401,
+   "name": "Sangram Group",
+   "owner": "Muntazar Mhate",
+   "stage": "Pending on Customer",
+   "vband": "blank",
+   "lic": 5,
+   "age": "30-60 d",
+   "streak": 4,
+   "first_flagged": "2026-07-16",
+   "days_open": 4,
+   "moved_since": "NO",
+   "note": "Pending pointers followed up; customer still hasn't shared fresh WhatsApp number - account-on-hold email sent; client assured Sales Training Monday."
+  },
+  {
+   "id": 4336926,
+   "name": "Shri Krish Housing and Properties Pvt Ltd",
+   "owner": "Muntazar Mhate",
+   "stage": "Pending on Customer",
+   "vband": "5-7L",
+   "lic": 10,
+   "age": "30-60 d",
+   "streak": 2,
+   "first_flagged": "2026-07-16",
+   "days_open": 4,
+   "moved_since": "NO",
+   "note": "Sales Training done, account live; Facebook integration done; Prabhu on-site working with client; hold threatened if no update after 3 follow-ups."
+  },
+  {
+   "id": 4177642,
+   "name": "NPS DEVELOPERS",
+   "owner": "Raahul Ramanan R",
+   "stage": "Onboarding In Progress",
+   "vband": "3-5L",
+   "lic": 11,
+   "age": "60-90 d",
+   "streak": 5,
+   "first_flagged": "2026-07-20",
+   "days_open": 0,
+   "moved_since": "NO",
+   "note": "Nothing moved this week; escalate to sales for help; admin-training follow-ups; Kylas to be updated."
+  },
+  {
+   "id": 4389699,
+   "name": "Leonaara PVt LTD",
+   "owner": "Sahil Jane",
+   "stage": "Onboarding In Progress",
+   "vband": "1-2L",
+   "lic": 6,
+   "age": "30-60 d",
+   "streak": 4,
+   "first_flagged": "2026-07-20",
+   "days_open": 0,
+   "moved_since": "NO",
+   "note": "Weekly update: Jiras raised for calling-logs and Interakt WhatsApp issues (done); this week sales and tentative admin training; WhatsApp Interakt integration st"
+  },
+  {
+   "id": 4510268,
+   "name": "SHREYA CAPITAL ADVISORY SERVICES LLP",
+   "owner": "Sahil Jane",
+   "stage": "Kickoff Done",
+   "vband": "3-5L",
+   "lic": 5,
+   "age": "<14 d",
+   "streak": 0,
+   "first_flagged": "2026-07-20",
+   "days_open": 0,
+   "moved_since": "yes",
+   "note": "Users/projects/reports done; upcoming Meta + website + tentative lead import/inventory (awaiting files); WATI on hold due to account issues."
+  },
+  {
+   "id": 4479594,
+   "name": "Apex Realty Hub",
+   "owner": "Sahil Jane",
+   "stage": "Onboarding In Progress",
+   "vband": "blank",
+   "lic": 5,
+   "age": "<14 d",
+   "streak": 0,
+   "first_flagged": "2026-07-20",
+   "days_open": 0,
+   "moved_since": "yes",
+   "note": "Meta and WhatsApp on hold pending client Meta account; sales and admin training done; integrations to complete if Meta account created this week."
+  },
+  {
+   "id": 4458771,
+   "name": "VRUSHABADRI DEVELOPERS",
+   "owner": "Sahil Jane",
+   "stage": "Onboarding In Progress",
+   "vband": "2-3L",
+   "lic": 8,
+   "age": "14-30 d",
+   "streak": 0,
+   "first_flagged": "2026-07-20",
+   "days_open": 0,
+   "moved_since": "yes",
+   "note": "Facebook + SV form completed; native WhatsApp on hold per client; sales training scheduled Wednesday; dialer + trainings pending."
+  }
+ ],
+ "owners": {
+  "Venkat Viswavardhan": {
+   "n": 12,
+   "prog": 0,
+   "stuck": 11,
+   "sr": 9,
+   "notask": 0,
+   "theatre": 0,
+   "old": 5
+  },
+  "Muntazar Mhate": {
+   "n": 12,
+   "prog": 7,
+   "stuck": 5,
+   "sr": 5,
+   "notask": 10,
+   "theatre": 0,
+   "old": 0
+  },
+  "Raahul Ramanan R": {
+   "n": 9,
+   "prog": 4,
+   "stuck": 4,
+   "sr": 3,
+   "notask": 6,
+   "theatre": 0,
+   "old": 5
+  },
+  "Sourabh Sahu": {
+   "n": 3,
+   "prog": 0,
+   "stuck": 3,
+   "sr": 3,
+   "notask": 3,
+   "theatre": 0,
+   "old": 2
+  },
+  "Sahil Jane": {
+   "n": 15,
+   "prog": 8,
+   "stuck": 2,
+   "sr": 2,
+   "notask": 3,
+   "theatre": 0,
+   "old": 0
+  },
+  "Sanket Nampalliwar": {
+   "n": 2,
+   "prog": 0,
+   "stuck": 2,
+   "sr": 2,
+   "notask": 0,
+   "theatre": 0,
+   "old": 2
+  },
+  "Shweta Gouda": {
+   "n": 9,
+   "prog": 6,
+   "stuck": 2,
+   "sr": 1,
+   "notask": 2,
+   "theatre": 0,
+   "old": 0
+  }
+ },
+ "hygiene": {
+  "deals": 62,
+  "tests_excluded": 3,
+  "no_task": 24,
+  "overdue_task": 7,
+  "no_notes": [
+   "Makliv Infra Consulting Pvt Ltd.",
+   "KL HOMES",
+   "SPR Construction Pvt Ltd (leasing team)"
+  ],
+  "no_billed": 28,
+  "overdue_golive": 10,
+  "stuck_and_no_task": [
+   [
+    "SPR Construction Pvt Ltd (leasing team)",
+    "Raahul Ramanan R"
+   ],
+   [
+    "Sohum Estate Agency (Sameer Chheda)",
+    "Muntazar Mhate"
+   ],
+   [
+    "Sangram Group",
+    "Muntazar Mhate"
+   ],
+   [
+    "i5 Housing and Properties LLP",
+    "Sourabh Sahu"
+   ],
+   [
+    "Shri Krish Housing and Properties Pvt Ltd",
+    "Muntazar Mhate"
+   ],
+   [
+    "Ribitto Private Limited",
+    "Muntazar Mhate"
+   ],
+   [
+    "SPR Construction Pvt Ltd",
+    "Raahul Ramanan R"
+   ],
+   [
+    "NPS DEVELOPERS",
+    "Raahul Ramanan R"
+   ],
+   [
+    "Shree Honda",
+    "Sourabh Sahu"
+   ],
+   [
+    "Shree Automotive",
+    "Sourabh Sahu"
+   ]
+  ],
+  "note_theatre": [],
+  "older_60d": 14
+ },
+ "topics": [
+  [
+   "Trainings",
+   25
+  ],
+  [
+   "Bulk lead import",
+   16
+  ],
+  [
+   "Meta/Facebook",
+   15
+  ],
+  [
+   "IVR/Mcube/dialer",
+   11
+  ],
+  [
+   "Inventory",
+   11
+  ],
+  [
+   "WhatsApp",
+   11
+  ],
+  [
+   "Portals",
+   8
+  ],
+  [
+   "Handover",
+   8
+  ],
+  [
+   "Website",
+   5
+  ]
+ ],
+ "superred": [
+  [
+   "Ribitto Private Limited",
+   "Muntazar Mhate",
+   9,
+   "blank",
+   "30-60 d",
+   "Moved into Pending; transactional email still broken, sales training still deferred behind it."
+  ],
+  [
+   "SPR Construction Pvt Ltd",
+   "Raahul Ramanan R",
+   9,
+   "blank",
+   "60-90 d",
+   "Calling-integration blocker persists; now escalated to Ketan - escalation is not resolution."
+  ],
+  [
+   "Kohinoor AI Calling",
+   "Venkat Viswavardhan",
+   9,
+   "blank",
+   "60-90 d",
+   "AI-calling still blocked (ESTATE-21040 / SS-12176); only a call being scheduled."
+  ],
+  [
+   "Dhanraj Realbuild Llp",
+   "Venkat Viswavardhan",
+   9,
+   "5-7L",
+   "60-90 d",
+   "Refund/churn risk deepening; customer refuses AI-calling, wants unavailable sourcing changes."
+  ],
+  [
+   "Voora Developers",
+   "Raahul Ramanan R",
+   9,
+   "7-10L",
+   ">180 d",
+   "Same blockers: balance payment + Manoj's pointers, still awaited."
+  ],
+  [
+   "Times Group",
+   "Sanket Nampalliwar",
+   9,
+   "7-10L",
+   ">180 d",
+   "No note after 2026-07-16 (last run) and no stage change - nothing happened since the last review."
+  ],
+  [
+   "NPS DEVELOPERS",
+   "Raahul Ramanan R",
+   5,
+   "3-5L",
+   "60-90 d",
+   "Owner states nothing moved this week; escalated to sales."
+  ],
+  [
+   "Shree Automotive",
+   "Sourabh Sahu",
+   5,
+   "1-2L",
+   ">180 d",
+   "No note after 2026-07-16 (last run) and no stage change - nothing happened since the last review."
+  ],
+  [
+   "Leonaara PVt LTD",
+   "Sahil Jane",
+   4,
+   "1-2L",
+   "30-60 d",
+   "WhatsApp Interakt still pending on dev; trainings only scheduled, not done."
+  ],
+  [
+   "Sohum Estate Agency (Sameer Chheda)",
+   "Muntazar Mhate",
+   4,
+   "blank",
+   "30-60 d",
+   "Moved into Pending; inventory-layout demo slipped (client unavailable)."
+  ],
+  [
+   "Sangram Group",
+   "Muntazar Mhate",
+   4,
+   "blank",
+   "30-60 d",
+   "Moved into Pending; on-hold email sent; sales training only assured for Monday."
+  ],
+  [
+   "Navkar Realty",
+   "Venkat Viswavardhan",
+   3,
+   "3-5L",
+   "30-60 d",
+   "No progress - customer POC on sick leave; all items pushed to next week."
+  ],
+  [
+   "VENDSPACEZ PRIVATE LIMITED",
+   "Venkat Viswavardhan",
+   3,
+   "3-5L",
+   "30-60 d",
+   "Admin training still only being scheduled a week later - scheduled != done."
+  ],
+  [
+   "Strata Capital Holdings",
+   "Shweta Gouda",
+   3,
+   "blank",
+   "30-60 d",
+   "Mcube still blocked (recordings not captured); raised to vendor, client waiting."
+  ],
+  [
+   "VAZHRAA NIRMAAN PRIVATE LIMITED",
+   "Venkat Viswavardhan",
+   3,
+   "2-3L",
+   "30-60 d",
+   "Admin training restated as awaiting customer availability - same ask."
+  ],
+  [
+   "GGC AI Calling",
+   "Venkat Viswavardhan",
+   3,
+   "blank",
+   "60-90 d",
+   "Still only arranging a call; AI-calling adoption not started."
+  ],
+  [
+   "Mythri Builder AI Calling",
+   "Venkat Viswavardhan",
+   3,
+   "blank",
+   "60-90 d",
+   "Still awaiting BOT feedback/adoption; now via a new POC (SS-12285)."
+  ],
+  [
+   "Kunwarji Realtors",
+   "Sanket Nampalliwar",
+   3,
+   ">=10L",
+   "60-90 d",
+   "No note after 2026-07-16 (last run) and no stage change - nothing happened since the last review."
+  ],
+  [
+   "Shree Honda",
+   "Sourabh Sahu",
+   3,
+   "2-3L",
+   ">180 d",
+   "No note after 2026-07-16 (last run) and no stage change - nothing happened since the last review."
+  ],
+  [
+   "Propnsafe Realty LLP",
+   "Sahil Jane",
+   2,
+   "1-2L",
+   "<14 d",
+   "Still in Kickoff Done; core setup gated on website + lead import; fancy number is a side item."
+  ],
+  [
+   "Rajparis Civil Construction",
+   "Muntazar Mhate",
+   2,
+   "3-5L",
+   "14-30 d",
+   "Moved into Pending; AiSensy + inventory + cost sheet all awaited from client."
+  ],
+  [
+   "SWARAJYA REALTORS PRIVATE LIMITED",
+   "Venkat Viswavardhan",
+   2,
+   "2-3L",
+   "14-30 d",
+   "Owner notes little concrete movement; trainings pending client availability."
+  ],
+  [
+   "i5 Housing and Properties LLP",
+   "Sourabh Sahu",
+   2,
+   "3-5L",
+   "30-60 d",
+   "No note after 2026-07-16 (last run) and no stage change - nothing happened since the last review."
+  ],
+  [
+   "Shri Krish Housing and Properties Pvt Ltd",
+   "Muntazar Mhate",
+   2,
+   "5-7L",
+   "30-60 d",
+   "Account already live last week; only Facebook added; moved into Pending with hold threat."
+  ],
+  [
+   "GRUHAM SPACES LLP",
+   "Venkat Viswavardhan",
+   2,
+   "3-5L",
+   "90-180 d",
+   "Still awaiting Sourcing rework from dev (ETA 29 Jul); customer un-progressed."
+  ]
+ ]
+}

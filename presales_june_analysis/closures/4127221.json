@@ -1,0 +1,17 @@
+{
+  "deal_id": 4127221,
+  "deal_name": "Kaustubh Manohar",
+  "owner": "Pranith A B",
+  "stage": "Won/ Booked",
+  "created_at": "2026-04-20T07:21:08.286Z",
+  "updated_at": "2026-07-06T12:14:36.405Z",
+  "products_total": 820000.0,
+  "cfBilledAmount": 820000,
+  "cfActualPaymentReceived": 381000,
+  "noOfLicenses": 30,
+  "cfCity": "Gurgaon",
+  "cfReDeveloperOrChannelPartner": "Developer",
+  "cfMeetingConductedOn": "2026-04-20T11:27:40.000Z",
+  "cfPreviousCrm": "Never used a CRM",
+  "cfOwnerPhoneNumber": "+917030268916"
+}

@@ -1,0 +1,19 @@
+{
+  "deal_id": 4278793,
+  "name": "Rehman",
+  "owner": "Pranith A B",
+  "creator_id": 9062,
+  "stage": "Lost",
+  "noOfLicenses": 12,
+  "city": "Bangalore",
+  "created_at": "2026-05-18T12:36:24.203Z",
+  "demo_date": "2026-05-19T11:43:10.463Z",
+  "lost_date": "2026-05-27T08:59:35.875Z",
+  "days_created_to_demo": 1,
+  "days_demo_to_lost": 8,
+  "days_total": 9,
+  "sales_attempts": 1,
+  "loss_reason": "Competitor/Existing-CRM",
+  "one_line": "Lost to Leadrat (better UI + 10-day in-office onboarding); sales ran a 2nd demo post-first-demo but prospect chose competitor.",
+  "notes_count": 5
+}

@@ -1,0 +1,52 @@
+{
+ "deal_id": 4410512,
+ "deal_name": "Manish Jaikar",
+ "creator": "Revati Ambike",
+ "creator_id": 9062,
+ "owner": "Ananya Kumari",
+ "pipeline": "Sell.Do Deal Pipeline",
+ "stage": "Quote Sent",
+ "pipeline_stage_reason": null,
+ "created_at": "2026-06-22T05:31:50.380Z",
+ "updated_at": "2026-06-22T11:36:18.224Z",
+ "meeting_conducted": true,
+ "cfMeetingConductedOn": "2026-06-22T11:26:41.103Z",
+ "noOfLicenses": 1,
+ "cfCity": "Nashik",
+ "cfReDeveloperOrChannelPartner": "Channel partner",
+ "estimatedValue": null,
+ "actualValue": null,
+ "products": [
+  "Sell.Do Broker (qty 2)"
+ ],
+ "source": null,
+ "campaign": null,
+ "cfPreviousCrm": "Never used a CRM",
+ "cfRequiredTools": [
+  "CRM",
+  "AI Calling"
+ ],
+ "cfSales": null,
+ "cfFirstSalesOwner": "Ananya Kumari",
+ "cfOwnerPhoneNumber": "+918789152329",
+ "notes_count": 5,
+ "notes_text": "By 9062: Type-CRM/CRM+AI calling;City-Nashik;Company-Rialto Spaces;Broker (residential flats/apartments/plots);Team Size-1;Current CRM-No(excel);Challenge-lead generation from instagram. By 81335: Demo conducted, only 2 user licenses, quoted 800/user/mo, will update next Monday. Later: taking other CRM demos, wants cheaper solution; not answering; funding issue, wants time, no follow-up date.",
+ "license_tier": "1-4",
+ "city_bucket": "Other",
+ "city_clean": "Nashik",
+ "onsite_or_online": "Online",
+ "name_valid": true,
+ "bant": {
+  "budget": "Price-sensitive; wants cheaper; funding issue",
+  "authority": "Solo broker/owner - DM",
+  "need": "Moderate; real lead-gen pain from instagram, no CRM",
+  "timeline": "Weak; delayed by funding",
+  "bant_score": 2,
+  "bant_flag": "Partial"
+ },
+ "enterprise_flag": false,
+ "pre_sales_verdict": "AMBER",
+ "stall_blocker": "Budget",
+ "blocker_owner": "Customer",
+ "one_line": "Solo Nashik broker (2 seats) with a real lead-gen need but tiny scale, comparison-shopping cheaper CRMs and hit by a funding crunch; thin but on-ICP."
+}

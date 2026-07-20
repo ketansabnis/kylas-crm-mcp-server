@@ -1,0 +1,19 @@
+{
+  "deal_id": 4082495,
+  "name": "Nitesh",
+  "owner": "Ganesh Vamsee",
+  "creator_id": 9062,
+  "stage": "Lost",
+  "noOfLicenses": 5,
+  "city": "Madurai",
+  "created_at": "2026-04-13",
+  "demo_date": null,
+  "lost_date": "2026-04-22",
+  "days_created_to_demo": null,
+  "days_demo_to_lost": null,
+  "days_total": 9,
+  "sales_attempts": 0,
+  "loss_reason": "Non-responsive",
+  "one_line": "Broker never connected for a demo; owner logged repeated no-response calls before losing.",
+  "notes_count": 9
+}

@@ -1,0 +1,52 @@
+{
+ "deal_id": 4358041,
+ "deal_name": "Aarushi Daima",
+ "creator": "Revati Ambike",
+ "creator_id": 9062,
+ "owner": "Suraj Chauhan",
+ "owner_id": 80575,
+ "pipeline": "Sell.Do Deal Pipeline",
+ "stage": "Closed Unqualified",
+ "pipeline_stage_reason": null,
+ "created_at": "2026-06-08T06:17:10.686Z",
+ "updated_at": "2026-07-06T08:01:37.425Z",
+ "meeting_conducted": true,
+ "cfMeetingConductedOn": "2026-06-10T05:33:00.899Z",
+ "noOfLicenses": 2,
+ "cfCity": "Delhi",
+ "cfReDeveloperOrChannelPartner": "Developer",
+ "estimatedValue": null,
+ "actualValue": null,
+ "products": [
+  "Sell.Do Enterprise"
+ ],
+ "source": null,
+ "campaign": null,
+ "cfPreviousCrm": "Never used a CRM",
+ "cfRequiredTools": [
+  "CRM"
+ ],
+ "cfSales": null,
+ "cfFirstSalesOwner": "Suraj Chauhan",
+ "cfOwnerPhoneNumber": "+919643843177",
+ "notes_count": 7,
+ "notes_text": "[9062 2026-06-08] Type of Deal - CRM / City-Delhi Company Name -Daimark Developers LLP Developer/Channel Partner firm -Developer (industrial property) Total Team Size-2 Current CRM -No (Using excel sheet) Tentative meeting 10th June 10:30 am (Online) | [80575 2026-06-10] spoke with client, available at 10:30 AM | [80575 2026-06-10] Quote sent, demo done, 800/user/month - 2 user 30K whatsapp API, contact day after tomorrow | [80575 2026-06-18] client replied on whatsapp: no update from director's side, wait 1 week | [80575 2026-06-25] Not Answering | [80575 2026-07-06] not interested",
+ "license_tier": "1-4",
+ "city_bucket": "Main6",
+ "city_clean": "Delhi",
+ "onsite_or_online": "Online",
+ "name_valid": true,
+ "bant": {
+  "budget": "quote given (800/user + 30K WhatsApp); no budget confirmed",
+  "authority": "not DM - waiting on director; contact is not decision maker",
+  "need": "2-user industrial-property developer, no current CRM, no stated pain",
+  "timeline": "none - deferred to director then went non-responsive, 'not interested'",
+  "bant_score": 1,
+  "bant_flag": "Weak"
+ },
+ "enterprise_flag": false,
+ "pre_sales_verdict": "AMBER",
+ "stall_blocker": "Quality/ICP",
+ "blocker_owner": "Customer",
+ "one_line": "2-user Delhi industrial-property developer, contact not the DM, no urgency - marginal size/ICP that closed unqualified as 'not interested'."
+}

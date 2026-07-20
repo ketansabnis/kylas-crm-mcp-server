@@ -1,0 +1,17 @@
+{
+  "deal_id": 4372397,
+  "deal_name": "Amina Fridous",
+  "owner": "Pranith A B",
+  "stage": "Won/ Booked",
+  "created_at": "2026-06-11T09:52:40.691Z",
+  "updated_at": "2026-06-26T10:33:05.415Z",
+  "products_total": null,
+  "cfBilledAmount": 444000,
+  "cfActualPaymentReceived": 444000,
+  "noOfLicenses": 25,
+  "cfCity": "Kolkata",
+  "cfReDeveloperOrChannelPartner": "Developer",
+  "cfMeetingConductedOn": "2026-06-11T11:23:40.000Z",
+  "cfPreviousCrm": "Never used a CRM",
+  "cfOwnerPhoneNumber": "+917030268916"
+}

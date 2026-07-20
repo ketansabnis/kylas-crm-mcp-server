@@ -1,0 +1,17 @@
+{
+  "deal_id": 4281546,
+  "deal_name": "Fatema Kabani",
+  "owner": "Ankur Singhal",
+  "stage": "Won/ Booked",
+  "created_at": "2026-05-19T07:17:28.282Z",
+  "updated_at": "2026-06-09T12:07:50.618Z",
+  "products_total": 230000.0,
+  "cfBilledAmount": 230000,
+  "cfActualPaymentReceived": 230000,
+  "noOfLicenses": 5,
+  "cfCity": "Thane",
+  "cfReDeveloperOrChannelPartner": "Developer",
+  "cfMeetingConductedOn": "2026-06-02T09:21:18.949Z",
+  "cfPreviousCrm": "Never used a CRM",
+  "cfOwnerPhoneNumber": "+918879685293"
+}

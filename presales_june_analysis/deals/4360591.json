@@ -1,0 +1,53 @@
+{
+ "deal_id": 4360591,
+ "deal_name": "Prajjwal Jambhulkar",
+ "creator": "Revati Ambike",
+ "creator_id": 9062,
+ "owner": "Ananya Kumari",
+ "owner_id": 81335,
+ "pipeline": "Sell.Do Deal Pipeline",
+ "stage": "Closed Lost",
+ "pipeline_stage_reason": null,
+ "created_at": "2026-06-08T12:39:09.758Z",
+ "updated_at": "2026-06-26T08:15:14.081Z",
+ "meeting_conducted": true,
+ "cfMeetingConductedOn": "2026-06-08T14:25:58.715Z",
+ "noOfLicenses": 3,
+ "cfCity": "Nagpur",
+ "cfReDeveloperOrChannelPartner": "Channel partner",
+ "estimatedValue": null,
+ "actualValue": null,
+ "products": [
+  "Sell.Do Broker"
+ ],
+ "source": null,
+ "campaign": null,
+ "cfPreviousCrm": "Never used a CRM",
+ "cfRequiredTools": [
+  "CRM",
+  "AI Calling"
+ ],
+ "cfSales": null,
+ "cfFirstSalesOwner": "Ananya Kumari",
+ "cfOwnerPhoneNumber": "+918789152329",
+ "notes_count": 15,
+ "notes_text": "[9062 2026-06-08] I spoke with client gave them an overview about sell do work flow + ai bot calling is having a team of 5 but initial will be starting with 3 users, his team is not free today he will let us know when to schedule demo | [9062 2026-06-08] Type of Deal - CRM / CRM+Ai calling / City-Nagpur Company Name -Key to Hope Homes Developer/Channel Partner firm -Broker Total Team Size-3 Current CRM -No Current challenges-No Tentative meeting date and time-8th June at 6:15 pm (Online meeting)... | [9062 2026-06-08] {{USER_81335}} Kindly mark demo | [81335 2026-06-08] Demo conducted Client want quotation for 7 users IVR & WhatsApp API | [81335 2026-06-10] Call on Friday for final discussion | [81335 2026-06-15/16] traveling / busy on another call | [81335 2026-06-xx repeated] not answering / not answering my calls, texted him | [81335 2026-07-01] not answering",
+ "license_tier": "1-4",
+ "city_bucket": "Other",
+ "city_clean": "Nagpur",
+ "onsite_or_online": "Online",
+ "name_valid": true,
+ "bant": {
+  "budget": "requested quotation for 7 users + IVR + WhatsApp API; no budget confirmed",
+  "authority": "broker owner, likely DM but went unresponsive",
+  "need": "CRM + AI calling for a small broker team",
+  "timeline": "initial interest then went dark for weeks",
+  "bant_score": 2,
+  "bant_flag": "Partial"
+ },
+ "enterprise_flag": false,
+ "pre_sales_verdict": "AMBER",
+ "stall_blocker": "Non-responsive",
+ "blocker_owner": "Customer",
+ "one_line": "Small Nagpur broker, engaged demo and asked for 7-user quote, then went fully non-responsive - decent qualification, customer ghosted."
+}

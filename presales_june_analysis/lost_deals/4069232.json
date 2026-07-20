@@ -1,0 +1,19 @@
+{
+  "deal_id": 4069232,
+  "name": "Manan",
+  "owner": "Arzoo Choudhary",
+  "creator_id": 54132,
+  "stage": "Lost",
+  "noOfLicenses": 5,
+  "city": "Delhi",
+  "created_at": "2026-04-10",
+  "demo_date": "2026-04-10",
+  "lost_date": "2026-05-15",
+  "days_created_to_demo": 0,
+  "days_demo_to_lost": 35,
+  "days_total": 35,
+  "sales_attempts": 8,
+  "loss_reason": "Non-responsive",
+  "one_line": "CP went fully dark after demo (no company footprint online); owner called/texted ~8 times from all numbers, never replied.",
+  "notes_count": 11
+}

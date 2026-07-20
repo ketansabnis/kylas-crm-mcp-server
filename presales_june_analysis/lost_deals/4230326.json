@@ -1,0 +1,19 @@
+{
+  "deal_id": 4230326,
+  "name": "urvashi yadav",
+  "owner": "Suraj Chauhan",
+  "creator_id": 54132,
+  "stage": "Lost",
+  "noOfLicenses": 5,
+  "city": "Ahemdabad",
+  "created_at": "2026-05-06",
+  "demo_date": "2026-05-08",
+  "lost_date": "2026-06-18",
+  "days_created_to_demo": 2,
+  "days_demo_to_lost": 41,
+  "days_total": 43,
+  "sales_attempts": 4,
+  "loss_reason": "Non-responsive",
+  "one_line": "Post-demo went unresponsive (vacation then no answer); sales chased ~4x over 6 weeks before loss.",
+  "notes_count": 11
+}

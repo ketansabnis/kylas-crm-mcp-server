@@ -1,0 +1,19 @@
+{
+  "deal_id": 4296273,
+  "name": "Hardik Patel",
+  "owner": "Anuj Pathak",
+  "creator_id": 9062,
+  "stage": "Unqualified",
+  "noOfLicenses": 5,
+  "city": "Ahmedabad",
+  "created_at": "2026-05-22T05:29:53.805Z",
+  "demo_date": null,
+  "lost_date": "2026-06-19T10:55:01.965Z",
+  "days_created_to_demo": null,
+  "days_demo_to_lost": null,
+  "days_total": 28,
+  "sales_attempts": 1,
+  "loss_reason": "Non-responsive",
+  "one_line": "No demo held; small 2-5 person mandate firm stayed non-responsive to pre-sales calls. Sales owner logged 1 'did not pick phone' before unqualifying.",
+  "notes_count": 5
+}

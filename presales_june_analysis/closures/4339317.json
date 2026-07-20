@@ -1,0 +1,17 @@
+{
+  "deal_id": 4339317,
+  "deal_name": "Pinki Rowlo",
+  "owner": "Alok Tiwari",
+  "stage": "Won/ Booked",
+  "created_at": "2026-06-02T07:25:40.505Z",
+  "updated_at": "2026-07-06T09:29:41.439Z",
+  "products_total": 219000.0,
+  "cfBilledAmount": 219000,
+  "cfActualPaymentReceived": 219000,
+  "noOfLicenses": 20,
+  "cfCity": "Thane",
+  "cfReDeveloperOrChannelPartner": "Channel partner",
+  "cfMeetingConductedOn": "2026-06-02T13:54:58.088Z",
+  "cfPreviousCrm": "Never used a CRM",
+  "cfOwnerPhoneNumber": "+917391046055"
+}

@@ -1,0 +1,19 @@
+{
+  "deal_id": 4222538,
+  "name": "Shauren",
+  "owner": "Arzoo Choudhary",
+  "creator_id": 54132,
+  "stage": "Lost",
+  "noOfLicenses": 10,
+  "city": "Gurgaon",
+  "created_at": "2026-05-04",
+  "demo_date": null,
+  "lost_date": "2026-05-19",
+  "days_created_to_demo": null,
+  "days_demo_to_lost": null,
+  "days_total": 15,
+  "sales_attempts": 1,
+  "loss_reason": "Competitor/Existing-CRM",
+  "one_line": "Repeat tyre-kicker building own/cheaper CRM; sales tried one call (no connect), client came in twice but never bought.",
+  "notes_count": 8
+}

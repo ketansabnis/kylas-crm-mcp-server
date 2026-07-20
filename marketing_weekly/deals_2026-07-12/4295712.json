@@ -1,0 +1,21 @@
+{
+  "deal_id": 4295712,
+  "name": "Anchal",
+  "owner": "Suraj Chauhan",
+  "stage": "Quote Sent",
+  "licences": 2,
+  "tier": "<5",
+  "city": "Chandigarh",
+  "dev_broker": "Channel partner",
+  "onsite": "Online",
+  "bant_flag": "Weak",
+  "verdict": "RED",
+  "prob": 0.004,
+  "band": "COLD",
+  "name_valid": false,
+  "dummy_phone": false,
+  "unverified_contact": false,
+  "sales_followup_since_demo": 2,
+  "next_action": "Suraj: drop WhatsApp from the quote and re-price 2 seats CRM-only, else disqualify - this is a sub-ICP 2-seater.",
+  "one_line": "Chandigarh 2-seat broker Ghareazy; sub-ICP, WhatsApp priced out, city on deal conflicts with note (Mumbai)."
+}

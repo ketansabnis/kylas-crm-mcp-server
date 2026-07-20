@@ -1,0 +1,6 @@
+{
+ "ESTATE-21040": {"summary": "Implement Infinite Scrolling and Save Search List from Lead Index (Kohinoor AI Calling ask)", "status": "Won't Fix", "statusCategory": "done", "fixVersion": "11.3", "updated": "2026-07-13", "assignee": "Ketan Sabnis", "priority": "Medium", "realKey": "ESTATE-21040"},
+ "SS-12176": {"summary": "AI Calling_ Kohinoor (bot creation)", "status": "Done", "statusCategory": "done", "fixVersion": "11.0", "updated": "2026-07-16", "assignee": "Ketan Sabnis", "priority": "Medium", "realKey": "ESTATE-20563", "note": "Released in 11.0 on 2026-07-08 - the core AI-calling bot for Kohinoor is delivered."},
+ "SS-12285": {"summary": "AI Calling_ Mythri Builders (bot creation)", "status": "Tech Discussion", "statusCategory": "new", "fixVersion": "-", "updated": "2026-06-26", "assignee": "Sharayu Sutar", "priority": "Medium", "realKey": "ESTATE-20699", "note": "Sitting in Tech Discussion since 26-Jun; no fix version; our queue, not the customer's."},
+ "ESTATE-18697": {"summary": "Create App - Times Group Demo (FM unit-update module)", "status": "Done", "statusCategory": "done", "fixVersion": "6.0", "updated": "2026-02-13", "assignee": "Ketan Sabnis", "priority": "Medium", "realKey": "ESTATE-18697", "note": "Done since 13-Feb-2026 - ~5 months. Deal still parked against it."}
+}

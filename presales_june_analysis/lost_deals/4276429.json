@@ -1,0 +1,19 @@
+{
+  "deal_id": 4276429,
+  "name": "Kamal Daxini",
+  "owner": "Suraj Chauhan",
+  "creator_id": 54132,
+  "stage": "Lost",
+  "noOfLicenses": 5,
+  "city": "Ahmedabad",
+  "created_at": "2026-05-18T07:11:55.286Z",
+  "demo_date": "2026-05-18T10:23:37.000Z",
+  "lost_date": "2026-07-06T12:50:55.498Z",
+  "days_created_to_demo": 0,
+  "days_demo_to_lost": 49,
+  "days_total": 49,
+  "sales_attempts": 1,
+  "loss_reason": "Timeline/Not-now",
+  "one_line": "Not-now; client wanted to compare with other CRMs then postponed, said he would call back himself. Only one sales follow-up.",
+  "notes_count": 4
+}

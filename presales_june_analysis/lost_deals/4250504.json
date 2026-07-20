@@ -1,0 +1,19 @@
+{
+  "deal_id": 4250504,
+  "name": "Vikram Pratap",
+  "owner": "Pranith A B",
+  "creator_id": 9062,
+  "stage": "Lost",
+  "noOfLicenses": 5,
+  "city": "Bangalore",
+  "created_at": "2026-05-12T06:27:14.000Z",
+  "demo_date": "2026-05-13T07:10:05.645Z",
+  "lost_date": "2026-06-11T07:36:55.171Z",
+  "days_created_to_demo": 1,
+  "days_demo_to_lost": 29,
+  "days_total": 30,
+  "sales_attempts": 5,
+  "loss_reason": "Not-interested",
+  "one_line": "Decided to build own solution (was on free Zoho). Sales chased proposal + callback + multiple RNR (~5 attempts) over 29 days before drop.",
+  "notes_count": 12
+}

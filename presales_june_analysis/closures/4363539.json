@@ -1,0 +1,17 @@
+{
+  "deal_id": 4363539,
+  "deal_name": "Yogesh Kumar Rana",
+  "owner": "Suraj Chauhan",
+  "stage": "Won/ Booked",
+  "created_at": "2026-06-09T10:40:35.606Z",
+  "updated_at": "2026-07-06T10:05:54.268Z",
+  "products_total": 19400.0,
+  "cfBilledAmount": 19400,
+  "cfActualPaymentReceived": 19399,
+  "noOfLicenses": 1,
+  "cfCity": "Noida",
+  "cfReDeveloperOrChannelPartner": "Channel partner",
+  "cfMeetingConductedOn": "2026-06-09T12:34:51.160Z",
+  "cfPreviousCrm": "Never used a CRM",
+  "cfOwnerPhoneNumber": "+919643843177"
+}

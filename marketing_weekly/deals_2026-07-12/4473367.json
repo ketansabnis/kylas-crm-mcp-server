@@ -1,0 +1,21 @@
+{
+  "deal_id": 4473367,
+  "name": "Rajesh Buttal",
+  "owner": "Ananya Kumari",
+  "stage": "Closed Lost",
+  "licences": 5,
+  "tier": "5-10",
+  "city": "Delhi",
+  "dev_broker": "Channel partner",
+  "onsite": "Online",
+  "bant_flag": "Weak",
+  "verdict": "RED",
+  "prob": 0.007,
+  "band": "COLD",
+  "name_valid": true,
+  "dummy_phone": false,
+  "unverified_contact": false,
+  "sales_followup_since_demo": 1,
+  "next_action": "Closed Lost (no budget) - no action; pre-sales should not book a demo when the client explicitly refuses qualification.",
+  "one_line": "Delhi individual broker, refused all qualification, demo-shopping multiple CRMs, no budget. Lost."
+}

@@ -1,0 +1,19 @@
+{
+  "deal_id": 4315815,
+  "name": "Krunal Patel",
+  "owner": "Anuj Pathak",
+  "creator_id": 9062,
+  "stage": "Lost",
+  "noOfLicenses": 5,
+  "city": "Ahmedabad",
+  "created_at": "2026-05-26",
+  "demo_date": "2026-05-26",
+  "lost_date": "2026-07-01",
+  "days_created_to_demo": 0,
+  "days_demo_to_lost": 36,
+  "days_total": 36,
+  "sales_attempts": 10,
+  "loss_reason": "Timeline/Not-now",
+  "one_line": "Demoed + quote sent; sales chased ~10x over 5 weeks; client kept deferring (out of town, stakeholder unavailable) then postponed the decision.",
+  "notes_count": 13
+}

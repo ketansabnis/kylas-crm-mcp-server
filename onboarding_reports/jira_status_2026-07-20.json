@@ -1,0 +1,6 @@
+{
+ "ESTATE-21040": {"summary":"Implement Infinite Scrolling and Save Search List from Lead Index","status":"Won't Fix","statusCategory":"done","fixVersion":"11.3","updated":"2026-07-13","assignee":"Ketan Sabnis","priority":"Medium","cited_by":"Kohinoor AI Calling","note":"Bulk AI-call list feature (severity Critical in ask) - marked Won't Fix."},
+ "SS-12176": {"summary":"AI Calling_ Kohinoor (moved to ESTATE-20563)","status":"Done","statusCategory":"done","fixVersion":"11.0","updated":"2026-07-16","assignee":"Ketan Sabnis","priority":"Medium","resolved_key":"ESTATE-20563","cited_by":"Kohinoor AI Calling","note":"Kohinoor AI-calling bot build - Done/released in 11.0."},
+ "SS-12285": {"summary":"AI Calling_ Mythri Builders (moved to ESTATE-20699)","status":"Tech Discussion","statusCategory":"new","fixVersion":"","updated":"2026-06-26","assignee":"Sharayu Sutar","priority":"Medium","resolved_key":"ESTATE-20699","cited_by":"Mythri Builder AI Calling","note":"Mythri bot build sitting in Tech Discussion, untouched since 26-Jun."},
+ "ESTATE-18697": {"summary":"Create App - Times Group Demo - Abhirup","status":"Done","statusCategory":"done","fixVersion":"6.0","updated":"2026-02-13","assignee":"Ketan Sabnis","priority":"Medium","cited_by":"Times Group","note":"FM unit-update app - Done/released since 13-Feb-2026."}
+}

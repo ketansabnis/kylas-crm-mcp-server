@@ -1,0 +1,51 @@
+{
+ "deal_id": 4398270,
+ "deal_name": "Roopesh Saatam",
+ "creator": "Revati Ambike",
+ "creator_id": 9062,
+ "owner": "Niket Rathod",
+ "pipeline": "Sell.Do Deal Pipeline",
+ "stage": "Quote Sent",
+ "pipeline_stage_reason": null,
+ "created_at": "2026-06-18T05:08:07.477Z",
+ "updated_at": "2026-06-25T09:39:27.022Z",
+ "meeting_conducted": true,
+ "cfMeetingConductedOn": "2026-06-25T09:38:33.082Z",
+ "noOfLicenses": 3,
+ "cfCity": "Mumbai",
+ "cfReDeveloperOrChannelPartner": "Developer",
+ "estimatedValue": null,
+ "actualValue": null,
+ "products": [
+  "Sell.Do Enterprise"
+ ],
+ "source": null,
+ "campaign": null,
+ "cfPreviousCrm": "Never used a CRM",
+ "cfRequiredTools": [
+  "CRM"
+ ],
+ "cfSales": null,
+ "cfFirstSalesOwner": "Karan Shinde",
+ "cfOwnerPhoneNumber": "+919999999999",
+ "notes_count": 12,
+ "notes_text": "By 9062: not responding/driving; mandate firm, 1 project, might need 3 users, explained features. Type-CRM;City-Mumbai;Company-Shambhavi Enterprises;Developer(mandate firm);Team Size-3;Current CRM-No;Meeting 25 Jun 11:30am. By 79391: demo; quote 1200/user/mo + 25k setup, 3 users; connect 5th July when owner available. Contact handles Sales & Marketing, real CRM requirement, owner out of town till 5 July, finalization after. Owner phone placeholder(9999999999); cb 12 July.",
+ "license_tier": "1-4",
+ "city_bucket": "Main6",
+ "city_clean": "Mumbai",
+ "onsite_or_online": "Online",
+ "name_valid": true,
+ "bant": {
+  "budget": "Quoted 1200/user/mo + 25k setup; not objected",
+  "authority": "Contact handles sales/marketing; owner is DM (out of town)",
+  "need": "Moderate; mandate firm, 1 project, real CRM requirement, no CRM today",
+  "timeline": "Deferred; owner available only after 5 July",
+  "bant_score": 2,
+  "bant_flag": "Partial"
+ },
+ "enterprise_flag": false,
+ "pre_sales_verdict": "AMBER",
+ "stall_blocker": "Timeline/Not-now",
+ "blocker_owner": "Customer",
+ "one_line": "Small Mumbai mandate firm (3 seats, 1 project), real requirement and quoted, but sub-scale and decision parked until the owner is back - borderline ICP."
+}

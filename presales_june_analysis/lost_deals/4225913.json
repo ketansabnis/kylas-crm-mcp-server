@@ -1,0 +1,19 @@
+{
+  "deal_id": 4225913,
+  "name": "Amardeep Singh",
+  "owner": "Anuj Pathak",
+  "creator_id": 54132,
+  "stage": "Unqualified",
+  "noOfLicenses": 5,
+  "city": "Delhi",
+  "created_at": "2026-05-05",
+  "demo_date": "2026-05-07",
+  "lost_date": "2026-06-03",
+  "days_created_to_demo": 2,
+  "days_demo_to_lost": 27,
+  "days_total": 29,
+  "sales_attempts": 8,
+  "loss_reason": "Non-responsive",
+  "one_line": "Quote sent then client went dark; sales chased hard ~8x (quote + 7 'did not pick phone') over 4 weeks, no response.",
+  "notes_count": 12
+}

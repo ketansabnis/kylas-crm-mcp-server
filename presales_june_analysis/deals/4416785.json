@@ -1,0 +1,52 @@
+{
+ "deal_id": 4416785,
+ "deal_name": "AAdil Qureshi",
+ "creator": "Revati Ambike",
+ "creator_id": 9062,
+ "owner": "Ananya Kumari",
+ "pipeline": "Sell.Do Deal Pipeline",
+ "stage": "Quote Sent",
+ "pipeline_stage_reason": null,
+ "created_at": "2026-06-23T08:38:41.438Z",
+ "updated_at": "2026-07-03T12:31:39.148Z",
+ "meeting_conducted": true,
+ "cfMeetingConductedOn": "2026-06-24T05:54:42.009Z",
+ "noOfLicenses": 12,
+ "cfCity": "Mumbai",
+ "cfReDeveloperOrChannelPartner": "Channel partner",
+ "estimatedValue": null,
+ "actualValue": null,
+ "products": [
+  "Sell.Do Enterprise"
+ ],
+ "source": null,
+ "campaign": null,
+ "cfPreviousCrm": "Never used a CRM",
+ "cfRequiredTools": [
+  "CRM",
+  "Native WA"
+ ],
+ "cfSales": null,
+ "cfFirstSalesOwner": "Alok Tiwari",
+ "cfOwnerPhoneNumber": "+918789152329",
+ "notes_count": 15,
+ "notes_text": "By 9062: Type-CRM;City-Mumbai;Company-Smart Space;Broker(rental+primary);Team Size-12;Current CRM-No;Meeting 23 Jun 7pm online. AUDIT(4248): High confidence - verified senior DM (Founder Smart Space, ex-Azuro/Squareyards), on-ICP growing Mumbai brokerage, licence plausible. By 81335: Demo conducted; wants customizations to brokerage invoicing, closure/booking form, site visit report vs inventory. Quoted 800/user/mo + 10k setup + 45000 WhatsApp. Extensive inventory mgmt customizations. Multiple reschedules; ongoing seller/inventory feature discussion.",
+ "license_tier": "10-39",
+ "city_bucket": "Main6",
+ "city_clean": "Mumbai",
+ "onsite_or_online": "Online",
+ "name_valid": true,
+ "bant": {
+  "budget": "Quoted 800/user/mo + 10k setup + 45k WA; engaged on commercials",
+  "authority": "Founder/DM of Smart Space (verified senior)",
+  "need": "Strong; CRM + heavy inventory/invoicing customizations",
+  "timeline": "Active but slipping via reschedules",
+  "bant_score": 3,
+  "bant_flag": "Strong"
+ },
+ "enterprise_flag": false,
+ "pre_sales_verdict": "GREEN",
+ "stall_blocker": "Progressing",
+ "blocker_owner": "Sales",
+ "one_line": "Strong pre-sales: verified Mumbai brokerage founder, 12 lic, real customization need, priced and progressing; sales working custom feature fit."
+}

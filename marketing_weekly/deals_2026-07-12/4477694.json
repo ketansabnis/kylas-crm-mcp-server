@@ -1,0 +1,21 @@
+{
+  "deal_id": 4477694,
+  "name": "Manveet Mallik",
+  "owner": "Suraj Chauhan",
+  "stage": "Demo Conducted",
+  "licences": 2,
+  "tier": "<5",
+  "city": "Gurgaon",
+  "dev_broker": "Channel partner",
+  "onsite": "Online",
+  "bant_flag": "Weak",
+  "verdict": "RED",
+  "prob": 0.0037,
+  "band": "COLD",
+  "name_valid": true,
+  "dummy_phone": false,
+  "unverified_contact": false,
+  "sales_followup_since_demo": 1,
+  "next_action": "One call to pin the user count; if it is still 'I'll let you know', disqualify - 2-seat AI-calling-only broker is sub-ICP.",
+  "one_line": "2-seat Panipat/Gurgaon broker wanting AI calling only, no CRM need. A demo booked for the number."
+}

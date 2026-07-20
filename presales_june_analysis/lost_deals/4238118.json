@@ -1,0 +1,19 @@
+{
+  "deal_id": 4238118,
+  "name": "Harshit Agrawal",
+  "owner": "Alok Tiwari",
+  "creator_id": 9062,
+  "stage": "Unqualified",
+  "noOfLicenses": 10,
+  "city": "AHmedabad",
+  "created_at": "2026-05-08",
+  "demo_date": "2026-05-08",
+  "lost_date": "2026-06-29",
+  "days_created_to_demo": 0,
+  "days_demo_to_lost": 52,
+  "days_total": 52,
+  "sales_attempts": 11,
+  "loss_reason": "Non-responsive",
+  "one_line": "Demo done, proposal shared; sales chased relentlessly (~11x WA/calls over 7 wks) but client repeatedly unresponsive, dropped plan.",
+  "notes_count": 21
+}

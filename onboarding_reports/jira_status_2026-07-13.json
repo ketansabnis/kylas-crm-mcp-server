@@ -1,0 +1,6 @@
+{
+ "ESTATE-21040": {"summary":"Implement Infinite Scrolling and Save Search List from Lead Index (Kohinoor bulk AI call list)","status":"Won't Fix","statusCategory":"done","fixVersion":"11.3","updated":"2026-07-13","assignee":"Ketan Sabnis","severity":"Critical"},
+ "ESTATE-20563": {"summary":"AI Calling_ Kohinoor","status":"QA Clarification Required","statusCategory":"indeterminate","fixVersion":"11.0 (released 08-Jul)","updated":"2026-07-01","assignee":"Sharayu Sutar"},
+ "ESTATE-20699": {"summary":"AI Calling_ Mythri Builders","status":"Tech Discussion","statusCategory":"new","fixVersion":"-","updated":"2026-06-26","assignee":"Sharayu Sutar"},
+ "ESTATE-18697": {"summary":"Create App - Times Group Demo (FM module)","status":"Done","statusCategory":"done","fixVersion":"6.0 (released)","updated":"2026-02-13","assignee":"Ketan Sabnis"}
+}

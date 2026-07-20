@@ -31,12 +31,14 @@ SHARED UTILITIES:
 - lookup_users (resolve user names to IDs for ownerId, createdBy, updatedBy)
 - lookup_products (find products for field_values)
 - parse_datetime_to_utc_iso_tool (convert user timezone to UTC ISO)
+- add_note / get_notes (add or fetch notes on lead, deal, contact, company, meeting, call_log)
 """
 
 import asyncio
 import os
 import random
 import logging
+import re
 from contextlib import asynccontextmanager
 from datetime import datetime, timedelta
 from importlib.metadata import version as _pkg_version, PackageNotFoundError
@@ -47,6 +49,7 @@ import httpx
 import phonenumbers
 from dateutil import parser as dateutil_parser
 from fastmcp.server import FastMCP
+from fastmcp.server.dependencies import get_context
 from fastmcp.server.middleware import Middleware, MiddlewareContext
 from dotenv import load_dotenv
 import json
@@ -64,7 +67,23 @@ logging.basicConfig(
 logger = logging.getLogger("kylas-mcp")
 
 BASE_URL = os.getenv("KYLAS_BASE_URL", "https://api.kylas.io/v1")
+# Some Kylas endpoints (e.g. Reports) live under the /v3 API. Derive it from BASE_URL.
+API_V3_BASE = re.sub(r"/v\d+/?$", "/v3", BASE_URL) if re.search(r"/v\d+/?$", BASE_URL) else BASE_URL.rstrip("/") + "/../v3"
 API_KEY = os.getenv("KYLAS_API_KEY")
+
+# ZipLabs Person Enrichment API (https://api.ziplabs.ai/datasvc/api-manual)
+# Used by enrich_person to resolve a phone (+ optional name/email) to a verified
+# identity / professional profile. Auth is a separate key from Kylas.
+ZIPLABS_BASE_URL = os.getenv("ZIPLABS_BASE_URL", "https://api.ziplabs.ai")
+ZIPLABS_AUTHKEY = os.getenv("ZIPLABS_AUTHKEY")
+# Async job polling: start fast, back off, and cap total wait (seconds).
+ZIPLABS_POLL_DELAYS = [2, 2, 3, 5, 5, 8, 10, 10, 10, 10, 15, 15]
+ZIPLABS_POLL_MAX_SECONDS = float(os.getenv("ZIPLABS_POLL_MAX_SECONDS", "120"))
+# Where full enrichment responses are stored locally (one JSON file per run).
+ZIPLABS_STORE_DIR = os.getenv("ZIPLABS_STORE_DIR") or os.path.join(
+    os.path.dirname(os.path.abspath(__file__)), "enrichment_responses"
+)
+
 try:
     SERVER_VERSION = _pkg_version("kylas-crm-mcp-server")
 except PackageNotFoundError:
@@ -372,6 +391,10 @@ Build `field_values` from user input only. For `update_lead`: pass lead ID from 
 Use `search_idle_entities("lead", days)` for "no activity for N days" queries.
 Fallback: `search_entity("lead", [...])` with `updatedAt ≤ threshold AND latestActivityCreatedAt ≤ threshold`.
 
+### Notes
+- Fetch: `get_lead_notes(lead_id)` or `get_notes("LEAD", lead_id)`
+- Add: `add_note("LEAD", lead_id, "note text")`
+
 ---
 
 ## Contact Operations
@@ -522,7 +545,7 @@ def _get_mcp_client_name() -> str:
     Used for the outbound User-Agent to Kylas: kylas_mcp_server({version}) on {client}.
     """
     try:
-        ctx = mcp.get_context()
+        ctx = get_context()
         client_params = ctx.session.client_params
         if client_params and client_params.clientInfo:
             name = client_params.clientInfo.name or ""
@@ -618,6 +641,52 @@ async def handle_api_response(response: httpx.Response, operation: str) -> Dict[
         raise KylasAPIError(f"{operation} failed: {str(e)}")
 
 
+def _extract_owner(record: Dict[str, Any]) -> Tuple[Optional[int], Optional[str]]:
+    """
+    Resolve an entity owner from a Kylas record, handling both response shapes:
+      - Direct GET /{entity}/{id} returns nested `ownedBy: {id, name}`.
+      - Search/list endpoints return a flat `ownerId` (and sometimes `ownerName`).
+    Returns (owner_id, owner_name); either may be None.
+    """
+    if not isinstance(record, dict):
+        return None, None
+    owned_by = record.get("ownedBy")
+    if isinstance(owned_by, dict):
+        oid = owned_by.get("id")
+        oname = owned_by.get("name")
+        if oid is not None:
+            try:
+                return int(oid), (oname or None)
+            except (TypeError, ValueError):
+                return None, (oname or None)
+    # Fall back to flat fields (search/list responses)
+    flat_id = record.get("ownerId")
+    flat_name = record.get("ownerName")
+    if flat_id is not None:
+        try:
+            return int(flat_id), (flat_name or None)
+        except (TypeError, ValueError):
+            return None, (flat_name or None)
+    return None, (flat_name or None)
+
+
+def _extract_owner_id(record: Dict[str, Any]) -> Optional[int]:
+    """Return just the owner ID from a record (see _extract_owner)."""
+    return _extract_owner(record)[0]
+
+
+def _format_owner_line(record: Dict[str, Any]) -> str:
+    """Build a human-readable 'Owner' display line from a record."""
+    oid, oname = _extract_owner(record)
+    if oid is not None and oname:
+        return f"Owner: {oname} (ID: {oid})"
+    if oid is not None:
+        return f"Owner ID: {oid}"
+    if oname:
+        return f"Owner: {oname}"
+    return "Owner ID: —"
+
+
 # ---------------------------------------------------------------------------
 # Deal System Instructions (added alongside Lead instructions)
 # ---------------------------------------------------------------------------
@@ -659,6 +728,10 @@ Existing products preserved; new products merged (duplicates by ID skipped).
 ```
 search_entity("deal", [{"field": "products", "operator": "equal", "value": <product_id>}])
 ```
+
+### Notes
+- Fetch: `get_deal_notes(deal_id)` or `get_notes("DEAL", deal_id)`
+- Add: `add_note("DEAL", deal_id, "note text")`
 """
 
 # ---------------------------------------------------------------------------
@@ -728,7 +801,7 @@ Before creating, ask for:
 - `delete_meeting` — permanent; confirm with user first.
 
 ### Notes
-`add_note("MEETING", meeting_id, "note text")`
+`add_note("MEETING", meeting_id, "note text")` · Fetch: `get_notes("MEETING", meeting_id)`
 """
 
 # ---------------------------------------------------------------------------
@@ -764,7 +837,7 @@ Same as above with `"entity": "deal"` in relatedTo. Optionally link a contact:
 `get_call_logs(entity_id, entity_type)` — for a lead, contact, or deal.
 
 ### Notes
-`add_note("CALL_LOG", call_log_id, "note text")`
+`add_note("CALL_LOG", call_log_id, "note text")` · Fetch: `get_notes("CALL_LOG", call_log_id)`
 """
 
 # ---------------------------------------------------------------------------
@@ -2097,7 +2170,7 @@ def _format_lead_for_display(lead: Dict[str, Any]) -> str:
     else:
         lines.append(f"Pipeline: {pipeline}")
     lines.append(f"Pipeline Stage Reason: {lead.get('pipelineStageReason') or '—'}")
-    lines.append(f"Owner ID: {lead.get('ownerId', '—')}")
+    lines.append(_format_owner_line(lead))
     lines.append(f"Created At: {lead.get('createdAt', '—')}")
     lines.append(f"Updated At: {lead.get('updatedAt', '—')}")
     # Custom fields
@@ -2410,7 +2483,7 @@ def _format_contact_for_display(contact: Dict[str, Any]) -> str:
             lines.append(f"Phone ({typ}): +{code} {val}{prim}")
     else:
         lines.append("Phone: —")
-    lines.append(f"Owner ID: {contact.get('ownerId', '—')}")
+    lines.append(_format_owner_line(contact))
     lines.append(f"Created At: {contact.get('createdAt', '—')}")
     lines.append(f"Updated At: {contact.get('updatedAt', '—')}")
     ad = contact.get("associatedDeals") or []
@@ -3503,7 +3576,7 @@ def _format_deal_for_display(deal: Dict[str, Any]) -> str:
         lines.append(f"Stage: {stage_name}")
     else:
         lines.append(f"Pipeline: {pipeline}")
-    lines.append(f"Owner ID: {deal.get('ownerId', '—')}")
+    lines.append(_format_owner_line(deal))
     lines.append(f"Created At: {deal.get('createdAt', '—')}")
     lines.append(f"Updated At: {deal.get('updatedAt', '—')}")
     # Products
@@ -4026,7 +4099,7 @@ def _format_company_for_display(company: Dict[str, Any]) -> str:
             lines.append(f"Phone ({typ}): +{code} {val}{prim}")
     else:
         lines.append("Phone: —")
-    lines.append(f"Owner ID: {company.get('ownerId', '—')}")
+    lines.append(_format_owner_line(company))
     lines.append(f"Created At: {company.get('createdAt', '—')}")
     lines.append(f"Updated At: {company.get('updatedAt', '—')}")
     # Custom fields
@@ -5292,8 +5365,8 @@ async def add_note(entity_type: str, entity_id: int, note_text: str) -> str:
         if not note_text or not note_text.strip():
             return "✗ Note text cannot be empty."
 
-        # Wrap note text in <div> tags for API
-        description = f"<div>{note_text}</div>"
+        # Render newlines as <br/>, **bold** as <b>, preserve indentation, then wrap.
+        description = f"<div>{_plaintext_to_note_html(note_text)}</div>"
 
         payload = {
             "sourceEntity": {
@@ -5323,6 +5396,1135 @@ async def add_note(entity_type: str, entity_id: int, note_text: str) -> str:
         return f"✗ Failed to add note: {e.message}\n  Details: {e.response_body}"
     except Exception as e:
         logger.exception("add_note")
+        return f"✗ Unexpected error: {str(e)}"
+
+
+# ---------------------------------------------------------------------------
+# ZIPLABS PERSON ENRICHMENT: resolve a phone (+ name/email) to a verified
+# identity / professional profile. Async job-based:
+#   1) POST /enrichsvc/job/create  -> { job_id }
+#   2) GET  /enrichsvc/job/result/{job_id} (poll) until status == "completed"
+# Used by the deal-audit skill to verify the decision-maker behind Owner Phone.
+# ---------------------------------------------------------------------------
+
+
+def _clean_phone_digits(phone: str) -> Optional[str]:
+    """Keep the last 10 digits of a phone number (ZipLabs requires >= 10 digits)."""
+    if not phone:
+        return None
+    digits = re.sub(r"\D", "", str(phone))
+    if len(digits) < 10:
+        return None
+    return digits[-10:]
+
+
+def _ziplabs_headers() -> Dict[str, str]:
+    return {
+        "authkey": ZIPLABS_AUTHKEY or "",
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+        "User-Agent": f"kylas_mcp_server({SERVER_VERSION})",
+    }
+
+
+async def _ziplabs_create_job(inputs: List[Dict[str, str]]) -> str:
+    """Submit an enrichment job; return its job_id."""
+    async with httpx.AsyncClient(base_url=ZIPLABS_BASE_URL, timeout=30.0) as client:
+        resp = await client.post(
+            "/enrichsvc/job/create",
+            headers=_ziplabs_headers(),
+            json={"inputs": inputs},
+        )
+        if resp.status_code in (401, 402, 403):
+            raise KylasAPIError(
+                f"ZipLabs auth/credit error ({resp.status_code}). "
+                "Check ZIPLABS_AUTHKEY and account credits.",
+                status_code=resp.status_code,
+                response_body=resp.text,
+            )
+        if resp.status_code >= 400:
+            raise KylasAPIError(
+                f"ZipLabs create job failed: {resp.status_code}",
+                status_code=resp.status_code,
+                response_body=resp.text,
+            )
+        data = resp.json()
+        job_id = data.get("job_id")
+        if not job_id:
+            raise KylasAPIError(
+                "ZipLabs create job returned no job_id.",
+                response_body=resp.text,
+            )
+        return job_id
+
+
+async def _ziplabs_poll_result(job_id: str) -> Dict[str, Any]:
+    """Poll the result endpoint until status == 'completed' (or time/attempt budget runs out)."""
+    elapsed = 0.0
+    async with httpx.AsyncClient(base_url=ZIPLABS_BASE_URL, timeout=30.0) as client:
+        for i in range(len(ZIPLABS_POLL_DELAYS) + 1):
+            resp = await client.get(
+                f"/enrichsvc/job/result/{job_id}",
+                headers=_ziplabs_headers(),
+            )
+            if resp.status_code == 404:
+                raise KylasAPIError("ZipLabs job not found.", status_code=404, response_body=resp.text)
+            if resp.status_code in (401, 403):
+                raise KylasAPIError(
+                    f"ZipLabs not authorized for this job ({resp.status_code}).",
+                    status_code=resp.status_code,
+                    response_body=resp.text,
+                )
+            if resp.status_code >= 400:
+                raise KylasAPIError(
+                    f"ZipLabs poll failed: {resp.status_code}",
+                    status_code=resp.status_code,
+                    response_body=resp.text,
+                )
+            data = resp.json()
+            if data.get("status") == "completed":
+                return data
+            if elapsed >= ZIPLABS_POLL_MAX_SECONDS or i >= len(ZIPLABS_POLL_DELAYS):
+                raise KylasAPIError(
+                    f"ZipLabs job still '{data.get('status', 'processing')}' "
+                    f"({data.get('progress', '')}) after {int(elapsed)}s — try again shortly.",
+                )
+            delay = ZIPLABS_POLL_DELAYS[i]
+            await asyncio.sleep(delay)
+            elapsed += delay
+    raise KylasAPIError("ZipLabs polling exhausted without completion.")
+
+
+def _fmt_kv(label: str, value: Any) -> Optional[str]:
+    """Render a non-empty value as 'label: value', else None."""
+    if value in (None, "", [], {}):
+        return None
+    if isinstance(value, (list, tuple)):
+        value = ", ".join(str(v) for v in value if v not in (None, ""))
+        if not value:
+            return None
+    return f"  • {label}: {value}"
+
+
+def _clean_text(value: Any) -> Any:
+    """Strip leading emoji/symbol noise and surrounding whitespace from a string value."""
+    if not isinstance(value, str):
+        return value
+    # Drop common decorative symbols/emoji that prepend names/headlines.
+    cleaned = re.sub(r"[^\w\s().,@&/+-]", "", value, flags=re.UNICODE).strip()
+    return cleaned or value.strip()
+
+
+# We intentionally do NOT use financial-profiling data (credit-bureau, income/
+# compensation): it is not needed for the audit (BANT + social + contactability)
+# and carries extra cost. We strip it from every response before storing,
+# attaching, displaying, or building a note.
+_STRIPPED_KEYS = ("bureau", "compensation")
+
+
+def _strip_bureau(result: Dict[str, Any]) -> Dict[str, Any]:
+    """Remove financial-profiling blocks from each result row (in place) and return result."""
+    try:
+        for row in (result.get("results") or []):
+            if isinstance(row, dict):
+                for k in _STRIPPED_KEYS:
+                    row.pop(k, None)
+                inner = row.get("result")
+                if isinstance(inner, dict):
+                    for k in _STRIPPED_KEYS:
+                        inner.pop(k, None)
+    except Exception:
+        pass
+    return result
+
+
+_SOCIAL_DOMAINS = {
+    "linkedin": "LinkedIn", "instagram": "Instagram", "facebook": "Facebook",
+    "twitter": "Twitter", "x.com": "Twitter/X", "youtube": "YouTube",
+}
+
+
+def _harvest_contacts_socials(result: Dict[str, Any]):
+    """
+    Recursively scan an enrichment result for contactability + social signals
+    (BANT focus): email addresses, phone numbers (from phone/mobile/contact keys),
+    and social/profile URLs. Returns (emails:set, phones:set, socials:dict).
+    """
+    emails: set = set()
+    phones: set = set()
+    socials: Dict[str, str] = {}
+
+    def visit(node: Any, keyhint: str = "") -> None:
+        if isinstance(node, dict):
+            for k, v in node.items():
+                visit(v, str(k).lower())
+        elif isinstance(node, list):
+            for v in node:
+                visit(v, keyhint)
+        elif isinstance(node, str):
+            s = node.strip()
+            if "@" in s and "." in s and " " not in s and len(s) <= 100:
+                emails.add(s.lower())
+            if s.lower().startswith("http"):
+                for dom, label in _SOCIAL_DOMAINS.items():
+                    if dom in s.lower():
+                        socials.setdefault(label, s)
+                        break
+            if any(t in keyhint for t in ("phone", "mobile", "contact")):
+                d = re.sub(r"\D", "", s)
+                if 10 <= len(d) <= 13:
+                    phones.add(d[-10:])
+        elif isinstance(node, int):
+            if any(t in keyhint for t in ("phone", "mobile")):
+                d = str(node)
+                if 10 <= len(d) <= 13:
+                    phones.add(d[-10:])
+
+    visit(result)
+    return emails, phones, socials
+
+
+def _format_enrich_row(row: Dict[str, Any]) -> str:
+    """
+    Format one ZipLabs result row into a readable, authority-focused block.
+
+    Real schema (observed): each row is
+        {input:{phone,email,name}, status, billing_status, credits_used,
+         result:{data_found, identity:{full_name,gender,age,community},
+                 locations:[{city,state,country}], compensation:{bucket_label,currency},
+                 insights:{total_experience,...},
+                 professional_profile:{url,headline,summary,experience:[{title,company:{name}}]}}}
+    Rendered defensively; the full raw row is appended so nothing is lost even if
+    the schema shifts.
+    """
+    inp = row.get("input") or {}
+    result = row.get("result") or row  # unwrap the nested result object
+    identity = result.get("identity") or {}
+    prof = result.get("professional_profile") or result.get("professional") or {}
+    locations = result.get("locations") or []
+    loc0 = locations[0] if locations and isinstance(locations[0], dict) else {}
+    insights = result.get("insights") or {}
+    name_validation = result.get("name_validation") or row.get("name_validation") or {}
+    career = result.get("career") or row.get("career") or {}
+
+    # Current role = first experience entry (most recent / present).
+    experience = prof.get("experience") or []
+    cur = experience[0] if experience and isinstance(experience[0], dict) else {}
+    cur_company = cur.get("company") or {}
+    cur_company_name = cur_company.get("name") if isinstance(cur_company, dict) else cur_company
+
+    lines: List[str] = []
+    full_name = _clean_text(identity.get("full_name") or identity.get("name") or inp.get("name") or "—")
+    in_phone = inp.get("phone") or row.get("phone") or "—"
+    headline = _clean_text(prof.get("headline"))
+    header_role = f" · {headline}" if headline else ""
+    lines.append(f"▶ Input phone {in_phone} → {full_name}{header_role}")
+
+    # Identity
+    location_str = loc0.get("raw") or ", ".join(
+        x for x in [loc0.get("city"), loc0.get("state"), loc0.get("country")] if x
+    )
+    id_lines = [
+        _fmt_kv("Name", full_name if full_name != "—" else None),
+        _fmt_kv("Gender", identity.get("gender")),
+        _fmt_kv("Age", identity.get("age")),
+        _fmt_kv("Location", location_str),
+        _fmt_kv("Community", identity.get("community")),
+    ]
+    id_lines = [l for l in id_lines if l]
+    if id_lines:
+        lines.append("Identity:")
+        lines.extend(id_lines)
+
+    # Professional / authority signal
+    prof_lines = [
+        _fmt_kv("Current title", _clean_text(cur.get("title"))),
+        _fmt_kv("Current company", _clean_text(cur_company_name)),
+        _fmt_kv("Headline", headline),
+        _fmt_kv("LinkedIn", prof.get("url") or prof.get("linkedin_url")),
+        _fmt_kv("Total experience", insights.get("total_experience") or prof.get("experience_years")),
+        _fmt_kv("Premier institute", insights.get("studied_at_premier_institute")),
+    ]
+    prof_lines = [l for l in prof_lines if l]
+    if prof_lines:
+        lines.append("Professional:")
+        lines.extend(prof_lines)
+
+    # Add-on signals (opt-in; only render if present)
+    addon_lines = [
+        _fmt_kv("Name validation", name_validation.get("result") or name_validation.get("match")),
+        _fmt_kv("Phone owner (namelookup)", name_validation.get("phone_owner")),
+        _fmt_kv("Relationship to input", name_validation.get("relationship")),
+        _fmt_kv("Recent job change", career.get("job_change") if career else None),
+        _fmt_kv("Recent promotion", career.get("promotion") if career else None),
+    ]
+    addon_lines = [l for l in addon_lines if l]
+    if addon_lines:
+        lines.append("Signals:")
+        lines.extend(addon_lines)
+
+    # Contactability + social (BANT-focused; credit-bureau intentionally excluded)
+    emails, phones, socials = _harvest_contacts_socials(result)
+    contact_lines = [
+        _fmt_kv("Emails found", sorted(emails)),
+        _fmt_kv("Phones found", sorted(phones)),
+    ]
+    contact_lines = [l for l in contact_lines if l]
+    if contact_lines:
+        lines.append("Contactability:")
+        lines.extend(contact_lines)
+    if socials:
+        lines.append("Social / web:")
+        lines.extend(f"  • {k}: {v}" for k, v in socials.items())
+
+    data_found = result.get("data_found")
+    status = row.get("status") or row.get("billing_status")
+    meta = []
+    if data_found is not None:
+        meta.append(f"data_found={data_found}")
+    if status:
+        meta.append(f"status={status}")
+    if meta:
+        lines.append("  • Resolution: " + ", ".join(meta))
+
+    # Preserve the raw row compactly so no field is lost to the caller.
+    try:
+        raw = json.dumps(row, ensure_ascii=False, separators=(",", ":"))
+        if len(raw) > 2000:
+            raw = raw[:2000] + "…(truncated)"
+        lines.append(f"  • Raw: {raw}")
+    except Exception:
+        pass
+
+    return "\n".join(lines)
+
+
+def _store_enrichment(
+    deal_id: int,
+    contact_id: Optional[int],
+    input_item: Dict[str, Any],
+    response: Dict[str, Any],
+) -> Tuple[Optional[str], Optional[str]]:
+    """
+    Persist the full enrichment response locally as one JSON file.
+    Returns (store_id, file_path). Never raises — storage failure must not break
+    the enrichment itself.
+    """
+    try:
+        os.makedirs(ZIPLABS_STORE_DIR, exist_ok=True)
+        ts = datetime.utcnow().strftime("%Y%m%dT%H%M%SZ")
+        job_id = (response or {}).get("job_id") or "nojob"
+        store_id = f"deal{deal_id}-contact{contact_id or 'NA'}-{ts}"
+        fname = f"{store_id}-{job_id}.json"
+        path = os.path.join(ZIPLABS_STORE_DIR, fname)
+        record = {
+            "store_id": store_id,
+            "stored_at_utc": ts,
+            "deal_id": deal_id,
+            "contact_id": contact_id,
+            "input_sent": input_item,   # phone + email + name actually sent
+            "job_id": job_id,
+            "response": response,       # the COMPLETE ZipLabs response
+        }
+        with open(path, "w", encoding="utf-8") as f:
+            json.dump(record, f, ensure_ascii=False, indent=2)
+        return store_id, path
+    except Exception as e:
+        logger.warning(f"Could not store enrichment response: {e}")
+        return None, None
+
+
+def _esc(value: Any) -> str:
+    """HTML-escape a value for safe inclusion inside note markup."""
+    import html as _html
+    return _html.escape("" if value is None else str(value))
+
+
+def _plaintext_to_note_html(text: str) -> str:
+    """
+    Convert a plain-text note (with newlines / **bold** / leading-space indents)
+    into Kylas-friendly HTML: escape, render **bold**, keep indentation with
+    non-breaking spaces, and turn newlines into <br/>. Used by add_note so any
+    code-posted note renders with line breaks instead of one wall of text.
+    """
+    import html as _html
+    esc = _html.escape(text)
+    esc = re.sub(r"\*\*(.+?)\*\*", r"<b>\1</b>", esc)  # **bold** -> <b>bold</b>
+
+    def _indent(line: str) -> str:
+        stripped = line.lstrip(" ")
+        pad = len(line) - len(stripped)
+        return ("&nbsp;" * pad) + stripped
+
+    return "<br/>".join(_indent(l) for l in esc.split("\n"))
+
+
+def _html_section(heading: str, items: List[str]) -> str:
+    """Render a bold heading followed by a bulleted list (items are already escaped)."""
+    if not items:
+        return ""
+    lis = "".join(f"<li>{it}</li>" for it in items)
+    return f"<p><b>{_esc(heading)}</b></p><ul>{lis}</ul>"
+
+
+def _enrich_full_detail_html(row: Dict[str, Any]) -> str:
+    """Verbose HTML dump of a single enrichment row for the CRM note (max detail)."""
+    result = row.get("result") or row
+    parts: List[str] = []
+
+    idn = result.get("identity") or {}
+    id_items = []
+    for label, v in [
+        ("Full name", _clean_text(idn.get("full_name") or idn.get("name"))),
+        ("Gender", idn.get("gender")),
+        ("Age", idn.get("age")),
+        ("Community", idn.get("community")),
+        ("DOB", idn.get("dob")),
+    ]:
+        if v not in (None, "", "—"):
+            id_items.append(f"<b>{_esc(label)}:</b> {_esc(v)}")
+    parts.append(_html_section("Identity", id_items))
+
+    locs = result.get("locations") or []
+    loc_items = []
+    for L in locs:
+        if isinstance(L, dict):
+            val = L.get("raw") or ", ".join(
+                str(x) for x in [L.get("city"), L.get("state"), L.get("country"), L.get("pincode")] if x
+            )
+            if val:
+                loc_items.append(_esc(val))
+    parts.append(_html_section("Location", loc_items))
+
+    ins = result.get("insights") or {}
+    ins_items = [f"<b>{_esc(k)}:</b> {_esc(v)}" for k, v in ins.items() if v not in (None, "")]
+    parts.append(_html_section("Insights", ins_items))
+
+    nv = result.get("name_validation") or {}
+    if isinstance(nv, dict) and nv:
+        nv_items = []
+        for label, key in [
+            ("Result", "result"), ("Phone owner (namelookup)", "phone_owner"),
+            ("Input name", "input_name"), ("Relationship to input", "relationship"),
+        ]:
+            v = nv.get(key)
+            if v not in (None, ""):
+                nv_items.append(f"<b>{label}:</b> {_esc(v)}")
+        parts.append(_html_section("Name validation", nv_items))
+
+    prof = result.get("professional_profile") or result.get("professional") or {}
+    if isinstance(prof, dict) and prof:
+        p_items = []
+        if prof.get("url"):
+            p_items.append(f'<b>LinkedIn:</b> <a href="{_esc(prof["url"])}">{_esc(prof["url"])}</a>')
+        for k, label in [("headline", "Headline"), ("summary", "Summary")]:
+            v = prof.get(k)
+            if v:
+                p_items.append(f"<b>{label}:</b> {_esc(_clean_text(v))}")
+        for e in (prof.get("experience") or [])[:6]:
+            if not isinstance(e, dict):
+                continue
+            ce = e.get("company") or {}
+            cn = ce.get("name") if isinstance(ce, dict) else ce
+            dur = e.get("duration") or {}
+            span = ""
+            if dur:
+                s = str(dur.get("start") or "")[:10]
+                en = "present" if dur.get("present") else str(dur.get("end") or "")[:10]
+                span = f" ({s} → {en})" if (s or en) else ""
+            p_items.append(f"<b>Role:</b> {_esc(_clean_text(e.get('title')))} @ {_esc(_clean_text(cn))}{_esc(span)}")
+        for ed in (prof.get("education") or [])[:4]:
+            if isinstance(ed, dict):
+                p_items.append(f"<b>Education:</b> {_esc(_clean_text(ed.get('school') or ed.get('name')))}")
+        parts.append(_html_section("Professional", p_items))
+
+    # Contactability + social (credit-bureau intentionally excluded)
+    emails, phones, socials = _harvest_contacts_socials(result)
+    contact_items = []
+    if emails:
+        contact_items.append(f"<b>Emails:</b> {_esc(', '.join(sorted(emails)))}")
+    if phones:
+        contact_items.append(f"<b>Phones:</b> {_esc(', '.join(sorted(phones)))}")
+    parts.append(_html_section("Contactability", contact_items))
+    social_items = [
+        f'<b>{_esc(k)}:</b> <a href="{_esc(v)}">{_esc(v)}</a>' for k, v in socials.items()
+    ]
+    parts.append(_html_section("Social / web", social_items))
+
+    parts.append(
+        f"<p><i>Resolution: data_found={_esc(result.get('data_found'))} · "
+        f"status={_esc(row.get('status') or row.get('billing_status'))}</i></p>"
+    )
+    return "".join(p for p in parts if p)
+
+
+def _build_enrichment_note_html(
+    deal_id: int,
+    contact_ctx: Dict[str, Any],
+    name_note: Optional[str],
+    rows: List[Dict[str, Any]],
+    store_id: Optional[str],
+    store_path: Optional[str],
+    input_item: Dict[str, Any],
+    doc_ref: Optional[str] = None,
+) -> str:
+    """Assemble the full enrichment note as HTML for posting to the deal (no vendor name)."""
+    ts = datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC")
+    fname = os.path.basename(store_path) if store_path else "(not stored)"
+    inputs_desc = "phone " + (input_item.get("phone") or "—")
+    if input_item.get("email"):
+        inputs_desc += " + email " + input_item["email"]
+    if input_item.get("name"):
+        inputs_desc += f" (name: {input_item['name']})"
+
+    meta_items = [
+        f"<b>Inputs checked:</b> {_esc(inputs_desc)}",
+        f"<b>Stored ref:</b> {_esc(store_id or '(not stored)')} ({_esc(fname)})",
+    ]
+    if doc_ref:
+        meta_items.append(f"<b>Attached document:</b> {_esc(doc_ref)}")
+    contact_items = [
+        f"<b>Contact:</b> {_esc(contact_ctx.get('name'))} (#{_esc(contact_ctx.get('cid'))})",
+        f"<b>Selected via:</b> {_esc(contact_ctx.get('chosen_via'))}",
+        f"<b>Designation (CRM):</b> {_esc(contact_ctx.get('designation'))}",
+        f"<b>Decision-maker flag (CRM):</b> {_esc(contact_ctx.get('stakeholder'))}",
+    ]
+
+    html_parts = [
+        f"<p><b>🔎 CONTACT ENRICHMENT — Deal #{_esc(deal_id)}</b> · {_esc(ts)}</p>",
+        _html_section("Run details", meta_items),
+        _html_section("CRM primary contact", contact_items),
+    ]
+    if name_note:
+        nn = name_note.replace("  • Name check:", "", 1).strip()
+        flagged = nn.startswith("⚠")
+        body = f"<b>{_esc(nn)}</b>" if flagged else _esc(nn)
+        html_parts.append(f"<p><b>Name check:</b> {body}</p>")
+
+    if not rows:
+        html_parts.append("<p><b>Enriched profile:</b> (no result returned)</p>")
+    else:
+        for i, r in enumerate(rows):
+            if len(rows) > 1:
+                html_parts.append(f"<p><b>Result {i + 1} of {len(rows)}</b></p>")
+            html_parts.append(_enrich_full_detail_html(r))
+
+    html_parts.append("<p><i>Auto-generated contact verification. CRM fields not overwritten.</i></p>")
+    return "".join(p for p in html_parts if p)
+
+
+async def _post_deal_note(deal_id: int, html_body: str) -> None:
+    """Post an HTML note to a deal. Caller supplies safe HTML. Raises on failure."""
+    payload = {
+        "sourceEntity": {"description": f"<div>{html_body}</div>", "mentions": None},
+        "targetEntityId": str(int(deal_id)),
+        "targetEntityType": "DEAL",
+    }
+    async with get_client() as client:
+        response = await client.post("/notes/relation", json=payload)
+        await handle_api_response(response, "Add note")
+
+
+async def _upload_deal_document(
+    deal_id: int,
+    filename: str,
+    data_bytes: bytes,
+    content_type: str = "application/json",
+) -> Dict[str, Any]:
+    """
+    Attach a file to a deal via Kylas POST /documents (multipart/form-data).
+    Returns the parsed response, e.g. {"success":[{"id":..,"fileName":..}],"failure":[]}.
+    Uses a dedicated client so httpx sets the multipart boundary (NOT application/json).
+    """
+    api_key = _resolve_api_key()
+    headers = {
+        "api-key": api_key,
+        "Accept": "application/json",
+        "User-Agent": f"kylas_mcp_server({SERVER_VERSION})",
+    }
+    files = {"files[]": (filename, data_bytes, content_type)}
+    form = {"entityId": str(int(deal_id)), "entityType": "deal"}
+    async with httpx.AsyncClient(base_url=BASE_URL, timeout=60.0) as client:
+        resp = await client.post("/documents", headers=headers, files=files, data=form)
+        return await handle_api_response(resp, "Upload deal document")
+
+
+@mcp.tool()
+async def enrich_person(phone: str, name: Optional[str] = None, email: Optional[str] = None) -> str:
+    """
+    Enrich a single person from their phone number using the ZipLabs Person
+    Enrichment API. Resolves the phone (plus optional name/email) to a verified
+    identity and professional profile — useful for verifying the decision-maker
+    behind a deal's Owner Phone Number during a deal audit.
+
+    phone: Phone number (required, >= 10 digits; the last 10 digits are used).
+    name:  Optional person/contact name — improves resolution and enables the
+           name_validation add-on signal.
+    email: Optional email — improves resolution quality.
+
+    Returns identity, professional profile, and any enabled add-on signals
+    (community, name validation, career). Requires ZIPLABS_AUTHKEY to be set.
+    Note: this is a separate paid API from Kylas; one phone = one billed input.
+    """
+    try:
+        if not ZIPLABS_AUTHKEY:
+            return (
+                "✗ ZipLabs is not configured. Set ZIPLABS_AUTHKEY in the environment "
+                "(.env) to use enrich_person. Get a key from support@ziplabs.ai."
+            )
+        cleaned = _clean_phone_digits(phone)
+        if not cleaned:
+            return f"✗ Invalid phone '{phone}': need at least 10 digits."
+
+        item: Dict[str, str] = {"phone": cleaned}
+        if name and name.strip():
+            item["name"] = name.strip()
+        if email and email.strip():
+            item["email"] = email.strip().lower()
+
+        logger.info(f"ZipLabs enrich: creating job for phone ****{cleaned[-4:]}")
+        job_id = await _ziplabs_create_job([item])
+        result = await _ziplabs_poll_result(job_id)
+        result = _strip_bureau(result)  # never persist/use credit-bureau data
+
+        rows = result.get("results") or []
+        credits = result.get("credits_used")
+        if not rows:
+            return (
+                f"ZipLabs job {job_id} completed but returned no result rows "
+                f"(phone may be unresolvable). Credits used: {credits}."
+            )
+
+        blocks = [_format_enrich_row(r) for r in rows]
+        head = f"ZipLabs enrichment — job {job_id} (credits used: {credits})"
+        return head + "\n" + "\n\n".join(blocks)
+    except KylasAPIError as e:
+        detail = f"\n  Details: {e.response_body}" if e.response_body else ""
+        return f"✗ ZipLabs enrich failed: {e.message}{detail}"
+    except Exception as e:
+        logger.exception("enrich_person")
+        return f"✗ Unexpected error: {str(e)}"
+
+
+def _extract_contact_id(entry: Any) -> Optional[int]:
+    """An associatedContacts entry may be a bare id or a {'id': ...} dict."""
+    if isinstance(entry, dict):
+        cid = entry.get("id")
+    else:
+        cid = entry
+    try:
+        return int(cid)
+    except (TypeError, ValueError):
+        return None
+
+
+def _extract_primary_phone_value(phones: Any) -> Optional[str]:
+    """Return just the dialable number (local value) of the primary phone, digits only."""
+    if not phones or not isinstance(phones, list):
+        return None
+    chosen = None
+    for p in phones:
+        if p and p.get("primary"):
+            chosen = p
+            break
+    if chosen is None:
+        chosen = phones[0] if phones and phones[0] else None
+    if not chosen:
+        return None
+    # Prefer the local 'value'; fall back to code+value if value is short.
+    value = re.sub(r"\D", "", str(chosen.get("value", "")))
+    code = re.sub(r"\D", "", str(chosen.get("code", "")))
+    if len(value) >= 10:
+        return value
+    combined = (code + value) if code.isdigit() else value
+    return combined or None
+
+
+def _contact_display_name(contact: Dict[str, Any]) -> str:
+    name = " ".join(
+        x for x in [contact.get("firstName"), contact.get("lastName")] if x
+    ).strip()
+    return name or contact.get("name") or "—"
+
+
+def _name_tokens(name: str) -> set:
+    """Normalize a name to a set of lowercase alpha tokens (drop titles/initials)."""
+    if not name:
+        return set()
+    titles = {"mr", "mrs", "ms", "miss", "dr", "shri", "smt", "m/s"}
+    toks = re.findall(r"[a-z]+", str(name).lower())
+    return {t for t in toks if len(t) >= 3 and t not in titles}
+
+
+def _name_match_note(crm_name: str, enriched_name: str) -> Optional[str]:
+    """
+    Compare the CRM contact name against the name the phone resolved to.
+    Returns a ⚠ flag line when they clearly disagree, a ✓ line when they match,
+    or None when there's not enough to compare.
+    """
+    crm_t, enr_t = _name_tokens(crm_name), _name_tokens(enriched_name)
+    if not crm_t or not enr_t or not enriched_name or enriched_name == "—":
+        return None
+    overlap = crm_t & enr_t
+    if overlap:
+        return f"  • Name check: ✓ matches CRM ('{crm_name}' ↔ '{enriched_name}')"
+    return (
+        f"  • Name check: ⚠ MISMATCH — phone resolves to '{enriched_name}', "
+        f"but CRM contact is '{crm_name}'. Verify the number belongs to the contact "
+        f"before treating this profile as the decision-maker."
+    )
+
+
+@mcp.tool()
+async def enrich_deal_primary_contact(
+    deal_id: int,
+    post_note: bool = True,
+    store: bool = True,
+    attach_to_deal: bool = True,
+) -> str:
+    """
+    Enrich the PRIMARY CONTACT linked to a deal using ZipLabs Person Enrichment.
+
+    This is the turnkey entry point for a deal audit: it pulls the deal, picks the
+    primary associated contact (preferring one flagged "Decision maker"/stakeholder,
+    else the first), reads that contact's primary phone + email + name from the CRM,
+    sends BOTH the phone and email to ZipLabs, and resolves them to a verified
+    identity + professional profile. Use this to verify the decision-maker behind a
+    deal before a sales demo.
+
+    deal_id:   The Kylas deal ID.
+    post_note: When True (default), post a full HTML enrichment note onto the deal
+               (one note; no field is overwritten). Pass False to skip posting.
+    store:     When True (default), save the COMPLETE response to a local JSON file
+               under ZIPLABS_STORE_DIR, keyed by a store id.
+    attach_to_deal: When True (default), also upload that full JSON response as a
+               document on the Kylas deal (best-effort; never blocks the result).
+
+    Returns the CRM contact context, a name-match check, the stored-file id, and the
+    enrichment focused on BANT signals: identity, professional profile (title/company/
+    LinkedIn), social links, and validated phone/email contactability. Credit-bureau
+    data is intentionally excluded. Requires ZIPLABS_AUTHKEY. One input row per call.
+    """
+    try:
+        if not ZIPLABS_AUTHKEY:
+            return (
+                "✗ ZipLabs is not configured. Set ZIPLABS_AUTHKEY in the environment "
+                "(.env) to use enrichment. Get a key from support@ziplabs.ai."
+            )
+        deal_id = int(deal_id)
+        deal = await get_deal_logic(deal_id)
+        assoc = deal.get("associatedContacts") or []
+        contact_ids = [cid for cid in (_extract_contact_id(e) for e in assoc) if cid]
+        if not contact_ids:
+            return (
+                f"✗ Deal {deal_id} has no associated contacts to enrich. "
+                "Link a primary contact on the deal first."
+            )
+
+        # Fetch contacts (free) and pick the primary: decision-maker flag wins, else first.
+        contacts: List[Dict[str, Any]] = []
+        for cid in contact_ids[:10]:
+            try:
+                contacts.append(await get_contact_logic(cid))
+            except Exception as ce:
+                logger.warning(f"enrich_deal_primary_contact: could not fetch contact {cid}: {ce}")
+        if not contacts:
+            return f"✗ Could not fetch any associated contact for deal {deal_id}."
+
+        primary = next((c for c in contacts if c.get("stakeholder")), contacts[0])
+        chosen_via = "Decision-maker flag" if primary.get("stakeholder") else "first associated contact"
+
+        name = _contact_display_name(primary)
+        phone_value = _extract_primary_phone_value(primary.get("phoneNumbers"))
+        email = _extract_primary_email(primary.get("emails"))
+        email = None if email in (None, "-", "") else email
+        designation = primary.get("designation") or "—"
+
+        ctx = [
+            f"CRM primary contact (deal {deal_id}): {name} (contact #{primary.get('id')})",
+            f"  • Selected via: {chosen_via}"
+            + (f" ({len(contacts)} contacts on deal)" if len(contacts) > 1 else ""),
+            f"  • Designation (CRM): {designation}",
+            f"  • Decision-maker flag (CRM): {'yes' if primary.get('stakeholder') else 'no'}",
+            f"  • Phone enriched: {phone_value or '— none on contact'}",
+            f"  • Email: {email or '—'}",
+        ]
+        ctx_block = "\n".join(ctx)
+
+        if not phone_value or len(phone_value) < 10:
+            return (
+                ctx_block
+                + "\n\n✗ Primary contact has no usable phone (≥10 digits) — cannot enrich. "
+                "Verify the contact's number in the CRM, then retry."
+            )
+
+        logger.info(
+            f"ZipLabs enrich: deal {deal_id} primary contact #{primary.get('id')} "
+            f"phone ****{phone_value[-4:]}"
+        )
+        item: Dict[str, str] = {"phone": _clean_phone_digits(phone_value) or phone_value[-10:]}
+        if name and name != "—":
+            item["name"] = name
+        if email:
+            item["email"] = email.lower()
+
+        job_id = await _ziplabs_create_job([item])
+        result = await _ziplabs_poll_result(job_id)
+        result = _strip_bureau(result)  # never persist/use credit-bureau data
+        rows = result.get("results") or []
+        credits = result.get("credits_used")
+
+        # Always store the COMPLETE response locally (even empty/partial), keyed by id.
+        store_id, store_path = (None, None)
+        if store:
+            store_id, store_path = _store_enrichment(deal_id, primary.get("id"), item, result)
+        store_line = (
+            f"Stored locally: {store_id} ({os.path.basename(store_path)})"
+            if store_id else "Stored locally: (storage disabled or failed)"
+        )
+
+        # Best-effort: attach the COMPLETE response JSON as a document on the deal.
+        doc_ref, doc_line = None, ""
+        if attach_to_deal:
+            try:
+                record = {
+                    "store_id": store_id,
+                    "deal_id": deal_id,
+                    "contact_id": primary.get("id"),
+                    "input_sent": item,
+                    "job_id": job_id,
+                    "response": result,
+                }
+                blob = json.dumps(record, ensure_ascii=False, indent=2).encode("utf-8")
+                # Upload as .txt/text-plain — Kylas /documents rejects some MIME types (422).
+                upload_name = (store_id or f"enrichment_deal{deal_id}") + ".txt"
+                up = await _upload_deal_document(
+                    deal_id, upload_name, blob, content_type="text/plain"
+                )
+                succ = (up or {}).get("success") or []
+                if succ:
+                    doc_ref = f"{succ[0].get('fileName')} (doc #{succ[0].get('id')})"
+                    doc_line = f"\nAttached to deal: {doc_ref}"
+                else:
+                    doc_line = "\nAttach to deal: no document id returned."
+            except KylasAPIError as ue:
+                body = (ue.response_body or "")[:300].replace("\n", " ")
+                doc_line = f"\nAttach to deal failed: {ue.message}" + (f" — {body}" if body else "")
+            except Exception as ue:
+                logger.warning(f"deal document upload failed: {ue}")
+                doc_line = f"\nAttach to deal failed: {ue}"
+
+        if not rows:
+            return (
+                ctx_block
+                + f"\n\n{store_line}{doc_line}"
+                + f"\nZipLabs job {job_id} completed but returned no result row "
+                f"(contact may be unresolvable). Credits used: {credits}."
+            )
+        blocks = [_format_enrich_row(r) for r in rows]
+        head = f"ZipLabs enrichment — job {job_id} (credits used: {credits})"
+
+        # Local name-match check (covers the case where the name_validation add-on
+        # is not enabled on the authkey): compare the CRM contact name to the name
+        # the phone actually resolved to, and surface a mismatch as an audit flag.
+        first = rows[0] if rows else {}
+        enr_result = first.get("result") or first
+        enr_identity = (enr_result.get("identity") or {}) if isinstance(enr_result, dict) else {}
+        enriched_name = _clean_text(enr_identity.get("full_name") or enr_identity.get("name") or "—")
+        name_note = _name_match_note(name, enriched_name)
+        head_block = head + ("\n" + name_note if name_note else "")
+
+        # Optionally post a full text-format note to the deal.
+        note_line = ""
+        if post_note:
+            contact_ctx = {
+                "name": name,
+                "cid": primary.get("id"),
+                "chosen_via": chosen_via
+                + (f" ({len(contacts)} contacts on deal)" if len(contacts) > 1 else ""),
+                "designation": designation,
+                "stakeholder": "yes" if primary.get("stakeholder") else "no",
+            }
+            note_html = _build_enrichment_note_html(
+                deal_id, contact_ctx, name_note, rows,
+                store_id, store_path, item, doc_ref,
+            )
+            try:
+                await _post_deal_note(deal_id, note_html)
+                note_line = f"\n✓ Posted enrichment note to deal {deal_id}."
+            except KylasAPIError as ne:
+                note_line = f"\n✗ Could not post note: {ne.message}"
+
+        return (
+            ctx_block + "\n\n" + store_line + doc_line + "\n\n" + head_block
+            + "\n" + "\n\n".join(blocks) + note_line
+        )
+    except ValueError as e:
+        return f"✗ Invalid deal ID: {str(e)}"
+    except KylasAPIError as e:
+        detail = f"\n  Details: {e.response_body}" if e.response_body else ""
+        return f"✗ enrich_deal_primary_contact failed: {e.message}{detail}"
+    except Exception as e:
+        logger.exception("enrich_deal_primary_contact")
+        return f"✗ Unexpected error: {str(e)}"
+
+
+# ---------------------------------------------------------------------------
+# NOTES: Fetch notes on Lead, Contact, Deal, Company, Meeting, Call Log
+# ---------------------------------------------------------------------------
+
+NOTE_SUPPORTED_ENTITY_TYPES = {"LEAD", "CONTACT", "DEAL", "COMPANY", "MEETING", "CALL_LOG"}
+
+NOTE_ENTITY_GET_PATHS: Dict[str, str] = {
+    "LEAD": "/leads/{entity_id}",
+    "DEAL": "/deals/{entity_id}",
+    "CONTACT": "/contacts/{entity_id}",
+    "COMPANY": "/companies/{entity_id}",
+    "MEETING": "/meetings/{entity_id}",
+    "CALL_LOG": "/call-logs/{entity_id}",
+}
+
+
+def _strip_html(text: Optional[str]) -> str:
+    """Remove HTML tags from note description for readable display."""
+    if not text:
+        return ""
+    cleaned = re.sub(r"<[^>]+>", " ", str(text))
+    return re.sub(r"\s+", " ", cleaned).strip()
+
+
+async def _resolve_note_target_owner_id(entity_type: str, entity_id: int) -> Optional[int]:
+    """Fetch ownerId for an entity (required by GET /notes/relation per Kylas API)."""
+    path_template = NOTE_ENTITY_GET_PATHS.get(entity_type)
+    if not path_template:
+        return None
+    async with get_client() as client:
+        response = await client.get(path_template.format(entity_id=entity_id))
+        record = await handle_api_response(response, f"Get {entity_type.lower()} for notes")
+    # Direct GET responses return nested `ownedBy: {id}`; search/list return flat `ownerId`.
+    # _extract_owner_id handles both shapes.
+    return _extract_owner_id(record)
+
+
+NOTE_DEFAULT_MAX_CHARS = 300
+NOTE_HARD_PAGE_CAP = 10  # safety: never walk more than 10 pages when collecting all notes
+
+
+def _note_sort_key(note: Dict[str, Any]) -> int:
+    """createdAt is epoch-millis. Missing/odd values sort oldest."""
+    raw = note.get("createdAt")
+    try:
+        return int(raw)
+    except (TypeError, ValueError):
+        return 0
+
+
+def _format_note_line(note: Dict[str, Any], max_chars: int = NOTE_DEFAULT_MAX_CHARS) -> str:
+    """Format a single note record for display.
+
+    max_chars <= 0 returns the FULL note body (no truncation). Callers that need to diff
+    notes week-over-week (e.g. the onboarding review's restated-note detector) must use
+    full text - a truncated body hides the very delta they are looking for.
+    """
+    note_id = note.get("id", "?")
+    created_at = note.get("createdAt", "—")
+    created_by = note.get("createdBy", "—")
+    description = _strip_html(note.get("description") or note.get("title") or "")
+    if max_chars and max_chars > 0 and len(description) > max_chars:
+        description = description[: max_chars - 3] + "..."
+    return f"• ID: {note_id} | Created: {created_at} | By: {created_by}\n  {description or '(empty)'}"
+
+
+async def _fetch_notes_page(
+    client, entity_id: int, entity_type_upper: str, owner_id: int, page: int, size: int
+) -> tuple:
+    params = {
+        "page": page,
+        "size": min(size, 100),
+        "targetEntityId": entity_id,
+        "targetEntityType": entity_type_upper,
+        "targetEntityOwnerId": owner_id,
+    }
+    response = await client.get("/notes/relation", params=params)
+    data = await handle_api_response(response, f"Fetch notes for {entity_type_upper}")
+    if isinstance(data, list):
+        return data, len(data), 1
+    notes = data.get("content", data.get("data", []))
+    total = data.get("totalElements", data.get("total", len(notes)))
+    total_pages = data.get("totalPages", 1)
+    return notes, total, total_pages
+
+
+async def fetch_notes_logic(
+    entity_type: str,
+    entity_id: int,
+    page: int = 0,
+    size: int = 20,
+    owner_id: Optional[int] = None,
+    full_text: bool = False,
+    newest_first: bool = True,
+) -> str:
+    """
+    Fetch notes attached to an entity via GET /notes/relation (Kylas Postman API).
+
+    IMPORTANT: the Kylas API returns notes in an ARBITRARY order, paginated. Page 0 is NOT
+    the newest notes. With newest_first=True (default) we walk every page, sort by createdAt
+    descending, and return the `size` genuinely-newest notes - so `size=3` means "the 3 latest
+    notes", which is what every caller actually wants.
+
+    Set newest_first=False for the raw API paging behaviour (honours `page`).
+    """
+    entity_type_upper = entity_type.upper().strip()
+    if entity_type_upper not in NOTE_SUPPORTED_ENTITY_TYPES:
+        return (
+            f"✗ Invalid entity type: '{entity_type}'. "
+            f"Must be one of: {', '.join(sorted(NOTE_SUPPORTED_ENTITY_TYPES))}"
+        )
+
+    entity_id = int(entity_id)
+    resolved_owner_id = int(owner_id) if owner_id is not None else await _resolve_note_target_owner_id(
+        entity_type_upper, entity_id
+    )
+    if resolved_owner_id is None:
+        return (
+            f"✗ Could not determine ownerId for {entity_type_upper} {entity_id}. "
+            "Pass owner_id explicitly or verify the entity exists."
+        )
+
+    max_chars = 0 if full_text else NOTE_DEFAULT_MAX_CHARS
+    logger.info("Fetching notes for %s %s (ownerId=%s)", entity_type_upper, entity_id, resolved_owner_id)
+
+    async with get_client() as client:
+        if not newest_first:
+            notes, total, total_pages = await _fetch_notes_page(
+                client, entity_id, entity_type_upper, resolved_owner_id, page, size
+            )
+            header = (
+                f"Found {len(notes)} note(s) on {entity_type_upper} {entity_id} "
+                f"(page {page + 1} of {total_pages}, total {total})"
+            )
+        else:
+            # Walk every page (cap 100/page), then sort newest-first and slice.
+            collected, total, total_pages = await _fetch_notes_page(
+                client, entity_id, entity_type_upper, resolved_owner_id, 0, 100
+            )
+            p = 1
+            while len(collected) < total and p < min(total_pages, NOTE_HARD_PAGE_CAP):
+                more, _t, _tp = await _fetch_notes_page(
+                    client, entity_id, entity_type_upper, resolved_owner_id, p, 100
+                )
+                if not more:
+                    break
+                collected.extend(more)
+                p += 1
+            collected.sort(key=_note_sort_key, reverse=True)
+            notes = collected[: max(int(size), 1)]
+            header = (
+                f"Found {len(notes)} note(s) on {entity_type_upper} {entity_id} "
+                f"(NEWEST FIRST - {len(notes)} of {total} total, sorted by createdAt desc)"
+            )
+
+    if not notes:
+        return f"No notes found on {entity_type_upper} {entity_id}. (Total: {total})"
+
+    lines = [header, "-" * 60]
+    for note in notes:
+        lines.append(_format_note_line(note, max_chars))
+    lines.append("-" * 60)
+    return "\n".join(lines)
+
+
+@mcp.tool()
+async def get_notes(
+    entity_type: str,
+    entity_id: int,
+    page: int = 0,
+    size: int = 20,
+    owner_id: Optional[int] = None,
+    full_text: bool = False,
+    newest_first: bool = True,
+) -> str:
+    """
+    Fetch notes attached to a Lead, Deal, Contact, Company, Meeting, or Call Log.
+
+    Uses GET /notes/relation (same pattern as Kylas Postman "Fetch Call Log Notes" / "Fetch Meetings Notes").
+    For leads and deals: pass the lead/deal ID from search or get_lead/get_deal results.
+
+    entity_type: LEAD, DEAL, CONTACT, COMPANY, MEETING, or CALL_LOG.
+    entity_id: ID of the record whose notes to fetch.
+    page: 0-based page. Only used when newest_first=False.
+    size: How many notes to return (max 100, default 20).
+    owner_id: Optional ownerId of the target entity. If omitted, fetched from the entity record.
+    full_text: True returns the COMPLETE note body. Default False truncates at 300 chars.
+               Use True whenever you need to compare notes to each other or read the whole update.
+    newest_first: True (default) walks all pages and returns the genuinely newest `size` notes.
+                  The Kylas API returns notes in arbitrary order, so page 0 is NOT the newest.
+    """
+    try:
+        _reset_api_call_count()
+        return await fetch_notes_logic(entity_type, entity_id, page, size, owner_id, full_text, newest_first)
+    except ValueError as e:
+        return f"✗ Invalid parameter: {str(e)}"
+    except KylasAPIError as e:
+        return f"✗ Failed to fetch notes: {e.message}\n  Details: {e.response_body}"
+    except Exception as e:
+        logger.exception("get_notes")
+        return f"✗ Unexpected error: {str(e)}"
+
+
+@mcp.tool()
+async def get_lead_notes(
+    lead_id: int,
+    page: int = 0,
+    size: int = 20,
+    owner_id: Optional[int] = None,
+    full_text: bool = False,
+    newest_first: bool = True,
+) -> str:
+    """
+    Fetch all notes on a lead (GET /notes/relation?targetEntityType=LEAD).
+    lead_id: Lead ID (from search_leads or get_lead).
+    full_text: True returns complete note bodies (default truncates at 300 chars).
+    newest_first: True (default) returns the genuinely newest notes, not raw API page order.
+    """
+    try:
+        _reset_api_call_count()
+        return await fetch_notes_logic("LEAD", lead_id, page, size, owner_id, full_text, newest_first)
+    except ValueError as e:
+        return f"✗ Invalid parameter: {str(e)}"
+    except KylasAPIError as e:
+        return f"✗ Failed to fetch lead notes: {e.message}\n  Details: {e.response_body}"
+    except Exception as e:
+        logger.exception("get_lead_notes")
+        return f"✗ Unexpected error: {str(e)}"
+
+
+@mcp.tool()
+async def get_deal_notes(
+    deal_id: int,
+    page: int = 0,
+    size: int = 20,
+    owner_id: Optional[int] = None,
+    full_text: bool = False,
+    newest_first: bool = True,
+) -> str:
+    """
+    Fetch all notes on a deal (GET /notes/relation?targetEntityType=DEAL).
+    deal_id: Deal ID (from search_deals or get_deal).
+    full_text: True returns complete note bodies (default truncates at 300 chars). Use True when
+               diffing this week's note against last week's - truncation hides the delta.
+    newest_first: True (default) walks all pages and returns the genuinely newest notes.
+                  The Kylas API returns notes unsorted, so page 0 is NOT the newest.
+    """
+    try:
+        _reset_api_call_count()
+        return await fetch_notes_logic("DEAL", deal_id, page, size, owner_id, full_text, newest_first)
+    except ValueError as e:
+        return f"✗ Invalid parameter: {str(e)}"
+    except KylasAPIError as e:
+        return f"✗ Failed to fetch deal notes: {e.message}\n  Details: {e.response_body}"
+    except Exception as e:
+        logger.exception("get_deal_notes")
         return f"✗ Unexpected error: {str(e)}"
 
 
@@ -5988,6 +7190,373 @@ async def update_entity(entity_type: str, entity_id: int, field_values: Dict[str
         return f"✗ Failed to update {entity_type}: {e.message}\n  Details: {e.response_body}"
     except Exception as e:
         logger.exception("update_entity")
+        return f"✗ Unexpected error: {str(e)}"
+
+
+# ---------------------------------------------------------------------------
+# Delete Tools
+# ---------------------------------------------------------------------------
+
+_ENTITY_DELETE_PATHS: Dict[str, str] = {
+    "lead": "/leads/{id}",
+    "contact": "/contacts/{id}",
+    "deal": "/deals/{id}",
+    "company": "/companies/{id}",
+    "task": "/tasks/{id}",
+    "meeting": "/meetings/{id}",
+}
+
+
+@mcp.tool()
+async def delete_entity(entity_type: str, entity_id: int) -> str:
+    """
+    Permanently delete a CRM record. This cannot be undone — only call after the user confirms.
+
+    Valid entity_type values: lead, contact, deal, company, task, meeting.
+    entity_id: ID of the record to delete (from search or get_* results).
+
+    For deleting a NOTE, use delete_note instead (notes need their target entity context).
+    """
+    entity_type = (entity_type or "").lower().strip()
+    path_tmpl = _ENTITY_DELETE_PATHS.get(entity_type)
+    if not path_tmpl:
+        valid = ", ".join(_ENTITY_DELETE_PATHS.keys())
+        return f"✗ Unknown entity_type '{entity_type}'. Valid: {valid}"
+    try:
+        _reset_api_call_count()
+        entity_id = int(entity_id)
+        async with get_client() as client:
+            response = await client.delete(path_tmpl.format(id=entity_id))
+            # Some delete endpoints return 200 with body, some 204 no content.
+            if response.status_code not in (200, 204):
+                response.raise_for_status()
+        label = entity_type.replace("_", " ").title()
+        return f"✓ {label} {entity_id} deleted successfully."
+    except KylasAPIError as e:
+        return f"✗ Failed to delete {entity_type}: {e.message}\n  Details: {e.response_body}"
+    except httpx.HTTPStatusError as e:
+        return f"✗ Failed to delete {entity_type}: {e.response.status_code}\n  Details: {e.response.text}"
+    except Exception as e:
+        logger.exception("delete_entity")
+        return f"✗ Unexpected error: {str(e)}"
+
+
+@mcp.tool()
+async def delete_note(note_id: int, entity_type: Optional[str] = None, entity_id: Optional[int] = None) -> str:
+    """
+    Delete a note (DELETE /notes/{note_id}). This cannot be undone — confirm with the user first.
+
+    note_id: ID of the note to delete (from get_notes / get_lead_notes / get_deal_notes).
+    entity_type / entity_id: REQUIRED for notes on a MEETING or CALL_LOG (passed as
+      targetEntityType / targetEntityId query params). Optional for lead/deal/contact/company.
+    """
+    try:
+        _reset_api_call_count()
+        note_id = int(note_id)
+        params: Dict[str, Any] = {}
+        if entity_type:
+            params["targetEntityType"] = entity_type.upper().strip()
+        if entity_id is not None:
+            params["targetEntityId"] = int(entity_id)
+        async with get_client() as client:
+            response = await client.delete(f"/notes/{note_id}", params=params or None)
+            if response.status_code not in (200, 204):
+                response.raise_for_status()
+        return f"✓ Note {note_id} deleted successfully."
+    except KylasAPIError as e:
+        return f"✗ Failed to delete note: {e.message}\n  Details: {e.response_body}"
+    except httpx.HTTPStatusError as e:
+        return f"✗ Failed to delete note: {e.response.status_code}\n  Details: {e.response.text}"
+    except Exception as e:
+        logger.exception("delete_note")
+        return f"✗ Unexpected error: {str(e)}"
+
+
+# ---------------------------------------------------------------------------
+# Pipeline-Stage / Close Lifecycle Tool (Lead + Deal)
+# ---------------------------------------------------------------------------
+
+@mcp.tool()
+async def change_pipeline_stage(
+    entity_type: str,
+    entity_id: int,
+    pipeline_stage_id: int,
+    reason_for_closing: Optional[str] = None,
+    actual_value: Optional[Dict[str, Any]] = None,
+) -> str:
+    """
+    Move a LEAD or DEAL to a pipeline stage, including closing it as Won / Lost / Unqualified.
+    Uses POST /{leads|deals}/{id}/pipeline-stages/{stage_id}/activate.
+
+    Use lookup_pipelines + get_pipeline_stages first to find the target stage_id.
+    For closing stages (Won/Lost/Unqualified) the stage itself determines the outcome;
+    pass reason_for_closing for Lost/Unqualified (and a Won value via actual_value if needed).
+
+    entity_type: 'lead' or 'deal'.
+    entity_id: the lead or deal ID.
+    pipeline_stage_id: target stage ID (the stage to activate).
+    reason_for_closing: optional text reason (typically for Lost / Unqualified stages).
+    actual_value: optional dict for a deal's closing value, e.g. {"currencyId": 431, "value": 50000}.
+                  Leave None for stage moves that don't set a value.
+
+    NOTE: For ordinary in-pipeline stage moves on a DEAL you can also use
+    update_entity("deal", id, {"pipelineStage": stage_id}), which handles sequential-stage locks.
+    """
+    entity_type = (entity_type or "").lower().strip()
+    if entity_type == "lead":
+        base = "/leads"
+    elif entity_type == "deal":
+        base = "/deals"
+    else:
+        return f"✗ Unknown entity_type '{entity_type}'. Valid: lead, deal"
+    try:
+        _reset_api_call_count()
+        entity_id = int(entity_id)
+        pipeline_stage_id = int(pipeline_stage_id)
+        body: Dict[str, Any] = {
+            "reasonForClosing": reason_for_closing,
+            "actualValue": actual_value,
+        }
+        if entity_type == "deal":
+            body.setdefault("products", None)
+        path = f"{base}/{entity_id}/pipeline-stages/{pipeline_stage_id}/activate"
+        async with get_client() as client:
+            response = await client.post(path, json=body)
+            result = await handle_api_response(response, f"Change {entity_type} pipeline stage")
+        label = entity_type.title()
+        lines = [f"✓ {label} {entity_id} moved to pipeline stage {pipeline_stage_id}."]
+        if isinstance(result, dict):
+            pipeline = result.get("pipeline") or {}
+            stage = pipeline.get("stage") if isinstance(pipeline, dict) else None
+            if isinstance(stage, dict) and stage.get("name"):
+                lines.append(f"  Stage: {stage.get('name')}")
+            if result.get("pipelineStageReason"):
+                lines.append(f"  Reason: {result.get('pipelineStageReason')}")
+        return "\n".join(lines)
+    except KylasAPIError as e:
+        return f"✗ Failed to change pipeline stage: {e.message}\n  Details: {e.response_body}"
+    except Exception as e:
+        logger.exception("change_pipeline_stage")
+        return f"✗ Unexpected error: {str(e)}"
+
+
+# ---------------------------------------------------------------------------
+# Lead Conversion + Reassignment
+# ---------------------------------------------------------------------------
+
+@mcp.tool()
+async def convert_lead(lead_id: int, targets: Dict[str, Any]) -> str:
+    """
+    Convert a lead into a Deal, Contact, and/or Company (POST /leads/{id}/convert).
+
+    lead_id: ID of the lead to convert.
+    targets: a dict with one or more of the keys 'deal', 'contact', 'company'. Each value is
+      an object with a 'mode' ('CREATE' to create new, or 'LINK' to link existing) and 'details'.
+
+    Example (convert to a new deal):
+      targets = {
+        "deal": {
+          "mode": "CREATE",
+          "details": {
+            "name": "Acme expansion",
+            "ownedBy": {"id": 305},
+            "estimatedValue": {"currencyId": 431, "value": 200000}
+          }
+        }
+      }
+    Resolve owner IDs via lookup_users and currency IDs via the deal field instructions.
+    """
+    try:
+        _reset_api_call_count()
+        lead_id = int(lead_id)
+        if not isinstance(targets, dict) or not targets:
+            return "✗ 'targets' must be a non-empty object with at least one of: deal, contact, company."
+        allowed = {"deal", "contact", "company"}
+        unknown = set(targets) - allowed
+        if unknown:
+            return f"✗ Unknown conversion target(s): {', '.join(sorted(unknown))}. Allowed: deal, contact, company."
+        async with get_client() as client:
+            response = await client.post(f"/leads/{lead_id}/convert", json=targets)
+            result = await handle_api_response(response, "Convert lead")
+        lines = [f"✓ Lead {lead_id} converted ({', '.join(sorted(targets.keys()))})."]
+        if isinstance(result, dict):
+            for key in ("deal", "contact", "company"):
+                obj = result.get(key)
+                if isinstance(obj, dict) and obj.get("id"):
+                    nm = obj.get("name") or f"{obj.get('firstName', '')} {obj.get('lastName', '')}".strip()
+                    lines.append(f"  {key.title()}: ID {obj.get('id')}{(' — ' + nm) if nm else ''}")
+        return "\n".join(lines)
+    except KylasAPIError as e:
+        return f"✗ Failed to convert lead: {e.message}\n  Details: {e.response_body}"
+    except Exception as e:
+        logger.exception("convert_lead")
+        return f"✗ Unexpected error: {str(e)}"
+
+
+@mcp.tool()
+async def reassign_lead(lead_id: int, owner_id: int) -> str:
+    """
+    Reassign a lead to a new owner (PUT /leads/{id}/owner). Resolve owner_id via lookup_users.
+
+    lead_id: ID of the lead.
+    owner_id: user ID of the new owner.
+    """
+    try:
+        _reset_api_call_count()
+        lead_id = int(lead_id)
+        owner_id = int(owner_id)
+        async with get_client() as client:
+            response = await client.put(f"/leads/{lead_id}/owner", json={"ownerId": owner_id})
+            await handle_api_response(response, "Reassign lead")
+        return f"✓ Lead {lead_id} reassigned to owner {owner_id}."
+    except KylasAPIError as e:
+        return f"✗ Failed to reassign lead: {e.message}\n  Details: {e.response_body}"
+    except Exception as e:
+        logger.exception("reassign_lead")
+        return f"✗ Unexpected error: {str(e)}"
+
+
+# ---------------------------------------------------------------------------
+# Reports (v3 API) — read/review
+# ---------------------------------------------------------------------------
+
+@mcp.tool()
+async def list_reports(page: int = 0, size: int = 50) -> str:
+    """
+    List available reports (GET /v3/reports/search). Useful for reviewing pipeline/CRM reports.
+
+    page: 0-based page (default 0).
+    size: page size, max 100 (default 50).
+    """
+    try:
+        _reset_api_call_count()
+        params = {"page": page, "size": min(int(size), 100)}
+        async with get_client() as client:
+            response = await client.get(f"{API_V3_BASE}/reports/search", params=params)
+            data = await handle_api_response(response, "Fetch reports")
+        if isinstance(data, dict):
+            reports = data.get("content") or data.get("data") or []
+            total = data.get("totalElements", len(reports))
+        elif isinstance(data, list):
+            reports = data
+            total = len(reports)
+        else:
+            reports, total = [], 0
+        if not reports:
+            return "No reports found."
+        lines = [f"Found {len(reports)} report(s) (total {total}):", "-" * 60]
+        for r in reports:
+            if not isinstance(r, dict):
+                continue
+            rid = r.get("id", "?")
+            name = r.get("name") or r.get("title") or "(unnamed)"
+            rtype = r.get("type") or r.get("reportType") or ""
+            lines.append(f"• ID: {rid} | {name}{(' | ' + str(rtype)) if rtype else ''}")
+        lines.append("-" * 60)
+        return "\n".join(lines)
+    except KylasAPIError as e:
+        return f"✗ Failed to fetch reports: {e.message}\n  Details: {e.response_body}"
+    except Exception as e:
+        logger.exception("list_reports")
+        return f"✗ Unexpected error: {str(e)}"
+
+
+@mcp.tool()
+async def get_report(report_id: int) -> str:
+    """
+    Get details/definition of a single report (GET /v3/reports/{id}).
+    report_id: report ID (from list_reports).
+    """
+    try:
+        _reset_api_call_count()
+        report_id = int(report_id)
+        async with get_client() as client:
+            response = await client.get(f"{API_V3_BASE}/reports/{report_id}")
+            data = await handle_api_response(response, "Get report")
+        if not isinstance(data, dict):
+            return str(data)
+        lines = ["=" * 60, "REPORT DETAILS", "=" * 60]
+        lines.append(f"ID: {data.get('id', '—')}")
+        lines.append(f"Name: {data.get('name') or data.get('title') or '—'}")
+        if data.get("description"):
+            lines.append(f"Description: {data.get('description')}")
+        if data.get("type") or data.get("reportType"):
+            lines.append(f"Type: {data.get('type') or data.get('reportType')}")
+        if data.get("entityType"):
+            lines.append(f"Entity: {data.get('entityType')}")
+        lines.append(f"Created At: {data.get('createdAt', '—')}")
+        lines.append(f"Updated At: {data.get('updatedAt', '—')}")
+        lines.append("=" * 60)
+        return "\n".join(lines)
+    except KylasAPIError as e:
+        return f"✗ Failed to get report: {e.message}\n  Details: {e.response_body}"
+    except Exception as e:
+        logger.exception("get_report")
+        return f"✗ Unexpected error: {str(e)}"
+
+
+# ---------------------------------------------------------------------------
+# Email threads — read/review
+# ---------------------------------------------------------------------------
+
+@mcp.tool()
+async def get_entity_emails(
+    thread_id: int,
+    entity_id: int,
+    entity_type: str,
+    page: int = 1,
+    size: int = 10,
+) -> str:
+    """
+    Fetch emails in a thread for an entity (GET /email-threads/{thread_id}/emails).
+    Useful for reviewing email communication on a lead/contact/deal.
+
+    thread_id: the email thread ID.
+    entity_id: the related entity ID.
+    entity_type: 'lead', 'contact', or 'deal' (lowercase, as the API expects).
+    page: 1-based page (default 1).
+    size: page size (default 10).
+    """
+    try:
+        _reset_api_call_count()
+        params = {
+            "entityId": int(entity_id),
+            "entityType": (entity_type or "").lower().strip(),
+            "page": int(page),
+            "size": int(size),
+        }
+        async with get_client() as client:
+            response = await client.get(f"/email-threads/{int(thread_id)}/emails", params=params)
+            data = await handle_api_response(response, "Fetch emails")
+        if isinstance(data, dict):
+            emails = data.get("content") or data.get("data") or []
+            total = data.get("totalElements", len(emails))
+        elif isinstance(data, list):
+            emails = data
+            total = len(emails)
+        else:
+            emails, total = [], 0
+        if not emails:
+            return f"No emails found in thread {thread_id} for {params['entityType']} {entity_id}."
+        lines = [f"Found {len(emails)} email(s) in thread {thread_id} (total {total}):", "-" * 60]
+        for em in emails:
+            if not isinstance(em, dict):
+                continue
+            subj = em.get("subject") or "(no subject)"
+            frm = em.get("from") or em.get("fromEmail") or "?"
+            if isinstance(frm, dict):
+                frm = frm.get("email") or frm.get("name") or "?"
+            sent = em.get("sentAt") or em.get("createdAt") or "—"
+            body = _strip_html(em.get("bodyPreview") or em.get("snippet") or em.get("body") or "")
+            if len(body) > 200:
+                body = body[:197] + "..."
+            lines.append(f"• {sent} | From: {frm}\n  Subject: {subj}\n  {body or '(no preview)'}")
+        lines.append("-" * 60)
+        return "\n".join(lines)
+    except KylasAPIError as e:
+        return f"✗ Failed to fetch emails: {e.message}\n  Details: {e.response_body}"
+    except Exception as e:
+        logger.exception("get_entity_emails")
         return f"✗ Unexpected error: {str(e)}"
 
 

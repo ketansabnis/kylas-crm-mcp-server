@@ -1,0 +1,21 @@
+{
+  "deal_id": 4481170,
+  "name": "Abdul Rishan",
+  "owner": "Tejas Mehta",
+  "stage": "Demo Conducted",
+  "licences": 100,
+  "tier": "10+",
+  "city": "Dubai",
+  "dev_broker": "Developer",
+  "onsite": "Online",
+  "bant_flag": "Partial",
+  "verdict": "AMBER",
+  "prob": 0.0323,
+  "band": "COLD",
+  "name_valid": true,
+  "dummy_phone": false,
+  "unverified_contact": false,
+  "sales_followup_since_demo": 1,
+  "next_action": "Do NOT hand over login credentials - he pushed for them from a personal ID; get the 15-user quote (Rs 2.12L) confirmed on the official UAE domain first.",
+  "one_line": "Reportage Properties UAE, 100 seats on record, quote for 15 - but classic credential-fishing from a personal email."
+}

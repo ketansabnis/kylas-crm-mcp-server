@@ -1,0 +1,51 @@
+{
+ "deal_id": 4375928,
+ "deal_name": "Ishan",
+ "creator": "Revati Ambike",
+ "creator_id": 9062,
+ "owner": "Anuj Pathak",
+ "pipeline": "Sell.Do Deal Pipeline",
+ "stage": "Won/ Booked",
+ "pipeline_stage_reason": null,
+ "created_at": "2026-06-12T07:39:42.420Z",
+ "updated_at": "2026-06-24T12:23:03.551Z",
+ "meeting_conducted": true,
+ "cfMeetingConductedOn": "2026-06-12T11:24:05.534Z",
+ "noOfLicenses": 5,
+ "cfCity": "Ahmedabad",
+ "cfReDeveloperOrChannelPartner": "Developer",
+ "estimatedValue": null,
+ "actualValue": 43200,
+ "products": [
+  "Sell.Do Enterprise"
+ ],
+ "source": null,
+ "campaign": null,
+ "cfPreviousCrm": "Never used a CRM",
+ "cfRequiredTools": [
+  "CRM"
+ ],
+ "cfSales": null,
+ "cfFirstSalesOwner": "Anuj Pathak",
+ "cfOwnerPhoneNumber": true,
+ "notes_count": 12,
+ "notes_text": "9062: Torandwar Developrs, Ahmedabad, Developer (plotting), team 5, no CRM/excel, demo 12 Jun online; contact Manish Vyas captured w email/phone. | 50500: quote sent; payment links sent multiple times; payment of INR 50976 successful 21-Jun; razorpay technical refund issue, client to re-pay. Billed 43200, actual received 43200.",
+ "license_tier": "5-9",
+ "city_bucket": "Other",
+ "city_clean": "Ahmedabad",
+ "onsite_or_online": "Online",
+ "name_valid": true,
+ "bant": {
+  "budget": "Confirmed - paid ~43-50k",
+  "authority": "Manish Vyas / owner side, made payment",
+  "need": "Plotting developer, no CRM, real need",
+  "timeline": "Immediate - purchased in June",
+  "bant_score": 4,
+  "bant_flag": "Strong"
+ },
+ "enterprise_flag": false,
+ "pre_sales_verdict": "GREEN",
+ "stall_blocker": "Won",
+ "blocker_owner": "NA-Won",
+ "one_line": "Ahmedabad plotting developer, 5 seats, closed and paid (~43k) - textbook qualified demo that converted."
+}

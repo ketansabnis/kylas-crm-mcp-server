@@ -1,0 +1,19 @@
+{
+  "deal_id": 4223384,
+  "name": "Mritunjay Kumar Tiwari",
+  "owner": "Ankur Singhal",
+  "creator_id": 9062,
+  "stage": "Unqualified",
+  "noOfLicenses": 7,
+  "city": "Ranchi",
+  "created_at": "2026-05-04",
+  "demo_date": "2026-05-05",
+  "lost_date": "2026-05-20",
+  "days_created_to_demo": 1,
+  "days_demo_to_lost": 15,
+  "days_total": 16,
+  "sales_attempts": 2,
+  "loss_reason": "Budget",
+  "one_line": "Demo done, quote sent 7 users; sales followed up ~2x but client wanted 200-300/user cheap CRM - budget mismatch.",
+  "notes_count": 8
+}

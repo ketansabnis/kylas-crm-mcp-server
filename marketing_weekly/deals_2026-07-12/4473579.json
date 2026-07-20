@@ -1,0 +1,21 @@
+{
+  "deal_id": 4473579,
+  "name": "taniya",
+  "owner": "Ankur Singhal",
+  "stage": "Demo Conducted",
+  "licences": 7,
+  "tier": "5-10",
+  "city": "raipur",
+  "dev_broker": "Developer",
+  "onsite": "Online",
+  "bant_flag": "Partial",
+  "verdict": "AMBER",
+  "prob": 0.027,
+  "band": "COLD",
+  "name_valid": false,
+  "dummy_phone": false,
+  "unverified_contact": true,
+  "sales_followup_since_demo": 1,
+  "next_action": "Ankur: book the pre-sales/sales demo leg promised for this week and escalate above Taniya (junior manager) to a Krishna Group owner/director.",
+  "one_line": "Raipur developer Krishna Group, 7 seats, post-sales demo done, price untouched; contact is a junior manager."
+}

@@ -1,0 +1,21 @@
+{
+  "deal_id": 4457247,
+  "name": "Nithish",
+  "owner": "Santhana K",
+  "stage": "Closed Lost",
+  "licences": 10,
+  "tier": "10+",
+  "city": "Coimbatore",
+  "dev_broker": "Channel partner",
+  "onsite": "Online",
+  "bant_flag": "Weak",
+  "verdict": "RED",
+  "prob": 0.009,
+  "band": "COLD",
+  "name_valid": false,
+  "dummy_phone": false,
+  "unverified_contact": true,
+  "sales_followup_since_demo": 1,
+  "next_action": "Already Closed Lost - no action; feed back to pre-sales that a RED-audited, unverified contact was still put on a demo slot.",
+  "one_line": "Coimbatore '123 Real Estate' - RED audit, no footprint, turned out to be a software/digital agency. Lost."
+}

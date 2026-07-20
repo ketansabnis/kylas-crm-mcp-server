@@ -1,0 +1,19 @@
+{
+  "deal_id": 4323728,
+  "name": "Jitendra Pareek",
+  "owner": "Alok Tiwari",
+  "creator_id": 9062,
+  "stage": "Unqualified",
+  "noOfLicenses": 10,
+  "city": "Ahmedabad",
+  "created_at": "2026-05-28",
+  "demo_date": "2026-06-01",
+  "lost_date": "2026-07-02",
+  "days_created_to_demo": 4,
+  "days_demo_to_lost": 31,
+  "days_total": 35,
+  "sales_attempts": 10,
+  "loss_reason": "Timeline/Not-now",
+  "one_line": "Demoed; sales chased ~10x over a month (tech-buyer Om evaluating AI features); kept deferring, put on hold, marked lost.",
+  "notes_count": 21
+}

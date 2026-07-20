@@ -1,0 +1,51 @@
+{
+ "deal_id": 4411273,
+ "deal_name": "Manav Yadav",
+ "creator": "Revati Ambike",
+ "creator_id": 9062,
+ "owner": "Suraj Chauhan",
+ "pipeline": "Sell.Do Deal Pipeline",
+ "stage": "Closed Unqualified",
+ "pipeline_stage_reason": null,
+ "created_at": "2026-06-22T07:26:03.117Z",
+ "updated_at": "2026-07-06T07:28:34.434Z",
+ "meeting_conducted": true,
+ "cfMeetingConductedOn": "2026-06-23T10:15:06.994Z",
+ "noOfLicenses": 5,
+ "cfCity": "Gurgaon",
+ "cfReDeveloperOrChannelPartner": "Channel partner",
+ "estimatedValue": null,
+ "actualValue": null,
+ "products": [
+  "Sell.Do Enterprise"
+ ],
+ "source": null,
+ "campaign": null,
+ "cfPreviousCrm": "Never used a CRM",
+ "cfRequiredTools": [
+  "CRM"
+ ],
+ "cfSales": null,
+ "cfFirstSalesOwner": "Suraj Chauhan",
+ "cfOwnerPhoneNumber": "+919643843177",
+ "notes_count": 8,
+ "notes_text": "By 80575: not answering. By 9062: Type-CRM;City-Gurgaon Sector 57;Company-Deep Real Estate;Broker;Team Size-5;Current CRM-No;Challenge-Inventory management;Meeting 23 Jun 2:30pm. AUDIT(4248): FORWARD green - well-established verified Gurgaon brokerage (Deep Real Estate est 2005), strong ICP, real inventory pain; pre-sales UNDER-sized (site 25 staff vs 5 seats). By 80575: total 6 users, 800/user/mo, wants 2-day demo account; wants demo with partner; plan postponed.",
+ "license_tier": "5-9",
+ "city_bucket": "Main6",
+ "city_clean": "Gurgaon",
+ "onsite_or_online": "Online",
+ "name_valid": true,
+ "bant": {
+  "budget": "800/user/mo discussed; no objection",
+  "authority": "Contact + partner DMs",
+  "need": "Strong; real inventory pain, no CRM",
+  "timeline": "Postponed; wanted trial then delayed",
+  "bant_score": 3,
+  "bant_flag": "Strong"
+ },
+ "enterprise_flag": false,
+ "pre_sales_verdict": "GREEN",
+ "stall_blocker": "Timeline/Not-now",
+ "blocker_owner": "Customer",
+ "one_line": "Verified est-2005 Gurgaon brokerage with real inventory pain (audit green) - strong pre-sales; customer postponed, not a qualification failure."
+}

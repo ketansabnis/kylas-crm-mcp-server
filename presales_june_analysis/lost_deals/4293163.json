@@ -1,0 +1,19 @@
+{
+  "deal_id": 4293163,
+  "name": "Rajat Jain",
+  "owner": "Disha Kadam",
+  "creator_id": 54132,
+  "stage": "Unqualified",
+  "noOfLicenses": 5,
+  "city": "Pune",
+  "created_at": "2026-05-21T11:39:39.824Z",
+  "demo_date": "2026-05-22T11:25:56.071Z",
+  "lost_date": "2026-06-16T06:05:42.682Z",
+  "days_created_to_demo": 1,
+  "days_demo_to_lost": 25,
+  "days_total": 26,
+  "sales_attempts": 10,
+  "loss_reason": "Other",
+  "one_line": "Existing customer who had already made renewal payment; sales shared commercial and chased ~10 times (mostly CNR) before manager flagged it as a duplicate and unqualified.",
+  "notes_count": 22
+}

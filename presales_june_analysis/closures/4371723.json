@@ -1,0 +1,17 @@
+{
+  "deal_id": 4371723,
+  "deal_name": "Neelesh Pandey",
+  "owner": "Suraj Chauhan",
+  "stage": "Won/ Booked",
+  "created_at": "2026-06-11T08:08:22.870Z",
+  "updated_at": "2026-06-26T10:39:34.910Z",
+  "products_total": 46000.0,
+  "cfBilledAmount": 46000,
+  "cfActualPaymentReceived": 46000,
+  "noOfLicenses": 5,
+  "cfCity": "Gurugram",
+  "cfReDeveloperOrChannelPartner": "Channel partner",
+  "cfMeetingConductedOn": "2026-06-12T07:29:35.957Z",
+  "cfPreviousCrm": "Never used a CRM",
+  "cfOwnerPhoneNumber": "+919643843177"
+}

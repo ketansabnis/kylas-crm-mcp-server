@@ -1,0 +1,19 @@
+{
+  "deal_id": 4306197,
+  "name": "V srinivas",
+  "owner": "Jaganmohan Vankina",
+  "creator_id": 54132,
+  "stage": "Lost",
+  "noOfLicenses": 30,
+  "city": "Hyderabad",
+  "created_at": "2026-05-25",
+  "demo_date": null,
+  "lost_date": "2026-06-01",
+  "days_created_to_demo": null,
+  "days_demo_to_lost": null,
+  "days_total": 7,
+  "sales_attempts": 3,
+  "loss_reason": "Sub-ICP/Too-small",
+  "one_line": "Owner chased 3x (callbacks/site-visit/festival) then met client: no in-house team, not keen. Lost as sub-ICP.",
+  "notes_count": 6
+}

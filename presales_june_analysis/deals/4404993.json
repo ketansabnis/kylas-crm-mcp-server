@@ -1,0 +1,52 @@
+{
+ "deal_id": 4404993,
+ "deal_name": "Mandeep",
+ "creator": "Revati Ambike",
+ "creator_id": 9062,
+ "owner": "Arzoo Choudhary",
+ "pipeline": "Sell.Do Deal Pipeline",
+ "stage": "Demo Conducted",
+ "pipeline_stage_reason": null,
+ "created_at": "2026-06-19T12:23:56.539Z",
+ "updated_at": "2026-06-22T13:39:42.429Z",
+ "meeting_conducted": true,
+ "cfMeetingConductedOn": "2026-06-22T13:39:40.199Z",
+ "noOfLicenses": 30,
+ "cfCity": "Noida",
+ "cfReDeveloperOrChannelPartner": "Channel partner",
+ "estimatedValue": null,
+ "actualValue": null,
+ "products": [
+  "Sell.Do Enterprise"
+ ],
+ "source": null,
+ "campaign": null,
+ "cfPreviousCrm": "Never used a CRM",
+ "cfRequiredTools": [
+  "CRM",
+  "AI Calling"
+ ],
+ "cfSales": null,
+ "cfFirstSalesOwner": "Arzoo Choudhary",
+ "cfOwnerPhoneNumber": "+919870893570",
+ "notes_count": 6,
+ "notes_text": "By 9062: Type-CRM/CRM+AI calling;City-Noida;Company-Tanwar Properties;Broker;Team Size-30;Current CRM-Yes;Challenges-Yes;Meeting 22 Jun 4pm;Price Discussed-Yes. AUDIT(4248): FORWARD WITH FLAGS - real NCR broker brand (Tanwar Properties), plausibly-owner contact, but 30-licence claim looks inflated vs modest footprint, and CRM contradiction (note says has CRM, field says never used); verify active-agent count. By 73470: demo done, owner took demo, using credentials to see how CRM works; checking CRM, connect tomorrow evening; almost gone through whole CRM, connect Monday; tried calling, was busy.",
+ "license_tier": "10-39",
+ "city_bucket": "Main6",
+ "city_clean": "Noida",
+ "onsite_or_online": "Online",
+ "name_valid": true,
+ "bant": {
+  "budget": "Price discussed at qualification (Yes); no objection surfaced",
+  "authority": "Owner personally took the demo - DM",
+  "need": "Strong; 30-agent broker, has a CRM, switching, stated challenges",
+  "timeline": "Active; owner deeply evaluating CRM over days",
+  "bant_score": 4,
+  "bant_flag": "Strong"
+ },
+ "enterprise_flag": false,
+ "pre_sales_verdict": "GREEN",
+ "stall_blocker": "Progressing",
+ "blocker_owner": "Sales",
+ "one_line": "Real 30-seat Noida broker brand (Tanwar Properties), owner-led demo and hands-on evaluation - strong pre-sales; only caveat is verifying the 30-seat/CRM claim."
+}

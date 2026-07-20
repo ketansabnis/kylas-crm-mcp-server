@@ -1,0 +1,17 @@
+{
+  "deal_id": 4375928,
+  "deal_name": "Ishan",
+  "owner": "Anuj Pathak",
+  "stage": "Won/ Booked",
+  "created_at": "2026-06-12T07:39:42.420Z",
+  "updated_at": "2026-06-24T12:23:03.551Z",
+  "products_total": 43200.0,
+  "cfBilledAmount": 43200,
+  "cfActualPaymentReceived": 43200,
+  "noOfLicenses": 5,
+  "cfCity": "Ahmedabad",
+  "cfReDeveloperOrChannelPartner": "Developer",
+  "cfMeetingConductedOn": "2026-06-12T11:24:05.534Z",
+  "cfPreviousCrm": "Never used a CRM",
+  "cfOwnerPhoneNumber": "+917391046052"
+}

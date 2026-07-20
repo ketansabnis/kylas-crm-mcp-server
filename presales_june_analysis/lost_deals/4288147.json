@@ -1,0 +1,19 @@
+{
+  "deal_id": 4288147,
+  "name": "Mr. Kamlesh danu",
+  "owner": "Suraj Chauhan",
+  "creator_id": 54132,
+  "stage": "Unqualified",
+  "noOfLicenses": 5,
+  "city": "New delhi",
+  "created_at": "2026-05-20T11:51:41.710Z",
+  "demo_date": "2026-06-10T12:40:21.480Z",
+  "lost_date": "2026-06-25T06:14:02.208Z",
+  "days_created_to_demo": 21,
+  "days_demo_to_lost": 15,
+  "days_total": 36,
+  "sales_attempts": 4,
+  "loss_reason": "Non-responsive",
+  "one_line": "Non-responsive; only half-demo done (network), then sales owner (80575) logged 4 'not answering/not responding' attempts over 2 weeks before marking unqualified.",
+  "notes_count": 21
+}

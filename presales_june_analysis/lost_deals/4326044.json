@@ -1,0 +1,19 @@
+{
+  "deal_id": 4326044,
+  "name": "Govind Gupta",
+  "owner": "Suraj Chauhan",
+  "creator_id": 9062,
+  "stage": "Lost",
+  "noOfLicenses": 10,
+  "city": "Noida",
+  "created_at": "2026-05-29",
+  "demo_date": "2026-06-01",
+  "lost_date": "2026-06-04",
+  "days_created_to_demo": 3,
+  "days_demo_to_lost": 3,
+  "days_total": 6,
+  "sales_attempts": 2,
+  "loss_reason": "Product-gap",
+  "one_line": "Demoed; ~2 follow-ups; lost interest because Sell.Do lacks portal-style inventory listing with images (99acres/Housing-like).",
+  "notes_count": 11
+}

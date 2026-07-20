@@ -1,0 +1,51 @@
+{
+ "deal_id": 4393081,
+ "deal_name": "Krisha Ketan Shah",
+ "creator": "Revati Ambike",
+ "creator_id": 9062,
+ "owner": "Ankur Singhal",
+ "pipeline": "Sell.Do Deal Pipeline",
+ "stage": "Quote Sent",
+ "pipeline_stage_reason": null,
+ "created_at": "2026-06-16T12:36:09.052Z",
+ "updated_at": "2026-06-17T09:08:38.231Z",
+ "meeting_conducted": true,
+ "cfMeetingConductedOn": "2026-06-17T08:59:58.472Z",
+ "noOfLicenses": 3,
+ "cfCity": "Mumbai",
+ "cfReDeveloperOrChannelPartner": "Developer",
+ "estimatedValue": null,
+ "actualValue": null,
+ "products": [
+  "Sell.Do Enterprise"
+ ],
+ "source": null,
+ "campaign": null,
+ "cfPreviousCrm": "Never used a CRM",
+ "cfRequiredTools": [
+  "CRM"
+ ],
+ "cfSales": null,
+ "cfFirstSalesOwner": "Ankur Singhal",
+ "cfOwnerPhoneNumber": "+918879685293",
+ "notes_count": 9,
+ "notes_text": "By 9062: emails krisha.shah@synthesis.com / synthesisgroup.in / krishashah983@gmail.com. Type-CRM;City-Mumbai;Company-AMi Realty Developers LLP;Developer;Team Size-3;Current CRM-No(excel);Meeting 17 Jun 12pm. By 58133: quote sent; client will get back; will get back; after 15 July; ringing.",
+ "license_tier": "1-4",
+ "city_bucket": "Main6",
+ "city_clean": "Mumbai",
+ "onsite_or_online": "Online",
+ "name_valid": true,
+ "bant": {
+  "budget": "Quote sent; no reaction captured",
+  "authority": "Contact has corporate email (Synthesis Group); role/DM unclear",
+  "need": "Moderate; registered developer LLP, no CRM, but no pain captured",
+  "timeline": "Deferred; will get back after 15 July",
+  "bant_score": 2,
+  "bant_flag": "Partial"
+ },
+ "enterprise_flag": false,
+ "pre_sales_verdict": "AMBER",
+ "stall_blocker": "Timeline/Not-now",
+ "blocker_owner": "Customer",
+ "one_line": "Registered Mumbai developer LLP (AMi Realty) with corporate-email contact but tiny 3-seat scope and thin BANT; quote sent, decision punted past mid-July."
+}

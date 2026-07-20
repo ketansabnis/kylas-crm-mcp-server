@@ -1,0 +1,17 @@
+{
+  "deal_id": 3426822,
+  "deal_name": "Ankit Jain",
+  "owner": "Niket Rathod",
+  "stage": "Won/ Booked",
+  "created_at": "2025-11-25T11:47:04.642Z",
+  "updated_at": "2026-06-26T05:46:31.314Z",
+  "products_total": null,
+  "cfBilledAmount": 36000,
+  "cfActualPaymentReceived": 36000,
+  "noOfLicenses": 5,
+  "cfCity": "Mumbai",
+  "cfReDeveloperOrChannelPartner": "Channel partner",
+  "cfMeetingConductedOn": "2025-11-25T13:25:30.019Z",
+  "cfPreviousCrm": "Never used a CRM",
+  "cfOwnerPhoneNumber": "+919999999999"
+}

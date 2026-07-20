@@ -1,0 +1,19 @@
+{
+  "deal_id": 4042765,
+  "name": "Vishwanath Arora WORLD WIDE REALTY",
+  "owner": "Arzoo Choudhary",
+  "creator_id": 54132,
+  "stage": "Lost",
+  "noOfLicenses": 5,
+  "city": "Gurgaon",
+  "created_at": "2026-04-06",
+  "demo_date": "2026-04-10",
+  "lost_date": "2026-06-08",
+  "days_created_to_demo": 4,
+  "days_demo_to_lost": 59,
+  "days_total": 63,
+  "sales_attempts": 10,
+  "loss_reason": "Timeline/Not-now",
+  "one_line": "Developer stuck awaiting MD approval; owner chased ~10 times over 2 months but no timeline as their project part was stuck.",
+  "notes_count": 17
+}

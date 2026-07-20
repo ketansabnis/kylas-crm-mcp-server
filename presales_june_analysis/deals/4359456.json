@@ -1,0 +1,52 @@
+{
+ "deal_id": 4359456,
+ "deal_name": "Manan Jain",
+ "creator": "Revati Ambike",
+ "creator_id": 9062,
+ "owner": "Niket Rathod",
+ "owner_id": 79391,
+ "pipeline": "Sell.Do Deal Pipeline",
+ "stage": "Closed Unqualified",
+ "pipeline_stage_reason": null,
+ "created_at": "2026-06-08T09:47:44.238Z",
+ "updated_at": "2026-07-03T06:30:17.686Z",
+ "meeting_conducted": true,
+ "cfMeetingConductedOn": "2026-06-08T14:25:29.675Z",
+ "noOfLicenses": 3,
+ "cfCity": "Surat",
+ "cfReDeveloperOrChannelPartner": "Channel partner",
+ "estimatedValue": null,
+ "actualValue": null,
+ "products": [
+  "Sell.Do Enterprise"
+ ],
+ "source": null,
+ "campaign": null,
+ "cfPreviousCrm": "Never used a CRM",
+ "cfRequiredTools": [
+  "CRM"
+ ],
+ "cfSales": null,
+ "cfFirstSalesOwner": "Niket Rathod",
+ "cfOwnerPhoneNumber": null,
+ "notes_count": 22,
+ "notes_text": "[9062 2026-06-08] Type of Deal - CRM / City-Surat Company Name -Mungipa Enterprises Developer/Channel Partner firm -Broker Total Team Size-3 Current CRM -No (Using excel sheet) Tentative meeting 8th June 3:15 pm (Online) | [9062 various Mar-Jun] repeated call attempts: not responding / call cannot be connected / busy / call back later - long chase over months | [9062] spoke with client, his dad runs real estate business, enquired | [9062] client dealing in rental, residential, commercial, plotting, working as single user | [79391 2026-06-15] as discussed with manan jain he needs at least 2 week time | [79391 2026-06-xx] Cb next monday / not answering / still not answering | [79391 2026-07-03] not interested",
+ "license_tier": "1-4",
+ "city_bucket": "Other",
+ "city_clean": "Surat",
+ "onsite_or_online": "Online",
+ "name_valid": true,
+ "bant": {
+  "budget": "no signal; on excel sheet currently",
+  "authority": "family business, contact enquired on behalf of dad - unclear DM, works as single user",
+  "need": "weak - single-user broker dealing across property types, no defined pain",
+  "timeline": "none - months of chasing, asked 2 weeks then went non-responsive, 'not interested'",
+  "bant_score": 1,
+  "bant_flag": "Weak"
+ },
+ "enterprise_flag": false,
+ "pre_sales_verdict": "AMBER",
+ "stall_blocker": "Non-responsive",
+ "blocker_owner": "Customer",
+ "one_line": "Tiny 3-user Surat broker working essentially solo, chased for months with no real urgency - marginal ICP that closed unqualified as 'not interested'."
+}

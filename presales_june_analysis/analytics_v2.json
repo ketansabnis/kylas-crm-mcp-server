@@ -1,0 +1,1054 @@
+{
+ "N": 253,
+ "verdict": {
+  "AMBER": 98,
+  "GREEN": 98,
+  "RED": 57
+ },
+ "tier": {
+  "10-39": 59,
+  "5-9": 80,
+  "1-4": 109,
+  "40+": 5
+ },
+ "5plus": 146,
+ "under5": 107,
+ "won": 25,
+ "lost": 93,
+ "open": 135,
+ "onsite": {
+  "Online": 219,
+  "Onsite": 33,
+  "Unknown": 1
+ },
+ "dev_broker": {
+  "Developer": 105,
+  "Channel partner": 147,
+  "Broker": 1
+ },
+ "winrate_by_bucket": [
+  {
+   "key": "Main6",
+   "demos": 172,
+   "won": 18,
+   "win_rate": 0.1047,
+   "green": 72,
+   "green_rate": 0.4186,
+   "5plus": 106,
+   "onsite": 33
+  },
+  {
+   "key": "Other",
+   "demos": 79,
+   "won": 7,
+   "win_rate": 0.0886,
+   "green": 26,
+   "green_rate": 0.3291,
+   "5plus": 39,
+   "onsite": 0
+  },
+  {
+   "key": "Unknown",
+   "demos": 2,
+   "won": 0,
+   "win_rate": 0.0,
+   "green": 0,
+   "green_rate": 0.0,
+   "5plus": 1,
+   "onsite": 0
+  }
+ ],
+ "winrate_by_main6": [
+  {
+   "key": "Pune",
+   "demos": 14,
+   "won": 0,
+   "win_rate": 0.0,
+   "green": 3,
+   "green_rate": 0.2143,
+   "5plus": 6,
+   "onsite": 2
+  },
+  {
+   "key": "Mumbai/Thane",
+   "demos": 42,
+   "won": 4,
+   "win_rate": 0.0952,
+   "green": 20,
+   "green_rate": 0.4762,
+   "5plus": 23,
+   "onsite": 15
+  },
+  {
+   "key": "Delhi/NCR",
+   "demos": 57,
+   "won": 4,
+   "win_rate": 0.0702,
+   "green": 24,
+   "green_rate": 0.4211,
+   "5plus": 40,
+   "onsite": 8
+  },
+  {
+   "key": "Bangalore",
+   "demos": 24,
+   "won": 2,
+   "win_rate": 0.0833,
+   "green": 10,
+   "green_rate": 0.4167,
+   "5plus": 14,
+   "onsite": 4
+  },
+  {
+   "key": "Chennai",
+   "demos": 11,
+   "won": 3,
+   "win_rate": 0.2727,
+   "green": 4,
+   "green_rate": 0.3636,
+   "5plus": 6,
+   "onsite": 2
+  },
+  {
+   "key": "Hyderabad",
+   "demos": 21,
+   "won": 5,
+   "win_rate": 0.2381,
+   "green": 10,
+   "green_rate": 0.4762,
+   "5plus": 14,
+   "onsite": 2
+  }
+ ],
+ "winrate_by_tier": [
+  {
+   "key": "1-4",
+   "demos": 109,
+   "won": 7,
+   "win_rate": 0.0642,
+   "green": 15,
+   "green_rate": 0.1376,
+   "5plus": 2,
+   "onsite": 10
+  },
+  {
+   "key": "5-9",
+   "demos": 80,
+   "won": 10,
+   "win_rate": 0.125,
+   "green": 42,
+   "green_rate": 0.525,
+   "5plus": 80,
+   "onsite": 12
+  },
+  {
+   "key": "10-39",
+   "demos": 59,
+   "won": 7,
+   "win_rate": 0.1186,
+   "green": 36,
+   "green_rate": 0.6102,
+   "5plus": 59,
+   "onsite": 9
+  },
+  {
+   "key": "40+",
+   "demos": 5,
+   "won": 1,
+   "win_rate": 0.2,
+   "green": 5,
+   "green_rate": 1.0,
+   "5plus": 5,
+   "onsite": 2
+  }
+ ],
+ "winrate_by_devbroker": [
+  {
+   "key": "Developer",
+   "demos": 105,
+   "won": 14,
+   "win_rate": 0.1333,
+   "green": 55,
+   "green_rate": 0.5238,
+   "5plus": 73,
+   "onsite": 15
+  },
+  {
+   "key": "Channel partner",
+   "demos": 147,
+   "won": 11,
+   "win_rate": 0.0748,
+   "green": 42,
+   "green_rate": 0.2857,
+   "5plus": 72,
+   "onsite": 18
+  },
+  {
+   "key": "Broker",
+   "demos": 1,
+   "won": 0,
+   "win_rate": 0.0,
+   "green": 1,
+   "green_rate": 1.0,
+   "5plus": 1,
+   "onsite": 0
+  }
+ ],
+ "winrate_by_onsite": [
+  {
+   "key": "Onsite",
+   "demos": 33,
+   "won": 5,
+   "win_rate": 0.1515,
+   "green": 19,
+   "green_rate": 0.5758,
+   "5plus": 23,
+   "onsite": 33
+  },
+  {
+   "key": "Online",
+   "demos": 219,
+   "won": 20,
+   "win_rate": 0.0913,
+   "green": 79,
+   "green_rate": 0.3607,
+   "5plus": 122,
+   "onsite": 0
+  },
+  {
+   "key": "Unknown",
+   "demos": 1,
+   "won": 0,
+   "win_rate": 0.0,
+   "green": 0,
+   "green_rate": 0.0,
+   "5plus": 1,
+   "onsite": 0
+  }
+ ],
+ "winrate_by_verdict": [
+  {
+   "key": "GREEN",
+   "demos": 98,
+   "won": 24,
+   "win_rate": 0.2449,
+   "green": 98,
+   "green_rate": 1.0,
+   "5plus": 83,
+   "onsite": 19
+  },
+  {
+   "key": "AMBER",
+   "demos": 98,
+   "won": 1,
+   "win_rate": 0.0102,
+   "green": 0,
+   "green_rate": 0.0,
+   "5plus": 45,
+   "onsite": 9
+  },
+  {
+   "key": "RED",
+   "demos": 57,
+   "won": 0,
+   "win_rate": 0.0,
+   "green": 0,
+   "green_rate": 0.0,
+   "5plus": 18,
+   "onsite": 5
+  }
+ ],
+ "winrate_by_bantflag": [
+  {
+   "key": "Strong",
+   "demos": 86,
+   "won": 24,
+   "win_rate": 0.2791,
+   "green": 81,
+   "green_rate": 0.9419,
+   "5plus": 67,
+   "onsite": 19
+  },
+  {
+   "key": "Partial",
+   "demos": 82,
+   "won": 1,
+   "win_rate": 0.0122,
+   "green": 17,
+   "green_rate": 0.2073,
+   "5plus": 49,
+   "onsite": 7
+  },
+  {
+   "key": "Weak",
+   "demos": 75,
+   "won": 0,
+   "win_rate": 0.0,
+   "green": 0,
+   "green_rate": 0.0,
+   "5plus": 24,
+   "onsite": 7
+  },
+  {
+   "key": "None",
+   "demos": 10,
+   "won": 0,
+   "win_rate": 0.0,
+   "green": 0,
+   "green_rate": 0.0,
+   "5plus": 6,
+   "onsite": 0
+  }
+ ],
+ "winrate_by_creator": [
+  {
+   "key": "Revati Ambike",
+   "demos": 135,
+   "won": 16,
+   "win_rate": 0.1185,
+   "green": 58,
+   "green_rate": 0.4296,
+   "5plus": 78,
+   "onsite": 21
+  },
+  {
+   "key": "Ashwini Nirmal",
+   "demos": 114,
+   "won": 9,
+   "win_rate": 0.0789,
+   "green": 39,
+   "green_rate": 0.3421,
+   "5plus": 66,
+   "onsite": 12
+  },
+  {
+   "key": "Gayatri More",
+   "demos": 4,
+   "won": 0,
+   "win_rate": 0.0,
+   "green": 1,
+   "green_rate": 0.25,
+   "5plus": 2,
+   "onsite": 0
+  }
+ ],
+ "winrate_by_prevcrm": [
+  {
+   "key": "Had a CRM",
+   "demos": 15,
+   "won": 0,
+   "win_rate": 0.0,
+   "green": 10,
+   "green_rate": 0.6667,
+   "5plus": 11,
+   "onsite": 2
+  },
+  {
+   "key": "Never used CRM",
+   "demos": 233,
+   "won": 25,
+   "win_rate": 0.1073,
+   "green": 87,
+   "green_rate": 0.3734,
+   "5plus": 132,
+   "onsite": 31
+  },
+  {
+   "key": "Unknown",
+   "demos": 5,
+   "won": 0,
+   "win_rate": 0.0,
+   "green": 1,
+   "green_rate": 0.2,
+   "5plus": 3,
+   "onsite": 0
+  }
+ ],
+ "top_cities": [
+  {
+   "city": "Mumbai",
+   "demos": 29,
+   "won": 2,
+   "win_rate": 0.069,
+   "green": 14,
+   "5plus": 17,
+   "onsite": 9
+  },
+  {
+   "city": "Bangalore",
+   "demos": 22,
+   "won": 1,
+   "win_rate": 0.0455,
+   "green": 8,
+   "5plus": 12,
+   "onsite": 4
+  },
+  {
+   "city": "Hyderabad",
+   "demos": 21,
+   "won": 5,
+   "win_rate": 0.2381,
+   "green": 10,
+   "5plus": 14,
+   "onsite": 2
+  },
+  {
+   "city": "Ahmedabad",
+   "demos": 16,
+   "won": 1,
+   "win_rate": 0.0625,
+   "green": 9,
+   "5plus": 13,
+   "onsite": 0
+  },
+  {
+   "city": "Noida",
+   "demos": 16,
+   "won": 0,
+   "win_rate": 0.0,
+   "green": 8,
+   "5plus": 12,
+   "onsite": 3
+  },
+  {
+   "city": "Pune",
+   "demos": 14,
+   "won": 0,
+   "win_rate": 0.0,
+   "green": 3,
+   "5plus": 6,
+   "onsite": 2
+  },
+  {
+   "city": "Chennai",
+   "demos": 11,
+   "won": 3,
+   "win_rate": 0.2727,
+   "green": 4,
+   "5plus": 6,
+   "onsite": 2
+  },
+  {
+   "city": "Gurgaon",
+   "demos": 11,
+   "won": 1,
+   "win_rate": 0.0909,
+   "green": 6,
+   "5plus": 10,
+   "onsite": 2
+  },
+  {
+   "city": "Kolkata",
+   "demos": 10,
+   "won": 1,
+   "win_rate": 0.1,
+   "green": 3,
+   "5plus": 6,
+   "onsite": 0
+  },
+  {
+   "city": "Delhi",
+   "demos": 9,
+   "won": 0,
+   "win_rate": 0.0,
+   "green": 1,
+   "5plus": 3,
+   "onsite": 2
+  },
+  {
+   "city": "Indore",
+   "demos": 7,
+   "won": 0,
+   "win_rate": 0.0,
+   "green": 3,
+   "5plus": 5,
+   "onsite": 0
+  },
+  {
+   "city": "Gurugram",
+   "demos": 7,
+   "won": 2,
+   "win_rate": 0.2857,
+   "green": 4,
+   "5plus": 6,
+   "onsite": 0
+  },
+  {
+   "city": "Thane",
+   "demos": 5,
+   "won": 2,
+   "win_rate": 0.4,
+   "green": 3,
+   "5plus": 3,
+   "onsite": 3
+  },
+  {
+   "city": "Jaipur",
+   "demos": 4,
+   "won": 1,
+   "win_rate": 0.25,
+   "green": 1,
+   "5plus": 3,
+   "onsite": 0
+  },
+  {
+   "city": "Nagpur",
+   "demos": 4,
+   "won": 1,
+   "win_rate": 0.25,
+   "green": 1,
+   "5plus": 2,
+   "onsite": 0
+  },
+  {
+   "city": "Faridabad",
+   "demos": 3,
+   "won": 0,
+   "win_rate": 0.0,
+   "green": 1,
+   "5plus": 2,
+   "onsite": 0
+  },
+  {
+   "city": "Ghaziabad",
+   "demos": 3,
+   "won": 0,
+   "win_rate": 0.0,
+   "green": 1,
+   "5plus": 2,
+   "onsite": 1
+  },
+  {
+   "city": "Lucknow",
+   "demos": 3,
+   "won": 1,
+   "win_rate": 0.3333,
+   "green": 3,
+   "5plus": 1,
+   "onsite": 0
+  },
+  {
+   "city": "Kolhapur",
+   "demos": 3,
+   "won": 0,
+   "win_rate": 0.0,
+   "green": 0,
+   "5plus": 0,
+   "onsite": 0
+  },
+  {
+   "city": "Surat",
+   "demos": 3,
+   "won": 0,
+   "win_rate": 0.0,
+   "green": 0,
+   "5plus": 0,
+   "onsite": 0
+  },
+  {
+   "city": "Bengaluru",
+   "demos": 2,
+   "won": 1,
+   "win_rate": 0.5,
+   "green": 2,
+   "5plus": 2,
+   "onsite": 0
+  },
+  {
+   "city": "New Delhi",
+   "demos": 2,
+   "won": 0,
+   "win_rate": 0.0,
+   "green": 0,
+   "5plus": 2,
+   "onsite": 0
+  },
+  {
+   "city": "Navi Mumbai",
+   "demos": 2,
+   "won": 0,
+   "win_rate": 0.0,
+   "green": 0,
+   "5plus": 0,
+   "onsite": 1
+  },
+  {
+   "city": "Agra",
+   "demos": 2,
+   "won": 1,
+   "win_rate": 0.5,
+   "green": 1,
+   "5plus": 0,
+   "onsite": 0
+  },
+  {
+   "city": "Coimbatore",
+   "demos": 2,
+   "won": 0,
+   "win_rate": 0.0,
+   "green": 0,
+   "5plus": 0,
+   "onsite": 0
+  }
+ ],
+ "onsite_by_main6": {
+  "Pune": {
+   "demos": 14,
+   "onsite": 2
+  },
+  "Mumbai/Thane": {
+   "demos": 42,
+   "onsite": 15
+  },
+  "Delhi/NCR": {
+   "demos": 57,
+   "onsite": 8
+  },
+  "Bangalore": {
+   "demos": 24,
+   "onsite": 4
+  },
+  "Chennai": {
+   "demos": 11,
+   "onsite": 2
+  },
+  "Hyderabad": {
+   "demos": 21,
+   "onsite": 2
+  }
+ },
+ "won_deals": [
+  {
+   "id": 4372397,
+   "name": "Amina Fridous",
+   "lic": 25,
+   "city": "Kolkata",
+   "bucket": "Other",
+   "val": 444000,
+   "onsite": "Online",
+   "dev_broker": "Developer",
+   "creator": "Revati Ambike",
+   "owner": "Pranith A B"
+  },
+  {
+   "id": 4281546,
+   "name": "Fatema Kabani",
+   "lic": 5,
+   "city": "Thane",
+   "bucket": "Main6",
+   "val": 230000,
+   "onsite": "Onsite",
+   "dev_broker": "Developer",
+   "creator": "Revati Ambike",
+   "owner": "Ankur Singhal"
+  },
+  {
+   "id": 4339317,
+   "name": "Pinki Rowlo",
+   "lic": 20,
+   "city": "Thane",
+   "bucket": "Main6",
+   "val": 219000,
+   "onsite": "Onsite",
+   "dev_broker": "Channel partner",
+   "creator": "Revati Ambike",
+   "owner": "Alok Tiwari"
+  },
+  {
+   "id": 4360747,
+   "name": "Sapna",
+   "lic": 10,
+   "city": "Mumbai",
+   "bucket": "Main6",
+   "val": 200000,
+   "onsite": "Onsite",
+   "dev_broker": "Developer",
+   "creator": "Ashwini Nirmal",
+   "owner": "Alok Tiwari (50513)"
+  },
+  {
+   "id": 4360677,
+   "name": "Manoj Kumar",
+   "lic": 5,
+   "city": "Chennai",
+   "bucket": "Main6",
+   "val": 155600,
+   "onsite": "Onsite",
+   "dev_broker": "Developer",
+   "creator": "Revati Ambike",
+   "owner": "Santhana K"
+  },
+  {
+   "id": 4385582,
+   "name": "Saurav Aggarwal",
+   "lic": 3,
+   "city": "Agra",
+   "bucket": "Other",
+   "val": 146200,
+   "onsite": "Online",
+   "dev_broker": "Channel partner",
+   "creator": "Ashwini Nirmal",
+   "owner": "Disha Kadam"
+  },
+  {
+   "id": 4336630,
+   "name": "Aryan Sankriti",
+   "lic": 10,
+   "city": "Gurgaon",
+   "bucket": "Main6",
+   "val": 141000,
+   "onsite": "Online",
+   "dev_broker": "Developer",
+   "creator": "Revati Ambike",
+   "owner": "Disha Kadam"
+  },
+  {
+   "id": 4334770,
+   "name": "Snehith Yarabarla",
+   "lic": 9,
+   "city": "Hyderabad",
+   "bucket": "Main6",
+   "val": 125000,
+   "onsite": "Online",
+   "dev_broker": "Developer",
+   "creator": "Revati Ambike",
+   "owner": "Jaganmohan Vankina"
+  },
+  {
+   "id": 4316856,
+   "name": "Ragni Sharma",
+   "lic": 12,
+   "city": "Jaipur",
+   "bucket": "Other",
+   "val": 121000,
+   "onsite": "Online",
+   "dev_broker": "Developer",
+   "creator": "Revati Ambike",
+   "owner": "Alok Tiwari"
+  },
+  {
+   "id": 4358528,
+   "name": "Jay",
+   "lic": 3,
+   "city": "Lucknow",
+   "bucket": "Other",
+   "val": 121000,
+   "onsite": "Online",
+   "dev_broker": "Developer",
+   "creator": "Revati Ambike",
+   "owner": "Ankur Singhal"
+  },
+  {
+   "id": 4389693,
+   "name": "Harshal Shah",
+   "lic": 6,
+   "city": "Mumbai",
+   "bucket": "Main6",
+   "val": 109800,
+   "onsite": "Online",
+   "dev_broker": "Developer",
+   "creator": "Revati Ambike",
+   "owner": "Ankur Singhal"
+  },
+  {
+   "id": 4360767,
+   "name": "Hari Haran",
+   "lic": 10,
+   "city": "Chennai",
+   "bucket": "Main6",
+   "val": 106200,
+   "onsite": "Online",
+   "dev_broker": "Developer",
+   "creator": "Revati Ambike",
+   "owner": "Santhana K"
+  },
+  {
+   "id": 4335423,
+   "name": "Prathyusha Adhikma",
+   "lic": 5,
+   "city": "Hyderabad",
+   "bucket": "Main6",
+   "val": 106000,
+   "onsite": "Online",
+   "dev_broker": "Developer",
+   "creator": "Revati Ambike",
+   "owner": "Jaganmohan Vankina"
+  },
+  {
+   "id": 4372968,
+   "name": "Khayum",
+   "lic": 5,
+   "city": "Hyderabad",
+   "bucket": "Main6",
+   "val": 102000,
+   "onsite": "Onsite",
+   "dev_broker": "Developer",
+   "creator": "Revati Ambike",
+   "owner": "Jaganmohan Vankina"
+  },
+  {
+   "id": 4335185,
+   "name": "ganesh",
+   "lic": 3,
+   "city": "Hyderabad",
+   "bucket": "Main6",
+   "val": 100400,
+   "onsite": "Online",
+   "dev_broker": "Developer",
+   "creator": "Ashwini Nirmal",
+   "owner": "Jaganmohan Vankina"
+  },
+  {
+   "id": 4348185,
+   "name": "CloVents Pvt Ltd",
+   "lic": 10,
+   "city": "Bangalore",
+   "bucket": "Main6",
+   "val": 81600,
+   "onsite": "Online",
+   "dev_broker": "Channel partner",
+   "creator": "Ashwini Nirmal",
+   "owner": "Panchasheel Tare"
+  },
+  {
+   "id": 4366360,
+   "name": "pravesh rathi",
+   "lic": 5,
+   "city": "Gurugram",
+   "bucket": "Main6",
+   "val": 69000,
+   "onsite": "Online",
+   "dev_broker": "Channel partner",
+   "creator": "Ashwini Nirmal",
+   "owner": "Suraj Chauhan"
+  },
+  {
+   "id": 4362176,
+   "name": "Dhivya Daniell",
+   "lic": 3,
+   "city": "Chennai",
+   "bucket": "Main6",
+   "val": 68800,
+   "onsite": "Online",
+   "dev_broker": "Channel partner",
+   "creator": "Ashwini Nirmal",
+   "owner": "Santhana K (17923)"
+  },
+  {
+   "id": 2066957,
+   "name": "Shivaji Rannaware",
+   "lic": 14,
+   "city": "Nagpur",
+   "bucket": "Other",
+   "val": 60000,
+   "onsite": "Online",
+   "dev_broker": "Channel partner",
+   "creator": "Revati Ambike",
+   "owner": "Alok Tiwari"
+  },
+  {
+   "id": 4359253,
+   "name": "Shivakumar Mende",
+   "lic": 3,
+   "city": "Hyderabad",
+   "bucket": "Main6",
+   "val": 58000,
+   "onsite": "Online",
+   "dev_broker": "Channel partner",
+   "creator": "Revati Ambike",
+   "owner": "Jawed Alam"
+  },
+  {
+   "id": 4376499,
+   "name": "Fuzail",
+   "lic": 7,
+   "city": "Bengaluru",
+   "bucket": "Main6",
+   "val": 56200,
+   "onsite": "Online",
+   "dev_broker": "Channel partner",
+   "creator": "Ashwini Nirmal",
+   "owner": "Jawed Alam (ID: 50512)"
+  },
+  {
+   "id": 4371723,
+   "name": "Neelesh Pandey",
+   "lic": 5,
+   "city": "Gurugram",
+   "bucket": "Main6",
+   "val": 46000,
+   "onsite": "Online",
+   "dev_broker": "Channel partner",
+   "creator": "Ashwini Nirmal",
+   "owner": "Suraj Chauhan (ID: 80575)"
+  },
+  {
+   "id": 4375928,
+   "name": "Ishan",
+   "lic": 5,
+   "city": "Ahmedabad",
+   "bucket": "Other",
+   "val": 43200,
+   "onsite": "Online",
+   "dev_broker": "Developer",
+   "creator": "Revati Ambike",
+   "owner": "Anuj Pathak"
+  },
+  {
+   "id": 4363539,
+   "name": "Yogesh Kumar Rana",
+   "lic": 1,
+   "city": "Noida (NCR)",
+   "bucket": "Main6",
+   "val": 19400,
+   "onsite": "Online",
+   "dev_broker": "Channel partner",
+   "creator": "Revati Ambike",
+   "owner": "Suraj Chauhan"
+  },
+  {
+   "id": 3641128,
+   "name": "prasad",
+   "lic": 1,
+   "city": "Nashik",
+   "bucket": "Other",
+   "val": 9599,
+   "onsite": "Online",
+   "dev_broker": "Channel partner",
+   "creator": "Ashwini Nirmal",
+   "owner": "Anuj Pathak"
+  }
+ ],
+ "revenue_total": 2938999,
+ "revenue_by_bucket": {
+  "Main6": 1994000,
+  "Other": 944999,
+  "Unknown": 0
+ },
+ "revenue_by_main6": {
+  "Pune": 0,
+  "Mumbai/Thane": 758800,
+  "Delhi/NCR": 275400,
+  "Bangalore": 137800,
+  "Chennai": 330600,
+  "Hyderabad": 491400
+ },
+ "revenue_by_onsite": {
+  "Onsite": 906600,
+  "Online": 2032399
+ },
+ "revenue_by_tier": {
+  "1-4": 523399,
+  "5-9": 1042800,
+  "10-39": 1153800,
+  "40+": 219000
+ },
+ "onsite_detail": {
+  "onsite": [
+   5,
+   33,
+   0.15151515151515152
+  ],
+  "online": [
+   20,
+   219,
+   0.091324200913242
+  ]
+ },
+ "blocker": {
+  "BANT-weak": 18,
+  "Non-responsive": 43,
+  "Progressing": 25,
+  "Competitor/Existing-CRM": 27,
+  "Timeline/Not-now": 26,
+  "Budget": 18,
+  "Won": 25,
+  "Product/Pricing": 2,
+  "Sales-gap": 7,
+  "Quality/ICP": 60,
+  "Pre-sales-gap": 2
+ },
+ "blocker_owner": {
+  "Customer": 103,
+  "Sales": 43,
+  "Pre-sales": 63,
+  "Product/Pricing": 19,
+  "NA-Won": 25
+ },
+ "tiermix_main6": {
+  "1-4": 68,
+  "5-9": 60,
+  "10-39": 40,
+  "40+": 4
+ },
+ "tiermix_other": {
+  "1-4": 40,
+  "5-9": 20,
+  "10-39": 18,
+  "40+": 1
+ },
+ "per_creator": {
+  "Revati Ambike": {
+   "demos": 135,
+   "won": 16,
+   "win_rate": 0.1185,
+   "GREEN": 58,
+   "RED": 31,
+   "5plus": 78,
+   "onsite": 21,
+   "revenue": 2161200
+  },
+  "Ashwini Nirmal": {
+   "demos": 114,
+   "won": 9,
+   "win_rate": 0.0789,
+   "GREEN": 39,
+   "RED": 24,
+   "5plus": 66,
+   "onsite": 12,
+   "revenue": 777799
+  },
+  "Gayatri More": {
+   "demos": 4,
+   "won": 0,
+   "win_rate": 0.0,
+   "GREEN": 1,
+   "RED": 2,
+   "5plus": 2,
+   "onsite": 0,
+   "revenue": 0
+  }
+ },
+ "winrate_by_tier3": [
+  {
+   "key": "<5",
+   "demos": 107,
+   "won": 7,
+   "win_rate": 0.0654,
+   "green": 15,
+   "green_rate": 0.1402,
+   "5plus": 0,
+   "onsite": 10
+  },
+  {
+   "key": "5-10",
+   "demos": 116,
+   "won": 14,
+   "win_rate": 0.1207,
+   "green": 63,
+   "green_rate": 0.5431,
+   "5plus": 116,
+   "onsite": 19
+  },
+  {
+   "key": "10+",
+   "demos": 30,
+   "won": 4,
+   "win_rate": 0.1333,
+   "green": 20,
+   "green_rate": 0.6667,
+   "5plus": 30,
+   "onsite": 4
+  }
+ ]
+}

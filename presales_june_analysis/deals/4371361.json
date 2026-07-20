@@ -1,0 +1,51 @@
+{
+ "deal_id": 4371361,
+ "deal_name": "Mukesh Sinha",
+ "creator": "Revati Ambike",
+ "creator_id": 9062,
+ "owner": "Suraj Chauhan",
+ "pipeline": "Sell.Do Deal Pipeline",
+ "stage": "Closed Lost",
+ "pipeline_stage_reason": null,
+ "created_at": "2026-06-11T07:06:18.961Z",
+ "updated_at": "2026-06-18T12:07:37.212Z",
+ "meeting_conducted": true,
+ "cfMeetingConductedOn": "2026-06-13T08:15:06.435Z",
+ "noOfLicenses": 4,
+ "cfCity": "Delhi",
+ "cfReDeveloperOrChannelPartner": "Channel partner",
+ "estimatedValue": null,
+ "actualValue": null,
+ "products": [
+  "Sell.Do Enterprise"
+ ],
+ "source": null,
+ "campaign": null,
+ "cfPreviousCrm": "Never used a CRM",
+ "cfRequiredTools": [
+  "CRM"
+ ],
+ "cfSales": null,
+ "cfFirstSalesOwner": "Suraj Chauhan",
+ "cfOwnerPhoneNumber": true,
+ "notes_count": 8,
+ "notes_text": "9062: REM HOMES, Delhi, Broker, team 4, no CRM, in-person meeting 13 Jun; address Sector-12 Dwarka. | 80575: client not interested on data security, said 'I want to create my own CRM'.",
+ "license_tier": "1-4",
+ "city_bucket": "Main6",
+ "city_clean": "Delhi",
+ "onsite_or_online": "Onsite",
+ "name_valid": true,
+ "bant": {
+  "budget": "no signal",
+  "authority": "Broker owner/self",
+  "need": "4-user broker, but wants to build own CRM - low real need",
+  "timeline": "no signal",
+  "bant_score": 1,
+  "bant_flag": "Weak"
+ },
+ "enterprise_flag": false,
+ "pre_sales_verdict": "RED",
+ "stall_blocker": "Quality/ICP",
+ "blocker_owner": "Pre-sales",
+ "one_line": "Delhi broker (REM Homes), 4 seats, wants to build his own CRM - weak intent/sub-ICP; F2F demo wasted."
+}

@@ -1,0 +1,52 @@
+{
+ "deal_id": 4400862,
+ "deal_name": "Shivanshu Gupta",
+ "creator": "Revati Ambike",
+ "creator_id": 9062,
+ "owner": "Arzoo Choudhary",
+ "pipeline": "Sell.Do Deal Pipeline",
+ "stage": "Quote Sent",
+ "pipeline_stage_reason": null,
+ "created_at": "2026-06-18T12:40:09.413Z",
+ "updated_at": "2026-06-25T06:18:21.446Z",
+ "meeting_conducted": true,
+ "cfMeetingConductedOn": "2026-06-19T18:38:01.184Z",
+ "noOfLicenses": 30,
+ "cfCity": "Gurgaon",
+ "cfReDeveloperOrChannelPartner": "Channel partner",
+ "estimatedValue": null,
+ "actualValue": null,
+ "products": [
+  "Sell.Do Enterprise"
+ ],
+ "source": null,
+ "campaign": null,
+ "cfPreviousCrm": "Leadsquared",
+ "cfRequiredTools": [
+  "CRM",
+  "AI Calling"
+ ],
+ "cfSales": null,
+ "cfFirstSalesOwner": "Arzoo Choudhary",
+ "cfOwnerPhoneNumber": "+919870893570",
+ "notes_count": 11,
+ "notes_text": "By 73470: demo done, using Leadsquared, checking how other platforms work, gave detailed view; will share requirements. By 9062: Type-CRM/CRM+AI calling;City-Gurgaon;Company-Orion Infra Realtors;Broker;Team Size-30;Current CRM-Yes(Leadsquare);Challenges-Yes;Meeting 19 Jun 3pm. AUDIT(4248): FORWARD WITH FLAGS - established well-verified Gurgaon broker (strong fit); flags contact not verified DM (true owners are directors), confirm 30-licence/team-size. By 73470: 30 users x 1000 x 12mo standard quote sent; needs specific report formats; multiple non-answers; he is in hospital, will connect once back.",
+ "license_tier": "10-39",
+ "city_bucket": "Main6",
+ "city_clean": "Gurgaon",
+ "onsite_or_online": "Online",
+ "name_valid": true,
+ "bant": {
+  "budget": "Quoted 30 users x 1000 x 12mo; no objection",
+  "authority": "Contact not verified as DM - true owners are directors",
+  "need": "Strong; 30-agent broker switching off Leadsquared, stated challenges",
+  "timeline": "Active but stalling on non-response / contact hospitalized",
+  "bant_score": 3,
+  "bant_flag": "Strong"
+ },
+ "enterprise_flag": false,
+ "pre_sales_verdict": "GREEN",
+ "stall_blocker": "Progressing",
+ "blocker_owner": "Sales",
+ "one_line": "Established 30-seat Gurgaon broker switching off Leadsquared, priced and detailed - strong pre-sales; verify the DM (directors) and chase past the hospitalization."
+}

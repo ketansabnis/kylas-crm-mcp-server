@@ -1,0 +1,87 @@
+{
+  "4255681": [
+    1784264083768,
+    "This weeks task:- Push the Calling Integration delivery timelines - Done, pushed for this Monday.&nbsp; Sanket to talk to Ketan for the Calling Integration delays - &nbsp;Done",
+    "Weekly tasks on calling-integration timelines/delays marked done; Sanket to talk to Ketan.",
+    []
+  ],
+  "4241966": [
+    1784263743412,
+    "Have to arrange call between Customer, Vinay and Siddarth. Checking their availability and schedule call.",
+    "Arranging a call between customer, Vinay and Siddharth; checking availability.",
+    []
+  ],
+  "4233760": [
+    1784475170171,
+    "Connect with new POC and get feedback on BOT and push them to start using the same.",
+    "Connect with new POC for BOT feedback and push adoption.",
+    [
+      "SS-12285"
+    ]
+  ],
+  "4233715": [
+    1784475122131,
+    "Schedule call with customer to discuss pointers shared by customer after checking availability of Sharayu and customer.",
+    "Schedule call to discuss customer pointers (dependent on Sharayu/customer availability).",
+    [
+      "ESTATE-21040",
+      "SS-12176"
+    ]
+  ],
+  "4230613": [
+    1783401767413,
+    "We had a meeting with the client on 0 3rd July 2026 , along with Ketan Sir and Siddharth. &nbsp; During the discussion, the client expressed concerns regarding the rollout timelines and the delay in the implementation process. They also requested that a member of our team be available at their offic",
+    "Client escalated rollout delays, wants 3-5 day onsite; JIRAs (incl mobile) to deploy by 15 Jul; targeting completion end-Jul/early-Aug.",
+    []
+  ],
+  "4177642": [
+    1784264185653,
+    "This week Task:- Nothing is moved, highlight to sales on OB requesting them to help for the movement - Will be done today, 3 follow-ups done on admin training, will handover will pending tasks.&nbsp; Kylas not being updated - Will be done today.&nbsp;",
+    "Nothing moved this week; escalate to sales for help; admin-training follow-ups; Kylas to be updated.",
+    []
+  ],
+  "4144089": [
+    1784474669833,
+    "Call Conducted, customer not ready to discuss on AI Calling. They want changes on sourcing which is not available.&nbsp; Checking with siddarth on same how to proceed further.",
+    "Customer refuses AI-calling discussion, wants unavailable sourcing changes; checking with Siddharth (refund risk).",
+    []
+  ],
+  "3968505": [
+    1784474584823,
+    "Update received from customer, shared the same with dev team. ETA is 29th July. Next Action: &nbsp; Connect with customer and walk them through to Sourcing again.",
+    "Update shared with dev team, ETA 29 Jul; re-walk customer through Sourcing.",
+    []
+  ],
+  "3575524": [
+    1784264001623,
+    "This weeks tasks.&nbsp; Convince the client for the Online Meeting, if the client insists for Onsite Meeting tell the client for the balance payment - &nbsp;Done, waiting for client acknowledegelemt on work done.&nbsp; Loop Amit to follow-up for the Partial Payment post this discussion - &nbsp;Done ",
+    "Pushing online vs onsite meeting tied to balance payment; Amit following up on partial payment; awaiting client acknowledgement on Manoj's pointers.",
+    []
+  ],
+  "3317883": [
+    1784521347788,
+    "Previous Tasks Status &nbsp; ✅ Completed Account Activation – 3 users and 1 admin activated Project Setup – 1 project created Lead Routing – Completed 99Acres Integration – Completed ⏳ Pending Facebook Integration – Call scheduled for Wednesday Mcube Integration – Mcube email shared with the client ",
+    "Status recap: accounts/project/routing/99acres done; Facebook, Mcube, trainings, website, data migration pending; new tasks discussed.",
+    []
+  ],
+  "3304063": [
+    1783415092241,
+    "As discussed with the client's POC ( Mr. Mithilesh ) and Director ( Mr. Abhishek ), we have scheduled a meeting for tomorrow (8th July 2026) to reinitiate the OB process. &nbsp; The meeting will primarily focus on the following activities; &nbsp; Reviewing the current OB status. Discussing the pendi",
+    "Meeting set 8 Jul with POC/Director to reinitiate OB and finalize plan.",
+    []
+  ],
+  "3304062": [
+    1783415098472,
+    "As discussed with the client's POC ( Mr. Mithilesh ) and Director ( Mr. Abhishek ), we have scheduled a meeting for tomorrow (8th July 2026) to reinitiate the OB process. &nbsp; The meeting will primarily focus on the following activities; &nbsp; Reviewing the current OB status. Discussing the pendi",
+    "Meeting set 8 Jul with POC/Director to reinitiate OB and finalize plan.",
+    []
+  ],
+  "3302998": [
+    1783402010067,
+    "The data has been uploaded successfully. However, the client has reported multiple discrepancies in the uploaded data. To address these issues, we requested a meeting with the client so that we could review the discrepancies together and resolve them over a call. However, the meeting was rescheduled",
+    "Data uploaded but client reports discrepancies; internal validation meeting 7 Jul; only formula fields and roles/access pending.",
+    [
+      "ESTATE-18697"
+    ]
+  ]
+}

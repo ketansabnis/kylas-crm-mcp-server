@@ -1,0 +1,52 @@
+{
+ "deal_id": 4357803,
+ "deal_name": "Samarth Jain",
+ "creator": "Revati Ambike",
+ "creator_id": 9062,
+ "owner": "Arzoo Choudhary",
+ "owner_id": 73470,
+ "pipeline": "Sell.Do Deal Pipeline",
+ "stage": "Demo Conducted",
+ "pipeline_stage_reason": null,
+ "created_at": "2026-06-08T05:40:55.816Z",
+ "updated_at": "2026-06-08T13:46:49.015Z",
+ "meeting_conducted": true,
+ "cfMeetingConductedOn": "2026-06-08T13:46:46.789Z",
+ "noOfLicenses": 18,
+ "cfCity": "Indore",
+ "cfReDeveloperOrChannelPartner": "Developer",
+ "estimatedValue": null,
+ "actualValue": null,
+ "products": [
+  "Sell.Do Enterprise"
+ ],
+ "source": null,
+ "campaign": null,
+ "cfPreviousCrm": "Never used a CRM",
+ "cfRequiredTools": [
+  "CRM"
+ ],
+ "cfSales": null,
+ "cfFirstSalesOwner": "Arzoo Choudhary",
+ "cfOwnerPhoneNumber": "+919870893570",
+ "notes_count": 15,
+ "notes_text": "[9062 2026-06-08] Type of Deal - CRM / City-Indore Company Name -Arihant Realty Infra Developer/Channel Partner firm -Developer Total Team Size-18 Current CRM -No (Using excel sheet) Tentative meeting 8th June 3:30 pm (Online) | [9062 2026-06-03] client busy, call later | [73470 2026-06-09] demo done, samarth did not join, saloni and mr. soni joined, shared credentials, need to share quote | [73470 2026-06-xx] chasing saloni/samarth, not answering | [73470 2026-06-15] getting 500/user for tier 2 vs standard 1000, want less pricing, 15 users | [73470 2026-06-25] focused on finishing project before rains, asked detailed quote 15 users w/ and w/o inventory | [73470 2026-07-03] connect post 10th July, still in touch",
+ "license_tier": "10-39",
+ "city_bucket": "Other",
+ "city_clean": "Indore",
+ "onsite_or_online": "Online",
+ "name_valid": true,
+ "bant": {
+  "budget": "price-sensitive - comparing at 500/user vs standard 1000; wants lower pricing",
+  "authority": "Samarth (owner) did not join; team (Saloni, Mr Soni) attended - DM engagement partial",
+  "need": "real developer (Arihant Realty Infra), 15-18 users, no current CRM - genuine need",
+  "timeline": "slow - focused on project completion before rains, connect post 10 July",
+  "bant_score": 3,
+  "bant_flag": "Strong"
+ },
+ "enterprise_flag": false,
+ "pre_sales_verdict": "GREEN",
+ "stall_blocker": "Budget",
+ "blocker_owner": "Product/Pricing",
+ "one_line": "Solid 15-18 user Indore developer (Arihant Realty), well-qualified demo; stalling purely on price (wants 500 vs 1000/user) - a pricing negotiation, not pre-sales."
+}

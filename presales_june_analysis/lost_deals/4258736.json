@@ -1,0 +1,19 @@
+{
+  "deal_id": 4258736,
+  "name": "Wilson Pinto",
+  "owner": "Karan Shinde",
+  "creator_id": 9062,
+  "stage": "Unqualified",
+  "noOfLicenses": 6,
+  "city": "Goa",
+  "created_at": "2026-05-13T13:08:53.650Z",
+  "demo_date": "2026-05-14T14:19:04.556Z",
+  "lost_date": "2026-05-26T14:51:04.616Z",
+  "days_created_to_demo": 1,
+  "days_demo_to_lost": 12,
+  "days_total": 13,
+  "sales_attempts": 7,
+  "loss_reason": "Competitor/Existing-CRM",
+  "one_line": "Bought another CRM; sales chased 7 calls/WA over 12 days incl. reaching partner Dinesh before client confirmed switch.",
+  "notes_count": 14
+}

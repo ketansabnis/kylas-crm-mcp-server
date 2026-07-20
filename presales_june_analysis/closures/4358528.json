@@ -1,0 +1,17 @@
+{
+  "deal_id": 4358528,
+  "deal_name": "Jay",
+  "owner": "Ankur Singhal",
+  "stage": "Won/ Booked",
+  "created_at": "2026-06-08T07:19:57.338Z",
+  "updated_at": "2026-06-22T06:07:48.507Z",
+  "products_total": 121000.0,
+  "cfBilledAmount": 121000,
+  "cfActualPaymentReceived": 121000,
+  "noOfLicenses": 3,
+  "cfCity": "Lucknow",
+  "cfReDeveloperOrChannelPartner": "Developer",
+  "cfMeetingConductedOn": "2026-06-08T09:14:57.882Z",
+  "cfPreviousCrm": "Never used a CRM",
+  "cfOwnerPhoneNumber": "+918879685293"
+}

@@ -1,0 +1,806 @@
+{
+ "run_date": "2026-07-16",
+ "deals": [
+  [
+   4531331,
+   "Emerald Blue",
+   "Muntazar Mhate"
+  ],
+  [
+   4516021,
+   "RUBRICK CONSTRUCTIONS PRIVATE LIMITED",
+   "Sahil Jane"
+  ],
+  [
+   4515897,
+   "R J Real Tech and Properties Pvt Ltd",
+   "Sahil Jane"
+  ],
+  [
+   4514062,
+   "WINTER HOME PROPERTIES",
+   "Shweta Gouda"
+  ],
+  [
+   4511499,
+   "Sunita real estate",
+   "Shweta Gouda"
+  ],
+  [
+   4511483,
+   "GAGAN TONDON",
+   "Shweta Gouda"
+  ],
+  [
+   4510268,
+   "SHREYA CAPITAL ADVISORY SERVICES LLP",
+   "Sahil Jane"
+  ],
+  [
+   4510267,
+   "STONE AND ACRES REALITY CONSULTATNTS LLP",
+   "Raahul Ramanan R"
+  ],
+  [
+   4510245,
+   "Rare Property Advisory LLP",
+   "Raahul Ramanan R"
+  ],
+  [
+   4510214,
+   "MiCasa Realty",
+   "Raahul Ramanan R"
+  ],
+  [
+   4510192,
+   "SPR Construction Pvt Ltd (leasing team)",
+   "Raahul Ramanan R"
+  ],
+  [
+   4508480,
+   "MSK Realty",
+   "Muntazar Mhate"
+  ],
+  [
+   4499510,
+   "Sunny Developers & Realtors",
+   "Shweta Gouda"
+  ],
+  [
+   4494717,
+   "Sell.do test",
+   "Sanket Nampalliwar"
+  ],
+  [
+   4491940,
+   "Doff Estate Post Sales",
+   "Shubham Dubey"
+  ],
+  [
+   4482302,
+   "Doff Estate",
+   "Venkat Viswavardhan"
+  ],
+  [
+   4482197,
+   "Scanon Realty",
+   "Shweta Gouda"
+  ],
+  [
+   4480069,
+   "Palli Developers and Consultants LLP",
+   "Muntazar Mhate"
+  ],
+  [
+   4479599,
+   "Propnsafe Realty LLP",
+   "Sahil Jane"
+  ],
+  [
+   4479594,
+   "Apex Realty Hub",
+   "Sahil Jane"
+  ],
+  [
+   4478489,
+   "PANCHRATNA SKYLINE PRIVATE LIMITED",
+   "Shweta Gouda"
+  ],
+  [
+   4475303,
+   "test deal Push to OB 63 Copy",
+   "Sanket Nampalliwar"
+  ],
+  [
+   4475289,
+   "test deal Push to OB 63 Copy",
+   "Sanket Nampalliwar"
+  ],
+  [
+   4472721,
+   "Salahrealty Pvt Ltd",
+   "Muntazar Mhate"
+  ],
+  [
+   4458771,
+   "VRUSHABADRI DEVELOPERS",
+   "Sahil Jane"
+  ],
+  [
+   4458766,
+   "VASTU INFINITY AND VENTURES LLP",
+   "Sahil Jane"
+  ],
+  [
+   4458749,
+   "Properties Boutique",
+   "Sahil Jane"
+  ],
+  [
+   4457232,
+   "Growthx Estates",
+   "Muntazar Mhate"
+  ],
+  [
+   4449855,
+   "PROPKART4U",
+   "Shweta Gouda"
+  ],
+  [
+   4449587,
+   "Rajparis Civil Construction",
+   "Muntazar Mhate"
+  ],
+  [
+   4446753,
+   "SKYTOWN Group",
+   "Venkat Viswavardhan"
+  ],
+  [
+   4438366,
+   "Yashoda Infra Developer",
+   "Shweta Gouda"
+  ],
+  [
+   4435090,
+   "SWARAJYA REALTORS PRIVATE LIMITED",
+   "Venkat Viswavardhan"
+  ],
+  [
+   4430582,
+   "Sunrise Housing (GHP Group)",
+   "Muntazar Mhate"
+  ],
+  [
+   4412002,
+   "Blueroof India",
+   "Muntazar Mhate"
+  ],
+  [
+   4402389,
+   "Navkar Realty",
+   "Venkat Viswavardhan"
+  ],
+  [
+   4402374,
+   "VENDSPACEZ PRIVATE LIMITED",
+   "Venkat Viswavardhan"
+  ],
+  [
+   4389699,
+   "Leonaara PVt LTD",
+   "Sahil Jane"
+  ],
+  [
+   4389674,
+   "Axon Developer",
+   "Sahil Jane"
+  ],
+  [
+   4375201,
+   "Strata Capital Holdings",
+   "Shweta Gouda"
+  ],
+  [
+   4370391,
+   "Sohum Estate Agency (Sameer Chheda)",
+   "Muntazar Mhate"
+  ],
+  [
+   4370376,
+   "Shrimant Developers",
+   "Muntazar Mhate"
+  ],
+  [
+   4370308,
+   "VAZHRAA NIRMAAN PRIVATE LIMITED",
+   "Venkat Viswavardhan"
+  ],
+  [
+   4357637,
+   "Apex Construction",
+   "Sahil Jane"
+  ],
+  [
+   4345401,
+   "Sangram Group",
+   "Muntazar Mhate"
+  ],
+  [
+   4337048,
+   "i5 Housing and Properties LLP",
+   "Sourabh Sahu"
+  ],
+  [
+   4336926,
+   "Shri Krish Housing and Properties Pvt Ltd",
+   "Muntazar Mhate"
+  ],
+  [
+   4299438,
+   "Ribitto Private Limited",
+   "Muntazar Mhate"
+  ],
+  [
+   4269153,
+   "Northstone Realty",
+   "Shweta Gouda"
+  ],
+  [
+   4255693,
+   "Calicut Landmark Builders Pvt. Ltd",
+   "Raahul Ramanan R"
+  ],
+  [
+   4255681,
+   "SPR Construction Pvt Ltd",
+   "Raahul Ramanan R"
+  ],
+  [
+   4241966,
+   "GGC AI Calling",
+   "Venkat Viswavardhan"
+  ],
+  [
+   4233760,
+   "Mythri Builder AI Calling",
+   "Venkat Viswavardhan"
+  ],
+  [
+   4233715,
+   "Kohinoor AI Calling",
+   "Venkat Viswavardhan"
+  ],
+  [
+   4230613,
+   "Kunwarji Realtors",
+   "Sanket Nampalliwar"
+  ],
+  [
+   4177642,
+   "NPS DEVELOPERS",
+   "Raahul Ramanan R"
+  ],
+  [
+   4147287,
+   "Dreamworks Realtors",
+   "Venkat Viswavardhan"
+  ],
+  [
+   4144089,
+   "Dhanraj Realbuild Llp",
+   "Venkat Viswavardhan"
+  ],
+  [
+   3968505,
+   "GRUHAM SPACES LLP",
+   "Venkat Viswavardhan"
+  ],
+  [
+   3575524,
+   "Voora Developers",
+   "Raahul Ramanan R"
+  ],
+  [
+   3304063,
+   "Shree Honda",
+   "Sourabh Sahu"
+  ],
+  [
+   3304062,
+   "Shree Automotive",
+   "Sourabh Sahu"
+  ],
+  [
+   3302998,
+   "Times Group",
+   "Sanket Nampalliwar"
+  ]
+ ],
+ "stages": {
+  "Open": [
+   4516021,
+   4515897,
+   4514062,
+   4511499,
+   4510267,
+   4499510,
+   4494717,
+   4491940,
+   4475303,
+   4475289
+  ],
+  "Kickoff Done": [
+   4510268,
+   4508480,
+   4479599
+  ],
+  "Onboarding In Progress": [
+   4531331,
+   4511483,
+   4510245,
+   4510214,
+   4510192,
+   4482197,
+   4480069,
+   4479594,
+   4478489,
+   4472721,
+   4458771,
+   4458766,
+   4458749,
+   4457232,
+   4449855,
+   4449587,
+   4438366,
+   4435090,
+   4430582,
+   4412002,
+   4402374,
+   4389699,
+   4389674,
+   4375201,
+   4370391,
+   4370376,
+   4357637,
+   4345401,
+   4337048,
+   4336926,
+   4299438,
+   4269153,
+   4255681,
+   4230613,
+   4177642,
+   3968505,
+   3304063,
+   3304062
+  ],
+  "Pending on Customer": [
+   4482302,
+   4446753,
+   4402389,
+   4370308,
+   4255693,
+   4241966,
+   4233760,
+   4233715,
+   4147287,
+   4144089,
+   3575524,
+   3302998
+  ],
+  "Under Usage Tracking": []
+ },
+ "not_signedup": [
+  4516021,
+  4511499,
+  4511483,
+  4510267,
+  4508480,
+  4499510,
+  4491940,
+  4475303,
+  4475289
+ ],
+ "overdue_golive": [
+  4475303,
+  4475289,
+  4458771,
+  4458766,
+  4458749,
+  4435090,
+  4389699,
+  4389674,
+  4375201,
+  4269153,
+  4255681,
+  4230613,
+  3968505,
+  3575524
+ ],
+ "overdue_task": [
+  3302998,
+  3575524,
+  4144089,
+  4147287,
+  4177642,
+  4230613,
+  4233760,
+  4241966,
+  4337048,
+  4357637,
+  4370308,
+  4375201,
+  4389674,
+  4389699,
+  4402374,
+  4402389,
+  4458749
+ ],
+ "future_task": [
+  4269153,
+  4435090,
+  4458771,
+  4479599,
+  4482302,
+  4531331
+ ],
+ "cat": {
+  "Broker": [
+   4531331,
+   4514062,
+   4511499,
+   4511483,
+   4482197,
+   4457232,
+   4449855,
+   4435090,
+   4375201,
+   4269153
+  ],
+  "C": [
+   4516021,
+   4510268,
+   4510245,
+   4510214,
+   4508480,
+   4499510,
+   4480069,
+   4479599,
+   4479594,
+   4478489,
+   4472721,
+   4458771,
+   4458766,
+   4458749,
+   4438366,
+   4412002,
+   4402389,
+   4389699,
+   4370391,
+   4370376,
+   4370308,
+   4357637,
+   4345401,
+   4336926,
+   4299438,
+   4241966,
+   4233760,
+   4233715,
+   4177642,
+   4144089,
+   3304063,
+   3304062
+  ],
+  "(none)": [
+   4515897
+  ],
+  "B": [
+   4510267,
+   4449587,
+   4430582,
+   4402374
+  ],
+  "A": [
+   4510192,
+   4491940,
+   4482302,
+   4446753,
+   4389674,
+   4337048,
+   4255693,
+   4255681,
+   4230613,
+   4147287,
+   3968505,
+   3575524,
+   3302998
+  ],
+  "Push to OB": [
+   4494717,
+   4475303,
+   4475289
+  ]
+ },
+ "idle_gt5": [
+  3302998,
+  3304062,
+  3304063,
+  3968505,
+  4177642,
+  4230613,
+  4255693,
+  4475289,
+  4475303,
+  4479594,
+  4491940,
+  4494717,
+  4499510
+ ],
+ "idle_gt7": [
+  3304062,
+  3304063,
+  4177642,
+  4230613,
+  4255693,
+  4475289,
+  4475303,
+  4479594,
+  4491940
+ ],
+ "idle_gt15": [],
+ "notes": {
+  "4531331": [
+   1784163550691,
+   "Priority Onboarding Tasks: &nbsp; User Login Creation Project Creation Default Report Configuration Default Routing Creation Bulk Lead Import (Excel) Sales&nbsp;Training Admin Training Not Required Tasks as of now: &nbsp; Property Portal Integrations (99Acres/Magicbricks,Housing) - Currently, there "
+  ],
+  "4516021": [
+   null,
+   ""
+  ],
+  "4515897": [
+   null,
+   ""
+  ],
+  "4514062": [
+   1784028445794,
+   "Kick Off Call scheduled on 16th July at 3:00pm"
+  ],
+  "4511499": [
+   null,
+   ""
+  ],
+  "4511483": [
+   1784033528134,
+   "Completed Tasks: User Login Creation Project Creation Default Report Configuration Quick Add Unit Option&nbsp; \u200b Pending Tasks: Lead import - Call scheduled Tomorrow at 1:00pm for lead import session . Please find the link for the same : GAGAN TON DON | Meeting-Join | Microsoft Teams Clock In Clock "
+  ],
+  "4510268": [
+   null,
+   ""
+  ],
+  "4510267": [
+   null,
+   ""
+  ],
+  "4510245": [
+   null,
+   ""
+  ],
+  "4510214": [
+   1783955897197,
+   "&nbsp; \u2705 Done Account Creation User Creation &amp; Activation Team Creation Hierarchy Setup Team/Manager Access Control Routing Setup Website Integration Inventory Import (62 plots) \ud83d\udd04 In Progress Lead Pipeline Stages Setup Lead Import (scheduled for tomorrow) Telephony / Mcube Integration (awaiting "
+  ],
+  "4510192": [
+   null,
+   ""
+  ],
+  "4508480": [
+   1784043089127,
+   "Tasks for this week: * Account Setup."
+  ],
+  "4499510": [
+   1783686293300,
+   "As per client request Kick off call scheduled on 16th july at 11:30am."
+  ],
+  "4494717": [
+   1783592253763,
+   "Client Overview: ABC Realty \u2013 Real estate developer based in Pune. Current Process: Managing leads through Excel, WhatsApp, Meta Ads, and the website. Client Expectations: Centralized lead management, auto lead assignment, WhatsApp integration, and reporting. FastTrack Request: Yes \u2013 Go-live require"
+  ],
+  "4491940": [
+   null,
+   ""
+  ],
+  "4482302": [
+   1783838164019,
+   "Completed Onboarding Tasks: &nbsp;&nbsp; &nbsp;&nbsp; User Login Creation &nbsp; Project Creation &nbsp; Default Report Configuration &nbsp; Routing Creation &nbsp; Website Integration: Done (Lead ID #4) Wati Whatsapp Inegration: Done (Lead ID #8) Meta Integration: Done (Lead ID #4) &nbsp; &nbsp; Pe"
+  ],
+  "4482197": [
+   1784030210913,
+   "Targeting - Sales Training this week: Completed Tasks: User Login Creation \u200b Project Creation Default Report Configuration Lead import - As discussed, you will be starting with Fresh leads. Quick Add Unit - As discussed, you will be adding Inventories using Quick Add Unit Option &nbsp; Pending Tasks"
+  ],
+  "4480069": [
+   1784042735717,
+   "Tasks for this week: * Send Introduction Email. * If details received from the client. * Account Setup."
+  ],
+  "4479599": [
+   1783841719755,
+   "Once lead import data and website changes ae done we will complete the setup"
+  ],
+  "4479594": [
+   1783919064873,
+   "Meta and whatsapp integration call is scheduled on tuesday"
+  ],
+  "4478489": [
+   1783917685618,
+   "This week will focus on Lead import &amp; Native WA If the contact no. is ready with the client. Completed Tasks: User Login Creation Project Creation Default Report Configuration Meta Integration - Lead has been captured. Please find the lead ID For the same : # 38 &nbsp; Pending Taks: Lead Import "
+  ],
+  "4475303": [
+   1783339744599,
+   "test 3 &nbsp;"
+  ],
+  "4475289": [
+   1783339536156,
+   "test 3 &nbsp;"
+  ],
+  "4472721": [
+   1784042655107,
+   "Tasks for this week: * New Client - Account Setup * Follow-up for the Inventory. * Admin Training ---&gt; Tentative."
+  ],
+  "4458771": [
+   1784003930427,
+   "This week&nbsp; Meta and WhatsApp integration Sales Training : Ten. Next week&nbsp; Admin"
+  ],
+  "4458766": [
+   1783919042442,
+   "Sales training is completed. Only admin is pending"
+  ],
+  "4458749": [
+   1783942458420,
+   "All the trainings are completed the account will be handed over this week once Q and A is done"
+  ],
+  "4457232": [
+   1784043007126,
+   "Tasks for this week: * Meta Integration. * Bulk Lead Import."
+  ],
+  "4449855": [
+   1783919002689,
+   "This client was on Hold last week &amp; as per client request, we have resumed their Onboarding process from this week. This week will target for admin &amp; sales training &amp; will handover. Completed Tasks:&nbsp; User Login Creation Project Creation Default Report Configuration Lead import - As "
+  ],
+  "4449587": [
+   1784042933837,
+   "Tasks for this week: * Ai Sensy Integration ---&gt; If details received from the client. * Inventory &amp; Cost Sheet Setup ---&gt; If details received from the client."
+  ],
+  "4446753": [
+   1784189810132,
+   "Sales Training Completed. &nbsp; Onsite visit to be scheduled for next wednesday. &nbsp; Awaiting update on Whatsapp number from customer's end."
+  ],
+  "4438366": [
+   1783916270238,
+   "This week will target to complete Native WhatsApp Integration if the contact no. is ready with the client &amp; Sales Training Completed Tasks User Login Creation Project Creation Default Report Configuration Leads Uploaded Property Portal - 99 acres integration- Lead has been captured. Please find "
+  ],
+  "4435090": [
+   1783713626515,
+   "Lead Import completed. &nbsp; Action for next week: &nbsp; Meta Integration Sales Training &nbsp;"
+  ],
+  "4430582": [
+   1784042973753,
+   "Tasks for this week: * Virtual Numbers Setup. * Follow-up for the account setup."
+  ],
+  "4412002": [
+   1784043051045,
+   "Tasks for this week: * Meta Integration. * Sales Training. * Admin Training. * Handover ---&gt; Tentative."
+  ],
+  "4402389": [
+   1784189880575,
+   "Re-shared CP form link to customer today, Sahil is Unwell, will connect again tomorrow for the same."
+  ],
+  "4402374": [
+   1783656869960,
+   "Sales Training Completed. &nbsp; Admin to be scheduled on next week."
+  ],
+  "4389699": [
+   1783836887142,
+   "The IVR setup is expected to be completed by Monday . If the client agrees to proceed with the WhatsApp integration, we will begin the training sessions from Tuesday onwards."
+  ],
+  "4389674": [
+   1783837050753,
+   "Waiting for mucbe set from clients end."
+  ],
+  "4375201": [
+   1783917965917,
+   "Client was not available last week_ so will test mcube part this week &amp; client will proceed with the integrations &amp; once its done will be scheduling Sales Training. Completed Tasks: User Login Creation Project Creation Default Report Configuration Lead import - We have guided you on how to u"
+  ],
+  "4370391": [
+   1784042525349,
+   "Tasks for this week: * Custom Fields Setup Today. * Demo for the Inventory layout by tomorrow. * Account will show movement post Inventory Demo."
+  ],
+  "4370376": [
+   1784042846924,
+   "Tasks for this week: * Admin Training. * Handover Target for this week."
+  ],
+  "4370308": [
+   1783713764364,
+   "Admin Training to be scheduled next week."
+  ],
+  "4357637": [
+   1783919156145,
+   "Sales training is completed. Admin will be scheduled in this week."
+  ],
+  "4345401": [
+   1784042421173,
+   "Tasks for this week: * Follow-up for the pending pointers. * Will put on hold if no update from client side."
+  ],
+  "4337048": [
+   1783713865506,
+   "Inventory file upload is in progress, &nbsp; Customer to provide update on below items by 11th EOD. &nbsp; Pending Activities Bulk Lead Import \u2013 Awaiting the lead import file from customer's end expected to be received &nbsp;by tomorrow EOD. Inventory Upload \u2013 Upload in progress. Knowlarity Integrat"
+  ],
+  "4336926": [
+   1784042789545,
+   "Tasks for this week: * Sales Training Done, Account Live. * Put in On Hold if there is no update on 03 follow-up Emails and calls."
+  ],
+  "4299438": [
+   1784042594108,
+   "Tasks for this week: * Mail Gun Setup Scheduled to be completed by this week. * Sales Training."
+  ],
+  "4269153": [
+   1784091355284,
+   "This Client Was on Hold &amp; we are resuming it from today onwards. Today we will be covering sales training Completed Tasks: User Activation Lead Import - As discussed, you don't want to upload any leads in the CRM.&nbsp; \u200b Project Creation&nbsp; Clock In Clock Out Option Default Report Configurat"
+  ],
+  "4255693": [
+   1783516955567,
+   "This week's Task:-&nbsp; * Q&amp;A Session * Mobile Training * Admin Training 2.0"
+  ],
+  "4255681": [
+   1783944320207,
+   "This weeks Pointers * Get pointers moved - and drop email.&nbsp; * Sankit will speak with Dev * Add Ketan in Calling in JIRA.&nbsp; &nbsp;"
+  ],
+  "4241966": [
+   1783713926577,
+   "Pushing Netram to do outgoing calling.&nbsp;"
+  ],
+  "4233760": [
+   1783713883576,
+   "Awaiting flow and feedback from customer."
+  ],
+  "4233715": [
+   1783713906471,
+   "Few issues raised in outgoing calling. JIRA Raised for the same."
+  ],
+  "4230613": [
+   1783401767413,
+   "We had a meeting with the client on 0 3rd July 2026 , along with Ketan Sir and Siddharth. &nbsp; During the discussion, the client expressed concerns regarding the rollout timelines and the delay in the implementation process. They also requested that a member of our team be available at their offic"
+  ],
+  "4177642": [
+   1783517438607,
+   "This week's Tasks: * Initiate AI calling - &nbsp;Get them to take a demo.&nbsp; * Mcube - Concern * Plan Admin * Finish WhatsApp.&nbsp;"
+  ],
+  "4147287": [
+   1783713972451,
+   "Whatsapp flow will be shared by Monday. &nbsp; No update on inventory."
+  ],
+  "4144089": [
+   1783713947780,
+   "Have to arrange a call with customer on pending pointers."
+  ],
+  "3968505": [
+   1783713369250,
+   "GRE form delivered, awaiting update from customer on the same."
+  ],
+  "3575524": [
+   1783944042767,
+   "This weeks task:- * Schedule online call by tomorrow.&nbsp; * Update on Manoj Pointers.&nbsp; * Ask amit to follow-up on payment *&nbsp;"
+  ],
+  "3304063": [
+   1783415092241,
+   "As discussed with the client's POC ( Mr. Mithilesh ) and Director ( Mr. Abhishek ), we have scheduled a meeting for tomorrow (8th July 2026) to reinitiate the OB process. &nbsp; The meeting will primarily focus on the following activities; &nbsp; Reviewing the current OB status. Discussing the pendi"
+  ],
+  "3304062": [
+   1783415098472,
+   "As discussed with the client's POC ( Mr. Mithilesh ) and Director ( Mr. Abhishek ), we have scheduled a meeting for tomorrow (8th July 2026) to reinitiate the OB process. &nbsp; The meeting will primarily focus on the following activities; &nbsp; Reviewing the current OB status. Discussing the pendi"
+  ],
+  "3302998": [
+   1783402010067,
+   "The data has been uploaded successfully. However, the client has reported multiple discrepancies in the uploaded data. To address these issues, we requested a meeting with the client so that we could review the discrepancies together and resolve them over a call. However, the meeting was rescheduled"
+  ]
+ }
+}

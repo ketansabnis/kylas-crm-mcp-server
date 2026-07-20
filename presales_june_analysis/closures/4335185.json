@@ -1,0 +1,17 @@
+{
+  "deal_id": 4335185,
+  "deal_name": "ganesh",
+  "owner": "Jaganmohan Vankina",
+  "stage": "Won/ Booked",
+  "created_at": "2026-06-01T06:41:12.777Z",
+  "updated_at": "2026-06-24T12:19:08.279Z",
+  "products_total": null,
+  "cfBilledAmount": 100400,
+  "cfActualPaymentReceived": 100400,
+  "noOfLicenses": 3,
+  "cfCity": "Hyderabad",
+  "cfReDeveloperOrChannelPartner": "Developer",
+  "cfMeetingConductedOn": "2026-06-05T13:29:14.443Z",
+  "cfPreviousCrm": "Never used a CRM",
+  "cfOwnerPhoneNumber": "+919618242467"
+}

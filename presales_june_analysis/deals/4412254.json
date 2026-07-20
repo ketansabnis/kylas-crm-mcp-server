@@ -1,0 +1,51 @@
+{
+ "deal_id": 4412254,
+ "deal_name": "Ajaay Taneja",
+ "creator": "Revati Ambike",
+ "creator_id": 9062,
+ "owner": "Suraj Chauhan",
+ "pipeline": "Sell.Do Deal Pipeline",
+ "stage": "Closed Lost",
+ "pipeline_stage_reason": null,
+ "created_at": "2026-06-22T10:26:25.262Z",
+ "updated_at": "2026-07-06T07:19:17.937Z",
+ "meeting_conducted": true,
+ "cfMeetingConductedOn": "2026-06-22T12:55:19.008Z",
+ "noOfLicenses": 1,
+ "cfCity": "Delhi",
+ "cfReDeveloperOrChannelPartner": "Channel partner",
+ "estimatedValue": null,
+ "actualValue": null,
+ "products": [
+  "Sell.Do Enterprise"
+ ],
+ "source": null,
+ "campaign": null,
+ "cfPreviousCrm": "Never used a CRM",
+ "cfRequiredTools": [
+  "CRM"
+ ],
+ "cfSales": null,
+ "cfFirstSalesOwner": "Suraj Chauhan",
+ "cfOwnerPhoneNumber": "+919643843177",
+ "notes_count": 10,
+ "notes_text": "By 9062: not responding (x2); client deals residential, works as individual, used 4QT earlier. Type-CRM;City-Delhi;Company-DNA Realtors;Broker;Team Size-1;Current CRM-No(excel);Meeting 22 Jun 3:50pm online. ENRICH+AUDIT(4248): FORWARD WITH FLAGS - on-ICP broker, identity VERIFIED (phone=Ajaay Taneja), but confirm if 1-seat solo or full DNA Realtors (30+ project tricity broker); City Delhi likely off. By 80575: demo done, 1 user, said need 3-4 days will think. Later: only one user, not interested now, will think after more members join.",
+ "license_tier": "1-4",
+ "city_bucket": "Main6",
+ "city_clean": "Delhi",
+ "onsite_or_online": "Online",
+ "name_valid": true,
+ "bant": {
+  "budget": "no signal; no price discussed",
+  "authority": "Solo broker/owner - is DM",
+  "need": "Weak; individual agent, previously used 4QT",
+  "timeline": "Weak; will think after team grows",
+  "bant_score": 1,
+  "bant_flag": "Weak"
+ },
+ "enterprise_flag": false,
+ "pre_sales_verdict": "RED",
+ "stall_blocker": "Quality/ICP",
+ "blocker_owner": "Pre-sales",
+ "one_line": "Solo 1-seat Delhi broker demoed despite pre-sales own flag on true size; no team, no urgency - unqualified small-ICP demo."
+}

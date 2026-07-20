@@ -1,0 +1,17 @@
+{
+  "deal_id": 4372968,
+  "deal_name": "Khayum",
+  "owner": "Jaganmohan Vankina",
+  "stage": "Won/ Booked",
+  "created_at": "2026-06-11T11:13:34.447Z",
+  "updated_at": "2026-06-24T12:18:22.254Z",
+  "products_total": null,
+  "cfBilledAmount": 102000,
+  "cfActualPaymentReceived": 102000,
+  "noOfLicenses": 5,
+  "cfCity": "Hyderabad",
+  "cfReDeveloperOrChannelPartner": "Developer",
+  "cfMeetingConductedOn": "2026-06-12T15:46:37.132Z",
+  "cfPreviousCrm": "Never used a CRM",
+  "cfOwnerPhoneNumber": "+919618242467"
+}

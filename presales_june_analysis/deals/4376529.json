@@ -1,0 +1,52 @@
+{
+ "deal_id": 4376529,
+ "deal_name": "Gokul",
+ "creator": "Revati Ambike",
+ "creator_id": 9062,
+ "owner": "Jawed Alam",
+ "pipeline": "Sell.Do Deal Pipeline",
+ "stage": "Quote Sent",
+ "pipeline_stage_reason": null,
+ "created_at": "2026-06-12T09:41:55.704Z",
+ "updated_at": "2026-06-17T15:12:00.048Z",
+ "meeting_conducted": true,
+ "cfMeetingConductedOn": "2026-06-15T13:03:49.587Z",
+ "noOfLicenses": 5,
+ "cfCity": "Bangalore",
+ "cfReDeveloperOrChannelPartner": "Channel partner",
+ "estimatedValue": null,
+ "actualValue": null,
+ "products": [
+  "Sell.Do Enterprise"
+ ],
+ "source": null,
+ "campaign": null,
+ "cfPreviousCrm": "Never used a CRM",
+ "cfRequiredTools": [
+  "CRM",
+  "Native WA"
+ ],
+ "cfSales": null,
+ "cfFirstSalesOwner": "Jawed Alam",
+ "cfOwnerPhoneNumber": true,
+ "notes_count": 14,
+ "notes_text": "9062: Dream Spaces LLP, Bangalore, Broker, team 5, no CRM, demo 15 Jun online; multiple reschedules and non-responses. | 50512: demo done, 4 users, WA, share commercial; proposal sent; later spoke, said next month 2nd week.",
+ "license_tier": "5-9",
+ "city_bucket": "Main6",
+ "city_clean": "Bangalore",
+ "onsite_or_online": "Online",
+ "name_valid": false,
+ "bant": {
+  "budget": "Proposal sent, no explicit budget",
+  "authority": "Likely owner of Dream Spaces LLP",
+  "need": "Broker, 4-5 users, wants CRM + WhatsApp",
+  "timeline": "Deferred to next month 2nd week",
+  "bant_score": 2,
+  "bant_flag": "Partial"
+ },
+ "enterprise_flag": false,
+ "pre_sales_verdict": "AMBER",
+ "stall_blocker": "Timeline/Not-now",
+ "blocker_owner": "Customer",
+ "one_line": "Bangalore broker (Dream Spaces LLP), 4-5 seats + WA; junk contact name 'Gokul', quote out, deferred to next month."
+}

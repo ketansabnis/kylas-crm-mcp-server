@@ -1,0 +1,52 @@
+{
+ "deal_id": 4358528,
+ "deal_name": "Jay",
+ "creator": "Revati Ambike",
+ "creator_id": 9062,
+ "owner": "Ankur Singhal",
+ "owner_id": 58133,
+ "pipeline": "Sell.Do Deal Pipeline",
+ "stage": "Won/ Booked",
+ "pipeline_stage_reason": null,
+ "created_at": "2026-06-08T07:19:57.338Z",
+ "updated_at": "2026-06-22T06:07:48.507Z",
+ "meeting_conducted": true,
+ "cfMeetingConductedOn": "2026-06-08T09:14:57.882Z",
+ "noOfLicenses": 3,
+ "cfCity": "Lucknow",
+ "cfReDeveloperOrChannelPartner": "Developer",
+ "estimatedValue": null,
+ "actualValue": 121000,
+ "products": [
+  "Sell.Do Enterprise"
+ ],
+ "source": null,
+ "campaign": null,
+ "cfPreviousCrm": "Never used a CRM",
+ "cfRequiredTools": [
+  "CRM"
+ ],
+ "cfSales": null,
+ "cfFirstSalesOwner": "Ankur Singhal",
+ "cfOwnerPhoneNumber": "+918879685293",
+ "notes_count": 8,
+ "notes_text": "[9062 2026-06-08] Type of Deal - CRM / City-Lucknow Company Name -Jai Construction Developer/Channel Partner firm -Developer Total Team Size-25 Current CRM -No (Using excel sheet) Tentative meeting 8th June 2:30 pm (Online) | [9062 2026-06-08] The client is not responding to the call | [58133 2026-06-08] ok / demo done | [58133 2026-06-09] client has sales team of 5 users and ~20 channel partners; CRM requirement for internal sales team only | [58133 2026-06-09] paid for 3 users | [58133 2026-06-18] paid for post sales 1 project | [58133 invoice] K26270856 / K26270752",
+ "license_tier": "1-4",
+ "city_bucket": "Other",
+ "city_clean": "Lucknow",
+ "onsite_or_online": "Online",
+ "name_valid": false,
+ "bant": {
+  "budget": "Won at 121000 billed - budget strong",
+  "authority": "DM engaged - completed purchase incl post-sales project",
+  "need": "real developer (Jai Construction), team of 25, sales team of 5, 20 channel partners; genuine CRM need",
+  "timeline": "converted to Won within ~2 weeks",
+  "bant_score": 4,
+  "bant_flag": "Strong"
+ },
+ "enterprise_flag": true,
+ "pre_sales_verdict": "GREEN",
+ "stall_blocker": "Won",
+ "blocker_owner": "NA-Won",
+ "one_line": "Real Lucknow developer (Jai Construction, 25-strong team), qualified well and Won at 1.21L incl post-sales - strong pre-sales despite single-name contact."
+}

@@ -1,0 +1,17 @@
+{
+  "deal_id": 4308731,
+  "deal_name": "Fakhar",
+  "owner": "Niket Rathod",
+  "stage": "Won/ Booked",
+  "created_at": "2026-05-25T09:53:16.010Z",
+  "updated_at": "2026-07-02T06:27:44.004Z",
+  "products_total": null,
+  "cfBilledAmount": 24400,
+  "cfActualPaymentReceived": 24400,
+  "noOfLicenses": 2,
+  "cfCity": "Ajmer",
+  "cfReDeveloperOrChannelPartner": "Channel partner",
+  "cfMeetingConductedOn": "2026-05-26T08:42:15.679Z",
+  "cfPreviousCrm": "Never used a CRM",
+  "cfOwnerPhoneNumber": "+919999999999"
+}

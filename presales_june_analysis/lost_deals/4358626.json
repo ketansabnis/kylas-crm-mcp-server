@@ -1,0 +1,19 @@
+{
+  "deal_id": 4358626,
+  "name": "Vaibahv",
+  "owner": "Disha Kadam",
+  "creator_id": 54132,
+  "stage": "Lost",
+  "noOfLicenses": 5,
+  "city": "Ahmedabad",
+  "created_at": "2026-06-08",
+  "demo_date": "2026-06-12",
+  "lost_date": "2026-06-25",
+  "days_created_to_demo": 4,
+  "days_demo_to_lost": 13,
+  "days_total": 17,
+  "sales_attempts": 6,
+  "loss_reason": "Sub-ICP/Too-small",
+  "one_line": "Marketing agency evaluating on behalf of its own client (not the buyer); demoed, chased ~6x (mostly CNR); asked not to call.",
+  "notes_count": 17
+}

@@ -1,0 +1,19 @@
+{
+  "deal_id": 4070306,
+  "name": "shruti jindal",
+  "owner": "Ankur Singhal",
+  "creator_id": 54132,
+  "stage": "Unqualified",
+  "noOfLicenses": 6,
+  "city": "Ahmedabad",
+  "created_at": "2026-04-10",
+  "demo_date": "2026-04-13",
+  "lost_date": "2026-05-12",
+  "days_created_to_demo": 3,
+  "days_demo_to_lost": 29,
+  "days_total": 32,
+  "sales_attempts": 4,
+  "loss_reason": "Not-interested",
+  "one_line": "Developer got a 6-user quote then stalled and dropped the plan; unqualified after 4 owner follow-ups.",
+  "notes_count": 9
+}

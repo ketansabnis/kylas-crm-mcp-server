@@ -1,0 +1,52 @@
+{
+ "deal_id": 4335978,
+ "deal_name": "Shaurya Kajaria",
+ "creator": "Revati Ambike",
+ "creator_id": 9062,
+ "owner": "Jawed Alam",
+ "owner_id": 50512,
+ "pipeline": "Sell.Do Deal Pipeline",
+ "stage": "Quote Sent",
+ "pipeline_stage_reason": null,
+ "created_at": "2026-06-01T09:07:05.919Z",
+ "updated_at": "2026-06-04T17:31:35.145Z",
+ "meeting_conducted": true,
+ "cfMeetingConductedOn": "2026-06-01T11:32:52.479Z",
+ "noOfLicenses": 5,
+ "cfCity": "Kolkata",
+ "cfReDeveloperOrChannelPartner": "Developer",
+ "estimatedValue": null,
+ "actualValue": null,
+ "products": [
+  "Sell.Do Enterprise"
+ ],
+ "source": null,
+ "campaign": null,
+ "cfPreviousCrm": "B2BBricks",
+ "cfRequiredTools": [
+  "CRM"
+ ],
+ "cfSales": null,
+ "cfFirstSalesOwner": "Jawed Alam",
+ "cfOwnerPhoneNumber": "+917030914382",
+ "notes_count": 1,
+ "notes_text": "[9062 2026-06-01] Type of Deal - CRM / City-Kolkata Company Name -Vishnu Group Developer/Channel Partner firm -Developer Total Team Size-5 Current CRM - Current challenges- Tentative meeting date and time-1st June at 4:15 pm (Online meeting) Existing client or not -No Price Discussed-Yes Price Range-1500 per...",
+ "license_tier": "5-9",
+ "city_bucket": "Main6",
+ "city_clean": "Kolkata",
+ "onsite_or_online": "Online",
+ "name_valid": true,
+ "bant": {
+  "budget": "price discussed, range ~1500 per user noted at capture",
+  "authority": "no signal - no post-demo notes to confirm DM",
+  "need": "developer (Vishnu Group), 5 users, currently on B2BBricks",
+  "timeline": "no signal - no follow-up notes after quote",
+  "bant_score": 2,
+  "bant_flag": "Partial"
+ },
+ "enterprise_flag": false,
+ "pre_sales_verdict": "AMBER",
+ "stall_blocker": "Sales-gap",
+ "blocker_owner": "Sales",
+ "one_line": "Kolkata developer on B2BBricks, 5 users, price captured - but zero sales notes after the quote; a follow-up/logging gap on the sales side."
+}

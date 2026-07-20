@@ -1,0 +1,19 @@
+{
+  "deal_id": 4066491,
+  "name": "Diksha",
+  "owner": "Sakshi Kadu",
+  "creator_id": 9062,
+  "stage": "Lost",
+  "noOfLicenses": 12,
+  "city": "Nashik",
+  "created_at": "2026-04-09",
+  "demo_date": "2026-04-10",
+  "lost_date": "2026-05-13",
+  "days_created_to_demo": 1,
+  "days_demo_to_lost": 33,
+  "days_total": 34,
+  "sales_attempts": 5,
+  "loss_reason": "Competitor/Existing-CRM",
+  "one_line": "Hot prospect (multi-stakeholder demo + AI module pitch) but decision-maker Jagdish went with another CRM after 5 owner touches.",
+  "notes_count": 7
+}

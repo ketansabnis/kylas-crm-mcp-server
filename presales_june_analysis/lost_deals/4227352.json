@@ -1,0 +1,19 @@
+{
+  "deal_id": 4227352,
+  "name": "Anil Yadav",
+  "owner": "Alok Tiwari",
+  "creator_id": 9062,
+  "stage": "Unqualified",
+  "noOfLicenses": 10,
+  "city": "Mumbai",
+  "created_at": "2026-05-05",
+  "demo_date": null,
+  "lost_date": "2026-06-29",
+  "days_created_to_demo": null,
+  "days_demo_to_lost": null,
+  "days_total": 55,
+  "sales_attempts": 8,
+  "loss_reason": "Non-responsive",
+  "one_line": "No demo; broker mostly unreachable. Sales chased ~8x (calls, WA drops, not responding) over weeks; client kept it on hold.",
+  "notes_count": 24
+}

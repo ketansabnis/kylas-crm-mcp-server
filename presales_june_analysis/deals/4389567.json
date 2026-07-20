@@ -1,0 +1,51 @@
+{
+ "deal_id": 4389567,
+ "deal_name": "Nishant Sharma",
+ "creator": "Revati Ambike",
+ "creator_id": 9062,
+ "owner": "Arzoo Choudhary",
+ "pipeline": "Sell.Do Deal Pipeline",
+ "stage": "Demo Conducted",
+ "pipeline_stage_reason": null,
+ "created_at": "2026-06-16T09:40:16.853Z",
+ "updated_at": "2026-06-17T16:29:41.714Z",
+ "meeting_conducted": true,
+ "cfMeetingConductedOn": "2026-06-17T16:29:39.514Z",
+ "noOfLicenses": 12,
+ "cfCity": "Noida",
+ "cfReDeveloperOrChannelPartner": "Channel partner",
+ "estimatedValue": null,
+ "actualValue": null,
+ "products": [
+  "Sell.Do Enterprise"
+ ],
+ "source": null,
+ "campaign": null,
+ "cfPreviousCrm": "Never used a CRM",
+ "cfRequiredTools": [
+  "CRM"
+ ],
+ "cfSales": null,
+ "cfFirstSalesOwner": "Arzoo Choudhary",
+ "cfOwnerPhoneNumber": true,
+ "notes_count": 12,
+ "notes_text": "9062: Company NV/VR Reality Experts, Noida, Broker (comm+resi), team 12, current CRM yes, demo 17 Jun 11:30am online, looking for 12 users. | 73470: did not join demo at 12pm, call disconnected; later did come for demo, using kit19 70k/yr for 10 users w ivr/whatsapp, price should not be high; given demo creds, not willing to discuss much; wants all <70k; low interest, non-committal follow-ups.",
+ "license_tier": "10-39",
+ "city_bucket": "Main6",
+ "city_clean": "Noida",
+ "onsite_or_online": "Online",
+ "name_valid": true,
+ "bant": {
+  "budget": "Wants everything <70k/yr for 10 users, very price sensitive",
+  "authority": "Appears to be the buyer/broker owner",
+  "need": "Broker on kit19, wants CRM+IVR+WhatsApp",
+  "timeline": "no signal / stalling",
+  "bant_score": 3,
+  "bant_flag": "Strong"
+ },
+ "enterprise_flag": false,
+ "pre_sales_verdict": "GREEN",
+ "stall_blocker": "Budget",
+ "blocker_owner": "Customer",
+ "one_line": "Qualified 12-user broker on a competitor tool; pre-sales solid, deal stuck on sub-70k price ceiling."
+}

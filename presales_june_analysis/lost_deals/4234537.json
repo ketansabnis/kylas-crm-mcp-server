@@ -1,0 +1,19 @@
+{
+  "deal_id": 4234537,
+  "name": "Abhishek Mishra",
+  "owner": "Tejas Mehta",
+  "creator_id": 54132,
+  "stage": "Lost",
+  "noOfLicenses": 30,
+  "city": "Mumbai",
+  "created_at": "2026-05-07",
+  "demo_date": "2026-05-13",
+  "lost_date": "2026-06-18",
+  "days_created_to_demo": 6,
+  "days_demo_to_lost": 36,
+  "days_total": 42,
+  "sales_attempts": 0,
+  "loss_reason": "Non-responsive",
+  "one_line": "Salesforce user (Ruparel); pre-sales couldn't reach (not answering). No sales follow-up logged after in-person meeting.",
+  "notes_count": 5
+}

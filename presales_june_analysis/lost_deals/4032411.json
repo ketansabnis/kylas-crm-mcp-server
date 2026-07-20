@@ -1,0 +1,19 @@
+{
+  "deal_id": 4032411,
+  "name": "srujana",
+  "owner": "Jaganmohan Vankina",
+  "creator_id": 54132,
+  "stage": "Unqualified",
+  "noOfLicenses": 10,
+  "city": "Hyderabad",
+  "created_at": "2026-04-02",
+  "demo_date": null,
+  "lost_date": "2026-04-06",
+  "days_created_to_demo": null,
+  "days_demo_to_lost": null,
+  "days_total": 4,
+  "sales_attempts": 0,
+  "loss_reason": "Other",
+  "one_line": "Developer deal unqualified as a duplicate already existing in the CRM; no demo conducted.",
+  "notes_count": 5
+}

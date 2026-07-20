@@ -1,0 +1,51 @@
+{
+ "deal_id": 4375979,
+ "deal_name": "Swaraj Ruparel",
+ "creator": "Revati Ambike",
+ "creator_id": 9062,
+ "owner": "Niket Rathod",
+ "pipeline": "Sell.Do Deal Pipeline",
+ "stage": "Demo Conducted",
+ "pipeline_stage_reason": null,
+ "created_at": "2026-06-12T07:53:42.018Z",
+ "updated_at": "2026-06-25T05:13:03.106Z",
+ "meeting_conducted": true,
+ "cfMeetingConductedOn": "2026-06-12T15:39:11.132Z",
+ "noOfLicenses": 5,
+ "cfCity": "Mumbai",
+ "cfReDeveloperOrChannelPartner": "Channel partner",
+ "estimatedValue": null,
+ "actualValue": null,
+ "products": [
+  "Sell.Do Enterprise"
+ ],
+ "source": null,
+ "campaign": null,
+ "cfPreviousCrm": "Never used a CRM",
+ "cfRequiredTools": [
+  "CRM"
+ ],
+ "cfSales": null,
+ "cfFirstSalesOwner": "Karan Shinde",
+ "cfOwnerPhoneNumber": false,
+ "notes_count": 17,
+ "notes_text": "9062: Stone State Real Estate Advisory, Mumbai, Broker, team 5, no CRM, demo 12 Jun online (many prior non-responses). | 80519: Mumbai CP in Mumbai & Navi Mumbai, brokerage/redevelopment/mandates, team 4, leads from references/walk-ins/portals (99acres, Housing); demo done, wants another round with partner. | 79391: client will not finalize now, maybe end of next month.",
+ "license_tier": "5-9",
+ "city_bucket": "Main6",
+ "city_clean": "Mumbai",
+ "onsite_or_online": "Online",
+ "name_valid": true,
+ "bant": {
+  "budget": "no explicit budget",
+  "authority": "Owner/partner-level, wants partner in next round",
+  "need": "CP in redevelopment/mandates, no CRM, portal-driven leads",
+  "timeline": "Not finalizing now, maybe end of next month",
+  "bant_score": 3,
+  "bant_flag": "Strong"
+ },
+ "enterprise_flag": false,
+ "pre_sales_verdict": "GREEN",
+ "stall_blocker": "Timeline/Not-now",
+ "blocker_owner": "Customer",
+ "one_line": "Mumbai redevelopment/mandate CP, 4-5 seats, genuine need - good qualification; buyer just isn't ready to finalize."
+}

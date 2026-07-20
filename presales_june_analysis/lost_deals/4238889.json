@@ -1,0 +1,19 @@
+{
+  "deal_id": 4238889,
+  "name": "Varun Ahuja",
+  "owner": "Arzoo Choudhary",
+  "creator_id": 9062,
+  "stage": "Lost",
+  "noOfLicenses": 7,
+  "city": "Gurgaon",
+  "created_at": "2026-05-08",
+  "demo_date": "2026-06-02",
+  "lost_date": "2026-06-19",
+  "days_created_to_demo": 25,
+  "days_demo_to_lost": 17,
+  "days_total": 42,
+  "sales_attempts": 4,
+  "loss_reason": "Competitor/Existing-CRM",
+  "one_line": "In-person demo done, comparing with LeadRat; promised GST/payment then went quiet and asked to stop following up. Sales chased ~4 times.",
+  "notes_count": 21
+}

@@ -1,0 +1,19 @@
+{
+  "deal_id": 4232137,
+  "name": "Bhautik Kheradia",
+  "owner": "Ankur Singhal",
+  "creator_id": 54132,
+  "stage": "Unqualified",
+  "noOfLicenses": 7,
+  "city": "Rajkot",
+  "created_at": "2026-05-06",
+  "demo_date": null,
+  "lost_date": "2026-05-15",
+  "days_created_to_demo": null,
+  "days_demo_to_lost": null,
+  "days_total": 9,
+  "sales_attempts": 3,
+  "loss_reason": "Non-responsive",
+  "one_line": "No demo held; client dropped plan for CRM and stopped picking calls. Sales tried ~3x (calls/ringing).",
+  "notes_count": 8
+}

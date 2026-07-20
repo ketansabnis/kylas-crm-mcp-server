@@ -1,0 +1,52 @@
+{
+ "deal_id": 4334736,
+ "deal_name": "Manmeet Singh",
+ "creator": "Revati Ambike",
+ "creator_id": 9062,
+ "owner": "Karan Shinde",
+ "owner_id": 80519,
+ "pipeline": "Sell.Do Deal Pipeline",
+ "stage": "Closed Unqualified",
+ "pipeline_stage_reason": null,
+ "created_at": "2026-06-01T05:04:21.985Z",
+ "updated_at": "2026-06-18T10:52:14.708Z",
+ "meeting_conducted": true,
+ "cfMeetingConductedOn": "2026-06-01T13:05:05.005Z",
+ "noOfLicenses": 1,
+ "cfCity": "Chandigarh",
+ "cfReDeveloperOrChannelPartner": "Channel partner",
+ "estimatedValue": null,
+ "actualValue": null,
+ "products": [
+  "Sell.Do Enterprise"
+ ],
+ "source": null,
+ "campaign": null,
+ "cfPreviousCrm": "Never used a CRM",
+ "cfRequiredTools": [
+  "CRM"
+ ],
+ "cfSales": null,
+ "cfFirstSalesOwner": "Karan Shinde",
+ "cfOwnerPhoneNumber": "+918898320099",
+ "notes_count": 10,
+ "notes_text": "[9062 2026-06-01] Type of Deal - CRM / City-Chandigarh Company Name -Opaluxe Realty (newly started venture) Developer/Channel Partner firm -Broker (commercial and residential) Total Team Size-2 Current CRM -No (Using google sheet) meeting 1st June | [80519 2026-06-01] very freshly started business, no team, only him running it, will get leads from Meta Ads, in touch with EXP Realty and Selldo | [80519 2026-06-08] exploring other CRMs simultaneously, asked time | [80519 2026-06-12] still requesting time, exploring other platforms | [80519 2026-06-17/18] not responding, disconnects calls - seems not interested",
+ "license_tier": "1-4",
+ "city_bucket": "Other",
+ "city_clean": "Chandigarh",
+ "onsite_or_online": "Online",
+ "name_valid": true,
+ "bant": {
+  "budget": "no signal - on google sheet, budget-sensitive newly started venture",
+  "authority": "sole operator/owner - DM but a one-man show",
+  "need": "minimal - freshly started broker, no team, running alone, just starting Meta Ads leads",
+  "timeline": "none - endless 'need more time', exploring alternatives, went silent",
+  "bant_score": 1,
+  "bant_flag": "Weak"
+ },
+ "enterprise_flag": false,
+ "pre_sales_verdict": "RED",
+ "stall_blocker": "Quality/ICP",
+ "blocker_owner": "Pre-sales",
+ "one_line": "1-licence solo Chandigarh broker on a brand-new one-man venture with no team - clearly sub-ICP; demo run for the number, predictably closed unqualified."
+}

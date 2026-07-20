@@ -1,0 +1,51 @@
+{
+ "deal_id": 4417010,
+ "deal_name": "Nitin Rai",
+ "creator": "Revati Ambike",
+ "creator_id": 9062,
+ "owner": "Suraj Chauhan",
+ "pipeline": "Sell.Do Deal Pipeline",
+ "stage": "Closed Lost",
+ "pipeline_stage_reason": null,
+ "created_at": "2026-06-23T09:26:34.608Z",
+ "updated_at": "2026-07-06T07:30:03.457Z",
+ "meeting_conducted": true,
+ "cfMeetingConductedOn": "2026-06-26T10:57:05.247Z",
+ "noOfLicenses": 5,
+ "cfCity": "Noids",
+ "cfReDeveloperOrChannelPartner": "Channel partner",
+ "estimatedValue": null,
+ "actualValue": null,
+ "products": [
+  "Sell.Do Enterprise"
+ ],
+ "source": null,
+ "campaign": null,
+ "cfPreviousCrm": "Never used a CRM",
+ "cfRequiredTools": [
+  "CRM"
+ ],
+ "cfSales": null,
+ "cfFirstSalesOwner": "Suraj Chauhan",
+ "cfOwnerPhoneNumber": "+919643843177",
+ "notes_count": 14,
+ "notes_text": "By 80575: Meeting done, client only window shopping for pricing, will think 2-3 months. By 9062: client busy; not responding; wants in-person Thu 11am. By 9062: Type-CRM; City-Noida; Company-PCP Realty; Broker; Team Size-5; Current CRM-No(excel); Price Discussed-No. Enrichment(4248): Nitin Rai real person MATCH self. AUDIT(4248): Confirm on demo - on-ICP small Noida broker, contact real, firm PCP Realty no online footprint, budget/timeline+DM unconfirmed. By 80575: wants in-person 4PM; Client not interested.",
+ "license_tier": "5-9",
+ "city_bucket": "Main6",
+ "city_clean": "Noida",
+ "onsite_or_online": "Onsite",
+ "name_valid": true,
+ "bant": {
+  "budget": "No price discussed; window-shopping only",
+  "authority": "Broker/owner of PCP Realty - likely DM",
+  "need": "Real; never used a CRM, on excel",
+  "timeline": "Weak - 2-3 month maybe",
+  "bant_score": 2,
+  "bant_flag": "Partial"
+ },
+ "enterprise_flag": false,
+ "pre_sales_verdict": "AMBER",
+ "stall_blocker": "Timeline/Not-now",
+ "blocker_owner": "Customer",
+ "one_line": "On-ICP small Noida broker (5 lic, real owner) but pure price-shopping with 2-3 month maybe; pre-sales got basics, BANT thin."
+}

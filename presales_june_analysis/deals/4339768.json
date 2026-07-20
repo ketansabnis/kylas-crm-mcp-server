@@ -1,0 +1,52 @@
+{
+ "deal_id": 4339768,
+ "deal_name": "Karthikey",
+ "creator": "Revati Ambike",
+ "creator_id": 9062,
+ "owner": "Sakshi Kadu",
+ "owner_id": 73467,
+ "pipeline": "Sell.Do Deal Pipeline",
+ "stage": "Closed Lost",
+ "pipeline_stage_reason": null,
+ "created_at": "2026-06-02T09:12:47.744Z",
+ "updated_at": "2026-06-24T04:35:51.767Z",
+ "meeting_conducted": true,
+ "cfMeetingConductedOn": "2026-06-08T12:55:38.411Z",
+ "noOfLicenses": 5,
+ "cfCity": "Noida",
+ "cfReDeveloperOrChannelPartner": "Developer",
+ "estimatedValue": null,
+ "actualValue": null,
+ "products": [
+  "Sell.Do Enterprise"
+ ],
+ "source": null,
+ "campaign": null,
+ "cfPreviousCrm": "Never used a CRM",
+ "cfRequiredTools": [
+  "CRM"
+ ],
+ "cfSales": null,
+ "cfFirstSalesOwner": "Sakshi Kadu",
+ "cfOwnerPhoneNumber": "+917499017438",
+ "notes_count": 16,
+ "notes_text": "[9062 2026-06-02] Type of Deal - CRM / City-Noida Company Name -Anchor Realty Solution LLP Developer/Channel Partner firm -Developer Total Team Size-5 Current CRM -No Tentative meeting 2nd June 3 pm (Online) | [9062 2026-06-02] client using salesmax crm software, gave overview | [9062 2026-06-02] office address A 29 Sector 65 Noida | [73470 2026-06-08] demo done offline, shared requirements | [73470 2026-06-09] looking for discounts, pricing he asks is very less | [73470 2026-06-10] negotiation back and forth | [73467 2026-06-11] spoke for pricing, arzoo final meeting tomorrow | [73470 2026-06-22] sent requirement file and dummy data, scope is very different | [73467 2026-06-15] arzoo visited office, other requirement, working on it",
+ "license_tier": "5-9",
+ "city_bucket": "Main6",
+ "city_clean": "Noida",
+ "onsite_or_online": "Onsite",
+ "name_valid": false,
+ "bant": {
+  "budget": "very price-sensitive - expecting very low pricing, heavy negotiation",
+  "authority": "engaged, onsite demo and follow-up office visits - DM reachable",
+  "need": "developer (Anchor Realty), 5 users; scope turned out very different from product fit",
+  "timeline": "active for ~3 weeks then lost on price/scope mismatch",
+  "bant_score": 3,
+  "bant_flag": "Strong"
+ },
+ "enterprise_flag": false,
+ "pre_sales_verdict": "GREEN",
+ "stall_blocker": "Budget",
+ "blocker_owner": "Product/Pricing",
+ "one_line": "Noida developer, onsite demos and real engagement; lost on aggressive pricing demands and a scope mismatch vs product - pricing/fit loss, pre-sales did its job."
+}

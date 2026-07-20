@@ -1,0 +1,279 @@
+{
+ "n_closures": 42,
+ "total_billed": 6238610,
+ "total_received": 4536406,
+ "by_main6": {
+  "Pune": {
+   "deals": 1,
+   "revenue": 9600,
+   "avg_days": 20.0
+  },
+  "Hyderabad": {
+   "deals": 6,
+   "revenue": 563400,
+   "avg_days": 18.0
+  },
+  "Other": {
+   "deals": 15,
+   "revenue": 1939600,
+   "avg_days": 26.0
+  },
+  "Delhi/NCR": {
+   "deals": 4,
+   "revenue": 1026400,
+   "avg_days": 33.5
+  },
+  "Chennai": {
+   "deals": 5,
+   "revenue": 1246600,
+   "avg_days": 81.2
+  },
+  "Mumbai/Thane": {
+   "deals": 7,
+   "revenue": 882800,
+   "avg_days": 50.6
+  },
+  "Bangalore": {
+   "deals": 4,
+   "revenue": 570210,
+   "avg_days": 35.8
+  }
+ },
+ "by_tier3": {
+  "<5": {
+   "deals": 11,
+   "revenue": 714200,
+   "avg_days": 41.5
+  },
+  "5-10": {
+   "deals": 21,
+   "revenue": 2224600,
+   "avg_days": 31.0
+  },
+  "10+": {
+   "deals": 10,
+   "revenue": 3299810,
+   "avg_days": 44.9
+  }
+ },
+ "by_devbroker": {
+  "Developer": {
+   "deals": 24,
+   "revenue": 5000610,
+   "avg_days": 28.0
+  },
+  "Channel partner": {
+   "deals": 18,
+   "revenue": 1238000,
+   "avg_days": 49.1
+  }
+ },
+ "by_creator": {
+  "": {
+   "deals": 19,
+   "revenue": 3428610,
+   "avg_days": 60.8
+  },
+  "Revati Ambike": {
+   "deals": 15,
+   "revenue": 2101200,
+   "avg_days": 16.5
+  },
+  "Ashwini Nirmal": {
+   "deals": 8,
+   "revenue": 708800,
+   "avg_days": 19.0
+  }
+ },
+ "avg_close_days_overall": 37.0,
+ "median_close_days": 26,
+ "top_deals": [
+  {
+   "id": 3718788,
+   "name": "Joseph J",
+   "city": "chennai",
+   "lic": 20,
+   "dev_broker": "Developer",
+   "billed": 824200,
+   "days": 111
+  },
+  {
+   "id": 4127221,
+   "name": "Kaustubh Manohar",
+   "city": "Gurgaon",
+   "lic": 30,
+   "dev_broker": "Developer",
+   "billed": 820000,
+   "days": 71
+  },
+  {
+   "id": 4372397,
+   "name": "Amina Fridous",
+   "city": "Kolkata",
+   "lic": 25,
+   "dev_broker": "Developer",
+   "billed": 444000,
+   "days": 14
+  },
+  {
+   "id": 4310864,
+   "name": "Nabeela",
+   "city": "Bangalore",
+   "lic": 20,
+   "dev_broker": "Developer",
+   "billed": 296610,
+   "days": 35
+  },
+  {
+   "id": 3270042,
+   "name": "Kavita dam",
+   "city": "Ranchi",
+   "lic": 25,
+   "dev_broker": "Developer",
+   "billed": 277000,
+   "days": 45
+  },
+  {
+   "id": 4281546,
+   "name": "Fatema Kabani",
+   "city": "Thane",
+   "lic": 5,
+   "dev_broker": "Developer",
+   "billed": 230000,
+   "days": 7
+  },
+  {
+   "id": 4339317,
+   "name": "Pinki Rowlo",
+   "city": "Thane",
+   "lic": 20,
+   "dev_broker": "Channel partner",
+   "billed": 219000,
+   "days": 28
+  },
+  {
+   "id": 4313947,
+   "name": "Rohan",
+   "city": "Banaglore",
+   "lic": 8,
+   "dev_broker": "Developer",
+   "billed": 211400,
+   "days": 34
+  },
+  {
+   "id": 4360747,
+   "name": "Sapna",
+   "city": "Mumbai",
+   "lic": 10,
+   "dev_broker": "Developer",
+   "billed": 200000,
+   "days": 20
+  },
+  {
+   "id": 4360677,
+   "name": "Manoj Kumar",
+   "city": "Chennai",
+   "lic": 5,
+   "dev_broker": "Developer",
+   "billed": 155600,
+   "days": 20
+  },
+  {
+   "id": 4385582,
+   "name": "Saurav Aggarwal",
+   "city": "Agra",
+   "lic": 3,
+   "dev_broker": "Channel partner",
+   "billed": 146200,
+   "days": 10
+  },
+  {
+   "id": 4336630,
+   "name": "Aryan Sankriti",
+   "city": "Gurgaon",
+   "lic": 10,
+   "dev_broker": "Developer",
+   "billed": 141000,
+   "days": 28
+  },
+  {
+   "id": 4234345,
+   "name": "Ankit Maheshwari",
+   "city": "Bangalore",
+   "lic": 20,
+   "dev_broker": "Channel partner",
+   "billed": 130000,
+   "days": 54
+  },
+  {
+   "id": 4313598,
+   "name": "Suchithra Shivaraj",
+   "city": "Mysore",
+   "lic": 10,
+   "dev_broker": "Developer",
+   "billed": 130000,
+   "days": 35
+  },
+  {
+   "id": 4334770,
+   "name": "Snehith Yarabarla",
+   "city": "Hyderabad",
+   "lic": 9,
+   "dev_broker": "Developer",
+   "billed": 125000,
+   "days": 9
+  }
+ ],
+ "source_funnel": {
+  "Organic": {
+   "demos": 95,
+   "fiveplus": 56,
+   "won": 13,
+   "win_rate": 0.1368,
+   "fiveplus_rate": 0.5895
+  },
+  "Google": {
+   "demos": 74,
+   "fiveplus": 49,
+   "won": 7,
+   "win_rate": 0.0946,
+   "fiveplus_rate": 0.6622
+  },
+  "Facebook": {
+   "demos": 47,
+   "fiveplus": 24,
+   "won": 1,
+   "win_rate": 0.0213,
+   "fiveplus_rate": 0.5106
+  },
+  "Sell.Do Interakt (WhatsApp)": {
+   "demos": 32,
+   "fiveplus": 14,
+   "won": 3,
+   "win_rate": 0.0938,
+   "fiveplus_rate": 0.4375
+  },
+  "Instagram": {
+   "demos": 3,
+   "fiveplus": 1,
+   "won": 0,
+   "win_rate": 0.0,
+   "fiveplus_rate": 0.3333
+  },
+  "Outreach": {
+   "demos": 1,
+   "fiveplus": 1,
+   "won": 1,
+   "win_rate": 1.0,
+   "fiveplus_rate": 1.0
+  },
+  "My operator": {
+   "demos": 1,
+   "fiveplus": 0,
+   "won": 0,
+   "win_rate": 0.0,
+   "fiveplus_rate": 0.0
+  }
+ },
+ "source_demos_total": 253
+}

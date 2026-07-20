@@ -1,0 +1,19 @@
+{
+  "deal_id": 4042561,
+  "name": "Pankaj Yadav",
+  "owner": "Disha Kadam",
+  "creator_id": 9062,
+  "stage": "Unqualified",
+  "noOfLicenses": 5,
+  "city": "Varnasai",
+  "created_at": "2026-04-06",
+  "demo_date": null,
+  "lost_date": "2026-05-14",
+  "days_created_to_demo": null,
+  "days_demo_to_lost": null,
+  "days_total": 38,
+  "sales_attempts": 0,
+  "loss_reason": "Non-responsive",
+  "one_line": "Developer wouldn't proceed via mobile, demo never rescheduled; owner logged repeated CNR calls before unqualifying.",
+  "notes_count": 16
+}

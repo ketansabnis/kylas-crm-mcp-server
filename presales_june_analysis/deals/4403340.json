@@ -1,0 +1,51 @@
+{
+ "deal_id": 4403340,
+ "deal_name": "Rajan Raut",
+ "creator": "Revati Ambike",
+ "creator_id": 9062,
+ "owner": "Niket Rathod",
+ "pipeline": "Sell.Do Deal Pipeline",
+ "stage": "Quote Sent",
+ "pipeline_stage_reason": null,
+ "created_at": "2026-06-19T07:20:45.896Z",
+ "updated_at": "2026-06-29T05:15:09.013Z",
+ "meeting_conducted": true,
+ "cfMeetingConductedOn": "2026-06-23T12:41:00.630Z",
+ "noOfLicenses": 2,
+ "cfCity": "Mumbai",
+ "cfReDeveloperOrChannelPartner": "Developer",
+ "estimatedValue": null,
+ "actualValue": null,
+ "products": [
+  "Sell.Do Enterprise"
+ ],
+ "source": null,
+ "campaign": null,
+ "cfPreviousCrm": "Never used a CRM",
+ "cfRequiredTools": [
+  "CRM"
+ ],
+ "cfSales": null,
+ "cfFirstSalesOwner": "Ankur Singhal",
+ "cfOwnerPhoneNumber": "+919999999999",
+ "notes_count": 13,
+ "notes_text": "By 9062: Type-CRM;City-Mumbai;Company-Trimiti Homes;Developer(residential);Team Size-2;Current CRM-No;in-person meeting Vasai(w). AUDIT(4248): FORWARD WITH FLAGS - genuine RERA-verified single-project developer (Trimiti Constructions Pvt Ltd), 2-licence realistic, contact identity/authority unverified online, no website; Owner Phone placeholder(9999999999). 47602: why onsite for 2-user account? By 79391: onsite demo done; 80 units, 1 project, 3 users + 2 admin; quote 1200/user/mo + 60k setup + 25k additional; discuss with partner, finalize Monday; partner delayed by rain.",
+ "license_tier": "1-4",
+ "city_bucket": "Main6",
+ "city_clean": "Mumbai (Vasai)",
+ "onsite_or_online": "Onsite",
+ "name_valid": true,
+ "bant": {
+  "budget": "Quoted 1200/user/mo + 60k setup; engaged on commercials",
+  "authority": "Contact + partner DMs; decision pending partner",
+  "need": "Strong; RERA developer, 80-unit project, no CRM",
+  "timeline": "Near-term; partner to finalize Monday",
+  "bant_score": 4,
+  "bant_flag": "Strong"
+ },
+ "enterprise_flag": false,
+ "pre_sales_verdict": "GREEN",
+ "stall_blocker": "Progressing",
+ "blocker_owner": "Customer",
+ "one_line": "RERA-verified Vasai developer (80-unit project), onsite demo and full quote - well-qualified though small; only quibble is onsite effort for a 2-3 seat deal."
+}

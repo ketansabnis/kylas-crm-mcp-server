@@ -1,0 +1,19 @@
+{
+  "deal_id": 4269342,
+  "name": "Asim Patra",
+  "owner": "Sakshi Kadu",
+  "creator_id": 54132,
+  "stage": "Lost",
+  "noOfLicenses": 5,
+  "city": "Kolkata",
+  "created_at": "2026-05-15T13:46:23.121Z",
+  "demo_date": "2026-05-15T14:52:31.879Z",
+  "lost_date": "2026-06-01T09:01:21.458Z",
+  "days_created_to_demo": 0,
+  "days_demo_to_lost": 17,
+  "days_total": 17,
+  "sales_attempts": 5,
+  "loss_reason": "Non-responsive",
+  "one_line": "Non-responsive; not tech-savvy, slow to grasp demo. Sales chased with recording + 4 DNP calls over ~17 days, client never re-engaged.",
+  "notes_count": 8
+}

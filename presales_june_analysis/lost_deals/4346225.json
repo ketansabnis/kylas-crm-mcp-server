@@ -1,0 +1,19 @@
+{
+  "deal_id": 4346225,
+  "name": "Shubham",
+  "owner": "Suraj Chauhan",
+  "creator_id": 54132,
+  "stage": "Lost",
+  "noOfLicenses": 5,
+  "city": "Gurugram",
+  "created_at": "2026-06-04",
+  "demo_date": "2026-06-04",
+  "lost_date": "2026-06-12",
+  "days_created_to_demo": 0,
+  "days_demo_to_lost": 8,
+  "days_total": 8,
+  "sales_attempts": 3,
+  "loss_reason": "Budget",
+  "one_line": "Demoed + proposal; sales followed up ~3x; budget issue (client's AI calling at 1rs/min, found WhatsApp costly), not interested.",
+  "notes_count": 7
+}

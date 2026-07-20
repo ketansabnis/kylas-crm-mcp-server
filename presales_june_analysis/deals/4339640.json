@@ -1,0 +1,52 @@
+{
+ "deal_id": 4339640,
+ "deal_name": "Mahesh",
+ "creator": "Revati Ambike",
+ "creator_id": 9062,
+ "owner": "Suraj Chauhan",
+ "owner_id": 80575,
+ "pipeline": "Sell.Do Deal Pipeline",
+ "stage": "Closed Unqualified",
+ "pipeline_stage_reason": null,
+ "created_at": "2026-06-02T08:53:07.967Z",
+ "updated_at": "2026-06-25T06:12:33.967Z",
+ "meeting_conducted": true,
+ "cfMeetingConductedOn": "2026-06-03T10:29:03.821Z",
+ "noOfLicenses": 4,
+ "cfCity": "Delhi",
+ "cfReDeveloperOrChannelPartner": "Channel partner",
+ "estimatedValue": null,
+ "actualValue": null,
+ "products": [
+  "Sell.Do Enterprise"
+ ],
+ "source": null,
+ "campaign": null,
+ "cfPreviousCrm": "Never used a CRM",
+ "cfRequiredTools": [
+  "CRM"
+ ],
+ "cfSales": null,
+ "cfFirstSalesOwner": "Suraj Chauhan",
+ "cfOwnerPhoneNumber": "+919643843177",
+ "notes_count": 11,
+ "notes_text": "[9062 2026-06-02] Type of Deal - CRM / City-Delhi Company Name -Kohli Infrastructure & Developer Developer/Channel Partner firm -Broker Total Team Size-4 Current CRM -No Tentative meeting 3rd June (In person meeting) Price Discussed-Yes | [9062 2026-06-02] Client wants in person meeting, South Delhi | [9062 2026-06-02] office address Mohta Building South Delhi | [80575 2026-06-03] in person meeting at 4 PM | [80575 2026-06-03] Demo done, client wants 15 days, 600/user/month - 2 user, 500 ivr number, 1500/user IVR, 10K setup | [80575 2026-06-18/25] Not Answering (multiple)",
+ "license_tier": "1-4",
+ "city_bucket": "Main6",
+ "city_clean": "Delhi",
+ "onsite_or_online": "Onsite",
+ "name_valid": false,
+ "bant": {
+  "budget": "price discussed - specific per-user/IVR quotes given",
+  "authority": "onsite demo at office - contact engaged, likely DM",
+  "need": "small 4-user broker, no current CRM - modest need",
+  "timeline": "asked for 15 days then went non-responsive",
+  "bant_score": 2,
+  "bant_flag": "Partial"
+ },
+ "enterprise_flag": false,
+ "pre_sales_verdict": "AMBER",
+ "stall_blocker": "Non-responsive",
+ "blocker_owner": "Customer",
+ "one_line": "Small 4-user Delhi broker, onsite demo and pricing shared, then ghosted after asking for 15 days - decent effort but thin size, closed unqualified."
+}

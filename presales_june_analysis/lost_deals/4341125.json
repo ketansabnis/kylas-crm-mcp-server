@@ -1,0 +1,19 @@
+{
+  "deal_id": 4341125,
+  "name": "Vikram",
+  "owner": "Ananya Kumari",
+  "creator_id": 54132,
+  "stage": "Unqualified",
+  "noOfLicenses": 5,
+  "city": "Jaipur",
+  "created_at": "2026-06-02",
+  "demo_date": "2026-06-02",
+  "lost_date": "2026-06-19",
+  "days_created_to_demo": 0,
+  "days_demo_to_lost": 17,
+  "days_total": 17,
+  "sales_attempts": 7,
+  "loss_reason": "Non-responsive",
+  "one_line": "Demoed (wanted plot inventory mgmt); went dark after. Sales chased ~7x (incl. different numbers) with no response.",
+  "notes_count": 10
+}

@@ -1,0 +1,19 @@
+{
+  "deal_id": 4236246,
+  "name": "Adarsh",
+  "owner": "Alok Tiwari",
+  "creator_id": 54132,
+  "stage": "Lost",
+  "noOfLicenses": 5,
+  "city": "Ahmedabad",
+  "created_at": "2026-05-07",
+  "demo_date": "2026-05-07",
+  "lost_date": "2026-05-25",
+  "days_created_to_demo": 0,
+  "days_demo_to_lost": 18,
+  "days_total": 18,
+  "sales_attempts": 6,
+  "loss_reason": "Non-responsive",
+  "one_line": "Demo done, said price too high; sales chased 6x (WA drop, calls) but client went unresponsive then said not interested.",
+  "notes_count": 14
+}

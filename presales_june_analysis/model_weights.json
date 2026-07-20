@@ -1,0 +1,40 @@
+{
+  "base_rate": 0.0988,
+  "log_base_odds": -2.2105,
+  "feature_log_lr": {
+    "tier": {
+      "5-10": 0.1835,
+      "10+": 0.4238,
+      "<5": -0.4255
+    },
+    "dev": {
+      "Developer": 0.3285,
+      "ChannelPartner": -0.3001
+    },
+    "onsite": {
+      "Onsite": 0.5667,
+      "Online": -0.1165
+    },
+    "city": {
+      "OTHER": -0.1671,
+      "HOT": 1.0886,
+      "CORE": -0.3439
+    },
+    "bant": {
+      "Strong": 1.1552,
+      "Partial": -1.6341,
+      "None": -0.3185,
+      "Weak": -2.2513
+    }
+  },
+  "source_log_lr_optional": {
+    "Organic": 0.37,
+    "Google": -0.0436,
+    "Facebook": -1.6315,
+    "Sell.Do Interakt (WhatsApp)": -0.0553,
+    "Instagram": -1.6814,
+    "Outreach": 2.2105,
+    "My operator": -0.734
+  },
+  "note": "score = log_base_odds + sum(feature_log_lr[feat][value]) [+ source_log_lr]. prob=1/(1+exp(-score))."
+}

@@ -1,0 +1,21 @@
+{
+  "deal_id": 4475161,
+  "name": "Sujeet kumar",
+  "owner": "Disha Kadam",
+  "stage": "Closed Lost",
+  "licences": 2,
+  "tier": "<5",
+  "city": "Patna",
+  "dev_broker": "Developer",
+  "onsite": "Online",
+  "bant_flag": "Weak",
+  "verdict": "RED",
+  "prob": 0.0074,
+  "band": "COLD",
+  "name_valid": true,
+  "dummy_phone": false,
+  "unverified_contact": false,
+  "sales_followup_since_demo": 3,
+  "next_action": "Closed - requirement (farmer/vendor payment management) is out of product scope; no further follow-up.",
+  "one_line": "Patna 2-seat 'developer' with a finance profile; needed farmer/vendor payments in CRM - product mismatch, lost."
+}

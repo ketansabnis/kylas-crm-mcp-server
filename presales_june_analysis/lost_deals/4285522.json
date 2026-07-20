@@ -1,0 +1,19 @@
+{
+  "deal_id": 4285522,
+  "name": "Rishabh",
+  "owner": "Sakshi Kadu",
+  "creator_id": 54132,
+  "stage": "Lost",
+  "noOfLicenses": 8,
+  "city": "Vrindavan",
+  "created_at": "2026-05-20T05:41:41.187Z",
+  "demo_date": "2026-05-22T13:06:50.820Z",
+  "lost_date": "2026-06-02T07:50:12.930Z",
+  "days_created_to_demo": 2,
+  "days_demo_to_lost": 11,
+  "days_total": 13,
+  "sales_attempts": 1,
+  "loss_reason": "Competitor/Existing-CRM",
+  "one_line": "Already on Cratio (subscription till Oct), low intent; sales followed up once post-demo, client went non-responsive.",
+  "notes_count": 20
+}

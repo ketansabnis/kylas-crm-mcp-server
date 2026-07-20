@@ -1,0 +1,51 @@
+{
+ "deal_id": 4383336,
+ "deal_name": "Jayendra",
+ "creator": "Revati Ambike",
+ "creator_id": 9062,
+ "owner": "Disha Kadam",
+ "pipeline": "Sell.Do Deal Pipeline",
+ "stage": "Closed Unqualified",
+ "pipeline_stage_reason": null,
+ "created_at": "2026-06-15T04:39:19.458Z",
+ "updated_at": "2026-06-25T07:42:25.656Z",
+ "meeting_conducted": true,
+ "cfMeetingConductedOn": "2026-06-16T06:45:35.335Z",
+ "noOfLicenses": 4,
+ "cfCity": "Surat",
+ "cfReDeveloperOrChannelPartner": "Channel partner",
+ "estimatedValue": null,
+ "actualValue": null,
+ "products": [
+  "Sell.Do Enterprise"
+ ],
+ "source": null,
+ "campaign": null,
+ "cfPreviousCrm": "Never used a CRM",
+ "cfRequiredTools": [
+  "CRM"
+ ],
+ "cfSales": null,
+ "cfFirstSalesOwner": "Karan Shinde",
+ "cfOwnerPhoneNumber": true,
+ "notes_count": 7,
+ "notes_text": "9062: Ravajli Real Estate (note says Ahmedabad but city field/notes later Surat), Broker (resi bunglows/plots), team 5, excel, demo 16 Jun online. | 80519: client based in Surat, channel partner 1-2 yrs, expanding team, leads via WhatsApp + Meta ads, data on excel; demo done 16 Jun. | 65611: CNR (could not reach).",
+ "license_tier": "1-4",
+ "city_bucket": "Other",
+ "city_clean": "Surat",
+ "onsite_or_online": "Online",
+ "name_valid": true,
+ "bant": {
+  "budget": "no signal",
+  "authority": "Owner-operator channel partner",
+  "need": "CP for 1-2 yrs on excel, leads from WhatsApp/Meta - real need",
+  "timeline": "no urgency",
+  "bant_score": 2,
+  "bant_flag": "Partial"
+ },
+ "enterprise_flag": false,
+ "pre_sales_verdict": "AMBER",
+ "stall_blocker": "Non-responsive",
+ "blocker_owner": "Customer",
+ "one_line": "Young 4-5 seat Surat channel partner with a genuine lead-management pain; decent demo, went CNR and closed unqualified."
+}

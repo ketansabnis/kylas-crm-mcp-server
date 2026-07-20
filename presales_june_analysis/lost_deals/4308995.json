@@ -1,0 +1,19 @@
+{
+  "deal_id": 4308995,
+  "name": "Shreekar Solanki",
+  "owner": "Alok Tiwari",
+  "creator_id": 54132,
+  "stage": "Unqualified",
+  "noOfLicenses": 7,
+  "city": "Mumbai",
+  "created_at": "2026-05-25",
+  "demo_date": "2026-05-26",
+  "lost_date": "2026-06-26",
+  "days_created_to_demo": 1,
+  "days_demo_to_lost": 31,
+  "days_total": 32,
+  "sales_attempts": 13,
+  "loss_reason": "Budget",
+  "one_line": "Demoed; sales chased ~13x over a month (calls/WA/payment link) but client stalled repeatedly; budget too low, wanted monthly/part-payment.",
+  "notes_count": 32
+}

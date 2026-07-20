@@ -1,0 +1,17 @@
+{
+  "deal_id": 3641128,
+  "deal_name": "prasad",
+  "owner": "Anuj Pathak",
+  "stage": "Won/ Booked",
+  "created_at": "2026-02-05T09:19:16.472Z",
+  "updated_at": "2026-07-06T10:04:15.290Z",
+  "products_total": 0.0,
+  "cfBilledAmount": 9600,
+  "cfActualPaymentReceived": 9599,
+  "noOfLicenses": 1,
+  "cfCity": "nashik",
+  "cfReDeveloperOrChannelPartner": "Channel partner",
+  "cfMeetingConductedOn": "2026-06-01T06:30:37.414Z",
+  "cfPreviousCrm": "Never used a CRM",
+  "cfOwnerPhoneNumber": "+917391046052"
+}

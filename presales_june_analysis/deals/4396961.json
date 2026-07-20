@@ -1,0 +1,51 @@
+{
+ "deal_id": 4396961,
+ "deal_name": "Deepak Batra",
+ "creator": "Revati Ambike",
+ "creator_id": 9062,
+ "owner": "Suraj Chauhan",
+ "pipeline": "Sell.Do Deal Pipeline",
+ "stage": "Closed Unqualified",
+ "pipeline_stage_reason": null,
+ "created_at": "2026-06-17T12:20:41.306Z",
+ "updated_at": "2026-07-06T07:18:10.134Z",
+ "meeting_conducted": true,
+ "cfMeetingConductedOn": "2026-06-20T10:53:24.629Z",
+ "noOfLicenses": 5,
+ "cfCity": "Noida",
+ "cfReDeveloperOrChannelPartner": "Channel partner",
+ "estimatedValue": null,
+ "actualValue": null,
+ "products": [
+  "Sell.Do Enterprise"
+ ],
+ "source": null,
+ "campaign": null,
+ "cfPreviousCrm": "Never used a CRM",
+ "cfRequiredTools": [
+  "CRM"
+ ],
+ "cfSales": null,
+ "cfFirstSalesOwner": "Suraj Chauhan",
+ "cfOwnerPhoneNumber": "+919643843177",
+ "notes_count": 7,
+ "notes_text": "By 9062: client wants in-person meeting, Sector 18 Noida. Type-CRM;City-Noida;Company-Prop World Realty;Broker (industrial/commercial leasing);Team Size-5;Current CRM-No;Challenge-99 portals;Meeting 18 Jun in person. By 80575: meeting done, client in comparison mode, wants to compare with Buildesk CRM, wants active Noida client list, follow up. Wants in-person Saturday; ringing. Client not interested now, going with Buildesk for 300/user.",
+ "license_tier": "5-9",
+ "city_bucket": "Main6",
+ "city_clean": "Noida",
+ "onsite_or_online": "Onsite",
+ "name_valid": true,
+ "bant": {
+  "budget": "Price-sensitive; chose Buildesk at 300/user (much cheaper)",
+  "authority": "Contact engaged in-person - likely owner/DM",
+  "need": "Strong; real pain managing 99 portals, no CRM",
+  "timeline": "Active comparison then decided against",
+  "bant_score": 3,
+  "bant_flag": "Strong"
+ },
+ "enterprise_flag": false,
+ "pre_sales_verdict": "GREEN",
+ "stall_blocker": "Competitor/Existing-CRM",
+ "blocker_owner": "Product/Pricing",
+ "one_line": "On-ICP 5-seat Noida leasing broker with a real 99-portal pain, onsite demo - solid pre-sales; lost to Buildesk on price (300/user)."
+}

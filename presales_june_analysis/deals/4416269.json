@@ -1,0 +1,52 @@
+{
+ "deal_id": 4416269,
+ "deal_name": "Harjit Singh",
+ "creator": "Revati Ambike",
+ "creator_id": 9062,
+ "owner": "Niket Rathod",
+ "pipeline": "Sell.Do Deal Pipeline",
+ "stage": "Demo Conducted",
+ "pipeline_stage_reason": null,
+ "created_at": "2026-06-23T06:51:13.191Z",
+ "updated_at": "2026-06-23T15:03:57.242Z",
+ "meeting_conducted": true,
+ "cfMeetingConductedOn": "2026-06-23T15:03:55.020Z",
+ "noOfLicenses": 1,
+ "cfCity": "Mumbai",
+ "cfReDeveloperOrChannelPartner": "Channel partner",
+ "estimatedValue": null,
+ "actualValue": null,
+ "products": [
+  "Sell.Do Enterprise"
+ ],
+ "source": null,
+ "campaign": null,
+ "cfPreviousCrm": "Never used a CRM",
+ "cfRequiredTools": [
+  "CRM",
+  "AI Calling"
+ ],
+ "cfSales": null,
+ "cfFirstSalesOwner": "Niket Rathod",
+ "cfOwnerPhoneNumber": "+919999999999",
+ "notes_count": 8,
+ "notes_text": "By 9062: client not responding (x2). Type-CRM/CRM+AI calling;City-Mumbai;Company-Individual;Broker;Team Size-1;Current CRM-No;Meeting 23 Jun 7:30pm online;Price Discussed-No. ENRICH+AUDIT(4248): Confirm on demo - solo channel-partner, identity VERIFIED (name MATCH) but no real-estate footprint (verifiable profile is manufacturing), Owner Phone placeholder(9999999999); licence claim 1 footprint-consistent. By 79391: Online demo conducted, wants explore more CRM, final decision next month; quote 800/user/mo, setup 5000, only 2 users. Later: switched off; not answering.",
+ "license_tier": "1-4",
+ "city_bucket": "Main6",
+ "city_clean": "Mumbai",
+ "onsite_or_online": "Online",
+ "name_valid": true,
+ "bant": {
+  "budget": "Quoted 800/user/mo + 5000 setup for 2 users; no budget confirmation",
+  "authority": "Solo individual broker - is DM",
+  "need": "Weak; individual, no current CRM, no stated pain",
+  "timeline": "Vague - decision next month, then went dark",
+  "bant_score": 1,
+  "bant_flag": "Weak"
+ },
+ "enterprise_flag": false,
+ "pre_sales_verdict": "RED",
+ "stall_blocker": "Quality/ICP",
+ "blocker_owner": "Pre-sales",
+ "one_line": "Solo Mumbai individual broker (1-2 seats, no RE footprint, placeholder owner phone) demoed on thin intent; pre-sales flagged it yet forwarded - low-quality demo."
+}

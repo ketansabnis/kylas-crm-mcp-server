@@ -1,0 +1,52 @@
+{
+ "deal_id": 4403185,
+ "deal_name": "Kunal Mohite",
+ "creator": "Revati Ambike",
+ "creator_id": 9062,
+ "owner": "Ankur Singhal",
+ "pipeline": "Sell.Do Deal Pipeline",
+ "stage": "Closed Unqualified",
+ "pipeline_stage_reason": null,
+ "created_at": "2026-06-19T07:01:43.292Z",
+ "updated_at": "2026-07-03T05:17:09.757Z",
+ "meeting_conducted": true,
+ "cfMeetingConductedOn": "2026-06-25T06:37:01.064Z",
+ "noOfLicenses": 5,
+ "cfCity": "Pune",
+ "cfReDeveloperOrChannelPartner": "Developer",
+ "estimatedValue": null,
+ "actualValue": null,
+ "products": [
+  "Sell.Do Enterprise",
+  "Sell.Do Enterprise"
+ ],
+ "source": null,
+ "campaign": null,
+ "cfPreviousCrm": "Never used a CRM",
+ "cfRequiredTools": [
+  "CRM"
+ ],
+ "cfSales": null,
+ "cfFirstSalesOwner": "Sakshi Kadu",
+ "cfOwnerPhoneNumber": "+918879685293",
+ "notes_count": 32,
+ "notes_text": "Long history (since Mar 2023): repeated not responding/busy/driving; requirement doesnt match; re-opened lead automation. By 9062: Type-CRM;City-Pune;Company-Mohite Associates;Developer;Team Size-5;Current CRM-No;Meeting 25 Jun 11:30am;Price Discussed-No. AUDIT(4248): FORWARD WITH FLAGS - on-ICP Pune account, 5-licence matches team of 5, but developer-vs-broker classification unconfirmed and chronically non-responsive re-opened lead; close engagement+identity on demo. By 58133: 1500/user x5 12mo, OTD 40k, post-sales 65k/project setup, quote sent. Only evaluating demo, plan to implement after 2-3 months, requested Pune developer references. Ringing; will take time.",
+ "license_tier": "5-9",
+ "city_bucket": "Main6",
+ "city_clean": "Pune",
+ "onsite_or_online": "Online",
+ "name_valid": true,
+ "bant": {
+  "budget": "Quoted 1500/user x5 + 40k OTD + 65k/project post-sales; no objection",
+  "authority": "Contact engaged; developer-vs-broker classification unconfirmed",
+  "need": "Moderate; on-ICP but no acute challenge stated, evaluating only",
+  "timeline": "Weak; implement in 2-3 months, chronic non-responsiveness",
+  "bant_score": 2,
+  "bant_flag": "Partial"
+ },
+ "enterprise_flag": false,
+ "pre_sales_verdict": "AMBER",
+ "stall_blocker": "Timeline/Not-now",
+ "blocker_owner": "Customer",
+ "one_line": "On-ICP 5-seat Pune account, priced with refs requested, but a chronically non-responsive re-opened lead only evaluating with a 2-3 month maybe - thin intent."
+}

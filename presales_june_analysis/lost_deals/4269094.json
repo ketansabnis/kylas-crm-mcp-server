@@ -1,0 +1,19 @@
+{
+  "deal_id": 4269094,
+  "name": "Mr Shaikh",
+  "owner": "Ankur Singhal",
+  "creator_id": 54132,
+  "stage": "Unqualified",
+  "noOfLicenses": 5,
+  "city": "Thane",
+  "created_at": "2026-05-15T12:49:54.900Z",
+  "demo_date": "2026-05-16T06:58:45.069Z",
+  "lost_date": "2026-06-01T07:38:32.225Z",
+  "days_created_to_demo": 0,
+  "days_demo_to_lost": 16,
+  "days_total": 16,
+  "sales_attempts": 3,
+  "loss_reason": "Budget",
+  "one_line": "Mandate firm; demo+quote sent but wanted 200/user CRM (far below price). 3 sales touches then plan dropped.",
+  "notes_count": 8
+}

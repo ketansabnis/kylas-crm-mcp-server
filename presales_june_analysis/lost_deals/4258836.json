@@ -1,0 +1,19 @@
+{
+  "deal_id": 4258836,
+  "name": "Sunny Sharma",
+  "owner": "Sakshi Kadu",
+  "creator_id": 9062,
+  "stage": "Lost",
+  "noOfLicenses": 5,
+  "city": "Ghaizabad",
+  "created_at": "2026-05-13T13:35:07.838Z",
+  "demo_date": "2026-05-14T12:32:56.250Z",
+  "lost_date": "2026-06-04T11:56:30.666Z",
+  "days_created_to_demo": 0,
+  "days_demo_to_lost": 20,
+  "days_total": 21,
+  "sales_attempts": 4,
+  "loss_reason": "Not-interested",
+  "one_line": "Not serious in demo; told sales 'dont call me'. Sales made 4 follow-ups/DNPs over ~3 wks then not interested.",
+  "notes_count": 11
+}

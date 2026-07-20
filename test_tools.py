@@ -1149,7 +1149,7 @@ def _make_mock_context(client_name: str, client_version: str):
 def test_get_mcp_client_name_with_name_and_version():
     """Returns 'Name(version)' when both client name and version are present."""
     mock_ctx = _make_mock_context("Claude Desktop", "1.2.3")
-    with patch.object(main.mcp, "get_context", return_value=mock_ctx):
+    with patch("main.get_context", return_value=mock_ctx):
         result = main._get_mcp_client_name()
     assert result == "Claude Desktop(1.2.3)"
 
@@ -1157,14 +1157,14 @@ def test_get_mcp_client_name_with_name_and_version():
 def test_get_mcp_client_name_without_version():
     """Returns just the name when version is empty."""
     mock_ctx = _make_mock_context("cursor", "")
-    with patch.object(main.mcp, "get_context", return_value=mock_ctx):
+    with patch("main.get_context", return_value=mock_ctx):
         result = main._get_mcp_client_name()
     assert result == "cursor"
 
 
 def test_get_mcp_client_name_outside_request_context():
     """Returns 'unknown' when called outside a request (get_context raises)."""
-    with patch.object(main.mcp, "get_context", side_effect=LookupError):
+    with patch("main.get_context", side_effect=LookupError):
         result = main._get_mcp_client_name()
     assert result == "unknown"
 
@@ -1175,7 +1175,7 @@ def test_get_mcp_client_name_no_client_params():
     mock_session.client_params = None
     mock_ctx = MagicMock()
     mock_ctx.session = mock_session
-    with patch.object(main.mcp, "get_context", return_value=mock_ctx):
+    with patch("main.get_context", return_value=mock_ctx):
         result = main._get_mcp_client_name()
     assert result == "unknown"
 
@@ -1447,6 +1447,293 @@ async def test_advance_deal_sequentially_happy_path():
 
     assert result["pipeline"]["stage"]["id"] == 30
     assert mock_client.put.call_count == 2
+
+
+# ---------------------------------------------------------------------------
+# Notes fetch Tests
+# ---------------------------------------------------------------------------
+
+def test_strip_html():
+    from main import _strip_html
+    assert _strip_html("<div>Hello <b>world</b></div>") == "Hello world"
+    assert _strip_html(None) == ""
+
+
+@pytest.mark.asyncio
+async def test_fetch_notes_logic_lead():
+    from main import fetch_notes_logic
+    with patch("main.get_client") as mock_get_client:
+        mock_client = AsyncMock()
+        get_lead_resp = MagicMock()
+        get_lead_resp.json.return_value = {"id": 79415, "ownerId": 305}
+        get_lead_resp.raise_for_status = MagicMock()
+
+        notes_resp = MagicMock()
+        notes_resp.json.return_value = {
+            "content": [
+                {
+                    "id": 12639,
+                    "description": "lead is interested in product",
+                    "createdAt": "2022-09-05T09:08:52.326+0000",
+                    "createdBy": 305,
+                }
+            ],
+            "totalElements": 1,
+            "totalPages": 1,
+        }
+        notes_resp.raise_for_status = MagicMock()
+        mock_client.get.side_effect = [get_lead_resp, notes_resp]
+        mock_client.__aenter__.return_value = mock_client
+        mock_client.__aexit__.return_value = None
+        mock_get_client.return_value = mock_client
+
+        result = await fetch_notes_logic("LEAD", 79415)
+
+        assert "Found 1 note(s) on LEAD 79415" in result
+        assert "12639" in result
+        assert "interested in product" in result
+        notes_call = mock_client.get.call_args_list[1]
+        assert notes_call.args[0] == "/notes/relation"
+        assert notes_call.kwargs["params"]["targetEntityType"] == "LEAD"
+        assert notes_call.kwargs["params"]["targetEntityId"] == 79415
+        assert notes_call.kwargs["params"]["targetEntityOwnerId"] == 305
+
+
+@pytest.mark.asyncio
+async def test_fetch_notes_logic_deal_with_owner_id():
+    from main import fetch_notes_logic
+    with patch("main.get_client") as mock_get_client:
+        mock_client = AsyncMock()
+        notes_resp = MagicMock()
+        notes_resp.json.return_value = {
+            "content": [{"id": 99, "description": "<div>Deal note</div>", "createdAt": "2022-01-01", "createdBy": 1}],
+            "totalElements": 1,
+            "totalPages": 1,
+        }
+        notes_resp.raise_for_status = MagicMock()
+        mock_client.get.return_value = notes_resp
+        mock_client.__aenter__.return_value = mock_client
+        mock_client.__aexit__.return_value = None
+        mock_get_client.return_value = mock_client
+
+        result = await fetch_notes_logic("DEAL", 35257, owner_id=100)
+
+        assert "Found 1 note(s) on DEAL 35257" in result
+        assert "Deal note" in result
+        assert mock_client.get.call_count == 1
+        assert mock_client.get.call_args.kwargs["params"]["targetEntityType"] == "DEAL"
+        assert mock_client.get.call_args.kwargs["params"]["targetEntityOwnerId"] == 100
+
+
+@pytest.mark.asyncio
+async def test_fetch_notes_logic_empty():
+    from main import fetch_notes_logic
+    with patch("main.get_client") as mock_get_client:
+        mock_client = AsyncMock()
+        notes_resp = MagicMock()
+        notes_resp.json.return_value = {"content": [], "totalElements": 0, "totalPages": 0}
+        notes_resp.raise_for_status = MagicMock()
+        mock_client.get.return_value = notes_resp
+        mock_client.__aenter__.return_value = mock_client
+        mock_client.__aexit__.return_value = None
+        mock_get_client.return_value = mock_client
+
+        result = await fetch_notes_logic("DEAL", 1, owner_id=2)
+        assert "No notes found on DEAL 1" in result
+
+
+# ---------------------------------------------------------------------------
+# Owner-ID extraction (bug fix: ownedBy.id vs flat ownerId)
+# ---------------------------------------------------------------------------
+
+def test_extract_owner_nested_ownedby():
+    from main import _extract_owner, _extract_owner_id
+    rec = {"ownedBy": {"id": 7236, "name": "Asha Rao"}}
+    assert _extract_owner(rec) == (7236, "Asha Rao")
+    assert _extract_owner_id(rec) == 7236
+
+
+def test_extract_owner_flat_ownerid():
+    from main import _extract_owner, _extract_owner_id
+    rec = {"ownerId": 555, "ownerName": "Flat Owner"}
+    assert _extract_owner(rec) == (555, "Flat Owner")
+    assert _extract_owner_id(rec) == 555
+
+
+def test_extract_owner_prefers_nested_then_falls_back():
+    from main import _extract_owner_id
+    # Nested present → use it
+    assert _extract_owner_id({"ownedBy": {"id": 1}, "ownerId": 2}) == 1
+    # Nested missing id → fall back to flat
+    assert _extract_owner_id({"ownedBy": {}, "ownerId": 2}) == 2
+    # Neither → None
+    assert _extract_owner_id({}) is None
+
+
+def test_format_owner_line_variants():
+    from main import _format_owner_line
+    assert _format_owner_line({"ownedBy": {"id": 9, "name": "Bob"}}) == "Owner: Bob (ID: 9)"
+    assert _format_owner_line({"ownerId": 9}) == "Owner ID: 9"
+    assert _format_owner_line({}) == "Owner ID: —"
+
+
+def test_format_deal_display_uses_ownedby():
+    from main import _format_deal_for_display
+    deal = {"id": 1, "name": "Big Deal", "ownedBy": {"id": 7236, "name": "Asha Rao"}}
+    out = _format_deal_for_display(deal)
+    assert "Owner: Asha Rao (ID: 7236)" in out
+    assert "Owner ID: —" not in out
+
+
+@pytest.mark.asyncio
+async def test_resolve_note_owner_from_ownedby():
+    """Regression: GET /deals/{id} returns ownedBy.id, not flat ownerId."""
+    from main import _resolve_note_target_owner_id
+    with patch("main.get_client") as mock_get_client:
+        mock_client = AsyncMock()
+        resp = MagicMock()
+        resp.json.return_value = {"id": 1, "ownedBy": {"id": 4242, "name": "X"}}
+        resp.raise_for_status = MagicMock()
+        mock_client.get.return_value = resp
+        mock_client.__aenter__.return_value = mock_client
+        mock_client.__aexit__.return_value = None
+        mock_get_client.return_value = mock_client
+
+        owner_id = await _resolve_note_target_owner_id("DEAL", 1)
+        assert owner_id == 4242
+
+
+# ---------------------------------------------------------------------------
+# New tools
+# ---------------------------------------------------------------------------
+
+def _mock_async_client(method, response_obj):
+    mock_client = AsyncMock()
+    mock_client.__aenter__.return_value = mock_client
+    mock_client.__aexit__.return_value = None
+    getattr(mock_client, method).return_value = response_obj
+    return mock_client
+
+
+@pytest.mark.asyncio
+async def test_delete_entity_success():
+    from main import delete_entity
+    resp = MagicMock()
+    resp.status_code = 204
+    resp.raise_for_status = MagicMock()
+    with patch("main.get_client") as mock_get_client:
+        mock_get_client.return_value = _mock_async_client("delete", resp)
+        result = await delete_entity("deal", 99)
+        assert "✓" in result and "Deal 99 deleted" in result
+        assert mock_get_client.return_value.delete.call_args.args[0] == "/deals/99"
+
+
+@pytest.mark.asyncio
+async def test_delete_entity_unknown_type():
+    from main import delete_entity
+    result = await delete_entity("widget", 1)
+    assert "Unknown entity_type" in result
+
+
+@pytest.mark.asyncio
+async def test_change_pipeline_stage_deal():
+    from main import change_pipeline_stage
+    resp = MagicMock()
+    resp.json.return_value = {"id": 5, "pipeline": {"stage": {"name": "Won"}}}
+    resp.raise_for_status = MagicMock()
+    with patch("main.get_client") as mock_get_client:
+        mock_get_client.return_value = _mock_async_client("post", resp)
+        result = await change_pipeline_stage("deal", 5, 88, actual_value={"currencyId": 431, "value": 100})
+        assert "✓" in result
+        call = mock_get_client.return_value.post.call_args
+        assert call.args[0] == "/deals/5/pipeline-stages/88/activate"
+        assert call.kwargs["json"]["actualValue"] == {"currencyId": 431, "value": 100}
+        assert "products" in call.kwargs["json"]
+
+
+@pytest.mark.asyncio
+async def test_change_pipeline_stage_invalid_entity():
+    from main import change_pipeline_stage
+    result = await change_pipeline_stage("company", 1, 2)
+    assert "Unknown entity_type" in result
+
+
+@pytest.mark.asyncio
+async def test_convert_lead_to_deal():
+    from main import convert_lead
+    resp = MagicMock()
+    resp.json.return_value = {"deal": {"id": 700, "name": "Converted"}}
+    resp.raise_for_status = MagicMock()
+    with patch("main.get_client") as mock_get_client:
+        mock_get_client.return_value = _mock_async_client("post", resp)
+        targets = {"deal": {"mode": "CREATE", "details": {"name": "Converted"}}}
+        result = await convert_lead(123, targets)
+        assert "✓" in result and "700" in result
+        assert mock_get_client.return_value.post.call_args.args[0] == "/leads/123/convert"
+
+
+@pytest.mark.asyncio
+async def test_convert_lead_rejects_unknown_target():
+    from main import convert_lead
+    result = await convert_lead(1, {"invoice": {}})
+    assert "Unknown conversion target" in result
+
+
+@pytest.mark.asyncio
+async def test_reassign_lead():
+    from main import reassign_lead
+    resp = MagicMock()
+    resp.json.return_value = {"id": 1}
+    resp.raise_for_status = MagicMock()
+    with patch("main.get_client") as mock_get_client:
+        mock_get_client.return_value = _mock_async_client("put", resp)
+        result = await reassign_lead(1, 50)
+        assert "✓" in result
+        call = mock_get_client.return_value.put.call_args
+        assert call.args[0] == "/leads/1/owner"
+        assert call.kwargs["json"] == {"ownerId": 50}
+
+
+@pytest.mark.asyncio
+async def test_list_reports_hits_v3():
+    from main import list_reports
+    resp = MagicMock()
+    resp.json.return_value = {"content": [{"id": 1, "name": "Pipeline Report", "type": "DEAL"}], "totalElements": 1}
+    resp.raise_for_status = MagicMock()
+    with patch("main.get_client") as mock_get_client:
+        mock_get_client.return_value = _mock_async_client("get", resp)
+        result = await list_reports()
+        assert "Pipeline Report" in result
+        url = mock_get_client.return_value.get.call_args.args[0]
+        assert "/v3/reports/search" in url
+
+
+@pytest.mark.asyncio
+async def test_get_report_hits_v3():
+    from main import get_report
+    resp = MagicMock()
+    resp.json.return_value = {"id": 9, "name": "Sales", "entityType": "DEAL"}
+    resp.raise_for_status = MagicMock()
+    with patch("main.get_client") as mock_get_client:
+        mock_get_client.return_value = _mock_async_client("get", resp)
+        result = await get_report(9)
+        assert "Sales" in result
+        assert "/v3/reports/9" in mock_get_client.return_value.get.call_args.args[0]
+
+
+@pytest.mark.asyncio
+async def test_get_entity_emails():
+    from main import get_entity_emails
+    resp = MagicMock()
+    resp.json.return_value = {"content": [{"subject": "Hi", "from": "a@b.com", "sentAt": "2026-01-01"}], "totalElements": 1}
+    resp.raise_for_status = MagicMock()
+    with patch("main.get_client") as mock_get_client:
+        mock_get_client.return_value = _mock_async_client("get", resp)
+        result = await get_entity_emails(3636, 51411, "Lead")
+        assert "Hi" in result
+        call = mock_get_client.return_value.get.call_args
+        assert call.args[0] == "/email-threads/3636/emails"
+        assert call.kwargs["params"]["entityType"] == "lead"
 
 
 if __name__ == "__main__":

@@ -1,0 +1,17 @@
+{
+  "deal_id": 4319146,
+  "deal_name": "Inder Singh",
+  "owner": "Suraj Chauhan",
+  "stage": "Won/ Booked",
+  "created_at": "2026-05-27T05:49:27.383Z",
+  "updated_at": "2026-07-06T04:59:04.783Z",
+  "products_total": 65000.0,
+  "cfBilledAmount": 65000,
+  "cfActualPaymentReceived": 65000,
+  "noOfLicenses": 4,
+  "cfCity": "Chandigarh",
+  "cfReDeveloperOrChannelPartner": "Channel partner",
+  "cfMeetingConductedOn": "2026-05-27T08:53:43.498Z",
+  "cfPreviousCrm": "Never used a CRM",
+  "cfOwnerPhoneNumber": "+919643843177"
+}

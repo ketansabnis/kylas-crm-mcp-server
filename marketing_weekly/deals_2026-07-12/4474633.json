@@ -1,0 +1,21 @@
+{
+  "deal_id": 4474633,
+  "name": "Khan Shabnam",
+  "owner": "Anuj Pathak",
+  "stage": "Closed Unqualified",
+  "licences": 5,
+  "tier": "5-10",
+  "city": "Navi Mumbai",
+  "dev_broker": "Channel partner",
+  "onsite": "Online",
+  "bant_flag": "Weak",
+  "verdict": "RED",
+  "prob": 0.0067,
+  "band": "COLD",
+  "name_valid": true,
+  "dummy_phone": false,
+  "unverified_contact": true,
+  "sales_followup_since_demo": 1,
+  "next_action": "Closed - feed back to pre-sales as a qualification miss: contact never verified as a Revaa Homes decision-maker.",
+  "one_line": "Navi Mumbai broker demo burnt on a wrong contact; enrichment put 'Khan Shabnam' at an unrelated firm. Not interested."
+}

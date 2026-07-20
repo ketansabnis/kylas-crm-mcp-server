@@ -1,0 +1,19 @@
+{
+  "deal_id": 4309695,
+  "name": "Saksham Jain",
+  "owner": "Suraj Chauhan",
+  "creator_id": 9062,
+  "stage": "Lost",
+  "noOfLicenses": 12,
+  "city": "Indore",
+  "created_at": "2026-05-25",
+  "demo_date": "2026-05-27",
+  "lost_date": "2026-06-05",
+  "days_created_to_demo": 2,
+  "days_demo_to_lost": 9,
+  "days_total": 11,
+  "sales_attempts": 3,
+  "loss_reason": "Competitor/Existing-CRM",
+  "one_line": "Demoed + WhatsApp proposal; sales rang 2x more; client bought competitor at 300/user/month, not interested.",
+  "notes_count": 7
+}

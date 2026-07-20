@@ -1,0 +1,19 @@
+{
+  "deal_id": 4326751,
+  "name": "Himanshu",
+  "owner": "Ankur Singhal",
+  "creator_id": 54132,
+  "stage": "Unqualified",
+  "noOfLicenses": 10,
+  "city": "jaipur",
+  "created_at": "2026-05-29",
+  "demo_date": "2026-06-01",
+  "lost_date": "2026-06-01",
+  "days_created_to_demo": 3,
+  "days_demo_to_lost": 0,
+  "days_total": 3,
+  "sales_attempts": 1,
+  "loss_reason": "Not-interested",
+  "one_line": "Demoed; client wanted AI free trial then plan was dropped/not interested. Minimal post-demo follow-up.",
+  "notes_count": 9
+}

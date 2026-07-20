@@ -1,0 +1,53 @@
+{
+ "deal_id": 4359970,
+ "deal_name": "Rochan Trivedi",
+ "creator": "Revati Ambike",
+ "creator_id": 9062,
+ "owner": "Sakshi Kadu",
+ "owner_id": 73467,
+ "pipeline": "Sell.Do Deal Pipeline",
+ "stage": "Closed Lost",
+ "pipeline_stage_reason": null,
+ "created_at": "2026-06-08T10:56:17.292Z",
+ "updated_at": "2026-06-16T08:19:08.045Z",
+ "meeting_conducted": true,
+ "cfMeetingConductedOn": "2026-06-09T13:59:21.511Z",
+ "noOfLicenses": 5,
+ "cfCity": "Indore",
+ "cfReDeveloperOrChannelPartner": "Developer",
+ "estimatedValue": null,
+ "actualValue": null,
+ "products": [
+  "Sell.Do Enterprise"
+ ],
+ "source": null,
+ "campaign": null,
+ "cfPreviousCrm": "Never used a CRM",
+ "cfRequiredTools": [
+  "CRM",
+  "AI Calling"
+ ],
+ "cfSales": null,
+ "cfFirstSalesOwner": "Sakshi Kadu",
+ "cfOwnerPhoneNumber": "+917499017438",
+ "notes_count": 9,
+ "notes_text": "[9062 2026-06-08] Type of Deal - CRM / CRM+Ai calling / City-Indore Company Name -RKG Realcon LLP Developer/Channel Partner firm -Developer is looking from pre sales to post sales (1 upcoming mandate project 1100 unit name Siddhi Palace) Total Team Size-5 Current CRM -No Tentative meet... | [9062 2026-06-09] {{USER_73467}} Kindly mark demo | [73467 2026-06-09] felt like they are building their own crm but will connect tomo for quote | [73467 2026-06-11] not picking up call tried multiple times | [73467 2026-06-12] asked best quote for 6 months, want to use first, if goes well go for 4-5 projects; 2nd demo Rochan and Riya will attend | [73467 2026-06-15] Sunday had demo again with team for whatsapp api and postsale; final call second half | [73467 2026-06-15] his reply: decided to go ahead with another CRM provider offering more competitive pricing, greater customization flexibility | [73467 2026-06-15] finalised homelead crm | [73467 2026-06-15] asked mobile interface for postsale, delete data instantly, demand letter for multiple units",
+ "license_tier": "5-9",
+ "city_bucket": "Other",
+ "city_clean": "Indore",
+ "onsite_or_online": "Online",
+ "name_valid": true,
+ "bant": {
+  "budget": "engaged on pricing/quote; lost on competitive pricing",
+  "authority": "team-level engagement, multiple demos with team - DM involved",
+  "need": "strong - developer wanting pre-sales to post-sales CRM, 1100-unit mandate project",
+  "timeline": "active - multiple demos in a week then chose competitor",
+  "bant_score": 4,
+  "bant_flag": "Strong"
+ },
+ "enterprise_flag": false,
+ "pre_sales_verdict": "GREEN",
+ "stall_blocker": "Competitor/Existing-CRM",
+ "blocker_owner": "Sales",
+ "one_line": "Well-qualified Indore developer with real 1100-unit need and full BANT; lost to Homelead CRM on price/customization - a sales/pricing loss, not pre-sales."
+}

@@ -1,0 +1,51 @@
+{
+ "deal_id": 4394566,
+ "deal_name": "Balaji",
+ "creator": "Revati Ambike",
+ "creator_id": 9062,
+ "owner": "Panchasheel Tare",
+ "pipeline": "Sell.Do Deal Pipeline",
+ "stage": "Quote Sent",
+ "pipeline_stage_reason": null,
+ "created_at": "2026-06-17T05:40:12.940Z",
+ "updated_at": "2026-06-17T19:09:32.637Z",
+ "meeting_conducted": true,
+ "cfMeetingConductedOn": "2026-06-17T19:09:27.336Z",
+ "noOfLicenses": 5,
+ "cfCity": "Madhurai",
+ "cfReDeveloperOrChannelPartner": "Channel partner",
+ "estimatedValue": null,
+ "actualValue": null,
+ "products": [
+  "Sell.Do Enterprise"
+ ],
+ "source": null,
+ "campaign": null,
+ "cfPreviousCrm": "Never used a CRM",
+ "cfRequiredTools": [
+  "CRM"
+ ],
+ "cfSales": null,
+ "cfFirstSalesOwner": "Panchasheel Tare",
+ "cfOwnerPhoneNumber": "+919513300040",
+ "notes_count": 4,
+ "notes_text": "By 9062: digialbala.sal@gmail.com. Type-CRM;City-Madurai;Company-Yet to be registered;Broker (open plotting);Team Size-5 to 10;Current CRM-No(excel);Meeting 17 Jun 2:30pm online. By 9154: Demo done, client needs some time. Later: ringing no response.",
+ "license_tier": "5-9",
+ "city_bucket": "Other",
+ "city_clean": "Madurai",
+ "onsite_or_online": "Online",
+ "name_valid": false,
+ "bant": {
+  "budget": "no signal",
+  "authority": "Unclear; company not yet registered, contact is Balaji only",
+  "need": "Weak; open-plotting broker, no CRM, no stated pain",
+  "timeline": "None; needs time then went non-responsive",
+  "bant_score": 1,
+  "bant_flag": "Weak"
+ },
+ "enterprise_flag": false,
+ "pre_sales_verdict": "RED",
+ "stall_blocker": "Quality/ICP",
+ "blocker_owner": "Pre-sales",
+ "one_line": "Demoed a not-yet-registered Madurai open-plotting outfit with a single-name contact and no captured BANT - premature, low-quality demo that went dark."
+}

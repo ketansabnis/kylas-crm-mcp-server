@@ -1,0 +1,19 @@
+{
+  "deal_id": 4309065,
+  "name": "Kavita",
+  "owner": "Jawed Alam",
+  "creator_id": 54132,
+  "stage": "Unqualified",
+  "noOfLicenses": 7,
+  "city": "Gurugram",
+  "created_at": "2026-05-25",
+  "demo_date": "2026-05-25",
+  "lost_date": "2026-06-10",
+  "days_created_to_demo": 0,
+  "days_demo_to_lost": 16,
+  "days_total": 16,
+  "sales_attempts": 0,
+  "loss_reason": "Other",
+  "one_line": "Sparse; deal handled under another company record (Arzoo did in-person meet/closed). No follow-up attempts logged here.",
+  "notes_count": 3
+}

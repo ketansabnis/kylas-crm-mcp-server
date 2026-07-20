@@ -1,0 +1,19 @@
+{
+  "deal_id": 4252496,
+  "name": "Harsh Kothari",
+  "owner": "Sakshi Kadu",
+  "creator_id": 9062,
+  "stage": "Unqualified",
+  "noOfLicenses": 12,
+  "city": "Ahmedabad",
+  "created_at": "2026-05-12T12:18:12.267Z",
+  "demo_date": "2026-05-13T04:14:21.197Z",
+  "lost_date": "2026-05-20T10:40:45.839Z",
+  "days_created_to_demo": 1,
+  "days_demo_to_lost": 7,
+  "days_total": 8,
+  "sales_attempts": 1,
+  "loss_reason": "Wrong/Unverified-contact",
+  "one_line": "Sales rep judged it a fake lead after first demo; client asked for 2nd demo (internet issue) but rep disqualified. ~1 post-demo touch.",
+  "notes_count": 11
+}

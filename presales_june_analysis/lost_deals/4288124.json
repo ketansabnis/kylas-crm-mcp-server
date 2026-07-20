@@ -1,0 +1,19 @@
+{
+  "deal_id": 4288124,
+  "name": "Hitesh Singh",
+  "owner": "Ketan Sabnis (Internal)",
+  "creator_id": 9062,
+  "stage": "Lost",
+  "noOfLicenses": 15,
+  "city": "Noida",
+  "created_at": "2026-05-20T11:48:21.008Z",
+  "demo_date": "2026-05-20T17:32:05.157Z",
+  "lost_date": "2026-06-22T12:28:40.952Z",
+  "days_created_to_demo": 0,
+  "days_demo_to_lost": 33,
+  "days_total": 33,
+  "sales_attempts": 15,
+  "loss_reason": "Non-responsive",
+  "one_line": "Non-responsive; after demo sales (73470) chased ~15 calls/texts/quotes over 4 weeks, licence shrank 15->10->5, client dodged calls, 'sounded fake', went dark.",
+  "notes_count": 21
+}

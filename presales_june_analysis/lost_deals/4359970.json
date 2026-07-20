@@ -1,0 +1,19 @@
+{
+  "deal_id": 4359970,
+  "name": "Rochan Trivedi",
+  "owner": "Sakshi Kadu",
+  "creator_id": 9062,
+  "stage": "Lost",
+  "noOfLicenses": 5,
+  "city": "Indore",
+  "created_at": "2026-06-08",
+  "demo_date": "2026-06-09",
+  "lost_date": "2026-06-16",
+  "days_created_to_demo": 1,
+  "days_demo_to_lost": 7,
+  "days_total": 8,
+  "sales_attempts": 5,
+  "loss_reason": "Competitor/Existing-CRM",
+  "one_line": "Two demos + proposal; sales chased ~5x; client chose competitor Homelead CRM (better pricing, more customization).",
+  "notes_count": 9
+}

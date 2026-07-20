@@ -1,0 +1,19 @@
+{
+  "deal_id": 4089774,
+  "name": "Kanishka Handa",
+  "owner": "Arzoo Choudhary",
+  "creator_id": 9062,
+  "stage": "Lost",
+  "noOfLicenses": 5,
+  "city": "Chandigarh",
+  "created_at": "2026-04-13",
+  "demo_date": "2026-04-14",
+  "lost_date": "2026-04-29",
+  "days_created_to_demo": 1,
+  "days_demo_to_lost": 15,
+  "days_total": 16,
+  "sales_attempts": 2,
+  "loss_reason": "Timeline/Not-now",
+  "one_line": "Developer got a quote but management not looking for CRM now (maybe in 3-4 months while hiring); lost after 2 owner touches.",
+  "notes_count": 4
+}

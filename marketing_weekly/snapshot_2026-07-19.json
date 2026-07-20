@@ -1,0 +1,172 @@
+{
+  "week_start": "2026-07-13",
+  "week_end": "2026-07-19",
+  "N": 49,
+  "five": 48,
+  "green": 7,
+  "verdict": {
+    "AMBER": 26,
+    "GREEN": 7,
+    "RED": 16
+  },
+  "band": {
+    "COLD": 42,
+    "HOT": 3,
+    "MID": 2,
+    "WARM": 2
+  },
+  "tier": {
+    "10+": 22,
+    "5-10": 26,
+    "<5": 1
+  },
+  "dev": 21,
+  "cp": 28,
+  "onsite_all": 11,
+  "main6": 26,
+  "onsite_m6": 10,
+  "enterprise40": 3,
+  "wins": 3,
+  "seat_inflated": 6,
+  "source": {
+    "Organic": {
+      "demos": 23,
+      "five": 22,
+      "green": 3,
+      "red": 8,
+      "dev": 12,
+      "hotwarm": 3
+    },
+    "Google": {
+      "demos": 15,
+      "five": 15,
+      "green": 2,
+      "red": 2,
+      "dev": 5,
+      "hotwarm": 1
+    },
+    "Facebook": {
+      "demos": 8,
+      "five": 8,
+      "green": 2,
+      "red": 5,
+      "dev": 1,
+      "hotwarm": 1
+    },
+    "WhatsApp": {
+      "demos": 3,
+      "five": 3,
+      "green": 0,
+      "red": 1,
+      "dev": 3,
+      "hotwarm": 0
+    }
+  },
+  "creator": {
+    "Revati Ambike": 22,
+    "Ashwini Nirmal": 27
+  },
+  "alloc": {
+    "Sakshi Kadu": 6,
+    "Alok Tiwari": 3,
+    "Ankur Singhal": 6,
+    "Ananya Kumari": 2,
+    "Suraj Chauhan": 4,
+    "Anuj Pathak": 3,
+    "Disha Kadam": 3,
+    "Arzoo Choudhary": 5,
+    "Pranith A B": 2,
+    "Jawed Alam": 3,
+    "Panchasheel Tare": 3,
+    "Niket Rathod": 4,
+    "Santhana K": 1,
+    "Ganesh Vamsee": 2,
+    "Tejas Mehta": 2
+  },
+  "routing": {
+    "dev_to_revati": 13,
+    "dev_to_ashwini": 8,
+    "cp_to_ashwini": 19,
+    "cp_to_revati": 9
+  },
+  "alerts": {
+    "zero_followup": 21,
+    "dummy_phone": 4,
+    "unverified": 10,
+    "bad_name": 9
+  },
+  "targets": {
+    "five": 50,
+    "green": 25,
+    "devshare": 0.5,
+    "onsite_m6": 0.4
+  },
+  "funnel": {
+    "created": 72,
+    "demoed": 35,
+    "leak": 37,
+    "demos_conducted": 49
+  },
+  "campaign": {
+    "Meta Lead-Gen (Apr-24)": 5,
+    "Meta Lead-Gen (Jun-25)": 3,
+    "Google Brand Search": 4,
+    "Google Search (jan24)": 3,
+    "Other/untagged paid": 3
+  },
+  "utm_tagged": 18,
+  "cohort": {
+    "demos": 104,
+    "lost": 38,
+    "won": 7,
+    "open": 59
+  },
+  "reps": {
+    "Revati Ambike": {
+      "demos": 22,
+      "GREEN": 5,
+      "RED": 5,
+      "five": 21,
+      "dev": 13,
+      "onsite": 5,
+      "hotwarm": 4,
+      "badname": 3,
+      "unver": 3
+    },
+    "Ashwini Nirmal": {
+      "demos": 27,
+      "GREEN": 2,
+      "RED": 11,
+      "five": 27,
+      "dev": 8,
+      "onsite": 6,
+      "hotwarm": 1,
+      "badname": 6,
+      "unver": 7
+    }
+  },
+  "losses": {
+    "n": 50,
+    "avg_attempts": 4.6,
+    "zero_followup": 2,
+    "reasons": {
+      "Budget": 5,
+      "Wrong/Unverified-contact": 2,
+      "Competitor/Existing-CRM": 15,
+      "Timeline/Not-now": 10,
+      "Not-interested": 12,
+      "Non-responsive": 4,
+      "Sub-ICP/Too-small": 2
+    },
+    "competitors": {
+      "HomeLeads": 1,
+      "IQsetter": 1,
+      "Realty Organiser": 1,
+      "Vabble.io": 1,
+      "Pixxie": 1,
+      "Daebuild": 1,
+      "NeoDove": 1
+    },
+    "price_related": 20
+  }
+}

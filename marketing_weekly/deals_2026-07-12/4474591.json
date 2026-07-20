@@ -1,0 +1,21 @@
+{
+  "deal_id": 4474591,
+  "name": "Rahul Jain",
+  "owner": "Arzoo Choudhary",
+  "stage": "Demo Conducted",
+  "licences": 15,
+  "tier": "10+",
+  "city": "Gurgaon",
+  "dev_broker": "Developer",
+  "onsite": "Onsite",
+  "bant_flag": "Weak",
+  "verdict": "RED",
+  "prob": 0.0293,
+  "band": "COLD",
+  "name_valid": true,
+  "dummy_phone": false,
+  "unverified_contact": true,
+  "sales_followup_since_demo": 1,
+  "next_action": "Re-verify the contact (phone resolves to Sachin Kumar) and reset seats to the real 4-5; park unless a timeline emerges.",
+  "one_line": "KFG Developers real, but the 15-licence claim collapsed to 4-5 on demo and the phone belongs to someone else."
+}

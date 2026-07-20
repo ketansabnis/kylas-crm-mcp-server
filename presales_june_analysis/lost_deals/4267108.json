@@ -1,0 +1,19 @@
+{
+  "deal_id": 4267108,
+  "name": "Risha Routh",
+  "owner": "Sakshi Kadu",
+  "creator_id": 54132,
+  "stage": "Lost",
+  "noOfLicenses": 10,
+  "city": "Ahmedabad",
+  "created_at": "2026-05-15T08:08:10.252Z",
+  "demo_date": "2026-05-18T07:29:03.829Z",
+  "lost_date": "2026-05-26T05:38:54.782Z",
+  "days_created_to_demo": 2,
+  "days_demo_to_lost": 7,
+  "days_total": 10,
+  "sales_attempts": 2,
+  "loss_reason": "Not-interested",
+  "one_line": "Mandate firm w/ inhouse CRM, only wanted post-sales. 2 sales follow-ups (DNP/unavailable) then said not interested.",
+  "notes_count": 10
+}

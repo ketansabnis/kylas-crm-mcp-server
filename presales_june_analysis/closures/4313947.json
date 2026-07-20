@@ -1,0 +1,17 @@
+{
+  "deal_id": 4313947,
+  "deal_name": "Rohan",
+  "owner": "Jawed Alam",
+  "stage": "Won/ Booked",
+  "created_at": "2026-05-26T06:12:45.039Z",
+  "updated_at": "2026-07-06T08:50:09.648Z",
+  "products_total": 211400.0,
+  "cfBilledAmount": 211400,
+  "cfActualPaymentReceived": 211400,
+  "noOfLicenses": 8,
+  "cfCity": "Banaglore",
+  "cfReDeveloperOrChannelPartner": "Developer",
+  "cfMeetingConductedOn": "2026-05-27T12:59:12.451Z",
+  "cfPreviousCrm": "Never used a CRM",
+  "cfOwnerPhoneNumber": "+917030914382"
+}

@@ -1,0 +1,19 @@
+{
+  "deal_id": 4222125,
+  "name": "ankkit bansall",
+  "owner": "Arzoo Choudhary",
+  "creator_id": 54132,
+  "stage": "Lost",
+  "noOfLicenses": 10,
+  "city": "Noida",
+  "created_at": "2026-05-04",
+  "demo_date": null,
+  "lost_date": "2026-05-26",
+  "days_created_to_demo": null,
+  "days_demo_to_lost": null,
+  "days_total": 22,
+  "sales_attempts": 4,
+  "loss_reason": "Competitor/Existing-CRM",
+  "one_line": "Client unavailable and unreachable; sales called from different numbers ~4 times before he clarified he had already taken another CRM.",
+  "notes_count": 7
+}

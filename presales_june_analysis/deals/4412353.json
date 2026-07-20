@@ -1,0 +1,51 @@
+{
+ "deal_id": 4412353,
+ "deal_name": "Naresh Kamble",
+ "creator": "Revati Ambike",
+ "creator_id": 9062,
+ "owner": "Anuj Pathak",
+ "pipeline": "Sell.Do Deal Pipeline",
+ "stage": "Closed Unqualified",
+ "pipeline_stage_reason": null,
+ "created_at": "2026-06-22T10:45:28.672Z",
+ "updated_at": "2026-07-01T10:50:43.738Z",
+ "meeting_conducted": true,
+ "cfMeetingConductedOn": "2026-06-24T11:47:39.841Z",
+ "noOfLicenses": 1,
+ "cfCity": "Pune",
+ "cfReDeveloperOrChannelPartner": "Channel partner",
+ "estimatedValue": null,
+ "actualValue": null,
+ "products": [
+  "Sell.Do Enterprise"
+ ],
+ "source": null,
+ "campaign": null,
+ "cfPreviousCrm": "Never used a CRM",
+ "cfRequiredTools": [
+  "CRM"
+ ],
+ "cfSales": null,
+ "cfFirstSalesOwner": "Anuj Pathak",
+ "cfOwnerPhoneNumber": "+917391046052",
+ "notes_count": 13,
+ "notes_text": "By 9062: client deals land/residential/commercial, works as individual agent. Type-CRM;City-Pune;Company-Sudarshan Enterprises;Broker;Team Size-1;Current CRM-No(excel);Meeting 23 Jun 4pm online. ENRICH+AUDIT(4248): FORWARD WITH FLAGS - verified contactable DM (solo owner), genuine 1-seat broker need, but firm has NO independent online footprint; confirm scale & intent. By 50500: Demo Conducted; client not interested, single user; later said no requirement.",
+ "license_tier": "1-4",
+ "city_bucket": "Main6",
+ "city_clean": "Pune",
+ "onsite_or_online": "Online",
+ "name_valid": true,
+ "bant": {
+  "budget": "no signal",
+  "authority": "Solo owner/agent - is the DM",
+  "need": "Weak; individual agent, no stated pain, on excel",
+  "timeline": "no signal; not interested",
+  "bant_score": 1,
+  "bant_flag": "Weak"
+ },
+ "enterprise_flag": false,
+ "pre_sales_verdict": "RED",
+ "stall_blocker": "Quality/ICP",
+ "blocker_owner": "Pre-sales",
+ "one_line": "Solo 1-seat Pune agent with no footprint and no stated need pushed to demo; pre-sales own flag said scale/intent unconfirmed - unqualified, closed unqualified."
+}

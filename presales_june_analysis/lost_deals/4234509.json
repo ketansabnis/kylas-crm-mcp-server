@@ -1,0 +1,19 @@
+{
+  "deal_id": 4234509,
+  "name": "Jitendra Sharma",
+  "owner": "Ankur Singhal",
+  "creator_id": 9062,
+  "stage": "Unqualified",
+  "noOfLicenses": 5,
+  "city": "Jaipur",
+  "created_at": "2026-05-07",
+  "demo_date": "2026-05-07",
+  "lost_date": "2026-06-01",
+  "days_created_to_demo": 0,
+  "days_demo_to_lost": 25,
+  "days_total": 25,
+  "sales_attempts": 4,
+  "loss_reason": "Competitor/Existing-CRM",
+  "one_line": "Demo done vs Neodove; price issue. Sales chased hard (ringing, follow-ups) but client stalled and stuck with existing tool.",
+  "notes_count": 21
+}

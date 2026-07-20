@@ -1,0 +1,51 @@
+{
+ "deal_id": 4384331,
+ "deal_name": "Jai Singh",
+ "creator": "Revati Ambike",
+ "creator_id": 9062,
+ "owner": "Suraj Chauhan",
+ "pipeline": "Sell.Do Deal Pipeline",
+ "stage": "Quote Sent",
+ "pipeline_stage_reason": null,
+ "created_at": "2026-06-15T07:20:00.149Z",
+ "updated_at": "2026-06-25T06:43:47.320Z",
+ "meeting_conducted": true,
+ "cfMeetingConductedOn": "2026-06-17T13:32:29.572Z",
+ "noOfLicenses": 4,
+ "cfCity": "Gurgaon",
+ "cfReDeveloperOrChannelPartner": "Channel partner",
+ "estimatedValue": null,
+ "actualValue": null,
+ "products": [
+  "Sell.Do Enterprise"
+ ],
+ "source": null,
+ "campaign": null,
+ "cfPreviousCrm": "Never used a CRM",
+ "cfRequiredTools": [
+  "CRM"
+ ],
+ "cfSales": null,
+ "cfFirstSalesOwner": "Suraj Chauhan",
+ "cfOwnerPhoneNumber": true,
+ "notes_count": 9,
+ "notes_text": "9062: Tathastu Estate, Gurgaon, Broker, team 4, using excel, wants in-person meeting 16 Jun; office address shared. | 80575: proposal shared on whatsapp, client wants complete automation w AI calling + WhatsApp API, wants to start 1 July; then said call back next month; repeatedly pushed to next month.",
+ "license_tier": "1-4",
+ "city_bucket": "Main6",
+ "city_clean": "Gurgaon",
+ "onsite_or_online": "Onsite",
+ "name_valid": true,
+ "bant": {
+  "budget": "no explicit budget, proposal shared",
+  "authority": "Likely owner of Tathastu Estate",
+  "need": "Broker wants full automation, AI calling, WhatsApp API",
+  "timeline": "Said start 1 July then slipped to next month",
+  "bant_score": 3,
+  "bant_flag": "Strong"
+ },
+ "enterprise_flag": false,
+ "pre_sales_verdict": "AMBER",
+ "stall_blocker": "Timeline/Not-now",
+ "blocker_owner": "Customer",
+ "one_line": "Gurgaon broker with real automation need but only 4 seats; F2F demo done, keeps deferring purchase month over month."
+}

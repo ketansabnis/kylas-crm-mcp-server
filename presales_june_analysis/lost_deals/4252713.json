@@ -1,0 +1,19 @@
+{
+  "deal_id": 4252713,
+  "name": "Amar Reddy",
+  "owner": "Jaganmohan Vankina",
+  "creator_id": 9062,
+  "stage": "Unqualified",
+  "noOfLicenses": 5,
+  "city": "Hyderabad",
+  "created_at": "2026-05-12T13:06:47.237Z",
+  "demo_date": "2026-05-15T08:52:00.922Z",
+  "lost_date": "2026-07-02T06:25:06.538Z",
+  "days_created_to_demo": 3,
+  "days_demo_to_lost": 48,
+  "days_total": 51,
+  "sales_attempts": 2,
+  "loss_reason": "Not-interested",
+  "one_line": "Only wanted AI calling, no CRM need (on Tranquil). Sales made ~2 touches (CEO intro attempt then no response) over 48 days; sparse.",
+  "notes_count": 4
+}

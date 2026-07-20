@@ -1,0 +1,19 @@
+{
+  "deal_id": 4262224,
+  "name": "Sumanth",
+  "owner": "Jawed Alam",
+  "creator_id": 54132,
+  "stage": "Lost",
+  "noOfLicenses": 10,
+  "city": "Bangalore",
+  "created_at": "2026-05-14T09:03:05.544Z",
+  "demo_date": "2026-05-15T08:22:43.324Z",
+  "lost_date": "2026-06-10T07:19:01.235Z",
+  "days_created_to_demo": 0,
+  "days_demo_to_lost": 25,
+  "days_total": 26,
+  "sales_attempts": 0,
+  "loss_reason": "Competitor/Existing-CRM",
+  "one_line": "Wanted to switch from Paramantra; no post-demo sales follow-up logged. Client went with another CRM.",
+  "notes_count": 5
+}

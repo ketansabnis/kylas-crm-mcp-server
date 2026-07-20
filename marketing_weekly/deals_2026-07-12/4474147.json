@@ -1,0 +1,21 @@
+{
+  "deal_id": 4474147,
+  "name": "Nirvana Close Estates",
+  "owner": "Suraj Chauhan",
+  "stage": "Demo Conducted",
+  "licences": 3,
+  "tier": "<5",
+  "city": "Gurugram",
+  "dev_broker": "Channel partner",
+  "onsite": "Online",
+  "bant_flag": "Partial",
+  "verdict": "AMBER",
+  "prob": 0.007,
+  "band": "COLD",
+  "name_valid": true,
+  "dummy_phone": false,
+  "unverified_contact": false,
+  "sales_followup_since_demo": 2,
+  "next_action": "Suraj: the in-person meeting has slipped twice - hard-book Wednesday at the Gurugram office and capture budget + timeline there.",
+  "one_line": "Gurugram CP, owner/CEO verified, 3 seats; wants in-person, but the meeting keeps getting rescheduled."
+}

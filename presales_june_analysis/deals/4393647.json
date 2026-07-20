@@ -1,0 +1,51 @@
+{
+ "deal_id": 4393647,
+ "deal_name": "Pranav Anand",
+ "creator": "Revati Ambike",
+ "creator_id": 9062,
+ "owner": "Ketan Sabnis (Internal)",
+ "pipeline": "Sell.Do Deal Pipeline",
+ "stage": "Incoming",
+ "pipeline_stage_reason": null,
+ "created_at": "2026-06-16T16:11:54.269Z",
+ "updated_at": "2026-06-22T13:06:13.221Z",
+ "meeting_conducted": true,
+ "cfMeetingConductedOn": "2026-06-18T05:58:40.632Z",
+ "noOfLicenses": 100,
+ "cfCity": "Gurgaon",
+ "cfReDeveloperOrChannelPartner": "Developer",
+ "estimatedValue": null,
+ "actualValue": null,
+ "products": [
+  "Sell.Do Enterprise"
+ ],
+ "source": null,
+ "campaign": null,
+ "cfPreviousCrm": "Salesforce",
+ "cfRequiredTools": [
+  "CRM"
+ ],
+ "cfSales": null,
+ "cfFirstSalesOwner": "Tejas Mehta",
+ "cfOwnerPhoneNumber": "+919552523663",
+ "notes_count": 8,
+ "notes_text": "By 9062: Type-CRM;City-Gurgaon;Company-M3M India;Developer;Team Size-100;Current CRM-Yes(Salesforce);Meeting 17 Jun 4pm. Spoke with Pranav (Strategy team), enquired for pre-sales module, 100 users of which 30-40 sales, using Salesforce, not from sales team, wanted demo. ENRICH+AUDIT(4248) x2: FORWARD (green) - M3M India top-2 NCR luxury developer (60+ projects, RERA footprint), Pranav Anand VERIFIED as M3M Manager-Business Transformation (corporate email + LinkedIn + phone all match); 100-licence claim realistic/conservative.",
+ "license_tier": "40+",
+ "city_bucket": "Main6",
+ "city_clean": "Gurgaon",
+ "onsite_or_online": "Online",
+ "name_valid": true,
+ "bant": {
+  "budget": "Enterprise-scale (100 seats replacing Salesforce); price not yet discussed",
+  "authority": "Contact is M3M Manager-Business Transformation (verified) - strong champion, not final DM",
+  "need": "Strong; replacing Salesforce, wants pre-sales module for 100-user developer",
+  "timeline": "Early; demo done, still Incoming, evaluation ongoing",
+  "bant_score": 3,
+  "bant_flag": "Strong"
+ },
+ "enterprise_flag": true,
+ "pre_sales_verdict": "GREEN",
+ "stall_blocker": "Progressing",
+ "blocker_owner": "Sales",
+ "one_line": "Marquee enterprise: M3M India (top-2 NCR developer), verified transformation manager, 100 seats replacing Salesforce - excellent pre-sales; sales must drive this hard."
+}

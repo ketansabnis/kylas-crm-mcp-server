@@ -1,0 +1,19 @@
+{
+  "deal_id": 4306995,
+  "name": "Abhilasha",
+  "owner": "Alok Tiwari",
+  "creator_id": 54132,
+  "stage": "Lost",
+  "noOfLicenses": 5,
+  "city": "Jaipur",
+  "created_at": "2026-05-25",
+  "demo_date": "2026-05-25",
+  "lost_date": "2026-06-01",
+  "days_created_to_demo": 0,
+  "days_demo_to_lost": 7,
+  "days_total": 7,
+  "sales_attempts": 5,
+  "loss_reason": "Timeline/Not-now",
+  "one_line": "Demoed (boss joined, asked for 15-20 days); sales chased ~5x (mostly WhatsApp drops) then client said not looking for CRM now.",
+  "notes_count": 10
+}

@@ -1,0 +1,21 @@
+{
+  "deal_id": 4473011,
+  "name": "Aksha Lakkad Patel",
+  "owner": "Ananya Kumari",
+  "stage": "Demo Conducted",
+  "licences": 3,
+  "tier": "<5",
+  "city": "Ahmedabad",
+  "dev_broker": "Channel partner",
+  "onsite": "Online",
+  "bant_flag": "Partial",
+  "verdict": "AMBER",
+  "prob": 0.008,
+  "band": "COLD",
+  "name_valid": true,
+  "dummy_phone": false,
+  "unverified_contact": true,
+  "sales_followup_since_demo": 1,
+  "next_action": "Ananya: diarise 16 Jul (post-Palki) callback, confirm who the real contact is (phone resolves to 'Dharmraj') and whether WhatsApp inventory-send is in scope.",
+  "one_line": "Ahmedabad CP TCR Citywest; 4+1 seats quoted 48K+10K, but phone resolves to a different person. Callback 16 Jul."
+}

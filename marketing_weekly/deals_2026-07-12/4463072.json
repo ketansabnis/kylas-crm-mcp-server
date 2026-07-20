@@ -1,0 +1,21 @@
+{
+  "deal_id": 4463072,
+  "name": "Piyush Shrivastav",
+  "owner": "Niket Rathod",
+  "stage": "Closed Unqualified",
+  "licences": 5,
+  "tier": "5-10",
+  "city": "Nagpur",
+  "dev_broker": "Channel partner",
+  "onsite": "Online",
+  "bant_flag": "Weak",
+  "verdict": "RED",
+  "prob": 0.007,
+  "band": "COLD",
+  "name_valid": true,
+  "dummy_phone": true,
+  "unverified_contact": false,
+  "sales_followup_since_demo": 1,
+  "next_action": "Closed Unqualified - no action; fix the dummy owner phone (+919999999999) on the record and flag the 5-vs-2 seat overstatement to pre-sales.",
+  "one_line": "Nagpur rental broker DV Property; claimed 5 seats, actually 2, dummy owner phone, now Not Interested."
+}

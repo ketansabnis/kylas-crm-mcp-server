@@ -1,0 +1,51 @@
+{
+ "deal_id": 4412226,
+ "deal_name": "Sahab Khan",
+ "creator": "Revati Ambike",
+ "creator_id": 9062,
+ "owner": "Suraj Chauhan",
+ "pipeline": "Sell.Do Deal Pipeline",
+ "stage": "Demo Conducted",
+ "pipeline_stage_reason": null,
+ "created_at": "2026-06-22T10:20:43.117Z",
+ "updated_at": "2026-06-23T11:24:41.611Z",
+ "meeting_conducted": true,
+ "cfMeetingConductedOn": "2026-06-23T11:24:39.334Z",
+ "noOfLicenses": 1,
+ "cfCity": "Faridabad",
+ "cfReDeveloperOrChannelPartner": "Developer",
+ "estimatedValue": null,
+ "actualValue": null,
+ "products": [
+  "Sell.Do Enterprise"
+ ],
+ "source": null,
+ "campaign": null,
+ "cfPreviousCrm": "Never used a CRM",
+ "cfRequiredTools": [
+  "CRM"
+ ],
+ "cfSales": null,
+ "cfFirstSalesOwner": "Suraj Chauhan",
+ "cfOwnerPhoneNumber": "+919643843177",
+ "notes_count": 8,
+ "notes_text": "By 9062: client deals land developments/colonizers, has 10 users, explained workflow. Type-CRM;City-Faridabad;Company-Fauji Infrastructure;Developer;Team Size-10;Current CRM-No(excel);Meeting 22 Jun 7:30pm online. ENRICH+AUDIT(4248): FORWARD WITH FLAGS - genuine Faridabad developer/plot firm (Fauji Infrastructure), owner VERIFIED, real CRM need; MAIN FLAG licences UNDER-scoped (1 seat vs 10-user team, value should be ~17000 not 1700), re-size seats. By 80575: reschedules; client needs 2 days, busy on projects; 1500/user/mo, 10k setup, 7 sales + 3 accounts users; call back mon/tue.",
+ "license_tier": "1-4",
+ "city_bucket": "Main6",
+ "city_clean": "Faridabad",
+ "onsite_or_online": "Online",
+ "name_valid": true,
+ "bant": {
+  "budget": "Quoted 1500/user/mo + 10k setup for ~10 users; not objected",
+  "authority": "Owner of Fauji Infrastructure - DM (verified)",
+  "need": "Strong; genuine developer, no CRM, on excel, 10-user workflow",
+  "timeline": "Soft; busy on projects, keeps pushing callback",
+  "bant_score": 3,
+  "bant_flag": "Strong"
+ },
+ "enterprise_flag": false,
+ "pre_sales_verdict": "GREEN",
+ "stall_blocker": "Progressing",
+ "blocker_owner": "Sales",
+ "one_line": "Genuine Faridabad developer, 10 real users, verified owner and real need - qualified demo; only defect is pre-sales under-scoped seats (1 vs 10)."
+}

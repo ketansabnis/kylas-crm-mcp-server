@@ -1,0 +1,52 @@
+{
+ "deal_id": 4357574,
+ "deal_name": "Prashik Gaikwad",
+ "creator": "Revati Ambike",
+ "creator_id": 9062,
+ "owner": "Ananya Kumari",
+ "owner_id": 81335,
+ "pipeline": "Sell.Do Deal Pipeline",
+ "stage": "Demo Conducted",
+ "pipeline_stage_reason": null,
+ "created_at": "2026-06-08T05:06:45.066Z",
+ "updated_at": "2026-06-18T07:56:59.982Z",
+ "meeting_conducted": true,
+ "cfMeetingConductedOn": "2026-06-09T15:59:49.289Z",
+ "noOfLicenses": 2,
+ "cfCity": "Pune",
+ "cfReDeveloperOrChannelPartner": "Channel partner",
+ "estimatedValue": null,
+ "actualValue": null,
+ "products": [
+  "Sell.Do Broker"
+ ],
+ "source": null,
+ "campaign": null,
+ "cfPreviousCrm": "Never used a CRM",
+ "cfRequiredTools": [
+  "CRM"
+ ],
+ "cfSales": null,
+ "cfFirstSalesOwner": "Ananya Kumari",
+ "cfOwnerPhoneNumber": "+918789152329",
+ "notes_count": 14,
+ "notes_text": "[9062 2026-06-08] Type of Deal - CRM / City-Pune Company Name -Brick Castle Realty Developer/Channel Partner firm -Broker (resale, under-construction) Total Team Size-2 Current CRM -No (Using excel sheet) Tentative meeting 8th June 4 pm (Online) | [9062 2026-06-08] tried calling twice, not responding | [81335 2026-06-09] low-intent client, asked to share 1 admin + 1 sales login for quotation, 700/user quoted, team size 2 | [81335 2026-06-xx repeated] out of station / not answering / need 2 days | [81335 2026-06-25] will take demo of Leadrat then decide | [81335 2026-07-01] discussion done, wants time to decide",
+ "license_tier": "1-4",
+ "city_bucket": "Main6",
+ "city_clean": "Pune",
+ "onsite_or_online": "Online",
+ "name_valid": true,
+ "bant": {
+  "budget": "700/user quoted; no commitment",
+  "authority": "broker, likely DM but low intent",
+  "need": "small 2-user resale broker, no current CRM - marginal need",
+  "timeline": "none - repeatedly deferring, evaluating Leadrat, no decision",
+  "bant_score": 1,
+  "bant_flag": "Weak"
+ },
+ "enterprise_flag": false,
+ "pre_sales_verdict": "AMBER",
+ "stall_blocker": "BANT-weak",
+ "blocker_owner": "Customer",
+ "one_line": "Sales rep flagged low-intent 2-user Pune broker at demo; endless deferrals and now evaluating Leadrat - thin size and weak intent, borderline ICP."
+}

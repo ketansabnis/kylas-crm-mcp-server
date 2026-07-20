@@ -1,0 +1,52 @@
+{
+ "deal_id": 4339317,
+ "deal_name": "Pinki Rowlo",
+ "creator": "Revati Ambike",
+ "creator_id": 9062,
+ "owner": "Alok Tiwari",
+ "owner_id": 50513,
+ "pipeline": "Sell.Do Deal Pipeline",
+ "stage": "Won/ Booked",
+ "pipeline_stage_reason": null,
+ "created_at": "2026-06-02T07:25:40.505Z",
+ "updated_at": "2026-07-06T09:29:41.439Z",
+ "meeting_conducted": true,
+ "cfMeetingConductedOn": "2026-06-02T13:54:58.088Z",
+ "noOfLicenses": 20,
+ "cfCity": "Thane",
+ "cfReDeveloperOrChannelPartner": "Channel partner",
+ "estimatedValue": null,
+ "actualValue": 219000,
+ "products": [
+  "Sell.Do Enterprise"
+ ],
+ "source": null,
+ "campaign": null,
+ "cfPreviousCrm": "Never used a CRM",
+ "cfRequiredTools": [
+  "CRM"
+ ],
+ "cfSales": null,
+ "cfFirstSalesOwner": "Alok Tiwari",
+ "cfOwnerPhoneNumber": "+917391046055",
+ "notes_count": 25,
+ "notes_text": "[9062 2026-06-02] Type of Deal - CRM / City-Thane Company Name -Swarajya Realtors Developer/Channel Partner firm -Broker Total Team Size-20 (12 pre sales + 8 sales) Current CRM -No Tentative meeting 2/3rd June (In person meeting) | [9062] office address Pokhran Rd Thane West | [9062 Mar-Jun] long history of not responding / call cannot be connected | [9062] client dealing residential, 12 presales + 8 sales, will discuss with manager | [50513 2026-06-02] Meeting confirm 4pm, old client | [50513 2026-06-02] Demo done with team and owner, 3 branches, want automatic lead distribution, 25 users, need 2 days | [50513 2026-06-05] given best rate, will finalize | [50513 2026-06-05] payment 10000 successful | [50513 2026-06-23] 34 users total 2.19L + GST; payment 248420 successful",
+ "license_tier": "40+",
+ "city_bucket": "Main6",
+ "city_clean": "Thane",
+ "onsite_or_online": "Onsite",
+ "name_valid": true,
+ "bant": {
+  "budget": "strong - negotiated best rate, Won at 2.19L (34 users)",
+  "authority": "demo with team and owner, owner finalized - full DM access",
+  "need": "20-34 user broker (Swarajya Realtors), 3 branches, wants auto lead distribution - real need",
+  "timeline": "fast - closed within ~3 weeks of demo",
+  "bant_score": 4,
+  "bant_flag": "Strong"
+ },
+ "enterprise_flag": true,
+ "pre_sales_verdict": "GREEN",
+ "stall_blocker": "Won",
+ "blocker_owner": "NA-Won",
+ "one_line": "Large 20-34 user Thane brokerage (Swarajya, 3 branches), owner-level demo, Won at 2.19L - enterprise-grade qualified deal; excellent pre-sales."
+}

@@ -1,0 +1,19 @@
+{
+  "deal_id": 4248816,
+  "name": "Divya Bhati",
+  "owner": "Arzoo Choudhary",
+  "creator_id": 73470,
+  "stage": "Lost",
+  "noOfLicenses": 10,
+  "city": "Gurgaon",
+  "created_at": "2026-05-11T13:07:12.467Z",
+  "demo_date": "2026-05-11T14:35:22.828Z",
+  "lost_date": "2026-06-23T06:42:08.502Z",
+  "days_created_to_demo": 0,
+  "days_demo_to_lost": 42,
+  "days_total": 42,
+  "sales_attempts": 11,
+  "loss_reason": "Competitor/Existing-CRM",
+  "one_line": "Lost to incumbent; owner stayed on old CRM. Sales chased ~11 calls/WA over 6 weeks (contact left job, re-chased owner) before final no.",
+  "notes_count": 15
+}

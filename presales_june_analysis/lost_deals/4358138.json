@@ -1,0 +1,19 @@
+{
+  "deal_id": 4358138,
+  "name": "Pravin Donavane",
+  "owner": "Anuj Pathak",
+  "creator_id": 82379,
+  "stage": "Unqualified",
+  "noOfLicenses": 5,
+  "city": "Ahmedabad",
+  "created_at": "2026-06-08",
+  "demo_date": "2026-06-09",
+  "lost_date": "2026-06-10",
+  "days_created_to_demo": 1,
+  "days_demo_to_lost": 1,
+  "days_total": 2,
+  "sales_attempts": 2,
+  "loss_reason": "Timeline/Not-now",
+  "one_line": "Demoed; owner tried 2x (no pick) then client said no requirement now, call after 3 months. Small team (~5).",
+  "notes_count": 12
+}

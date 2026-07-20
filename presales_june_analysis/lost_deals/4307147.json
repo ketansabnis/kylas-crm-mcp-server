@@ -1,0 +1,19 @@
+{
+  "deal_id": 4307147,
+  "name": "Santosh Bhanja",
+  "owner": "Ankur Singhal",
+  "creator_id": 9062,
+  "stage": "Unqualified",
+  "noOfLicenses": 20,
+  "city": "Kolkata",
+  "created_at": "2026-05-25",
+  "demo_date": "2026-05-25",
+  "lost_date": "2026-06-24",
+  "days_created_to_demo": 0,
+  "days_demo_to_lost": 30,
+  "days_total": 30,
+  "sales_attempts": 1,
+  "loss_reason": "Budget",
+  "one_line": "Demo: AI-calling at 8rs/min too expensive, no CRM budget, wants only Excel. Owner rang once weeks later; not interested.",
+  "notes_count": 6
+}

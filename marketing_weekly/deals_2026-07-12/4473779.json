@@ -1,0 +1,21 @@
+{
+  "deal_id": 4473779,
+  "name": "Phani",
+  "owner": "Jaganmohan Vankina",
+  "stage": "Quote Sent",
+  "licences": 10,
+  "tier": "10+",
+  "city": "Hyderabad",
+  "dev_broker": "Channel partner",
+  "onsite": "Online",
+  "bant_flag": "Weak",
+  "verdict": "RED",
+  "prob": 0.032,
+  "band": "COLD",
+  "name_valid": false,
+  "dummy_phone": false,
+  "unverified_contact": true,
+  "sales_followup_since_demo": 1,
+  "next_action": "Not a CRM buyer - close as unqualified, or convert to a referral/reseller conversation for their client projects. Do not quote 10 seats.",
+  "one_line": "Hyderabad 'i infra' is a digital agency, not real estate; RED audit, name MISMATCH, use case does not fit."
+}

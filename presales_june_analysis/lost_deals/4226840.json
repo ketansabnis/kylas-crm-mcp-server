@@ -1,0 +1,19 @@
+{
+  "deal_id": 4226840,
+  "name": "Dr.Sameer Kunkolienkar",
+  "owner": "Alok Tiwari",
+  "creator_id": 54132,
+  "stage": "Lost",
+  "noOfLicenses": 5,
+  "city": "Goa",
+  "created_at": "2026-05-05",
+  "demo_date": "2026-05-05",
+  "lost_date": "2026-05-22",
+  "days_created_to_demo": 0,
+  "days_demo_to_lost": 17,
+  "days_total": 17,
+  "sales_attempts": 6,
+  "loss_reason": "Competitor/Existing-CRM",
+  "one_line": "Demo done; found pricing high, sales chased ~6x (calls + WA offer drops) but client finalized B2BBricks at 35k w/ website.",
+  "notes_count": 10
+}

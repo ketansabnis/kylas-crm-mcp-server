@@ -1,0 +1,52 @@
+{
+ "deal_id": 4394160,
+ "deal_name": "Vivek Tungar",
+ "creator": "Revati Ambike",
+ "creator_id": 9062,
+ "owner": "Alok Tiwari",
+ "pipeline": "Sell.Do Deal Pipeline",
+ "stage": "Quote Sent",
+ "pipeline_stage_reason": null,
+ "created_at": "2026-06-17T04:09:58.249Z",
+ "updated_at": "2026-06-18T07:07:43.479Z",
+ "meeting_conducted": true,
+ "cfMeetingConductedOn": "2026-06-17T12:08:11.203Z",
+ "noOfLicenses": 10,
+ "cfCity": "Mumbai",
+ "cfReDeveloperOrChannelPartner": "Channel partner",
+ "estimatedValue": null,
+ "actualValue": null,
+ "products": [
+  "Sell.Do Enterprise"
+ ],
+ "source": null,
+ "campaign": null,
+ "cfPreviousCrm": "Never used a CRM",
+ "cfRequiredTools": [
+  "CRM",
+  "Native WA"
+ ],
+ "cfSales": null,
+ "cfFirstSalesOwner": "Alok Tiwari",
+ "cfOwnerPhoneNumber": "+917391046055",
+ "notes_count": 11,
+ "notes_text": "By 9062: Type-CRM;City-Mumbai;Company-Klarheit;Broker (buy/sell/rent);Team Size-20;Current CRM-No(excel);Meeting 17 Jun 4pm. They do property valuation and started a RE venture. By 50513: Demo completed with Mr Vivek; new startup working like property portals, 3 active client projects, also retail; asked for both pricing options; 10 users; price shared. Repeated delays: at Kolhapur, call after month-end, WA drop, busy, no time will call soon.",
+ "license_tier": "10-39",
+ "city_bucket": "Main6",
+ "city_clean": "Mumbai",
+ "onsite_or_online": "Online",
+ "name_valid": true,
+ "bant": {
+  "budget": "Both pricing options shared; high-value quote; no objection yet",
+  "authority": "Mr Vivek took demo - likely founder/DM",
+  "need": "Strong; 20-team valuation+RE venture, 3 projects, no CRM, wants CRM+WA",
+  "timeline": "Weak; repeated postponements over weeks",
+  "bant_score": 3,
+  "bant_flag": "Strong"
+ },
+ "enterprise_flag": false,
+ "pre_sales_verdict": "GREEN",
+ "stall_blocker": "Non-responsive",
+ "blocker_owner": "Customer",
+ "one_line": "Real 20-team Mumbai valuation/RE startup (Klarheit), 10 seats, priced with WA - solid pre-sales; buyer keeps postponing, chronic slippage on the sales side."
+}

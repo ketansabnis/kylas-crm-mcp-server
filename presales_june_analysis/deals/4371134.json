@@ -1,0 +1,51 @@
+{
+ "deal_id": 4371134,
+ "deal_name": "Varun Gupta",
+ "creator": "Revati Ambike",
+ "creator_id": 9062,
+ "owner": "Suraj Chauhan",
+ "pipeline": "Sell.Do Deal Pipeline",
+ "stage": "Closed Unqualified",
+ "pipeline_stage_reason": null,
+ "created_at": "2026-06-11T06:31:53.094Z",
+ "updated_at": "2026-07-06T07:14:06.506Z",
+ "meeting_conducted": true,
+ "cfMeetingConductedOn": "2026-06-11T10:05:13.496Z",
+ "noOfLicenses": 5,
+ "cfCity": "Gurgaon",
+ "cfReDeveloperOrChannelPartner": "Channel partner",
+ "estimatedValue": null,
+ "actualValue": null,
+ "products": [
+  "Sell.Do Enterprise"
+ ],
+ "source": null,
+ "campaign": null,
+ "cfPreviousCrm": "Never used a CRM",
+ "cfRequiredTools": [
+  "CRM"
+ ],
+ "cfSales": null,
+ "cfFirstSalesOwner": "Suraj Chauhan",
+ "cfOwnerPhoneNumber": true,
+ "notes_count": 14,
+ "notes_text": "9062: Urban Propshop, Gurgaon, Broker, team 5, no CRM, demo 11 Jun 1pm online, price ~800/user; several disconnects. | 80575: demo done, wants to discuss with partner; needs one month for finalisation; then repeated ringing/not answering.",
+ "license_tier": "5-9",
+ "city_bucket": "Main6",
+ "city_clean": "Gurgaon",
+ "onsite_or_online": "Online",
+ "name_valid": true,
+ "bant": {
+  "budget": "Price ~800/user discussed",
+  "authority": "Owner deciding with partner",
+  "need": "5-user broker on no CRM - real but modest",
+  "timeline": "Needs ~1 month to finalize, then went dark",
+  "bant_score": 2,
+  "bant_flag": "Partial"
+ },
+ "enterprise_flag": false,
+ "pre_sales_verdict": "AMBER",
+ "stall_blocker": "Non-responsive",
+ "blocker_owner": "Customer",
+ "one_line": "Gurgaon broker (Urban Propshop), 5 seats, needed a partner sign-off - fair demo; went unresponsive, closed unqualified."
+}

@@ -1,0 +1,19 @@
+{
+  "deal_id": 4044759,
+  "name": "Priyanka",
+  "owner": "Sakshi Kadu",
+  "creator_id": 54132,
+  "stage": "Lost",
+  "noOfLicenses": 10,
+  "city": "Nagpur",
+  "created_at": "2026-04-06",
+  "demo_date": "2026-04-08",
+  "lost_date": "2026-05-18",
+  "days_created_to_demo": 2,
+  "days_demo_to_lost": 40,
+  "days_total": 42,
+  "sales_attempts": 2,
+  "loss_reason": "Budget",
+  "one_line": "CP busy with Nagpur project launch; owner followed up twice, lost over fund issues delaying payment.",
+  "notes_count": 4
+}

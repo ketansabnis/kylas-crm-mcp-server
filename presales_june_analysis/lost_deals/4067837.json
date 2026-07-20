@@ -1,0 +1,19 @@
+{
+  "deal_id": 4067837,
+  "name": "Sudhakar",
+  "owner": "Arzoo Choudhary",
+  "creator_id": 54132,
+  "stage": "Lost",
+  "noOfLicenses": 10,
+  "city": "Lucknow",
+  "created_at": "2026-04-09",
+  "demo_date": "2026-04-13",
+  "lost_date": "2026-05-05",
+  "days_created_to_demo": 4,
+  "days_demo_to_lost": 22,
+  "days_total": 26,
+  "sales_attempts": 3,
+  "loss_reason": "Timeline/Not-now",
+  "one_line": "CP tested the panel but team busy with site visits/internal processes; deferred indefinitely after 3 owner follow-ups.",
+  "notes_count": 6
+}

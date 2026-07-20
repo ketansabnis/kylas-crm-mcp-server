@@ -1,0 +1,51 @@
+{
+ "deal_id": 4399283,
+ "deal_name": "Sakshi Jain",
+ "creator": "Revati Ambike",
+ "creator_id": 9062,
+ "owner": "Ankur Singhal",
+ "pipeline": "Sell.Do Deal Pipeline",
+ "stage": "Closed Unqualified",
+ "pipeline_stage_reason": null,
+ "created_at": "2026-06-18T08:26:21.498Z",
+ "updated_at": "2026-06-22T06:01:28.269Z",
+ "meeting_conducted": true,
+ "cfMeetingConductedOn": "2026-06-18T10:42:01.939Z",
+ "noOfLicenses": 6,
+ "cfCity": "Mumbai",
+ "cfReDeveloperOrChannelPartner": "Developer",
+ "estimatedValue": null,
+ "actualValue": null,
+ "products": [
+  "Sell.Do Enterprise"
+ ],
+ "source": null,
+ "campaign": null,
+ "cfPreviousCrm": "Never used a CRM",
+ "cfRequiredTools": [
+  "CRM"
+ ],
+ "cfSales": null,
+ "cfFirstSalesOwner": "Ankur Singhal",
+ "cfOwnerPhoneNumber": "+918879685293",
+ "notes_count": 2,
+ "notes_text": "By 9062: Type-CRM;City-Mumbai;Company-Selfmade Realty;Developer (mandate firm doing marketing, residential projects, based in Shahpur);Team Size-6;Current CRM-No(excel);Meeting 18 Jun;Challenges-No;Price-No. By 58133: looking for monthly option only.",
+ "license_tier": "5-9",
+ "city_bucket": "Main6",
+ "city_clean": "Mumbai (Shahpur)",
+ "onsite_or_online": "Online",
+ "name_valid": true,
+ "bant": {
+  "budget": "Weak; wants monthly-only billing, no annual commitment",
+  "authority": "no signal on DM role",
+  "need": "Moderate; mandate/marketing firm, no CRM, but no stated pain",
+  "timeline": "no signal",
+  "bant_score": 1,
+  "bant_flag": "Weak"
+ },
+ "enterprise_flag": false,
+ "pre_sales_verdict": "AMBER",
+ "stall_blocker": "Budget",
+ "blocker_owner": "Product/Pricing",
+ "one_line": "On-ICP 6-seat Mumbai mandate firm but paper-thin qualification (2 notes, no pain/DM captured); died on a monthly-only billing preference."
+}

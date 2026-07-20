@@ -1,0 +1,21 @@
+{
+  "deal_id": 4477736,
+  "name": "Nikhil Pandey",
+  "owner": "Ankur Singhal",
+  "stage": "Demo Conducted",
+  "licences": 10,
+  "tier": "10+",
+  "city": "Mumbai",
+  "dev_broker": "Developer",
+  "onsite": "Online",
+  "bant_flag": "Partial",
+  "verdict": "AMBER",
+  "prob": 0.0293,
+  "band": "COLD",
+  "name_valid": true,
+  "dummy_phone": false,
+  "unverified_contact": false,
+  "sales_followup_since_demo": 2,
+  "next_action": "Escalate above Nikhil (marketing) to a Transcon director now - do not accept the 'connect in August' brush-off.",
+  "one_line": "Transcon Developers Mumbai, 10 seats, strong ICP - but contact is marketing-level and has pushed us to August."
+}

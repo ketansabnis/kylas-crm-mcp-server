@@ -1,0 +1,19 @@
+{
+  "deal_id": 4044081,
+  "name": "Amit",
+  "owner": "Pranith A B",
+  "creator_id": 54132,
+  "stage": "Lost",
+  "noOfLicenses": 5,
+  "city": "Punjab",
+  "created_at": "2026-04-06",
+  "demo_date": "2026-04-06",
+  "lost_date": "2026-06-11",
+  "days_created_to_demo": 0,
+  "days_demo_to_lost": 66,
+  "days_total": 66,
+  "sales_attempts": 1,
+  "loss_reason": "Budget",
+  "one_line": "CP on Excel with very high expectations for very low budget; owner logged little follow-up, lost on no budget.",
+  "notes_count": 8
+}

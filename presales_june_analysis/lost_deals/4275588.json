@@ -1,0 +1,19 @@
+{
+  "deal_id": 4275588,
+  "name": "Shivam Goswami",
+  "owner": "Ankur Singhal",
+  "creator_id": 9062,
+  "stage": "Unqualified",
+  "noOfLicenses": 5,
+  "city": "Ahmedabad",
+  "created_at": "2026-05-18T05:58:54.799Z",
+  "demo_date": "2026-05-18T11:12:15.855Z",
+  "lost_date": "2026-05-27T05:20:55.537Z",
+  "days_created_to_demo": 0,
+  "days_demo_to_lost": 9,
+  "days_total": 9,
+  "sales_attempts": 1,
+  "loss_reason": "Competitor/Existing-CRM",
+  "one_line": "Lost to competitor; sales sent a quote but client bought NeoDove, wanting a ~200/user CRM. One follow-up over ~9 days.",
+  "notes_count": 8
+}

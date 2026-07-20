@@ -1,0 +1,17 @@
+{
+  "deal_id": 4389693,
+  "deal_name": "Harshal Shah",
+  "owner": "Ankur Singhal",
+  "stage": "Won/ Booked",
+  "created_at": "2026-06-16T09:58:18.447Z",
+  "updated_at": "2026-07-02T11:02:59.616Z",
+  "products_total": null,
+  "cfBilledAmount": 109800,
+  "cfActualPaymentReceived": 109800,
+  "noOfLicenses": 6,
+  "cfCity": "Mumbai",
+  "cfReDeveloperOrChannelPartner": "Developer",
+  "cfMeetingConductedOn": "2026-06-17T04:35:33.000Z",
+  "cfPreviousCrm": "Never used a CRM",
+  "cfOwnerPhoneNumber": "+918879685293"
+}

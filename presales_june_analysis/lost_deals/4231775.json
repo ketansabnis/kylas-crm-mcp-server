@@ -1,0 +1,19 @@
+{
+  "deal_id": 4231775,
+  "name": "Rahul Yadav",
+  "owner": "Alok Tiwari",
+  "creator_id": 9062,
+  "stage": "Lost",
+  "noOfLicenses": 10,
+  "city": "Mumbai",
+  "created_at": "2026-05-06",
+  "demo_date": "2026-05-06",
+  "lost_date": "2026-05-14",
+  "days_created_to_demo": 0,
+  "days_demo_to_lost": 8,
+  "days_total": 8,
+  "sales_attempts": 4,
+  "loss_reason": "Budget",
+  "one_line": "On hold over IVR/price for hiding numbers; sales followed up ~4x incl WA drop before loss.",
+  "notes_count": 6
+}

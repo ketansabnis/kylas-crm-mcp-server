@@ -1,0 +1,19 @@
+{
+  "deal_id": 4281163,
+  "name": "Sonam Garg",
+  "owner": "Sakshi Kadu",
+  "creator_id": 9062,
+  "stage": "Lost",
+  "noOfLicenses": 10,
+  "city": "Noida",
+  "created_at": "2026-05-19T06:30:54.527Z",
+  "demo_date": "2026-05-19T07:09:52.064Z",
+  "lost_date": "2026-06-01T14:10:59.475Z",
+  "days_created_to_demo": 0,
+  "days_demo_to_lost": 13,
+  "days_total": 13,
+  "sales_attempts": 2,
+  "loss_reason": "Not-interested",
+  "one_line": "Rushed demo, client lukewarm; sales followed up ~2 times over ~2 days, client said 'not interested'.",
+  "notes_count": 9
+}

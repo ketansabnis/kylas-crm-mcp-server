@@ -1,0 +1,643 @@
+{
+ "N": 237,
+ "verdict": {
+  "GREEN": 93,
+  "AMBER": 97,
+  "RED": 47
+ },
+ "tier": {
+  "10-39": 52,
+  "5-9": 80,
+  "1-4": 101,
+  "40+": 4
+ },
+ "is_5plus_true": 138,
+ "is_5plus_false": 99,
+ "city_bucket": {
+  "Other": 77,
+  "Main6": 158,
+  "Unknown": 2
+ },
+ "onsite": {
+  "Online": 206,
+  "Onsite": 30,
+  "Unknown": 1
+ },
+ "dev_or_broker": {
+  "Developer": 102,
+  "Channel partner": 135
+ },
+ "stage": {
+  "Quote Sent": 65,
+  "Closed Lost": 36,
+  "Closed Unqualified": 43,
+  "Demo Conducted": 60,
+  "Won/ Booked": 21,
+  "Contacted": 1,
+  "Hot Opportunity": 9,
+  "Incoming": 2
+ },
+ "won": 21,
+ "lost": 79,
+ "open": 137,
+ "enterprise_flag_true": 19,
+ "name_invalid": 27,
+ "blocker": {
+  "Progressing": 28,
+  "Non-responsive": 43,
+  "Competitor/Existing-CRM": 25,
+  "Timeline/Not-now": 22,
+  "Won": 21,
+  "Sales-gap": 7,
+  "Quality/ICP": 52,
+  "BANT-weak": 20,
+  "Budget": 16,
+  "Pre-sales-gap": 2,
+  "Product/Pricing": 1
+ },
+ "blocker_owner": {
+  "Sales": 47,
+  "Customer": 100,
+  "Pre-sales": 53,
+  "NA-Won": 21,
+  "Product/Pricing": 16
+ },
+ "verdict_by_creator": {
+  "Ashwini Nirmal": {
+   "GREEN": 28,
+   "AMBER": 39,
+   "RED": 16
+  },
+  "Gayatri More": {
+   "RED": 2,
+   "AMBER": 1,
+   "GREEN": 1
+  },
+  "Revati Ambike": {
+   "GREEN": 64,
+   "AMBER": 57,
+   "RED": 29
+  }
+ },
+ "creator_counts": {
+  "Ashwini Nirmal": 107,
+  "Gayatri More": 4,
+  "Revati Ambike": 126
+ },
+ "verdict_by_tier": {
+  "10-39": {
+   "GREEN": 33,
+   "AMBER": 10,
+   "RED": 9
+  },
+  "5-9": {
+   "AMBER": 32,
+   "GREEN": 42,
+   "RED": 6
+  },
+  "1-4": {
+   "AMBER": 54,
+   "GREEN": 15,
+   "RED": 32
+  },
+  "40+": {
+   "GREEN": 3,
+   "AMBER": 1
+  }
+ },
+ "city_by_verdict": {
+  "Other": {
+   "GREEN": 25,
+   "AMBER": 35,
+   "RED": 17
+  },
+  "Main6": {
+   "AMBER": 62,
+   "GREEN": 68,
+   "RED": 28
+  },
+  "Unknown": {
+   "RED": 2
+  }
+ },
+ "won_by_city": {
+  "Main6": 17,
+  "Other": 4,
+  "Unknown": 0
+ },
+ "count_by_city": {
+  "Main6": 158,
+  "Other": 77,
+  "Unknown": 2
+ },
+ "won_by_tier": {
+  "1-4": 6,
+  "5-9": 9,
+  "10-39": 5,
+  "40+": 1,
+  "unknown": 0
+ },
+ "won_by_creator": {
+  "Ashwini Nirmal": 7,
+  "Gayatri More": 0,
+  "Revati Ambike": 14
+ },
+ "onsite_by_verdict": {
+  "Online": {
+   "GREEN": 76,
+   "AMBER": 88,
+   "RED": 42
+  },
+  "Onsite": {
+   "AMBER": 8,
+   "GREEN": 17,
+   "RED": 5
+  },
+  "Unknown": {
+   "AMBER": 1
+  }
+ },
+ "5plus_by_creator": {
+  "Ashwini Nirmal": 47,
+  "Gayatri More": 2,
+  "Revati Ambike": 89
+ },
+ "onsite_by_creator": {
+  "Ashwini Nirmal": 11,
+  "Gayatri More": 0,
+  "Revati Ambike": 19
+ },
+ "won_by_verdict": {
+  "GREEN": {
+   "False": 72,
+   "True": 21
+  },
+  "AMBER": {
+   "False": 97
+  },
+  "RED": {
+   "False": 47
+  }
+ },
+ "top_cities": {
+  "Mumbai": 32,
+  "Hyderabad": 19,
+  "Bangalore": 17,
+  "Ahmedabad": 17,
+  "Noida": 14,
+  "Pune": 12,
+  "Gurgaon": 11,
+  "Chennai": 10,
+  "Kolkata": 9,
+  "Gurugram": 7,
+  "Delhi": 7,
+  "Indore": 6,
+  "Lucknow": 4,
+  "Thane": 4,
+  "Faridabad": 3,
+  "Jaipur": 3,
+  "Kolhapur": 3,
+  "Surat": 3,
+  "Bengaluru": 2,
+  "Ghaziabad": 2
+ },
+ "main6_breakdown": {
+  "Bangalore": 19,
+  "Delhi/NCR": 51,
+  "Mumbai/Thane": 44,
+  "Pune": 12,
+  "Hyderabad": 19,
+  "Chennai": 10
+ },
+ "main6_won": {
+  "Bangalore": 2,
+  "Mumbai/Thane": 3,
+  "Delhi/NCR": 4,
+  "Chennai": 3,
+  "Hyderabad": 5
+ },
+ "forty_plus_deals": [
+  {
+   "id": 4393647,
+   "name": "Pranav Anand",
+   "lic": 100,
+   "city": "Gurgaon",
+   "verdict": "GREEN",
+   "stage": "Incoming",
+   "owner": "Ketan Sabnis (Internal)"
+  },
+  {
+   "id": 4403952,
+   "name": "Vrajesh Soni",
+   "lic": 50,
+   "city": "Vadodara",
+   "verdict": "GREEN",
+   "stage": "Demo Conducted",
+   "owner": "Sakshi Kadu"
+  },
+  {
+   "id": 4453857,
+   "name": "Neha Yadav",
+   "lic": 40,
+   "city": "Lucknow",
+   "verdict": "AMBER",
+   "stage": "Demo Conducted",
+   "owner": "Ankur Singhal"
+  }
+ ],
+ "enterprise_deals": [
+  {
+   "id": 4346666,
+   "name": "Mayuri verma",
+   "lic": 15,
+   "city": "Indore",
+   "verdict": "GREEN",
+   "stage": "Quote Sent"
+  },
+  {
+   "id": 4404700,
+   "name": "varsha jatav",
+   "lic": 10,
+   "city": "Mumbai",
+   "verdict": "AMBER",
+   "stage": "Closed Unqualified"
+  },
+  {
+   "id": 4417419,
+   "name": "Neha",
+   "lic": 10,
+   "city": "Mumbai",
+   "verdict": "GREEN",
+   "stage": "Closed Unqualified"
+  },
+  {
+   "id": 4410343,
+   "name": "Farid shaikh",
+   "lic": 10,
+   "city": "Mumbai",
+   "verdict": "GREEN",
+   "stage": "Quote Sent"
+  },
+  {
+   "id": 4436890,
+   "name": "Ronit gupta",
+   "lic": 10,
+   "city": "Siliguri",
+   "verdict": "GREEN",
+   "stage": "Quote Sent"
+  },
+  {
+   "id": 4410607,
+   "name": "Ram Vishwakarma",
+   "lic": 6,
+   "city": "Pune",
+   "verdict": "GREEN",
+   "stage": "Quote Sent"
+  },
+  {
+   "id": 4448891,
+   "name": "Harshvardhan",
+   "lic": 5,
+   "city": "Hyderabad",
+   "verdict": "AMBER",
+   "stage": "Quote Sent"
+  },
+  {
+   "id": 4393647,
+   "name": "Pranav Anand",
+   "lic": 100,
+   "city": "Gurgaon",
+   "verdict": "GREEN",
+   "stage": "Incoming"
+  },
+  {
+   "id": 4403952,
+   "name": "Vrajesh Soni",
+   "lic": 50,
+   "city": "Vadodara",
+   "verdict": "GREEN",
+   "stage": "Demo Conducted"
+  },
+  {
+   "id": 4453857,
+   "name": "Neha Yadav",
+   "lic": 40,
+   "city": "Lucknow",
+   "verdict": "AMBER",
+   "stage": "Demo Conducted"
+  },
+  {
+   "id": 4383549,
+   "name": "Wahaeeda Samreen Shaikh",
+   "lic": 30,
+   "city": "Hyderabad",
+   "verdict": "GREEN",
+   "stage": "Closed Lost"
+  },
+  {
+   "id": 4372397,
+   "name": "Amina Fridous",
+   "lic": 25,
+   "city": "Kolkata",
+   "verdict": "GREEN",
+   "stage": "Won/ Booked"
+  },
+  {
+   "id": 4339317,
+   "name": "Pinki Rowlo",
+   "lic": 20,
+   "city": "Thane",
+   "verdict": "GREEN",
+   "stage": "Won/ Booked"
+  },
+  {
+   "id": 4384304,
+   "name": "Sarika Singh",
+   "lic": 10,
+   "city": "Gurugram",
+   "verdict": "GREEN",
+   "stage": "Hot Opportunity"
+  },
+  {
+   "id": 4399859,
+   "name": "Nikita Sanghvi",
+   "lic": 10,
+   "city": "Mumbai (Borivali)",
+   "verdict": "GREEN",
+   "stage": "Closed Unqualified"
+  },
+  {
+   "id": 4434816,
+   "name": "Sapna",
+   "lic": 8,
+   "city": "Gurgaon",
+   "verdict": "AMBER",
+   "stage": "Quote Sent"
+  },
+  {
+   "id": 4335423,
+   "name": "Prathyusha Adhikma",
+   "lic": 5,
+   "city": "Hyderabad",
+   "verdict": "GREEN",
+   "stage": "Won/ Booked"
+  },
+  {
+   "id": 4435001,
+   "name": "Moyukh Basu",
+   "lic": 3,
+   "city": "Mumbai",
+   "verdict": "GREEN",
+   "stage": "Demo Conducted"
+  },
+  {
+   "id": 4358528,
+   "name": "Jay",
+   "lic": 3,
+   "city": "Lucknow",
+   "verdict": "GREEN",
+   "stage": "Won/ Booked"
+  }
+ ],
+ "won_deals": [
+  {
+   "id": 4348185,
+   "name": "CloVents Pvt Ltd",
+   "lic": 10,
+   "city": "Bangalore",
+   "val": 81600,
+   "creator": "Ashwini Nirmal",
+   "owner": "Panchasheel Tare"
+  },
+  {
+   "id": 4360747,
+   "name": "Sapna",
+   "lic": 10,
+   "city": "Mumbai",
+   "val": 200000,
+   "creator": "Ashwini Nirmal",
+   "owner": "Alok Tiwari (50513)"
+  },
+  {
+   "id": 4376499,
+   "name": "Fuzail",
+   "lic": 7,
+   "city": "Bengaluru",
+   "val": 56200,
+   "creator": "Ashwini Nirmal",
+   "owner": "Jawed Alam (ID: 50512)"
+  },
+  {
+   "id": 4371723,
+   "name": "Neelesh Pandey",
+   "lic": 5,
+   "city": "Gurugram",
+   "val": 46000,
+   "creator": "Ashwini Nirmal",
+   "owner": "Suraj Chauhan (ID: 80575)"
+  },
+  {
+   "id": 4366360,
+   "name": "pravesh rathi",
+   "lic": 5,
+   "city": "Gurugram",
+   "val": 69000,
+   "creator": "Ashwini Nirmal",
+   "owner": "Suraj Chauhan"
+  },
+  {
+   "id": 4362176,
+   "name": "Dhivya Daniell",
+   "lic": 3,
+   "city": "Chennai",
+   "val": 68800,
+   "creator": "Ashwini Nirmal",
+   "owner": "Santhana K (17923)"
+  },
+  {
+   "id": 4335185,
+   "name": "ganesh",
+   "lic": 3,
+   "city": "Hyderabad",
+   "val": 100400,
+   "creator": "Ashwini Nirmal",
+   "owner": "Jaganmohan Vankina"
+  },
+  {
+   "id": 4372397,
+   "name": "Amina Fridous",
+   "lic": 25,
+   "city": "Kolkata",
+   "val": 444000,
+   "creator": "Revati Ambike",
+   "owner": "Pranith A B"
+  },
+  {
+   "id": 4339317,
+   "name": "Pinki Rowlo",
+   "lic": 20,
+   "city": "Thane",
+   "val": 219000,
+   "creator": "Revati Ambike",
+   "owner": "Alok Tiwari"
+  },
+  {
+   "id": 4336630,
+   "name": "Aryan Sankriti",
+   "lic": 10,
+   "city": "Gurgaon",
+   "val": 141000,
+   "creator": "Revati Ambike",
+   "owner": "Disha Kadam"
+  },
+  {
+   "id": 4360767,
+   "name": "Hari Haran",
+   "lic": 10,
+   "city": "Chennai",
+   "val": 106200,
+   "creator": "Revati Ambike",
+   "owner": "Santhana K"
+  },
+  {
+   "id": 4334770,
+   "name": "Snehith Yarabarla",
+   "lic": 9,
+   "city": "Hyderabad",
+   "val": 125000,
+   "creator": "Revati Ambike",
+   "owner": "Jaganmohan Vankina"
+  },
+  {
+   "id": 4389693,
+   "name": "Harshal Shah",
+   "lic": 6,
+   "city": "Mumbai",
+   "val": 109800,
+   "creator": "Revati Ambike",
+   "owner": "Ankur Singhal"
+  },
+  {
+   "id": 4372968,
+   "name": "Khayum",
+   "lic": 5,
+   "city": "Hyderabad",
+   "val": 102000,
+   "creator": "Revati Ambike",
+   "owner": "Jaganmohan Vankina"
+  },
+  {
+   "id": 4360677,
+   "name": "Manoj Kumar",
+   "lic": 5,
+   "city": "Chennai",
+   "val": 155600,
+   "creator": "Revati Ambike",
+   "owner": "Santhana K"
+  },
+  {
+   "id": 4375928,
+   "name": "Ishan",
+   "lic": 5,
+   "city": "Ahmedabad",
+   "val": 43200,
+   "creator": "Revati Ambike",
+   "owner": "Anuj Pathak"
+  },
+  {
+   "id": 4335423,
+   "name": "Prathyusha Adhikma",
+   "lic": 5,
+   "city": "Hyderabad",
+   "val": 106000,
+   "creator": "Revati Ambike",
+   "owner": "Jaganmohan Vankina"
+  },
+  {
+   "id": 4359253,
+   "name": "Shivakumar Mende",
+   "lic": 3,
+   "city": "Hyderabad",
+   "val": 58000,
+   "creator": "Revati Ambike",
+   "owner": "Jawed Alam"
+  },
+  {
+   "id": 4385582,
+   "name": "Saurav Aggarwal",
+   "lic": 3,
+   "city": "Agra",
+   "val": 146200,
+   "creator": "Revati Ambike",
+   "owner": "Disha Kadam"
+  },
+  {
+   "id": 4358528,
+   "name": "Jay",
+   "lic": 3,
+   "city": "Lucknow",
+   "val": 121000,
+   "creator": "Revati Ambike",
+   "owner": "Ankur Singhal"
+  },
+  {
+   "id": 4363539,
+   "name": "Yogesh Kumar Rana",
+   "lic": 1,
+   "city": "Noida (NCR)",
+   "val": 19400,
+   "creator": "Revati Ambike",
+   "owner": "Suraj Chauhan"
+  }
+ ],
+ "per_creator": {
+  "Ashwini Nirmal": {
+   "demos": 107,
+   "GREEN": 40,
+   "AMBER": 48,
+   "RED": 19,
+   "5plus": 62,
+   "onsite": 12,
+   "won": 8,
+   "name_invalid": 9
+  },
+  "Gayatri More": {
+   "demos": 4,
+   "GREEN": 1,
+   "AMBER": 1,
+   "RED": 2,
+   "5plus": 2,
+   "onsite": 0,
+   "won": 0,
+   "name_invalid": 0
+  },
+  "Revati Ambike": {
+   "demos": 126,
+   "GREEN": 52,
+   "AMBER": 48,
+   "RED": 26,
+   "5plus": 74,
+   "onsite": 18,
+   "won": 13,
+   "name_invalid": 18
+  }
+ },
+ "created_vs_demo": {
+  "Revati Ambike": {
+   "created": 164,
+   "demo": 126
+  },
+  "Ashwini Nirmal": {
+   "created": 158,
+   "demo": 107
+  },
+  "Gayatri More": {
+   "created": 6,
+   "demo": 4
+  },
+  "TOTAL": {
+   "created": 328,
+   "demo": 237
+  }
+ }
+}

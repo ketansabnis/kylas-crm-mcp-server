@@ -1,0 +1,52 @@
+{
+ "deal_id": 4403103,
+ "deal_name": "Harsh Kishor",
+ "creator": "Revati Ambike",
+ "creator_id": 9062,
+ "owner": "Ankur Singhal",
+ "pipeline": "Sell.Do Deal Pipeline",
+ "stage": "Closed Unqualified",
+ "pipeline_stage_reason": null,
+ "created_at": "2026-06-19T06:48:53.979Z",
+ "updated_at": "2026-06-23T11:09:39.335Z",
+ "meeting_conducted": true,
+ "cfMeetingConductedOn": "2026-06-19T11:35:27.798Z",
+ "noOfLicenses": 10,
+ "cfCity": "Bihar",
+ "cfReDeveloperOrChannelPartner": "Developer",
+ "estimatedValue": null,
+ "actualValue": null,
+ "products": [
+  "Sell.Do Enterprise"
+ ],
+ "source": null,
+ "campaign": null,
+ "cfPreviousCrm": "Never used a CRM",
+ "cfRequiredTools": [
+  "CRM",
+  "AI Calling"
+ ],
+ "cfSales": null,
+ "cfFirstSalesOwner": "Ankur Singhal",
+ "cfOwnerPhoneNumber": "+918879685293",
+ "notes_count": 5,
+ "notes_text": "By 58133: info@irddiuminfotech.com. 47602: Actual Requirement - 10 Users. By 9062: Type-CRM/CRM+AI calling;City-Delhi;Company-Iridium Infotech;Developer(residential+commercial);Team Size-40 to 50;Current CRM-No;Meeting 19 Jun 3pm online. AUDIT(4248): SEND BACK TO PRE-SALES (RED) - 50-licence claim unsupported by footprint, company reads as construction/contracting not sales-led developer, owner phone is DUPLICATE of another deal, no verifiable unique DM; re-qualify before demo. By 58133: currently no projects, operating from Bihar + 1 new Delhi project that will take 3-4 months.",
+ "license_tier": "10-39",
+ "city_bucket": "Other",
+ "city_clean": "Bihar",
+ "onsite_or_online": "Online",
+ "name_valid": true,
+ "bant": {
+  "budget": "no signal",
+  "authority": "Owner phone duplicated across deals - no verified unique DM",
+  "need": "Weak/mismatched; no live projects, construction/IT firm not sales-led developer",
+  "timeline": "None; first project 3-4 months out",
+  "bant_score": 0,
+  "bant_flag": "None"
+ },
+ "enterprise_flag": false,
+ "pre_sales_verdict": "RED",
+ "stall_blocker": "Quality/ICP",
+ "blocker_owner": "Pre-sales",
+ "one_line": "Audit said RED send-back: inflated 50-seat claim, construction/IT firm with no live projects and a duplicated owner phone - demoed anyway, textbook pre-sales miss."
+}

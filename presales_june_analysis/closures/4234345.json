@@ -1,0 +1,17 @@
+{
+  "deal_id": 4234345,
+  "deal_name": "Ankit Maheshwari",
+  "owner": "Ganesh Vamsee",
+  "stage": "Won/ Booked",
+  "created_at": "2026-05-07T06:57:47.259Z",
+  "updated_at": "2026-06-30T13:09:22.550Z",
+  "products_total": null,
+  "cfBilledAmount": 130000,
+  "cfActualPaymentReceived": 130000,
+  "noOfLicenses": 20,
+  "cfCity": "Bangalore",
+  "cfReDeveloperOrChannelPartner": "Channel partner",
+  "cfMeetingConductedOn": "2026-05-07T09:50:18.471Z",
+  "cfPreviousCrm": "Never used a CRM",
+  "cfOwnerPhoneNumber": "+918985612725"
+}

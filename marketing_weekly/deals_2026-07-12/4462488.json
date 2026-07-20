@@ -1,0 +1,21 @@
+{
+  "deal_id": 4462488,
+  "name": "Shubham Sharma",
+  "owner": "Ananya Kumari",
+  "stage": "Demo Conducted",
+  "licences": 1,
+  "tier": "<5",
+  "city": "Jaipur",
+  "dev_broker": "Channel partner",
+  "onsite": "Online",
+  "bant_flag": "Weak",
+  "verdict": "RED",
+  "prob": 0.004,
+  "band": "COLD",
+  "name_valid": true,
+  "dummy_phone": false,
+  "unverified_contact": false,
+  "sales_followup_since_demo": 2,
+  "next_action": "Ananya: 1-seat solo broker who prefers B2B Bricks - one last call, then disqualify. Should not have taken a demo slot.",
+  "one_line": "Jaipur solo luxury broker, 1 seat; sub-ICP, prefers incumbent B2B Bricks, firm has no online footprint."
+}

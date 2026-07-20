@@ -1,0 +1,21 @@
+{
+  "deal_id": 4482359,
+  "name": "Sanjay Jain",
+  "owner": "Ankur Singhal",
+  "stage": "Closed Unqualified",
+  "licences": 5,
+  "tier": "5-10",
+  "city": "Mumbai",
+  "dev_broker": "Developer",
+  "onsite": "Online",
+  "bant_flag": "Strong",
+  "verdict": "GREEN",
+  "prob": 0.2891,
+  "band": "HOT",
+  "name_valid": true,
+  "dummy_phone": false,
+  "unverified_contact": false,
+  "sales_followup_since_demo": 3,
+  "next_action": "LOSS REVIEW: the best-qualified demo of the week (verified promoter, 10-user quote) still lost to Buildesk in a day - find out what beat us and try a win-back.",
+  "one_line": "GREEN demo, HOT profile, LOST to Buildesk in 24h. Millennium Group Mumbai; quote 10 users @Rs1000 + 30k setup."
+}

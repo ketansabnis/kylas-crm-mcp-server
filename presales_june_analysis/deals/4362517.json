@@ -1,0 +1,52 @@
+{
+ "deal_id": 4362517,
+ "deal_name": "Rushit Kotaditya",
+ "creator": "Revati Ambike",
+ "creator_id": 9062,
+ "owner": "Anuj Pathak",
+ "owner_id": 50500,
+ "pipeline": "Sell.Do Deal Pipeline",
+ "stage": "Closed Unqualified",
+ "pipeline_stage_reason": null,
+ "created_at": "2026-06-09T07:29:35.557Z",
+ "updated_at": "2026-06-22T06:39:48.598Z",
+ "meeting_conducted": true,
+ "cfMeetingConductedOn": "2026-06-12T06:25:51.696Z",
+ "noOfLicenses": 2,
+ "cfCity": "Rajkot",
+ "cfReDeveloperOrChannelPartner": "Developer",
+ "estimatedValue": null,
+ "actualValue": null,
+ "products": [
+  "Sell.Do Enterprise"
+ ],
+ "source": null,
+ "campaign": null,
+ "cfPreviousCrm": "Never used a CRM",
+ "cfRequiredTools": [
+  "CRM"
+ ],
+ "cfSales": null,
+ "cfFirstSalesOwner": "Ananya Kumari",
+ "cfOwnerPhoneNumber": "+917391046052",
+ "notes_count": 9,
+ "notes_text": "[9062 2026-06-09] Type of Deal - CRM / City-Rajkot Company Name -Sonamahor Group Developer/Channel Partner firm -Developer is dealing in residential and commercial property, is having 2 ongoing projects Total Team Size-2 Current CRM -No (using google sheet) Current challenges-No Tentative meeting date and ti... | [9062 2026-06-09] I spoke with client is busy need to call back post 11:30 am | [9062 2026-06-11] I tried calling the client is disconnecting the call | [9062 2026-06-11] {{USER_50500}} As discussed Ananya is on leave today hence I am re assigning you the deal | [9062 2026-06-11] Client had joined demo but he got another site visit so he asked to re schedule by 3 pm | [9062 2026-06-11] {{USER_50500}} Kindly mark demo | [50500 2026-06-16] The Client said please call me after 2 days. | [50500 2026-06-19] The Client said i am busy in meeting, i will call you later. | [50500 2026-06-22] The Client said as of now No Requirement.",
+ "license_tier": "1-4",
+ "city_bucket": "Other",
+ "city_clean": "Rajkot",
+ "onsite_or_online": "Online",
+ "name_valid": true,
+ "bant": {
+  "budget": "no signal (using google sheet currently)",
+  "authority": "owner/contact of Sonamahor Group - likely DM",
+  "need": "CRM, never used one, 2 ongoing projects but only team of 2",
+  "timeline": "no urgency - kept deferring, ended 'no requirement'",
+  "bant_score": 1,
+  "bant_flag": "Weak"
+ },
+ "enterprise_flag": false,
+ "pre_sales_verdict": "AMBER",
+ "stall_blocker": "Quality/ICP",
+ "blocker_owner": "Customer",
+ "one_line": "Tiny 2-user Rajkot developer with no real need - marginal ICP that predictably closed unqualified; demo generated more for the number than substance."
+}

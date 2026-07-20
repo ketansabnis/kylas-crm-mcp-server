@@ -1,0 +1,21 @@
+{
+  "deal_id": 4456141,
+  "name": "Soumya Ghosh",
+  "owner": "Jawed Alam",
+  "stage": "Quote Sent",
+  "licences": 10,
+  "tier": "10+",
+  "city": "Kolkata",
+  "dev_broker": "Channel partner",
+  "onsite": "Online",
+  "bant_flag": "Partial",
+  "verdict": "AMBER",
+  "prob": 0.018,
+  "band": "COLD",
+  "name_valid": true,
+  "dummy_phone": false,
+  "unverified_contact": false,
+  "sales_followup_since_demo": 1,
+  "next_action": "Jawed: chase the revised proposal, lock the real seat count (8 on demo vs ~3-6 agent footprint) and get a decision date.",
+  "one_line": "Kolkata CP Destifine Realty; owner-verified DM, 8 seats on demo, revised proposal out - but seat claim likely inflated."
+}

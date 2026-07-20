@@ -1,0 +1,19 @@
+{
+  "deal_id": 4084990,
+  "name": "Animesh",
+  "owner": "Anuj Pathak",
+  "creator_id": 9062,
+  "stage": "Unqualified",
+  "noOfLicenses": 10,
+  "city": "Mumbai",
+  "created_at": "2026-04-13",
+  "demo_date": "2026-04-13",
+  "lost_date": "2026-04-20",
+  "days_created_to_demo": 0,
+  "days_demo_to_lost": 7,
+  "days_total": 7,
+  "sales_attempts": 2,
+  "loss_reason": "Budget",
+  "one_line": "Broker got a quote post-demo but budget did not match; unqualified after 2 owner touches.",
+  "notes_count": 4
+}

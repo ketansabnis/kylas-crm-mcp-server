@@ -1,0 +1,17 @@
+{
+  "deal_id": 4316856,
+  "deal_name": "Ragni Sharma",
+  "owner": "Alok Tiwari",
+  "stage": "Won/ Booked",
+  "created_at": "2026-05-26T12:22:42.650Z",
+  "updated_at": "2026-07-02T10:59:00.035Z",
+  "products_total": 121000.0,
+  "cfBilledAmount": 121000,
+  "cfActualPaymentReceived": 121000,
+  "noOfLicenses": 12,
+  "cfCity": "Jaipur",
+  "cfReDeveloperOrChannelPartner": "Developer",
+  "cfMeetingConductedOn": "2026-06-04T07:17:41.180Z",
+  "cfPreviousCrm": "Never used a CRM",
+  "cfOwnerPhoneNumber": "+917391046055"
+}

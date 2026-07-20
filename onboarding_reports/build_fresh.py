@@ -1,0 +1,198 @@
+#!/usr/bin/env python3
+import json, os
+BASE=os.path.dirname(os.path.abspath(__file__))
+
+# latest note per deal: id -> [epoch_ms_or_None, gist]
+notes = {
+ 4491940:[None,""],
+ 4482302:[1783656472586,"Priority Onboarding Tasks; Inventory upload to be handled in Post sales; Sales/Presales & Admin training pending; Website integration."],
+ 4482197:[1783509031463,"Kick Off Call scheduled on 10th July at 1:00pm."],
+ 4481260:[1783664501397,"No response to calls."],
+ 4480069:[None,""],
+ 4479599:[1783446642798,"Priority Onboarding Tasks logged: account/user/project creation, routing, Mcube, native WhatsApp, bulk lead import, trainings."],
+ 4479594:[1783446603942,"Priority Onboarding Tasks logged: user/project creation, bulk lead, native WhatsApp, dialer, website, property portal, Meta, inventory, trainings."],
+ 4478489:[1783418557792,"Kick Off Call scheduled on 9th July at 11:00am."],
+ 4472721:[1783319703624,"Priority Onboarding Tasks logged: user/project creation, routing, offline dialer, inventory (tentative), trainings."],
+ 4461524:[1783422393483,"Completed: user/project creation, report config, lead import guided. Pending: Admin Training call scheduled."],
+ 4458771:[1783269635840,"Priority Onboarding Tasks logged: user/project creation, routing, property portal, Meta, native WhatsApp, website, CP form, dialer, trainings."],
+ 4458766:[1783508426297,"Completed: user/project/report config. Pending: Meta on hold (POC unavailable 2 weeks); Bulk Lead file received today; trainings; dialer."],
+ 4458749:[1783483848637,"Completed: account/user/project/report config, dialer, sales training. Meta call scheduled Monday; inventory & admin training pending."],
+ 4457232:[1783316083637,"Completed: user/project/report config, routing, GPS/clock-in. Pending: Bulk Lead Import (sample shared), portal/Meta/Google, WhatsApp."],
+ 4453288:[1783508038162,"Completed: user/project/report config, lead import guided. Pending: Meta integration call scheduled 9th; website; trainings."],
+ 4449587:[1783313949651,"Completed: user/project/report config, routing, bulk lead. Pending: Property Portal (99Acres/India Residential) initiated - awaiting POC email."],
+ 4446753:[1783500248701,"Pending from customer: Inventory + WhatsApp number for integration. Inventory file expected today EOD."],
+ 4438366:[1783423054392,"Completed: user/project/report config, leads uploaded, 99acres lead #7, Meta lead #215."],
+ 4435090:[1783498109812,"Project file imported. Duplicate-lead-storage requirement raised; awaiting dev team timeline. User/project creation done."],
+ 4430582:[1783315538712,"Completed: user/project/report config, routing. Pending: Bulk Lead Import (sample shared), Facebook (Meta) Integration."],
+ 4412002:[1783313200211,"Completed: user/project/report config, routing, GPS/clock-in, offline dialer. Pending: Bulk Lead Import, Facebook."],
+ 4411978:[1783483729376,"Completed: user/project/report config, bulk lead, Magic Bricks portal, inventory, sales/presales & mobile training, dialer."],
+ 4402389:[1783500439190,"AI Feedback received and shared with Sharayu. Awaiting details on Pinnacle WhatsApp templates dump."],
+ 4402374:[1783656869960,"Sales Training Completed. Admin training to be scheduled next week."],
+ 4389699:[1783482831508,"WhatsApp & IVR integrations pending from our end - Interakt not sending outgoing msgs; Airtel IVR setup not yet completed."],
+ 4389674:[1783483378169,"Completed: account/user/project, hierarchy, routing, bulk lead, Facebook, sales training. CAPI integration meeting Monday; admin pending."],
+ 4386888:[1782795571731,"Completed: user/project/report config, routing, 99Acres+Magicbricks portal integration. (last note ~29 Jun)"],
+ 4383383:[1783422168417,"Call scheduled 8th July for website & Meta integration. Completed: user activation, project creation, lead import guided."],
+ 4382895:[1783482056304,"Completed: user/project/report config, 99acres, Facebook, 3841 leads uploaded, dialer, inventory. Admin training scheduled this week."],
+ 4375201:[1783422572374,"Completed: user/project/report config, lead import guided, inventories uploaded, clock in/out, native WhatsApp."],
+ 4370391:[1783307528791,"Completed: user/project/report config, routing, sample lead & inventory. Pending: Bulk Lead, portal, Facebook."],
+ 4370376:[1782193563980,"Completed: user/project/report config, routing, GPS/clock. Pending: Website Integration initiated. (last note ~23 Jun)"],
+ 4370308:[1783656461084,"Sales Training completed; Admin to be scheduled today per availability. Meta not required; WhatsApp number reuse in progress."],
+ 4364225:[1782794766995,"Completed: user/project/report config, routing, 99Acres, Meta, admin training. Pending: Bulk Lead Import. (last note ~29 Jun)"],
+ 4358959:[1783495724023,"Customer raised lead-import & website-integration requirement; expected details today EOD else handover keeping these 2 pending."],
+ 4357637:[1783482224219,"Completed 2-3 workflow discussion calls with client (lacked clarity). Sales training scheduled Friday."],
+ 4357586:[1783422787021,"Completed: user/project, lead import (except Meta leads - bad date format/stages), Meta lead #10, website discussion."],
+ 4345401:[1782099613911,"Completed: user/project/report config, routing, IVR MCube. Pending: Bulk Lead Import. (last note ~21 Jun)"],
+ 4337048:[1783497758268,"WhatsApp integration call scheduled today 3PM. Completed: user/project/report config, routing, Meta, 99Acres, CommonFloor, CP form, trainings."],
+ 4336926:[1782099710209,"Kickoff Call pending from client side; highlighted to Sales POC. (last note ~21 Jun)"],
+ 4325921:[1783496170577,"Requested slots for Admin training; ETA to schedule by tomorrow."],
+ 4313304:[1781627597184,"Completed: user/project/report config, Facebook, native WhatsApp. Pending: routing, property portal, website, Mcube. (last note ~16 Jun)"],
+ 4299438:[1782101302988,"Completed: user/project/report config, routing, WATI, offline dialer, GPS, admin training. Pending: Bulk Lead, Facebook. (last note ~21 Jun)"],
+ 4255693:[1782451397193,"OB WEEKLY UPDATE (26 Jun): wrong client project plan shared; Sanket to share updated Project Plan & check status; don't pitch sub-domain."],
+ 4255681:[1782451701407,"OB WEEKLY UPDATE (26 Jun): Sanket to talk to client about the pending pointers."],
+ 4241966:[1783497539803,"Call completed; explained reports/recordings/scripts. Customer wants to connect calls with Highrise CRM; checking feasibility, update tomorrow."],
+ 4233760:[1783497459237,"Feedback implemented and tested; looks fine. Awaiting customer to confirm."],
+ 4233715:[1783497258569,"Call to be scheduled to discuss issues customer facing. 7th July call rescheduled; awaiting their availability."],
+ 4230613:[1783401767413,"Meeting with client 03 Jul (Ketan Sir & Siddharth). Client raised concerns on rollout timelines & implementation delay; requested onsite team member."],
+ 4204921:[1779091748300,"Completed Onboarding Tasks logged (user/project/report config, source, routing, Meta). (last note ~13 May - stale)"],
+ 4177642:[1782129064411,"Task status tracker: user/project/report/routing done; WhatsApp in progress (NPS call); awaiting user details from client. (last note ~22 Jun)"],
+ 4147287:[1783495556242,"WhatsApp workflow to be re-shared by customer; inventory files to be shared by customer; channel partner imported."],
+ 4144089:[1783485923966,"Call scheduled today 11 AM with Ankur and customer to discuss further."],
+ 4079157:[1779693893057,"Completed: user/project/report config, routing, sales/presales training, website, IVR MCube. (last note ~20 May - stale)"],
+ 3968505:[1779167414203,"Completed: user/project/report config, routing, CP upload, sales/presales training, offline dialer, GRE walkin form. (last note ~14 May - stale)"],
+ 3623014:[1771771939129,"Completed: user/project, pipeline stages. In progress: bulk lead. Pending: report config, Meta, website, Google, IVR Acefone, Wisr WhatsApp. (last note ~22 Feb - very stale, OB on pause)"],
+ 3575524:[1771852373103,"PFB requirement sheet & tasks; internal handover scheduled tomorrow. (last note ~23 Feb - very stale)"],
+ 3417644:[1765176334364,"Done: 99acres account activation. Pending: email/SMS comm setup (follow-up Sam), lead import, inventory import. (last note ~08 Dec 2025 - very stale)"],
+ 3304063:[1783415092241,"Scheduled meeting 8th July with POC Mithilesh & Director Abhishek to re-initiate OB; review status, discuss pending, DND/NDNC + Mcube."],
+ 3304062:[1783415098472,"Scheduled meeting 8th July with POC Mithilesh & Director Abhishek to re-initiate OB; review status, discuss pending."],
+ 3302998:[1762780884466,"UAT of inventory in progress; multiple fields updated per client suggestions; FM app final list shared, JIRA raised. (last note ~10 Nov 2025 - very stale)"],
+}
+
+# deals: [id, name, owner]
+deals = [
+ [4491940,"Doff Estate Post Sales","Shubham Dubey"],
+ [4482302,"Doff Estate","Venkat Viswavardhan"],
+ [4482197,"Scanon Realty","Shweta Gouda"],
+ [4481260,"Urbanyx Infra","Ganesh Vamsee"],
+ [4480069,"Palli Developers and Consultants LLP","Muntazar Mhate"],
+ [4479599,"Propnsafe Realty LLP","Sahil Jane"],
+ [4479594,"Apex Realty Hub","Sahil Jane"],
+ [4478489,"PANCHRATNA SKYLINE PRIVATE LIMITED","Shweta Gouda"],
+ [4472721,"Salahrealty Pvt Ltd","Muntazar Mhate"],
+ [4461524,"DhanVed Consultants","Shweta Gouda"],
+ [4458771,"VRUSHABADRI DEVELOPERS","Sahil Jane"],
+ [4458766,"VASTU INFINITY AND VENTURES LLP","Sahil Jane"],
+ [4458749,"Properties Boutique","Sahil Jane"],
+ [4457232,"Growthx Estates","Muntazar Mhate"],
+ [4453288,"Supreme Vision Infrabuild Private Limited (Augusta Realty)","Shweta Gouda"],
+ [4449587,"Rajparis Civil Construction","Muntazar Mhate"],
+ [4446753,"SKYTOWN Group","Venkat Viswavardhan"],
+ [4438366,"Yashoda Infra Developer","Shweta Gouda"],
+ [4435090,"SWARAJYA REALTORS PRIVATE LIMITED","Venkat Viswavardhan"],
+ [4430582,"Sunrise Housing (GHP Group)","Muntazar Mhate"],
+ [4412002,"Blueroof India","Muntazar Mhate"],
+ [4411978,"The Bangalore Real Estate Co.","Sahil Jane"],
+ [4402389,"Navkar Realty","Venkat Viswavardhan"],
+ [4402374,"VENDSPACEZ PRIVATE LIMITED","Venkat Viswavardhan"],
+ [4389699,"Leonaara PVt LTD","Sahil Jane"],
+ [4389674,"Axon Developer","Sahil Jane"],
+ [4386888,"Red Estate Destination Pvt Ltd","Muntazar Mhate"],
+ [4383383,"VIVANTA GROUP","Shweta Gouda"],
+ [4382895,"SS Salesforce","Sahil Jane"],
+ [4375201,"Strata Capital Holdings","Shweta Gouda"],
+ [4370391,"Sohum Estate Agency (Sameer Chheda)","Muntazar Mhate"],
+ [4370376,"Shrimant Developers","Muntazar Mhate"],
+ [4370308,"VAZHRAA NIRMAAN PRIVATE LIMITED","Venkat Viswavardhan"],
+ [4364225,"Real Estate Square","Muntazar Mhate"],
+ [4358959,"YES PROPTECH PRIVATE LIMITED","Venkat Viswavardhan"],
+ [4357637,"Apex Construction","Sahil Jane"],
+ [4357586,"Pavani Infra","Shweta Gouda"],
+ [4345401,"Sangram Group","Muntazar Mhate"],
+ [4337048,"i5 Housing and Properties LLP","Venkat Viswavardhan"],
+ [4336926,"Shri Krish Housing and Properties Pvt Ltd","Muntazar Mhate"],
+ [4325921,"Sujay Global Homes","Venkat Viswavardhan"],
+ [4313304,"Yula Globas","Sahil Jane"],
+ [4299438,"Ribitto Private Limited","Muntazar Mhate"],
+ [4255693,"Calicut Landmark Builders Pvt. Ltd","Raahul Ramanan R"],
+ [4255681,"SPR Construction Pvt Ltd","Raahul Ramanan R"],
+ [4241966,"GGC AI Calling","Venkat Viswavardhan"],
+ [4233760,"Mythri Builder AI Calling","Venkat Viswavardhan"],
+ [4233715,"Kohinoor AI Calling","Venkat Viswavardhan"],
+ [4230613,"Kunwarji Realtors","Sanket Nampalliwar"],
+ [4204921,"Vascon Engineers","Venkat Viswavardhan"],
+ [4177642,"NPS DEVELOPERS","Raahul Ramanan R"],
+ [4147287,"Dreamworks Realtors","Venkat Viswavardhan"],
+ [4144089,"Dhanraj Realbuild Llp","Venkat Viswavardhan"],
+ [4079157,"Gram Strategic Advisors LLP","Muntazar Mhate"],
+ [3968505,"GRUHAM SPACES LLP","Venkat Viswavardhan"],
+ [3623014,"Upcurve consumer Technologies Pvt Ltd","Raahul Ramanan R"],
+ [3575524,"Voora Developers","Raahul Ramanan R"],
+ [3417644,"House of Colours","Shweta Gouda"],
+ [3304063,"Shree Honda","Sourabh Sahu"],
+ [3304062,"Shree Automotive","Sourabh Sahu"],
+ [3302998,"Times Group","Sanket Nampalliwar"],
+]
+
+stages = {
+ "Open":[4491940,4482302,4482197,4481260,4480069,4478489],
+ "Kickoff Done":[4479599,4479594],
+ "Onboarding In Progress":[4472721,4461524,4458771,4458766,4458749,4457232,4453288,4449587,4438366,4435090,4430582,4412002,4411978,4402374,4389699,4389674,4386888,4383383,4382895,4375201,4370391,4370376,4364225,4358959,4357637,4357586,4345401,4337048,4336926,4325921,4313304,4255681,4230613,4177642,3968505,3417644,3304063,3304062],
+ "Pending on Customer":[4446753,4402389,4370308,4299438,4255693,4241966,4233760,4233715,4147287,4144089,4079157,3623014,3575524,3302998],
+ "Under Usage Tracking":[4204921],
+}
+
+cat = {
+ "A":[4491940,4482302,4446753,4389674,4337048,4255693,4255681,4230613,4204921,4147287,3968505,3575524,3302998],
+ "B":[4449587,4430582,4402374,4079157],
+ "C":[4480069,4479599,4479594,4472721,4458771,4458766,4458749,4453288,4438366,4412002,4411978,4402389,4389699,4386888,4383383,4382895,4370391,4370376,4370308,4357637,4357586,4345401,4336926,4325921,4313304,4299438,4241966,4233760,4233715,4177642,4144089,3417644,3304063,3304062],
+ "Broker":[4482197,4461524,4457232,4435090,4375201,4364225,4358959,3623014],
+}
+
+not_signedup=[4491940]
+overdue_golive=[4411978,4402374,4389699,4389674,4386888,4382895,4375201,4370376,4370308,4364225,4358959,4357586,4345401,4337048,4325921,4313304,4299438,4255681,4233760,4233715,4230613,4204921,4147287,4079157,3575524,3417644]
+overdue_task=[4461524,4375201,4358959,4357586,4241966,4233760,4177642,3623014,3575524,3417644]
+future_task=[4458771,4458749,4411978,4402374,4389699,4389674,4382895,4370308,4357637,4325921,4230613,4204921,3302998]
+idle_gt5=[4233760]
+idle_gt7=[]
+age={
+ "ca14":[4435090,4430582,4412002,4411978,4402389,4402374,4389699,4389674,4386888,4383383,4382895,4375201,4370391,4370376,4370308,4364225,4358959,4357637,4357586,4345401,4337048,4336926,4325921,4313304,4299438,4255693,4255681,4241966,4233760,4233715,4230613,4204921,4177642,4147287,4144089,4079157,3968505,3623014,3575524,3417644,3304063,3304062,3302998],
+ "ca30":[4364225,4358959,4357637,4357586,4345401,4337048,4336926,4325921,4313304,4299438,4255693,4255681,4241966,4233760,4233715,4230613,4204921,4177642,4147287,4144089,4079157,3968505,3623014,3575524,3417644,3304063,3304062,3302998],
+ "ca60":[4241966,4233760,4233715,4230613,4204921,4177642,4147287,4144089,4079157,3968505,3623014,3575524,3417644,3304063,3304062,3302998],
+ "ca90":[3968505,3623014,3575524,3417644,3304063,3304062,3302998],
+ "ca180":[3417644,3304063,3304062,3302998],
+}
+
+newdeals={
+ "4491940":{"billed":523919,"recv":523920,"lic":29},
+ "4482302":{"billed":523919,"recv":523920,"lic":29},
+ "4482197":{"billed":11328,"recv":11328,"lic":2},
+ "4481260":{"billed":None,"recv":None,"lic":5},
+ "4480069":{"billed":153400,"recv":153400,"lic":5},
+ "4479599":{"billed":172516,"recv":172516,"lic":3},
+ "4479594":{"billed":81420,"recv":81419,"lic":5},
+ "4478489":{"billed":None,"recv":None,"lic":None},
+}
+
+OUT={
+ "run_date":"2026-07-10",
+ "deals":deals,
+ "stages":stages,
+ "not_signedup":not_signedup,
+ "overdue_golive":overdue_golive,
+ "overdue_task":overdue_task,
+ "future_task":future_task,
+ "cat":cat,
+ "idle_gt5":idle_gt5,
+ "idle_gt7":idle_gt7,
+ "age":age,
+ "newdeals":newdeals,
+ "notes":{str(k):v for k,v in notes.items()},
+}
+json.dump(OUT,open(os.path.join(BASE,"fresh.json"),"w"),indent=1)
+
+# sanity
+allids=set(d[0] for d in deals)
+stids=set()
+for v in stages.values(): stids|=set(v)
+assert stids==allids, ("stage mismatch", stids^allids)
+print("fresh.json written:",len(deals),"deals; stages ok")
+print("note ids missing:",[d[0] for d in deals if str(d[0]) not in OUT["notes"]])

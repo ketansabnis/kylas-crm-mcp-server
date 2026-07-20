@@ -1,0 +1,19 @@
+{
+  "deal_id": 4296919,
+  "name": "Mr Parth",
+  "owner": "Arzoo Choudhary",
+  "creator_id": 54132,
+  "stage": "Lost",
+  "noOfLicenses": 15,
+  "city": "Gurugram",
+  "created_at": "2026-05-22T07:06:15.895Z",
+  "demo_date": "2026-05-22T09:42:45.168Z",
+  "lost_date": "2026-06-29T11:35:38.896Z",
+  "days_created_to_demo": 0,
+  "days_demo_to_lost": 38,
+  "days_total": 38,
+  "sales_attempts": 6,
+  "loss_reason": "Product-gap",
+  "one_line": "Product-gap: rejected native CRM (no chatbot, WhatsApp-integration concerns); sales chased ~6 mails/calls over 5 weeks, then mgmt said no budget now.",
+  "notes_count": 14
+}

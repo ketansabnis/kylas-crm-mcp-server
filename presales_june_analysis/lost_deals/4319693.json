@@ -1,0 +1,19 @@
+{
+  "deal_id": 4319693,
+  "name": "Sagar Singhal",
+  "owner": "Karan Shinde",
+  "creator_id": 54132,
+  "stage": "Lost",
+  "noOfLicenses": 12,
+  "city": "noida",
+  "created_at": "2026-05-27",
+  "demo_date": "2026-05-27",
+  "lost_date": "2026-06-25",
+  "days_created_to_demo": 0,
+  "days_demo_to_lost": 29,
+  "days_total": 29,
+  "sales_attempts": 11,
+  "loss_reason": "Timeline/Not-now",
+  "one_line": "Demoed; sales chased ~11x (calls/WA/email) over a month; requirement put on hold due to business/partnership challenges, not cost.",
+  "notes_count": 16
+}

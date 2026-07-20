@@ -1,0 +1,19 @@
+{
+  "deal_id": 4069312,
+  "name": "Nishant Muttreja",
+  "owner": "Jawed Alam",
+  "creator_id": 9062,
+  "stage": "Lost",
+  "noOfLicenses": 5,
+  "city": "Noida",
+  "created_at": "2026-04-10",
+  "demo_date": "2026-04-10",
+  "lost_date": "2026-06-16",
+  "days_created_to_demo": 0,
+  "days_demo_to_lost": 67,
+  "days_total": 67,
+  "sales_attempts": 3,
+  "loss_reason": "Timeline/Not-now",
+  "one_line": "Broker (only 3 users) got proposal then went quiet; put plan on hold after 3 owner follow-ups.",
+  "notes_count": 5
+}

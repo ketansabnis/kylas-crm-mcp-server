@@ -1,0 +1,51 @@
+{
+ "deal_id": 4374872,
+ "deal_name": "Srinivasa Reddy",
+ "creator": "Revati Ambike",
+ "creator_id": 9062,
+ "owner": "Ganesh Vamsee",
+ "pipeline": "Sell.Do Deal Pipeline",
+ "stage": "Demo Conducted",
+ "pipeline_stage_reason": null,
+ "created_at": "2026-06-12T04:19:34.149Z",
+ "updated_at": "2026-06-12T09:18:07.840Z",
+ "meeting_conducted": true,
+ "cfMeetingConductedOn": "2026-06-12T09:18:05.445Z",
+ "noOfLicenses": 10,
+ "cfCity": "Hyderabad",
+ "cfReDeveloperOrChannelPartner": "Channel partner",
+ "estimatedValue": null,
+ "actualValue": null,
+ "products": [
+  "Sell.Do Enterprise"
+ ],
+ "source": null,
+ "campaign": null,
+ "cfPreviousCrm": "Never used a CRM",
+ "cfRequiredTools": [
+  "CRM"
+ ],
+ "cfSales": null,
+ "cfFirstSalesOwner": "Ganesh Vamsee",
+ "cfOwnerPhoneNumber": true,
+ "notes_count": 7,
+ "notes_text": "9062: Nakshatra Projects, Hyderabad, Broker, team 10, no CRM/google sheet, demo 12 Jun online. | 72847: demo done, still early phase of business; asked quotation for 5 users + WhatsApp API; also taking Tranquil demo; reviewing other CRMs with partner; repeated no-response follow-ups.",
+ "license_tier": "10-39",
+ "city_bucket": "Main6",
+ "city_clean": "Hyderabad",
+ "onsite_or_online": "Online",
+ "name_valid": true,
+ "bant": {
+  "budget": "Asked for 5-user quote, no budget stated",
+  "authority": "Owner-level, deciding with partner",
+  "need": "Broker on google sheets, wants CRM + WhatsApp API",
+  "timeline": "Early phase, no urgency",
+  "bant_score": 3,
+  "bant_flag": "Strong"
+ },
+ "enterprise_flag": false,
+ "pre_sales_verdict": "GREEN",
+ "stall_blocker": "Competitor/Existing-CRM",
+ "blocker_owner": "Sales",
+ "one_line": "Hyderabad broker (Nakshatra), 10 seats, real CRM+WA need - solid demo; evaluating Tranquil/others and dropped off."
+}

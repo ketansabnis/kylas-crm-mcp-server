@@ -1,0 +1,51 @@
+{
+ "deal_id": 4410292,
+ "deal_name": "Shreya Saran",
+ "creator": "Revati Ambike",
+ "creator_id": 9062,
+ "owner": "Arzoo Choudhary",
+ "pipeline": "Sell.Do Deal Pipeline",
+ "stage": "Demo Conducted",
+ "pipeline_stage_reason": null,
+ "created_at": "2026-06-22T04:35:19.631Z",
+ "updated_at": "2026-06-22T13:39:48.096Z",
+ "meeting_conducted": true,
+ "cfMeetingConductedOn": "2026-06-22T13:39:45.814Z",
+ "noOfLicenses": 5,
+ "cfCity": "Gurgaon",
+ "cfReDeveloperOrChannelPartner": "Channel partner",
+ "estimatedValue": null,
+ "actualValue": null,
+ "products": [
+  "Sell.Do Enterprise"
+ ],
+ "source": null,
+ "campaign": null,
+ "cfPreviousCrm": "Never used a CRM",
+ "cfRequiredTools": [
+  "CRM"
+ ],
+ "cfSales": null,
+ "cfFirstSalesOwner": "Arzoo Choudhary",
+ "cfOwnerPhoneNumber": "+919870893570",
+ "notes_count": 7,
+ "notes_text": "By 9062: not responding. Type-CRM;City-Gurgaon;Company-Nivasa Realty;Broker (buy/sell/rent residential+commercial);Team Size-5;Current CRM-No(excel);Meeting 22 Jun. By 73470: demo done, gave credentials so they can feel the CRM; using credentials; connect on status tomorrow; she called asked for quote and feature list, sending; details shared, called but busy.",
+ "license_tier": "5-9",
+ "city_bucket": "Main6",
+ "city_clean": "Gurgaon",
+ "onsite_or_online": "Online",
+ "name_valid": true,
+ "bant": {
+  "budget": "no signal yet; quote requested",
+  "authority": "Contact engaged, requesting quote - likely DM/influencer",
+  "need": "Real; 5-person brokerage, no CRM, on excel",
+  "timeline": "Active; trialing credentials, requesting quote/features",
+  "bant_score": 3,
+  "bant_flag": "Strong"
+ },
+ "enterprise_flag": false,
+ "pre_sales_verdict": "GREEN",
+ "stall_blocker": "Progressing",
+ "blocker_owner": "Sales",
+ "one_line": "On-ICP 5-seat Gurgaon brokerage (Nivasa Realty), real firm, actively trialing credentials and requesting a quote - qualified demo, progressing in sales."
+}

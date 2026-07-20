@@ -1,0 +1,19 @@
+{
+  "deal_id": 4339768,
+  "name": "Karthikey",
+  "owner": "Sakshi Kadu",
+  "creator_id": 9062,
+  "stage": "Lost",
+  "noOfLicenses": 5,
+  "city": "Noida",
+  "created_at": "2026-06-02",
+  "demo_date": "2026-06-08",
+  "lost_date": "2026-06-24",
+  "days_created_to_demo": 6,
+  "days_demo_to_lost": 16,
+  "days_total": 22,
+  "sales_attempts": 6,
+  "loss_reason": "Budget",
+  "one_line": "Offline demo; sales chased ~6x with pricing negotiation; client expected very low pricing and scope differed. Lost on budget.",
+  "notes_count": 16
+}

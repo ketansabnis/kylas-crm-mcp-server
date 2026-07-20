@@ -1,0 +1,21 @@
+{
+  "deal_id": 2233926,
+  "name": "Varun",
+  "owner": "Arzoo Choudhary",
+  "stage": "Quote Sent",
+  "licences": 5,
+  "tier": "5-10",
+  "city": "Noida",
+  "dev_broker": "Channel partner",
+  "onsite": "Onsite",
+  "bant_flag": "Partial",
+  "verdict": "AMBER",
+  "prob": 0.027,
+  "band": "COLD",
+  "name_valid": false,
+  "dummy_phone": false,
+  "unverified_contact": false,
+  "sales_followup_since_demo": 3,
+  "next_action": "Arzoo: get written confirmation of final seat count (real need is 2-3, field says 5) and hold 650/user - close or drop by Friday.",
+  "one_line": "Noida CP Create Value Xperts; onsite demo, but real seats 2-3 vs 5 claimed and still haggling price."
+}

@@ -1,0 +1,19 @@
+{
+  "deal_id": 4067938,
+  "name": "Anup",
+  "owner": "Sakshi Kadu",
+  "creator_id": 54132,
+  "stage": "Lost",
+  "noOfLicenses": 10,
+  "city": "nagpur",
+  "created_at": "2026-04-09",
+  "demo_date": null,
+  "lost_date": "2026-05-12",
+  "days_created_to_demo": null,
+  "days_demo_to_lost": null,
+  "days_total": 33,
+  "sales_attempts": 0,
+  "loss_reason": "Not-interested",
+  "one_line": "Developer kept rescheduling in-person demo and dodging calls; finally said not interested in a CRM, no demo happened.",
+  "notes_count": 11
+}

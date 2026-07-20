@@ -1,0 +1,19 @@
+{
+  "deal_id": 4031132,
+  "name": "Ganesh Kamble",
+  "owner": "Alok Tiwari",
+  "creator_id": 54132,
+  "stage": "Unqualified",
+  "noOfLicenses": 6,
+  "city": "thane",
+  "created_at": "2026-04-02",
+  "demo_date": null,
+  "lost_date": "2026-05-05",
+  "days_created_to_demo": null,
+  "days_demo_to_lost": null,
+  "days_total": 33,
+  "sales_attempts": 0,
+  "loss_reason": "Non-responsive",
+  "one_line": "CP never connected for demo; owner logged 8+ RNR/disconnected/not-responded attempts over a month before unqualifying.",
+  "notes_count": 13
+}

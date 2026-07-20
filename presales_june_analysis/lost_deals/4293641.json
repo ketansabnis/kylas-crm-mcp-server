@@ -1,0 +1,19 @@
+{
+  "deal_id": 4293641,
+  "name": "Narinder K",
+  "owner": "Arzoo Choudhary",
+  "creator_id": 9062,
+  "stage": "Lost",
+  "noOfLicenses": 5,
+  "city": "Delhi",
+  "created_at": "2026-05-21T12:52:30.127Z",
+  "demo_date": "2026-05-24T16:27:43.360Z",
+  "lost_date": "2026-06-25T07:02:02.375Z",
+  "days_created_to_demo": 3,
+  "days_demo_to_lost": 32,
+  "days_total": 35,
+  "sales_attempts": 12,
+  "loss_reason": "Non-responsive",
+  "one_line": "Non-responsive; demo went well but client's phone stayed ringing/switched off daily. Sales (73470) made ~12 call attempts over a month before marking lost.",
+  "notes_count": 28
+}

@@ -1,0 +1,112 @@
+{
+ "N": 282,
+ "lost": 148,
+ "unq": 134,
+ "loss_reason": {
+  "Non-responsive": 61,
+  "Other": 9,
+  "Competitor/Existing-CRM": 62,
+  "Timeline/Not-now": 55,
+  "Not-interested": 41,
+  "Budget": 27,
+  "Sub-ICP/Too-small": 9,
+  "Product-gap": 13,
+  "Wrong/Unverified-contact": 5
+ },
+ "timing": {
+  "all": {
+   "cd": [
+    3.1,
+    1,
+    204
+   ],
+   "dl": [
+    23.0,
+    18,
+    204
+   ],
+   "tt": [
+    24.7,
+    21,
+    282
+   ]
+  },
+  "lost": {
+   "cd": [
+    3.3,
+    1,
+    119
+   ],
+   "dl": [
+    26.1,
+    25,
+    119
+   ],
+   "tt": [
+    28.3,
+    26,
+    148
+   ]
+  },
+  "unq": {
+   "cd": [
+    2.8,
+    1,
+    85
+   ],
+   "dl": [
+    18.6,
+    14,
+    85
+   ],
+   "tt": [
+    20.7,
+    16,
+    134
+   ]
+  }
+ },
+ "no_demo": 78,
+ "attempts_avg": 3.87,
+ "attempts_median": 3,
+ "attempts_dist": {
+  "0": 47,
+  "1-2": 90,
+  "3-5": 74,
+  "6-10": 53,
+  "11+": 18
+ },
+ "attempts_by_reason": {
+  "Non-responsive": 5.7,
+  "Other": 1.4,
+  "Competitor/Existing-CRM": 3.4,
+  "Timeline/Not-now": 4.4,
+  "Not-interested": 2.5,
+  "Budget": 3.9,
+  "Sub-ICP/Too-small": 1.7,
+  "Product-gap": 4.2,
+  "Wrong/Unverified-contact": 1.4
+ },
+ "reason_by_stage": {
+  "Lost": {
+   "Non-responsive": 35,
+   "Timeline/Not-now": 32,
+   "Competitor/Existing-CRM": 42,
+   "Not-interested": 17,
+   "Product-gap": 5,
+   "Budget": 14,
+   "Sub-ICP/Too-small": 3
+  },
+  "Unqualified": {
+   "Other": 9,
+   "Competitor/Existing-CRM": 20,
+   "Not-interested": 24,
+   "Budget": 13,
+   "Non-responsive": 26,
+   "Timeline/Not-now": 23,
+   "Sub-ICP/Too-small": 6,
+   "Wrong/Unverified-contact": 5,
+   "Product-gap": 8
+  }
+ }
+}

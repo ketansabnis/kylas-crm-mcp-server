@@ -1,0 +1,51 @@
+{
+ "deal_id": 4396191,
+ "deal_name": "Piyush Sarvankar",
+ "creator": "Revati Ambike",
+ "creator_id": 9062,
+ "owner": "Niket Rathod",
+ "pipeline": "Sell.Do Deal Pipeline",
+ "stage": "Hot Opportunity",
+ "pipeline_stage_reason": null,
+ "created_at": "2026-06-17T10:09:47.702Z",
+ "updated_at": "2026-06-18T08:31:36.804Z",
+ "meeting_conducted": true,
+ "cfMeetingConductedOn": "2026-06-18T08:31:23.409Z",
+ "noOfLicenses": 5,
+ "cfCity": "Mumbai",
+ "cfReDeveloperOrChannelPartner": "Channel partner",
+ "estimatedValue": null,
+ "actualValue": null,
+ "products": [
+  "Sell.Do Enterprise"
+ ],
+ "source": null,
+ "campaign": null,
+ "cfPreviousCrm": "Never used a CRM",
+ "cfRequiredTools": [
+  "CRM"
+ ],
+ "cfSales": null,
+ "cfFirstSalesOwner": "Niket Rathod",
+ "cfOwnerPhoneNumber": "+919999999999",
+ "notes_count": 14,
+ "notes_text": "By 9062: client will discuss with partner, confirm demo timings; repeated follow-ups. Type-CRM;City-Mumbai;Company-Vishi Property;Broker;Team Size-5;Current CRM-No;Meeting 18 Jun 1pm online. By 79391: demo done with both partners, quote shared for CRM + AI, shows interest in AI bot. Connect Tuesday for final process. Pricing 800/user/mo + 10k setup, 3 users; AI 1Lac (incl 50k credit) + 10rs/min. Will connect tomorrow for finalization; busy/ringing. Owner phone placeholder(9999999999).",
+ "license_tier": "5-9",
+ "city_bucket": "Main6",
+ "city_clean": "Mumbai",
+ "onsite_or_online": "Online",
+ "name_valid": true,
+ "bant": {
+  "budget": "Quoted 800/user/mo + 10k setup + AI 1Lac; engaged on commercials",
+  "authority": "Both partners attended demo - DMs engaged",
+  "need": "Strong; broker, no CRM, interested in CRM + AI calling",
+  "timeline": "Active; repeatedly moving toward finalization",
+  "bant_score": 4,
+  "bant_flag": "Strong"
+ },
+ "enterprise_flag": false,
+ "pre_sales_verdict": "GREEN",
+ "stall_blocker": "Progressing",
+ "blocker_owner": "Sales",
+ "one_line": "On-ICP Mumbai broker, both partners in the demo, quoted CRM+AI with active AI-bot interest (Hot Opportunity) - strong pre-sales, sales driving to close."
+}

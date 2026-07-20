@@ -1,0 +1,19 @@
+{
+  "deal_id": 4342241,
+  "name": "Gattu srinivas",
+  "owner": "Ganesh Vamsee",
+  "creator_id": 54132,
+  "stage": "Lost",
+  "noOfLicenses": 10,
+  "city": "Hyderabad",
+  "created_at": "2026-06-03",
+  "demo_date": null,
+  "lost_date": "2026-06-15",
+  "days_created_to_demo": null,
+  "days_demo_to_lost": null,
+  "days_total": 12,
+  "sales_attempts": 3,
+  "loss_reason": "Not-interested",
+  "one_line": "Demo never held; client disconnects on hearing Sell.Do, no purchase intent. Owner tried ~3x then dropped as non-potential.",
+  "notes_count": 9
+}

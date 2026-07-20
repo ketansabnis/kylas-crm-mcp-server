@@ -1,0 +1,19 @@
+{
+  "deal_id": 4337130,
+  "name": "meet agrawal",
+  "owner": "Disha Kadam",
+  "creator_id": 54132,
+  "stage": "Lost",
+  "noOfLicenses": 5,
+  "city": "Aurangabad",
+  "created_at": "2026-06-01",
+  "demo_date": "2026-06-02",
+  "lost_date": "2026-07-03",
+  "days_created_to_demo": 1,
+  "days_demo_to_lost": 31,
+  "days_total": 32,
+  "sales_attempts": 8,
+  "loss_reason": "Product-gap",
+  "one_line": "Demoed; sales chased ~8x over a month (repeated CNR, pricing objection); finally said CRM too difficult to use, not pricing, and asked not to call.",
+  "notes_count": 13
+}

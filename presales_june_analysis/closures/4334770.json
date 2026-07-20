@@ -1,0 +1,17 @@
+{
+  "deal_id": 4334770,
+  "deal_name": "Snehith Yarabarla",
+  "owner": "Jaganmohan Vankina",
+  "stage": "Won/ Booked",
+  "created_at": "2026-06-01T05:12:27.747Z",
+  "updated_at": "2026-06-10T12:54:53.596Z",
+  "products_total": null,
+  "cfBilledAmount": 125000,
+  "cfActualPaymentReceived": 125000,
+  "noOfLicenses": 9,
+  "cfCity": "Hyderabad",
+  "cfReDeveloperOrChannelPartner": "Developer",
+  "cfMeetingConductedOn": "2026-06-01T06:20:06.000Z",
+  "cfPreviousCrm": "Never used a CRM",
+  "cfOwnerPhoneNumber": "+919618242467"
+}

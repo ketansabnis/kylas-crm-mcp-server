@@ -1,0 +1,19 @@
+{
+  "deal_id": 4060482,
+  "name": "Sarvesh Uppar",
+  "owner": "Ketan Sabnis (Internal)",
+  "creator_id": 9062,
+  "stage": "Lost",
+  "noOfLicenses": 20,
+  "city": "Bangalore",
+  "created_at": "2026-04-08",
+  "demo_date": "2026-04-10",
+  "lost_date": "2026-06-22",
+  "days_created_to_demo": 2,
+  "days_demo_to_lost": 73,
+  "days_total": 75,
+  "sales_attempts": 10,
+  "loss_reason": "Non-responsive",
+  "one_line": "Raichur CP got a 1.05L payment link, kept promising payment then went dark; sales chased ~10 times over RNR before losing.",
+  "notes_count": 18
+}

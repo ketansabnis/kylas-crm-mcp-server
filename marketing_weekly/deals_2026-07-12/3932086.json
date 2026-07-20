@@ -1,0 +1,21 @@
+{
+  "deal_id": 3932086,
+  "name": "Sachin Shaji",
+  "owner": "Jaganmohan Vankina",
+  "stage": "Demo Conducted",
+  "licences": 5,
+  "tier": "5-10",
+  "city": "Hyderabad",
+  "dev_broker": "Developer",
+  "onsite": "Online",
+  "bant_flag": "Partial",
+  "verdict": "AMBER",
+  "prob": 0.091,
+  "band": "MID",
+  "name_valid": true,
+  "dummy_phone": false,
+  "unverified_contact": false,
+  "sales_followup_since_demo": 0,
+  "next_action": "ZERO FOLLOW-UP since 8 Jul demo - Jaganmohan to call this week, confirm RERA launch date and get him to the management pitch.",
+  "one_line": "Hyderabad developer Capitol Constructions, 5 seats; demo done but blocked on RERA launch and no follow-up yet."
+}

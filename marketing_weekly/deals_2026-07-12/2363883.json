@@ -1,0 +1,21 @@
+{
+  "deal_id": 2363883,
+  "name": "Nishant Bansal",
+  "owner": "Anuj Pathak",
+  "stage": "Quote Sent",
+  "licences": 4,
+  "tier": "<5",
+  "city": "Pune",
+  "dev_broker": "Developer",
+  "onsite": "Online",
+  "bant_flag": "Weak",
+  "verdict": "AMBER",
+  "prob": 0.007,
+  "band": "COLD",
+  "name_valid": true,
+  "dummy_phone": false,
+  "unverified_contact": false,
+  "sales_followup_since_demo": 4,
+  "next_action": "Anuj: pricing is the only blocker - send a 4-seat annual-prepay option with implementation waived, or park as nurture.",
+  "one_line": "Pune developer KBD, 4 seats, 16-month-old deal; demo done but 'pricing so high' - budget mismatch."
+}

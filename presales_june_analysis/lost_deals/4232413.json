@@ -1,0 +1,19 @@
+{
+  "deal_id": 4232413,
+  "name": "Devansh",
+  "owner": "Alok Tiwari",
+  "creator_id": 54132,
+  "stage": "Lost",
+  "noOfLicenses": 8,
+  "city": "Vrindavan",
+  "created_at": "2026-05-06",
+  "demo_date": "2026-05-07",
+  "lost_date": "2026-06-12",
+  "days_created_to_demo": 1,
+  "days_demo_to_lost": 36,
+  "days_total": 37,
+  "sales_attempts": 9,
+  "loss_reason": "Competitor/Existing-CRM",
+  "one_line": "Boss bought Zoho; asked a month to trial. Sales chased ~9x (mostly WA drops) before loss.",
+  "notes_count": 16
+}

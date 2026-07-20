@@ -1,0 +1,19 @@
+{
+  "deal_id": 4327812,
+  "name": "Naman Jain",
+  "owner": "Suraj Chauhan",
+  "creator_id": 54132,
+  "stage": "Lost",
+  "noOfLicenses": 5,
+  "city": "Gurgaon",
+  "created_at": "2026-05-29",
+  "demo_date": null,
+  "lost_date": "2026-06-22",
+  "days_created_to_demo": null,
+  "days_demo_to_lost": null,
+  "days_total": 24,
+  "sales_attempts": 1,
+  "loss_reason": "Non-responsive",
+  "one_line": "In-person meeting never happened; client repeatedly not answering/rescheduling; owner rang once; decision postponed.",
+  "notes_count": 13
+}

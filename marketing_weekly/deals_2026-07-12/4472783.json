@@ -1,0 +1,21 @@
+{
+  "deal_id": 4472783,
+  "name": "Nagesh Pokle",
+  "owner": "Anuj Pathak",
+  "stage": "Demo Conducted",
+  "licences": 1,
+  "tier": "<5",
+  "city": "Pune",
+  "dev_broker": "Channel partner",
+  "onsite": "Online",
+  "bant_flag": "None",
+  "verdict": "RED",
+  "prob": 0.027,
+  "band": "COLD",
+  "name_valid": true,
+  "dummy_phone": false,
+  "unverified_contact": true,
+  "sales_followup_since_demo": 3,
+  "next_action": "Verify identity before spending more time - audit says the phone belongs to Seeta Ram Meena, not Nagesh Pokle. Disqualify if unconfirmed.",
+  "one_line": "Pune 1-seat 'Urban Nest Realty'; RED audit (phone = different person, no firm footprint), zero facts from demo."
+}

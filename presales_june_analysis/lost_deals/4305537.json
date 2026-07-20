@@ -1,0 +1,19 @@
+{
+  "deal_id": 4305537,
+  "name": "Arvind Yadav",
+  "owner": "Alok Tiwari",
+  "creator_id": 9062,
+  "stage": "Unqualified",
+  "noOfLicenses": 5,
+  "city": "Mumbai",
+  "created_at": "2026-05-25",
+  "demo_date": "2026-05-25",
+  "lost_date": "2026-06-25",
+  "days_created_to_demo": 0,
+  "days_demo_to_lost": 31,
+  "days_total": 31,
+  "sales_attempts": 4,
+  "loss_reason": "Competitor/Existing-CRM",
+  "one_line": "Demoed then chased 4x over a week (waiting on investor funds/July launch); ultimately said had developed own CRM.",
+  "notes_count": 8
+}

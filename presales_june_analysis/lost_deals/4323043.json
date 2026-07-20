@@ -1,0 +1,19 @@
+{
+  "deal_id": 4323043,
+  "name": "Ajay Singh",
+  "owner": "Disha Kadam",
+  "creator_id": 54132,
+  "stage": "Lost",
+  "noOfLicenses": 10,
+  "city": "Indore",
+  "created_at": "2026-05-28",
+  "demo_date": null,
+  "lost_date": "2026-06-22",
+  "days_created_to_demo": null,
+  "days_demo_to_lost": null,
+  "days_total": 25,
+  "sales_attempts": 1,
+  "loss_reason": "Non-responsive",
+  "one_line": "Demo scheduled but client kept disconnecting/not answering; partner unavailable; owner CNR; finally not interested.",
+  "notes_count": 10
+}

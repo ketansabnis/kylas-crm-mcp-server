@@ -1,0 +1,52 @@
+{
+ "deal_id": 4335266,
+ "deal_name": "Suresh Mittal",
+ "creator": "Revati Ambike",
+ "creator_id": 9062,
+ "owner": "Arzoo Choudhary",
+ "owner_id": 73470,
+ "pipeline": "Sell.Do Deal Pipeline",
+ "stage": "Quote Sent",
+ "pipeline_stage_reason": null,
+ "created_at": "2026-06-01T06:54:37.812Z",
+ "updated_at": "2026-06-10T08:06:04.202Z",
+ "meeting_conducted": true,
+ "cfMeetingConductedOn": "2026-06-03T13:35:57.060Z",
+ "noOfLicenses": 20,
+ "cfCity": "Noida",
+ "cfReDeveloperOrChannelPartner": "Channel partner",
+ "estimatedValue": null,
+ "actualValue": null,
+ "products": [
+  "Sell.Do Enterprise"
+ ],
+ "source": null,
+ "campaign": null,
+ "cfPreviousCrm": "Never used a CRM",
+ "cfRequiredTools": [
+  "CRM"
+ ],
+ "cfSales": null,
+ "cfFirstSalesOwner": "Arzoo Choudhary",
+ "cfOwnerPhoneNumber": "+919870893570",
+ "notes_count": 16,
+ "notes_text": "[9062 2026-06-01] Type of Deal - CRM / City-Noida Company Name -Ravai Assets Developer/Channel Partner firm -Broker (residential property) Total Team Size-20 Current CRM -No Tentative meeting 3rd June 12 pm (Online) | [73470 2026-06-04] demo done, little knowledge of crm/ivr, gave detailed demo and quote | [73470 2026-06-xx] going through document, other members involved in decision, not immediately planning to move | [73470 2026-06-22] 20 users/800/12months - 212000+gst, out due to emergency, will connect team, suggested offline meeting | [73470 2026-06-25] one main partner getting married 7th July, one-on-one meeting after 12-13 July | [73470] followup 13th july",
+ "license_tier": "10-39",
+ "city_bucket": "Main6",
+ "city_clean": "Noida",
+ "onsite_or_online": "Online",
+ "name_valid": true,
+ "bant": {
+  "budget": "quote worked out (20 users, 212000+GST); no commitment yet",
+  "authority": "multiple partners in decision; contact not sole DM",
+  "need": "real - 20-user broker (Ravai Assets), no current CRM",
+  "timeline": "slow - drawn out over weeks, partner's wedding delaying to mid-July",
+  "bant_score": 3,
+  "bant_flag": "Strong"
+ },
+ "enterprise_flag": false,
+ "pre_sales_verdict": "GREEN",
+ "stall_blocker": "Progressing",
+ "blocker_owner": "Sales",
+ "one_line": "Real 20-user Noida broker (Ravai Assets), quoted at 2.12L, still in play but dragging on multi-partner sign-off - decent-size qualified deal; slow sales cycle."
+}

@@ -49,10 +49,12 @@ pip install -e .
 
 Set environment variables (or use a `.env` file):
 
-| Variable         | Required | Description                          |
-|------------------|----------|--------------------------------------|
-| `KYLAS_API_KEY`  | Yes      | Your Kylas API key                   |
-| `KYLAS_BASE_URL` | No       | API base URL (default: https://api.kylas.io/v1) |
+| Variable           | Required | Description                          |
+|--------------------|----------|--------------------------------------|
+| `KYLAS_API_KEY`    | Yes      | Your Kylas API key                   |
+| `KYLAS_BASE_URL`   | No       | API base URL (default: https://api.kylas.io/v1) |
+| `ZIPLABS_AUTHKEY`  | No       | ZipLabs Person Enrichment key — enables `enrich_person` / `enrich_deal_primary_contact` (email support@ziplabs.ai) |
+| `ZIPLABS_STORE_DIR`| No       | Where full enrichment responses are saved (default: `./enrichment_responses`) |
 
 ## Quick Start
 
