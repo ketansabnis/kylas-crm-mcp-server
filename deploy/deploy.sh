@@ -147,8 +147,12 @@ fi
 if [[ "$INGRESS" == "apigw" ]]; then
   echo "==> Ensuring API Gateway HTTP API '${FUNCTION_NAME}-api'"
   FN_ARN="arn:aws:lambda:${AWS_REGION}:${ACCOUNT_ID}:function:${FUNCTION_NAME}"
+  # NOTE: the CLI applies --query per page when get-apis paginates, so an
+  # account with several pages of APIs yields "id\nNone\nNone". Strip the
+  # None/blank lines and keep the real id.
   API_ID="$(aws apigatewayv2 get-apis --region "$AWS_REGION" \
-    --query "Items[?Name=='${FUNCTION_NAME}-api'].ApiId | [0]" --output text 2>/dev/null)"
+    --query "Items[?Name=='${FUNCTION_NAME}-api'].ApiId | [0]" --output text 2>/dev/null \
+    | grep -vx None | grep -v '^$' | head -n1)"
   if [[ -z "$API_ID" || "$API_ID" == "None" ]]; then
     # quick-create wires integration + $default route + auto-deployed $default stage
     API_ID="$(aws apigatewayv2 create-api --name "${FUNCTION_NAME}-api" \
