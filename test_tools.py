@@ -23,11 +23,14 @@ from main import (
     create_lead_logic,
     search_leads_logic,
     lookup_users_logic,
+    lookup_teams_logic,
     lookup_products_logic,
     _format_field,
     _normalize_field_values,
     _get_filterable_fields_map,
     _build_search_json_rule,
+    _build_deal_search_json_rule,
+    _try_build_entity_fields_rule,
     search_entity_logic,
     search_entity_by_term_logic,
     search_idle_entities_logic,
@@ -529,6 +532,124 @@ def test_build_search_json_rule_rejects_non_filterable():
     assert "not filterable" in err.lower() or "not found" in err.lower()
 
 
+_ENTITY_FIELDS_MAP = {
+    "createdBy": {"type": "LOOK_UP", "standard": True},
+    "ownedBy": {"type": "LOOK_UP", "standard": True},
+    "noOfLicenses": {"type": "NUMBER", "standard": True},
+    "createdAt": {"type": "DATETIME_PICKER", "standard": True},
+}
+
+_TEAM_FILTER = {
+    "field": "createdByFields",
+    "operator": "equal",
+    "value": 839,
+    "type": "long",
+    "property": "teams",
+    "primaryField": "createdBy",
+    "fieldInputType": "ENTITY_FIELDS",
+}
+
+
+def test_entity_fields_created_by_team_passes_through_keys():
+    """createdByFields composite filter is accepted and keeps property/primaryField/fieldInputType."""
+    rules, err = _build_search_json_rule([_TEAM_FILTER], _ENTITY_FIELDS_MAP)
+    assert err is None
+    rule = rules["rules"][0]
+    assert rule["field"] == "createdByFields"
+    assert rule["id"] == "createdByFields"
+    assert rule["type"] == "long"
+    assert rule["value"] == 839
+    assert rule["operator"] == "equal"
+    assert rule["property"] == "teams"
+    assert rule["primaryField"] == "createdBy"
+    assert rule["fieldInputType"] == "ENTITY_FIELDS"
+
+
+def test_entity_fields_owned_by_team_not_hardcoded_to_created_by():
+    filt = {
+        "field": "ownedByFields",
+        "operator": "equal",
+        "value": 839,
+        "type": "long",
+        "property": "teams",
+        "primaryField": "ownedBy",
+        "fieldInputType": "ENTITY_FIELDS",
+    }
+    rules, err = _build_deal_search_json_rule([filt], _ENTITY_FIELDS_MAP)
+    assert err is None
+    rule = rules["rules"][0]
+    assert rule["field"] == "ownedByFields"
+    assert rule["primaryField"] == "ownedBy"
+    assert rule["property"] == "teams"
+    assert rule["fieldInputType"] == "ENTITY_FIELDS"
+
+
+def test_entity_fields_combined_with_normal_filters():
+    filters = [
+        _TEAM_FILTER,
+        {"field": "createdAt", "operator": "current_month", "value": None, "timeZone": "Asia/Calcutta"},
+        {"field": "noOfLicenses", "operator": "greater_or_equal", "value": 5},
+    ]
+    rules, err = _build_deal_search_json_rule(filters, _ENTITY_FIELDS_MAP)
+    assert err is None
+    assert len(rules["rules"]) == 3
+    assert rules["rules"][0]["field"] == "createdByFields"
+    assert rules["rules"][0]["property"] == "teams"
+    assert rules["rules"][1]["field"] == "createdAt"
+    assert rules["rules"][1]["type"] == "date"
+    assert rules["rules"][2]["field"] == "noOfLicenses"
+    assert rules["rules"][2]["type"] == "double"
+    assert rules["rules"][2]["value"] == 5
+
+
+def test_entity_fields_rejects_non_lookup_primary_field():
+    filt = {
+        "field": "noOfLicensesFields",
+        "operator": "equal",
+        "value": 839,
+        "property": "teams",
+        "primaryField": "noOfLicenses",
+        "fieldInputType": "ENTITY_FIELDS",
+    }
+    _, err = _build_deal_search_json_rule([filt], _ENTITY_FIELDS_MAP)
+    assert err is not None
+    assert "LOOK_UP" in err
+    assert "noOfLicenses" in err
+
+
+def test_entity_fields_rejects_missing_primary_field():
+    filt = {
+        "field": "createdByFields",
+        "operator": "equal",
+        "value": 839,
+        "property": "teams",
+        "fieldInputType": "ENTITY_FIELDS",
+    }
+    _, err = _build_search_json_rule([filt], _ENTITY_FIELDS_MAP)
+    assert err is not None
+    assert "primaryField" in err
+
+
+def test_entity_fields_unknown_field_without_composite_still_rejected():
+    _, err = _build_deal_search_json_rule(
+        [{"field": "createdByFields", "operator": "equal", "value": 839}],
+        _ENTITY_FIELDS_MAP,
+    )
+    assert err is not None
+    assert "not filterable" in err.lower() or "not found" in err.lower()
+
+
+def test_try_build_entity_fields_rule_not_handled_without_field_input_type():
+    rule, err, handled = _try_build_entity_fields_rule(
+        {"field": "createdBy", "operator": "equal", "value": 1},
+        0,
+        _ENTITY_FIELDS_MAP,
+    )
+    assert handled is False
+    assert rule is None
+    assert err is None
+
+
 @pytest.mark.asyncio
 async def test_lookup_users_logic():
     with patch("main.get_client") as mock_get_client:
@@ -563,6 +684,35 @@ async def test_lookup_users_logic():
 
         result_single = await lookup_users_logic("name:Akshay")
         assert "Use user ID 594" in result_single
+
+
+@pytest.mark.asyncio
+async def test_lookup_teams_logic():
+    teams_payload = {
+        "content": [
+            {"id": 839, "name": "Pre-sales team"},
+            {"id": 838, "name": "Sell.Do Sales"},
+        ],
+        "totalElements": 2,
+        "totalPages": 1,
+    }
+    with patch("main.get_client") as mock_get_client:
+        mock_client = AsyncMock()
+        mock_response = MagicMock()
+        mock_response.json.return_value = teams_payload
+        mock_response.raise_for_status = MagicMock()
+        mock_client.get.return_value = mock_response
+        mock_client.__aenter__.return_value = mock_client
+        mock_client.__aexit__.return_value = None
+        mock_get_client.return_value = mock_client
+
+        result = await lookup_teams_logic("Pre-sales")
+        assert "Found 1 team(s)" in result
+        assert "839" in result
+        assert "Pre-sales team" in result
+        assert "ENTITY_FIELDS" in result
+        mock_client.get.assert_called()
+        assert mock_client.get.call_args.args[0] == "/teams"
 
 
 @pytest.mark.asyncio

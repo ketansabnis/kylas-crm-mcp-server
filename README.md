@@ -26,6 +26,7 @@ Model Context Protocol server for **Kylas CRM** lead and deal operations. Use it
 
 ### Shared Utilities
 - **lookup_users** – Resolve user names to IDs (for owner, created by, etc.)
+- **lookup_teams** – Resolve team names to IDs (for team-membership search filters)
 - **lookup_products** – Resolve product names to IDs
 - **lookup_pipelines** – Resolve pipelines (supports both LEAD and DEAL entity types)
 - **get_pipeline_stages** – Get stages for a pipeline

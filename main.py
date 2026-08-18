@@ -29,6 +29,7 @@ PIPELINE:
 SHARED UTILITIES:
 - get_current_user (timezone, ID; use for date/datetime handling)
 - lookup_users (resolve user names to IDs for ownerId, createdBy, updatedBy)
+- lookup_teams (resolve team names to IDs for ENTITY_FIELDS team-membership filters)
 - lookup_products (find products for field_values)
 - parse_datetime_to_utc_iso_tool (convert user timezone to UTC ISO)
 - add_note / get_notes (add or fetch notes on lead, deal, contact, company, meeting, call_log)
@@ -364,6 +365,7 @@ Use **Option ID** (number) from cheat sheet. Exceptions — use **internal name*
 
 ### Never guess IDs — always resolve first
 - **Users** (createdBy, updatedBy, ownerId, assignedTo, etc.): call `lookup_users(query)`. If multiple matches, list them and ask user to pick.
+- **Teams** (filter by team membership — e.g. "deals created by anyone on Pre-sales"): call `lookup_teams(query)` to resolve the team name to a Kylas team ID. Then use an ENTITY_FIELDS composite filter — do NOT hardcode a roster of user IDs. Example: `{"field": "createdByFields", "operator": "equal", "value": <teamId>, "type": "long", "property": "teams", "primaryField": "createdBy", "fieldInputType": "ENTITY_FIELDS"}`. Use `primaryField: "ownedBy"` (or `ownerId` on leads) to filter by the owner's team.
 - **Products**: call `lookup_products(query)`. If multiple matches, list and ask.
 - **Entity IDs** (for association filters — associatedLeads, associatedDeals, etc.): search for the entity first to get its real ID. Never invent IDs — this causes hallucinated results.
   - Example: "contacts associated with deals from Acme" → search deals for "Acme" first, confirm which deal, then search contacts by that deal ID.
@@ -376,7 +378,7 @@ Use **Option ID** (number) from cheat sheet. Exceptions — use **internal name*
 Build `field_values` from user input only. For `update_lead`: pass lead ID from search results + fields to update.
 
 ### Search / Filter
-- Use `search_entity("lead", filters)`. Only `filterable=true` fields (from cheat sheet) are allowed.
+- Use `search_entity("lead", filters)`. Only `filterable=true` fields (from cheat sheet) are allowed, plus ENTITY_FIELDS composite filters anchored to a LOOK_UP field (see Teams under Never guess IDs).
 - PICK_LIST/MULTI_PICKLIST: use Option ID, except `requirementCurrency`, `companyBusinessType`, `country`, `timezone`, `companyIndustry` → use internal name.
 
 ### Pipeline and Stage
@@ -702,8 +704,9 @@ Build `field_values` from user input only. For `update_deal`: pass deal ID from 
 - **Owner** (`ownedBy`): `{"id": <user_id>}` — resolve via `lookup_users`. (e.g. `"ownedBy": {"id": 7236}`)
 
 ### Search / Filter
-- Use `search_entity("deal", filters)`. Only `filterable=true` fields (from cheat sheet) are allowed.
+- Use `search_entity("deal", filters)`. Only `filterable=true` fields (from cheat sheet) are allowed, plus ENTITY_FIELDS composite filters anchored to a LOOK_UP field (see Teams under Never guess IDs).
 - PICK_LIST exceptions (use internal name string, not Option ID): `currency`, `country`, `dealSource`.
+- Team-scoped queries (e.g. "deals created by the Pre-sales team"): `lookup_teams` then `createdByFields` / `ownedByFields` with `fieldInputType: "ENTITY_FIELDS"`. Do not enumerate user IDs.
 
 ### Pipeline and Stage
 - Call `lookup_pipelines(entity_type="DEAL")` first. List pipelines and confirm with user (even if only one).
@@ -1177,6 +1180,99 @@ def _rule_type_for_value(field_type: str, field_name: str, value: Any) -> str:
     return "string"
 
 
+_ENTITY_FIELDS_OPS_REQUIRING_PROPERTY = {"equal", "not_equal", "in", "not_in"}
+
+
+def _try_build_entity_fields_rule(
+    f: Dict[str, Any],
+    index: int,
+    filterable_map: Dict[str, Dict[str, Any]],
+) -> Tuple[Optional[Dict[str, Any]], Optional[str], bool]:
+    """
+    Handle Kylas ENTITY_FIELDS composite filters (e.g. createdBy user belongs to team X).
+
+    Returns (rule, error, handled). handled=False means the caller should use normal field validation.
+    """
+    field_input_type = (f.get("fieldInputType") or "").strip().upper().replace(" ", "_")
+    if field_input_type != "ENTITY_FIELDS":
+        return None, None, False
+
+    filter_num = index + 1
+    field_name = f.get("field")
+    if not field_name:
+        return None, f"Filter #{filter_num}: missing 'field'.", True
+
+    operator = (f.get("operator") or "equal").strip().lower().replace(" ", "_")
+    operator = OPERATOR_SYMBOL_MAP.get(operator, operator)
+
+    primary_field = f.get("primaryField")
+    if not primary_field:
+        return None, (
+            f"Filter #{filter_num}: ENTITY_FIELDS filter requires 'primaryField' naming the LOOK_UP "
+            f"field this composite rides on (e.g. createdBy, ownedBy)."
+        ), True
+
+    primary_meta = filterable_map.get(primary_field)
+    if not primary_meta:
+        return None, (
+            f"Filter #{filter_num}: primaryField '{primary_field}' is not filterable or not found. "
+            f"ENTITY_FIELDS filters must be anchored to a [FILTERABLE] LOOK_UP field."
+        ), True
+    if primary_meta.get("type") != "LOOK_UP":
+        return None, (
+            f"Filter #{filter_num}: primaryField '{primary_field}' has type {primary_meta.get('type')} "
+            f"(must be LOOK_UP for ENTITY_FIELDS composite filters)."
+        ), True
+
+    allowed = OPERATOR_MAPPING.get("ENTITY_FIELDS") or []
+    if operator not in allowed:
+        return None, (
+            f"Filter #{filter_num}: operator '{operator}' not allowed for ENTITY_FIELDS. "
+            f"Allowed: {', '.join(allowed)}."
+        ), True
+
+    property_name = f.get("property")
+    if operator in _ENTITY_FIELDS_OPS_REQUIRING_PROPERTY and not property_name:
+        return None, (
+            f"Filter #{filter_num}: ENTITY_FIELDS operator '{operator}' requires 'property' "
+            f"(e.g. 'teams' to filter by team membership)."
+        ), True
+
+    value = f.get("value")
+    if value is not None:
+        if isinstance(value, list):
+            coerced = []
+            for item in value:
+                if isinstance(item, (int, float)):
+                    coerced.append(int(item))
+                else:
+                    try:
+                        coerced.append(int(item))
+                    except (TypeError, ValueError):
+                        coerced.append(item)
+            value = coerced
+        elif not isinstance(value, (int, float)):
+            try:
+                value = int(value)
+            except (TypeError, ValueError):
+                pass
+        else:
+            value = int(value)
+
+    rule = {
+        "operator": operator,
+        "id": field_name,
+        "field": field_name,
+        "type": "long",
+        "value": value,
+        "fieldInputType": "ENTITY_FIELDS",
+        "property": property_name,
+        "primaryField": primary_field,
+        "relatedFieldIds": None,
+    }
+    return rule, None, True
+
+
 def _build_search_json_rule(
     filters: List[Dict[str, Any]],
     filterable_map: Dict[str, Dict[str, Any]],
@@ -1196,6 +1292,13 @@ def _build_search_json_rule(
         operator = OPERATOR_SYMBOL_MAP.get(operator, operator)
         value = f.get("value")
         field_type_key = (f.get("type") or "TEXT_FIELD").strip().upper().replace(" ", "_")
+
+        entity_rule, entity_err, entity_handled = _try_build_entity_fields_rule(f, i, filterable_map)
+        if entity_err:
+            return {}, entity_err
+        if entity_handled:
+            rules.append(entity_rule)
+            continue
 
         if not field_name:
             return {}, f"Filter #{i + 1}: missing 'field'."
@@ -1259,7 +1362,20 @@ async def get_lead_field_instructions_logic() -> str:
         lines.extend(["", "## CUSTOM FIELDS", "-" * 40])
         for f in custom:
             lines.extend(_format_field(f, include_filterable=True))
-    lines.extend(["", "=" * 60, "END OF CHEAT SHEET", "=" * 60])
+    lines.extend([
+        "",
+        "## TEAM MEMBERSHIP FILTERS",
+        "-" * 40,
+        "To filter by team membership on a LOOK_UP field (e.g. createdBy, ownerId), use a composite filter",
+        "— do not hardcode user IDs. Resolve the team name with lookup_teams, then:",
+        '{"field": "<lookupField>Fields", "operator": "equal", "value": <teamId>, "type": "long",',
+        ' "property": "teams", "primaryField": "<lookupField>", "fieldInputType": "ENTITY_FIELDS"}',
+        'Example: primaryField "createdBy" → field "createdByFields"; primaryField "ownerId" → field "ownerIdFields".',
+        "",
+        "=" * 60,
+        "END OF CHEAT SHEET",
+        "=" * 60,
+    ])
     return "\n".join(lines)
 
 
@@ -1472,6 +1588,121 @@ async def lookup_users(
         return f"Error: {e.message}"
     except Exception as e:
         logger.exception("lookup_users")
+        return f"Unexpected error: {str(e)}"
+
+
+# ---------------------------------------------------------------------------
+# Tool 3a: Lookup Teams (for ENTITY_FIELDS team-membership filters)
+# ---------------------------------------------------------------------------
+
+async def lookup_teams_logic(
+    query: str = "",
+    page: int = 0,
+    size: int = 50,
+    fetch_all_pages: bool = False,
+) -> str:
+    """
+    Call GET /teams and return a formatted list of teams (id, name).
+    Optional name filter is applied client-side (GET /teams/lookup name search is unreliable).
+    Use this to resolve a team name (e.g. 'Pre-sales') to a Kylas team ID for ENTITY_FIELDS filters.
+    """
+    q = (query or "").strip()
+    if q.lower() in ("name:", "name"):
+        q = ""
+    elif ":" in q:
+        # Accept name:Pre-sales form used by other lookup tools
+        prefix, _, rest = q.partition(":")
+        if prefix.lower() == "name":
+            q = rest.strip()
+
+    page_size = min(size, 50)
+    content: List[Dict[str, Any]] = []
+    total = 0
+    total_pages = 1
+    current_page = 0 if (fetch_all_pages or q) else page
+    # Name search is client-side, so fetch all pages first then filter.
+    walk_all = fetch_all_pages or bool(q)
+    max_teams = 500 if walk_all else page_size
+
+    async with get_client() as client:
+        while True:
+            response = await client.get(
+                "/teams",
+                params={"page": current_page, "size": page_size},
+            )
+            data = await handle_api_response(response, "Team lookup")
+            chunk = data.get("content", data.get("data", []))
+            total = data.get("totalElements", data.get("total", len(chunk) + len(content)))
+            total_pages = data.get("totalPages", 1)
+            content.extend(chunk)
+            if not walk_all or current_page >= total_pages - 1 or len(content) >= max_teams or len(chunk) < page_size:
+                break
+            current_page += 1
+
+    if q:
+        q_lower = q.lower()
+        content = [t for t in content if q_lower in str(t.get("name") or "").lower()]
+        total = len(content)
+        total_pages = 1
+
+    if not content:
+        return f"No teams found" + (f" matching '{q}'." if q else ".")
+
+    if fetch_all_pages:
+        header = f"Found {len(content)} team(s)" + (f" matching '{q}'" if q else "") + f" (total {total}, all returned in one list)"
+    else:
+        header = f"Found {len(content)} team(s)" + (f" matching '{q}'" if q else "") + f" (total {total}, page {page + 1} of {total_pages})"
+    lines = [header, "-" * 50]
+    for t in content:
+        tid = t.get("id", "?")
+        name = t.get("name", "—")
+        lines.append(f"  • ID: {tid}  |  Name: {name}")
+    lines.append("-" * 50)
+    if len(content) > 1 and not fetch_all_pages:
+        lines.append(
+            "More than one team matched. Ask the user which one they mean, then use that ID in an ENTITY_FIELDS "
+            "filter (e.g. {\"field\": \"createdByFields\", \"operator\": \"equal\", \"value\": <teamId>, "
+            "\"type\": \"long\", \"property\": \"teams\", \"primaryField\": \"createdBy\", \"fieldInputType\": \"ENTITY_FIELDS\"})."
+        )
+    elif len(content) == 1:
+        tid = content[0].get("id")
+        lines.append(
+            f"Use team ID {tid} in search_entity with an ENTITY_FIELDS filter "
+            f'(e.g. {{"field": "createdByFields", "operator": "equal", "value": {tid}, '
+            f'"type": "long", "property": "teams", "primaryField": "createdBy", "fieldInputType": "ENTITY_FIELDS"}}).'
+        )
+    return "\n".join(lines)
+
+
+@mcp.tool()
+async def lookup_teams(
+    query: str = "",
+    page: int = 0,
+    size: int = 50,
+    return_all: bool = False,
+) -> str:
+    """
+    Look up Kylas teams by name, or list all teams.
+    Use this BEFORE team-scoped search_entity filters (e.g. "deals created by the Pre-sales team")
+    to resolve the team name to a Kylas team ID. Do not hardcode user-ID rosters.
+
+    - Use return_all=True (with empty query) to fetch all teams in one response.
+    - For name search: pass the team name (e.g. "Pre-sales") or "name:Pre-sales". If one team is found,
+      use that ID as value in an ENTITY_FIELDS composite filter; if multiple, ask which one.
+
+    query: Team name or "name:<team>". Empty / "name:" lists all teams.
+    page: 0-based page (default 0). Ignored when return_all=True.
+    size: Page size, max 50 (default 50). Used per page when return_all=True.
+    return_all: If True, fetch all pages and return every team in one response (cap 500).
+    """
+    try:
+        _reset_api_call_count()
+        logger.info("Team lookup: q=%s return_all=%s", query, return_all)
+        return await lookup_teams_logic(query, page, size, fetch_all_pages=return_all)
+    except KylasAPIError as e:
+        return f"Error: {e.message}"
+    except Exception as e:
+        logger.exception("lookup_teams")
         return f"Unexpected error: {str(e)}"
 
 
@@ -3174,7 +3405,20 @@ async def get_deal_field_instructions_logic() -> str:
         lines.extend(["", "## CUSTOM FIELDS", "-" * 40])
         for f in custom:
             lines.extend(_format_field(f, include_filterable=True))
-    lines.extend(["", "=" * 60, "END OF CHEAT SHEET", "=" * 60])
+    lines.extend([
+        "",
+        "## TEAM MEMBERSHIP FILTERS",
+        "-" * 40,
+        "To filter by team membership on a LOOK_UP field (e.g. createdBy, ownedBy, updatedBy, importedBy),",
+        "use a composite filter — do not hardcode user IDs. Resolve the team name with lookup_teams, then:",
+        '{"field": "<lookupField>Fields", "operator": "equal", "value": <teamId>, "type": "long",',
+        ' "property": "teams", "primaryField": "<lookupField>", "fieldInputType": "ENTITY_FIELDS"}',
+        'Example: primaryField "createdBy" → field "createdByFields"; primaryField "ownedBy" → field "ownedByFields".',
+        "",
+        "=" * 60,
+        "END OF CHEAT SHEET",
+        "=" * 60,
+    ])
     return "\n".join(lines)
 
 
@@ -3217,6 +3461,13 @@ def _build_deal_search_json_rule(
         operator = (f.get("operator") or "equal").strip().lower().replace(" ", "_")
         value = f.get("value")
         field_type_key = (f.get("type") or "TEXT_FIELD").strip().upper().replace(" ", "_")
+
+        entity_rule, entity_err, entity_handled = _try_build_entity_fields_rule(f, i, filterable_map)
+        if entity_err:
+            return {}, entity_err
+        if entity_handled:
+            rules.append(entity_rule)
+            continue
 
         if not field_name:
             return {}, f"Filter #{i + 1}: missing 'field'."
@@ -3688,7 +3939,7 @@ async def search_deals_logic(
     if err:
         return f"Invalid filters: {err}"
     payload = {
-        "fields": ["id", "name", "value", "currency", "closingDate", "ownedBy", "createdAt", "actualValue", "estimatedValue", "associatedContacts", "associatedLeads", "associatedCompanies", "products"],
+        "fields": ["id", "name", "value", "currency", "closingDate", "ownedBy", "createdBy", "createdAt", "actualValue", "estimatedValue", "associatedContacts", "associatedLeads", "associatedCompanies", "products"],
         "jsonRule": json_rule,
     }
     params = {"page": page, "size": min(size, 100)}
@@ -3712,6 +3963,8 @@ async def search_deals_logic(
         estimated_val = _extract_primary_deal_value(deal.get("estimatedValue"))
         owner_obj = deal.get("ownedBy", {})
         owner_name = owner_obj.get("name", "—") if isinstance(owner_obj, dict) else "—"
+        creator_obj = deal.get("createdBy", {})
+        creator_name = creator_obj.get("name", "—") if isinstance(creator_obj, dict) else "—"
         associated_contacts = deal.get("associatedContacts") or []
         associated_contacts_str = ", ".join(str(cid) for cid in associated_contacts) if associated_contacts else "—"
         products = deal.get("products") or []
@@ -3720,7 +3973,7 @@ async def search_deals_logic(
             products_str = ", ".join(prod_names[:3]) + (" ..." if len(prod_names) > 3 else "")
         else:
             products_str = "—"
-        lines.append(f"• ID: {did} | Name: {name} | Owner: {owner_name} | Value: {value} | Products: {products_str} | Contacts: {associated_contacts_str}")
+        lines.append(f"• ID: {did} | Name: {name} | Owner: {owner_name} | CreatedBy: {creator_name} | Value: {value} | Products: {products_str} | Contacts: {associated_contacts_str}")
     lines.append("-" * 60)
     return "\n".join(lines)
 
@@ -3977,6 +4230,13 @@ def _build_company_search_json_rule(
         operator = (f.get("operator") or "equal").strip().lower().replace(" ", "_")
         value = f.get("value")
         field_type_key = (f.get("type") or "TEXT_FIELD").strip().upper().replace(" ", "_")
+
+        entity_rule, entity_err, entity_handled = _try_build_entity_fields_rule(f, i, filterable_map)
+        if entity_err:
+            return {}, entity_err
+        if entity_handled:
+            rules.append(entity_rule)
+            continue
 
         if not field_name:
             return {}, f"Filter #{i + 1}: missing 'field'."
@@ -4488,6 +4748,13 @@ def _build_meeting_search_json_rule(
         field_name = f.get("field")
         operator = (f.get("operator") or "equal").strip().lower().replace(" ", "_")
         value = f.get("value")
+
+        entity_rule, entity_err, entity_handled = _try_build_entity_fields_rule(f, i, filterable_map)
+        if entity_err:
+            return {}, entity_err
+        if entity_handled:
+            rules.append(entity_rule)
+            continue
 
         if not field_name:
             return {}, f"Filter #{i + 1}: missing 'field'."
@@ -5179,6 +5446,13 @@ def _build_call_log_search_json_rule(
         field_name = f.get("field")
         operator = (f.get("operator") or "equal").strip().lower().replace(" ", "_")
         value = f.get("value")
+
+        entity_rule, entity_err, entity_handled = _try_build_entity_fields_rule(f, i, filterable_map)
+        if entity_err:
+            return {}, entity_err
+        if entity_handled:
+            rules.append(entity_rule)
+            continue
 
         if not field_name:
             return {}, f"Filter #{i + 1}: missing 'field'."
@@ -6907,6 +7181,13 @@ async def search_entity(
     page: 0-based page for lead/contact/task/deal/company; 1-based for meeting/call_log (default 0).
     size: Page size, max 100 (default 20).
     sort: Sort e.g. "createdAt,desc" (default).
+
+    Team membership (do NOT hardcode user-ID rosters — they go stale when people join/leave):
+      To filter by team membership on a lookup field (e.g. "deals created by anyone on team X"), use a
+      composite filter: {"field": "<lookupField>Fields", "operator": "equal", "value": <teamId>,
+      "type": "long", "property": "teams", "primaryField": "<lookupField>", "fieldInputType": "ENTITY_FIELDS"}
+      — e.g. primaryField: "createdBy" to filter by the creator's team, primaryField: "ownedBy" to filter
+      by the owner's team (use "ownerId" on leads). Resolve team names to IDs via lookup_teams first.
 
     Task association examples (replaces search_tasks_for_* tools):
       - search_entity("task", [{"field": "associatedLeads", "operator": "equal", "value": lead_id}])
